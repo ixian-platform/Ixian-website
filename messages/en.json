@@ -1,0 +1,19 @@
+{
+  "lorem": "Lorem ipsum dolor sit amet",
+  "Footer": {
+    "address": {
+      "slo": {
+        "company": "IXI Labs d.o.o.",
+        "street": "Zaloška cesta 160C",
+        "city": "1260 Ljubljana-Polje",
+        "country": "Slovenija"
+      },
+      "eng": {
+        "company": "IXI Labs LTD",
+        "street": "Suite 99 Milton Keynes Business Centre",
+        "city": "Foxhunter Drive, Milton Keynes",
+        "country": "United Kingdom"
+      }
+    }
+  }
+}

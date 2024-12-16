@@ -1,0 +1,102 @@
+@use '@styles/mixins' as *;
+
+.footer {
+  width: 100%;
+  background: var(--colors-surface-inverse);
+  color: var(--colors-text-inverse);
+  position: relative;
+
+  .wrapper {
+    padding: 40px var(--spacing-md);
+
+    @include mq('xs') {
+      padding: 24px;
+    }
+
+    .header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: var(--spacing-super);
+
+      @include mq('xs') {
+        flex-direction: column;
+        gap: var(--spacing-md);
+      }
+
+      .leftContent {
+        width: 100%;
+        max-width: 288px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+
+        .info {
+          display: flex;
+          flex-direction: column;
+          gap: var(--spacing-sm);
+
+          .address {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+
+      .rightContent {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        gap: var(--spacing-xxl);
+
+        @include mq('xs') {
+          flex-direction: column;
+          gap: var(--spacing-sm);
+          align-items: flex-start;
+        }
+
+        .singleColumn {
+          width: 100%;
+          max-width: 182px;
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          gap: var(--spacing-sm);
+
+          .mainTitle {
+            color: var(--colors-text-02);
+            margin-bottom: 12px;
+          }
+
+          @include mq('xs') {
+            align-items: flex-start;
+          }
+        }
+      }
+    }
+
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: var(--colors-outline-inverse);
+      margin: 24px 0;
+    }
+
+    .copyright {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      > span {
+        letter-spacing: 0.15rem;
+      }
+
+      .legalItems {
+        display: flex;
+        gap: var(--spacing-xxl);
+      }
+    }
+  }
+}

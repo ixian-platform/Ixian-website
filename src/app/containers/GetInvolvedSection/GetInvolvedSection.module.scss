@@ -1,0 +1,52 @@
+.getInvolvedSection {
+  width: 100%;
+  background: radial-gradient(
+    58.24% 75.73% at 80% 15%,
+    rgba(51, 114, 45, 0.1) 0%,
+    rgba(159, 63, 243, 0.1) 28.87%,
+    rgba(43, 244, 234, 0.1) 65.51%,
+    rgba(251, 252, 251, 0.1) 100%
+  );
+
+  .getInvolved {
+    padding: var(--spacing-super-xl) var(--spacing-md);
+    display: flex;
+    gap: var(--spacing-xxl);
+
+    .bottomRetro {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 1249px;
+    }
+
+    .involvedCards {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--spacing-xxl);
+
+      .singleCard {
+        width: 100%;
+        max-width: 394px;
+        padding: var(--spacing-xl);
+        border-radius: var(--corner-radius-lg);
+        background: var(--colors-surface-01);
+        border: 1px solid var(--colors-outline-02);
+
+        .innerSection {
+          min-width: 346px;
+          padding-top: var(--spacing-super-lg);
+
+          .headerIcons {
+            display: flex;
+            gap: var(--spacing-sm);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.themeSwitcher {
+  background: transparent;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1) rotate(-10deg);
+  }
+
+  > img {
+    width: 24px;
+    height: 24px;
+  }
+}

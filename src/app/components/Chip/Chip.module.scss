@@ -1,0 +1,15 @@
+.chip {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: var(--corner-radius-xs);
+  color: var(--colors-text-01);
+}
+
+.primary {
+  background-color: var(--colors-surface-brand-primary);
+}
+
+.outlined {
+  background-color: transparent;
+  border: 1px solid var(--colors-outline-03);
+}

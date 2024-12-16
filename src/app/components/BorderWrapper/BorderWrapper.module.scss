@@ -1,0 +1,16 @@
+.box {
+  position: relative;
+}
+
+.box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--border-radius);
+  padding: var(--border-width);
+  background: var(--border-color);
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+}

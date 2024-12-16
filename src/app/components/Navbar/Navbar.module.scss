@@ -1,0 +1,45 @@
+@use '@styles/mixins' as *;
+@use '@styles/typograhphy' as *;
+
+.navbar {
+  width: 100%;
+  background: var(--colors-surface-inverse);
+  color: var(--colors-text-inverse);
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--colors-outline-02);
+
+  .content {
+    padding: var(--spacing-md) 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-3xl);
+      @include label-sm;
+
+      a {
+        background-color: unset;
+      }
+    }
+  }
+
+  .contentMobile {
+    padding: var(--spacing-md);
+    overflow: unset;
+    position: relative;
+
+    > a {
+      max-height: 32px;
+    }
+  }
+}
+
+.navTrigger {
+  background: var(--colors-surface-inverse);
+}

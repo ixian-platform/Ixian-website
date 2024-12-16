@@ -1,0 +1,79 @@
+.ecosystemSection {
+  width: 100%;
+  background: radial-gradient(
+    58.24% 69.73% at 96.21% 14.11%,
+    rgba(51, 114, 45, 0.1) 0%,
+    rgba(159, 63, 243, 0.1) 28.87%,
+    rgba(43, 244, 234, 0.1) 65.51%,
+    rgba(251, 252, 251, 0.1) 100%
+  );
+
+  .ecosystemWrapper {
+    padding: var(--spacing-super-xl) var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3xl);
+
+    .offerInfo {
+      width: 100%;
+      padding: var(--spacing-3xl) var(--spacing-xxl);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-3xl);
+
+      position: relative;
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 1px;
+        background: linear-gradient(
+          180deg,
+          #fbfcfb 0%,
+          #ced4d1 23.5%,
+          #c0c8c4 75.5%,
+          #f2f4f3 100%
+        );
+      }
+
+      &:before {
+        left: 0;
+      }
+
+      &:after {
+        right: 0;
+      }
+
+      .singleInfo {
+        display: flex;
+        align-items: flex-start;
+        gap: var(--spacing-md);
+      }
+    }
+
+    .bottomCards {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-xxl);
+
+      .rowSpan2 {
+        grid-row: span 2;
+      }
+
+      .bigCardBody {
+        max-width: 360px;
+      }
+    }
+
+    .spixiHalfImg {
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 0;
+    }
+  }
+}

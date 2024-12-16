@@ -1,0 +1,72 @@
+@use '@styles/typograhphy' as *;
+
+.button {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--corner-radius-lg);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  @include label-md;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.primary {
+  background-color: var(--colors-surface-action);
+  color: var(--colors-text-on-action);
+  border: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.text {
+  background-color: transparent;
+  color: var(--colors-text-action);
+  border: none;
+
+  &:hover {
+    background-color: var(--colors-surface-03);
+    color: var(--colors-text-action-hover);
+    transition: none;
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: var(--colors-surface-03);
+    color: var(--colors-text-action-hover);
+    outline: 2px solid var(--colors-text-action-hover);
+  }
+
+  &:active {
+    background-color: transparent;
+    color: var(--colors-text-action-pressed);
+  }
+}
+
+.outlined {
+  background-color: transparent;
+  color: var(--colors-text-action);
+  border: 2px solid var(--colors-outline-action);
+
+  &:hover {
+    background-color: var(--colors-surface-03);
+    color: var(--colors-text-action-hover);
+  }
+}
+
+.outlined-2 {
+  background-color: transparent;
+  color: var(--colors-text-inverse);
+  border: 2px solid var(--colors-outline-01);
+
+  &:hover {
+    border-color: var(--colors-outline-inverse-2);
+  }
+}
