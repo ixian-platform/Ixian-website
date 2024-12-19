@@ -5,6 +5,7 @@
   background: var(--colors-surface-inverse);
   color: var(--colors-text-inverse);
   position: relative;
+  overflow: hidden;
 
   .wrapper {
     padding: 40px var(--spacing-md);

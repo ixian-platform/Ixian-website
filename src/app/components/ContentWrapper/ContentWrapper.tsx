@@ -6,17 +6,22 @@ interface ContentWrapperProps extends PropsWithChildren {
   className?: string;
   wrapperSection?: boolean;
   sectionClass?: string;
+  sectionId?: string;
 }
 
 const ContentWrapper = ({
   className,
   wrapperSection,
   sectionClass,
+  sectionId,
   children,
 }: ContentWrapperProps) => {
   if (wrapperSection) {
     return (
-      <section className={classNames(classes.sectionWrapper, sectionClass)}>
+      <section
+        className={classNames(classes.sectionWrapper, sectionClass)}
+        id={sectionId}
+      >
         <div className={classNames(classes.contentWrapper, className)}>
           {children}
         </div>

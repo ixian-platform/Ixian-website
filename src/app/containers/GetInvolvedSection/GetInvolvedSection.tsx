@@ -8,6 +8,7 @@ import Image from 'next/image';
 import bottomRetro from '@assets/bottom-retro.svg';
 import Button from '@components/Button/Button';
 import Icon from '@components/Icon/Icon';
+import { Section } from '@utils/constants';
 
 const GetInvolvedSection = () => {
   const t = useTranslations();
@@ -17,6 +18,7 @@ const GetInvolvedSection = () => {
       wrapperSection
       className={classes.getInvolved}
       sectionClass={classes.getInvolvedSection}
+      sectionId={Section.GET_INVOLVED}
     >
       <Image
         priority

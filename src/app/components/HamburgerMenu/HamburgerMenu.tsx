@@ -4,7 +4,7 @@ import classes from './HamburgerMenu.module.scss';
 import { useState } from 'react';
 import classNames from 'classnames';
 import Link from 'next/link';
-import { Routes } from '@utils/constants';
+import { linksData } from '@components/Navbar/Navbar';
 
 const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,15 +21,11 @@ const HamburgerMenu = () => {
         <span className={classNames({ [classes.open]: isOpen })}></span>
       </button>
       <div className={classNames(classes.menu, { [classes.open]: isOpen })}>
-        <Link href={`${Routes.INDEX}`} onClick={toggleMenu}>
-          test
-        </Link>
-        <Link href={`${Routes.INDEX}`} onClick={toggleMenu}>
-          test
-        </Link>
-        <Link href={`${Routes.INDEX}`} onClick={toggleMenu}>
-          test
-        </Link>
+        {linksData.map((link, index) => (
+          <Link key={index} href={link.href} onClick={toggleMenu}>
+            {link.label}
+          </Link>
+        ))}
       </div>
     </section>
   );
