@@ -22,19 +22,6 @@
       width: 100%;
       display: flex;
       gap: var(--spacing-xxl);
-
-      &:hover {
-        .useCaseArrowLink {
-          width: 100%;
-          max-width: 40px;
-          display: block;
-          transform: translateY(-30px);
-        }
-      }
-
-      .useCaseArrowLink {
-        display: none;
-      }
     }
 
     .buildTogether {

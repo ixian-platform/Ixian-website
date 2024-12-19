@@ -19,7 +19,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Ixian Network',
+  title: 'Ixian',
   description: 'Ixian - Distributed technology for the people',
 };
 

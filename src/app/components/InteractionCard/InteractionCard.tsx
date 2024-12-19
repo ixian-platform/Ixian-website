@@ -1,6 +1,8 @@
 import classes from './InteractionCard.module.scss';
 import { ReactNode } from 'react';
 import classNames from 'classnames';
+import Link from 'next/link';
+import MyIcon from '@components/MyIcon/MyIcon';
 
 interface InteractionCardProps {
   icon?: ReactNode;
@@ -12,7 +14,9 @@ interface InteractionCardProps {
   disableScale?: boolean;
   bgImageVariant?: 'primary' | 'secondary';
   enableHoverImage?: boolean;
+  hoverImageType?: 'access' | 'dapps' | 'enterprise' | 'iot';
   additionalContent?: ReactNode;
+  linkHref?: string;
 }
 
 const InteractionCard = ({
@@ -26,6 +30,8 @@ const InteractionCard = ({
   bgImageVariant = 'primary',
   enableHoverImage,
   additionalContent,
+  linkHref,
+  hoverImageType,
 }: InteractionCardProps) => {
   return (
     <div
@@ -33,6 +39,7 @@ const InteractionCard = ({
         classes.interactionCard,
         className,
         classes[bgImageVariant],
+        classes[hoverImageType || ''],
         {
           [classes.fullWidth]: fullWidth,
           [classes.enableHover]: enableHover,
@@ -46,6 +53,11 @@ const InteractionCard = ({
         <h3 className={classes.title}>{title}</h3>
         <p className={classes.description}>{description}</p>
       </div>
+      {linkHref && (
+        <Link className={classes.arrowLink} href={linkHref}>
+          <MyIcon name={'arrow_forward_ios'} />
+        </Link>
+      )}
       {additionalContent}
     </div>
   );

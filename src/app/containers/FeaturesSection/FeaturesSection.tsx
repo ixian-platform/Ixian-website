@@ -8,9 +8,9 @@ import Image from 'next/image';
 import topRetro from '@assets/top-retro.svg';
 import { useTranslations } from 'next-intl';
 import SectionHeader from '@components/SectionHeader/SectionHeader';
-import Icon from '@components/Icon/Icon';
 import illustration from '@assets/illustration.svg';
 import BigCard from '@components/BigCard/BigCard';
+import MyIcon from '@components/MyIcon/MyIcon';
 
 const FeaturesSection = () => {
   const t = useTranslations();
@@ -44,13 +44,13 @@ const FeaturesSection = () => {
             <>
               <Button
                 variant={'outlined'}
-                leadingIcon={<Icon iconName={'arrow_right_alt'} />}
+                leadingIcon={<MyIcon name={'arrow_right_alt'} />}
               >
                 {t('lorem')}
               </Button>
               <Button
                 variant={'text'}
-                leadingIcon={<Icon iconName={'two_pager'} />}
+                leadingIcon={<MyIcon name={'two_pager'} />}
               >
                 {t('lorem')}
               </Button>
@@ -59,7 +59,7 @@ const FeaturesSection = () => {
         />
         <div className={classes.featCards}>
           <InteractionCard
-            icon={<Icon iconName={'bolt'} />}
+            icon={<MyIcon name={'bolt'} />}
             title={t('lorem')}
             description={t('lorem')}
             className={classes.colSpan2}
@@ -97,11 +97,7 @@ const FeaturesSection = () => {
                 title={t('lorem')}
                 subtitle={t('lorem')}
                 ctaContent={
-                  <Button
-                    leadingIcon={
-                      <Icon iconName={'icon'} variant={'secondary'} />
-                    }
-                  >
+                  <Button leadingIcon={<MyIcon name={'icon'} />}>
                     {t('lorem')}
                   </Button>
                 }
@@ -119,8 +115,8 @@ const FeaturesSection = () => {
             }
             iconContainer={
               <>
-                <Icon iconName={'bolt'} />
-                <Icon iconName={'bolt'} />
+                <MyIcon name={'bolt'} />
+                <MyIcon name={'bolt'} />
               </>
             }
             className={classes.bigCardCustom}

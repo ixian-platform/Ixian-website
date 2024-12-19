@@ -4,8 +4,8 @@ import Button from '@components/Button/Button';
 import { useTranslations } from 'next-intl';
 import SectionHeader from '@components/SectionHeader/SectionHeader';
 import TextElement from '@components/TextElement/TextElement';
-import Icon from '@components/Icon/Icon';
 import Spline from '@splinetool/react-spline/next';
+import MyIcon from '@components/MyIcon/MyIcon';
 
 const HeroSection = () => {
   const t = useTranslations();
@@ -26,14 +26,10 @@ const HeroSection = () => {
         subtitle={<TextElement type={'body-md'}>{t('lorem')}</TextElement>}
         ctaContent={
           <>
-            <Button
-              leadingIcon={
-                <Icon iconName={'arrow_right_alt'} variant={'secondary'} />
-              }
-            >
+            <Button leadingIcon={<MyIcon name={'arrow_right_alt'} />}>
               {t('lorem')}
             </Button>
-            <Button variant={'text'} leadingIcon={<Icon iconName={'bolt'} />}>
+            <Button variant={'text'} leadingIcon={<MyIcon name={'bolt'} />}>
               {t('lorem')}
             </Button>
           </>

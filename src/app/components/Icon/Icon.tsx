@@ -1,7 +1,7 @@
 'use client';
 import classes from './Icon.module.scss';
 import classNames from 'classnames';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 interface IconProps {
   iconName: string;

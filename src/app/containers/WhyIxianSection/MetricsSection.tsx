@@ -7,7 +7,7 @@ import TypingAnimation from '@/components/ui/typing-animation';
 import Button from '@components/Button/Button';
 import SectionHeader from '@components/SectionHeader/SectionHeader';
 import { useTranslations } from 'next-intl';
-import Icon from '@components/Icon/Icon';
+import MyIcon from '@components/MyIcon/MyIcon';
 
 const MetricsSection = () => {
   const t = useTranslations();
@@ -35,11 +35,11 @@ const MetricsSection = () => {
             <>
               <Button
                 variant={'outlined'}
-                leadingIcon={<Icon iconName={'arrow_right_alt'} />}
+                leadingIcon={<MyIcon name={'arrow_right_alt'} />}
               >
                 {t('lorem')}
               </Button>
-              <Button variant={'text'} leadingIcon={<Icon iconName={'icon'} />}>
+              <Button variant={'text'} leadingIcon={<MyIcon name={'icon'} />}>
                 {t('lorem')}
               </Button>
             </>

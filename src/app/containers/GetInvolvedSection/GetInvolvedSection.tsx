@@ -7,8 +7,8 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import bottomRetro from '@assets/bottom-retro.svg';
 import Button from '@components/Button/Button';
-import Icon from '@components/Icon/Icon';
 import { Section } from '@utils/constants';
+import MyIcon from '@components/MyIcon/MyIcon';
 
 const GetInvolvedSection = () => {
   const t = useTranslations();
@@ -45,15 +45,15 @@ const GetInvolvedSection = () => {
             className={classes.innerSection}
             chipContainer={
               <div className={classes.headerIcons}>
-                <Icon iconName={'icon'} />
-                <Icon iconName={'s2_mark'} variant={'quaternary'} />
+                <MyIcon name={'icon'} />
+                <MyIcon name={'s2_mark'} />
               </div>
             }
             title={<TextElement type={'heading-sm'}>{t('lorem')}</TextElement>}
             subtitle={<TextElement type={'body-sm'}>{t('lorem')}</TextElement>}
             ctaContent={
               <Button
-                leadingIcon={<Icon iconName={'arrow_right_alt'} />}
+                leadingIcon={<MyIcon name={'arrow_right_alt'} />}
                 variant={'outlined'}
               >
                 {t('lorem')}
@@ -66,15 +66,15 @@ const GetInvolvedSection = () => {
             className={classes.innerSection}
             chipContainer={
               <div className={classes.headerIcons}>
-                <Icon iconName={'diversity_2'} variant={'tertiary'} />
-                <Icon iconName={'wallet'} variant={'tertiary'} />
+                <MyIcon name={'diversity_2'} rounded />
+                <MyIcon name={'wallet'} rounded />
               </div>
             }
             title={<TextElement type={'heading-sm'}>{t('lorem')}</TextElement>}
             subtitle={<TextElement type={'body-sm'}>{t('lorem')}</TextElement>}
             ctaContent={
               <Button
-                leadingIcon={<Icon iconName={'arrow_right_alt'} />}
+                leadingIcon={<MyIcon name={'arrow_right_alt'} />}
                 variant={'outlined'}
               >
                 {t('lorem')}
