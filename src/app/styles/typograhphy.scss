@@ -32,6 +32,7 @@
   line-height: var(--line-height-heading-heading-md);
   letter-spacing: var(--tracking-heading-heading-md);
   font: var(--type-font-family-primary);
+  font-weight: 700;
 }
 
 @mixin heading-sm {

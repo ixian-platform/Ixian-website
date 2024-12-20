@@ -59,7 +59,7 @@ const FeaturesSection = () => {
         />
         <div className={classes.featCards}>
           <InteractionCard
-            icon={<MyIcon name={'bolt'} />}
+            icon={<MyIcon name={'call_split'} rounded />}
             title={t('lorem')}
             description={t('lorem')}
             className={classes.colSpan2}
@@ -68,25 +68,25 @@ const FeaturesSection = () => {
             disableScale
           />
           <InteractionCard
-            icon={'icon'}
+            icon={<MyIcon name={'call_split'} rounded />}
             title={t('lorem')}
             description={t('lorem')}
             enableHover
           />
           <InteractionCard
-            icon={'icon'}
+            icon={<MyIcon name={'edit_audio'} rounded />}
             title={t('lorem')}
             description={t('lorem')}
             enableHover
           />
           <InteractionCard
-            icon={'icon'}
+            icon={<MyIcon name={'bolt'} rounded />}
             title={t('lorem')}
             description={t('lorem')}
             enableHover
           />
           <InteractionCard
-            icon={'icon'}
+            icon={<MyIcon name={'s2_mark'} rounded />}
             title={t('lorem')}
             description={t('lorem')}
             enableHover
@@ -94,12 +94,28 @@ const FeaturesSection = () => {
           <BigCard
             body={
               <SectionHeader
-                title={t('lorem')}
-                subtitle={t('lorem')}
-                ctaContent={
-                  <Button leadingIcon={<MyIcon name={'icon'} />}>
+                title={
+                  <TextElement type={'heading-md'} as={'h1'}>
                     {t('lorem')}
-                  </Button>
+                  </TextElement>
+                }
+                subtitle={
+                  <TextElement type={'body-md'} as={'h1'}>
+                    {t('lorem')}
+                  </TextElement>
+                }
+                ctaContent={
+                  <>
+                    <Button leadingIcon={<MyIcon name={'arrow_right_alt'} />}>
+                      {t('lorem')}
+                    </Button>
+                    <Button
+                      leadingIcon={<MyIcon name={'arrow_right_alt'} />}
+                      variant={'text'}
+                    >
+                      {t('lorem')}
+                    </Button>
+                  </>
                 }
                 chipContainer={
                   <Chip content={t('lorem')} variant={'outlined'} />
@@ -113,22 +129,16 @@ const FeaturesSection = () => {
                 className={classes.illustration}
               />
             }
-            iconContainer={
-              <>
-                <MyIcon name={'bolt'} />
-                <MyIcon name={'bolt'} />
-              </>
-            }
             className={classes.bigCardCustom}
           />
           <InteractionCard
-            icon={'icon'}
+            icon={<MyIcon name={'sync_alt'} rounded />}
             title={t('lorem')}
             description={t('lorem')}
             enableHover
           />
           <InteractionCard
-            icon={'icon'}
+            icon={<MyIcon name={'widgets'} rounded />}
             title={t('lorem')}
             description={t('lorem')}
             enableHover

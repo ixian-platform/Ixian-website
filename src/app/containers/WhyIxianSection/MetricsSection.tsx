@@ -39,7 +39,10 @@ const MetricsSection = () => {
               >
                 {t('lorem')}
               </Button>
-              <Button variant={'text'} leadingIcon={<MyIcon name={'icon'} />}>
+              <Button
+                variant={'text'}
+                leadingIcon={<MyIcon name={'ixian_logo'} />}
+              >
                 {t('lorem')}
               </Button>
             </>

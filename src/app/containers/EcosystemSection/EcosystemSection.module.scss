@@ -1,3 +1,5 @@
+@use '@styles/mixins' as *;
+
 .ecosystemSection {
   width: 100%;
   background: radial-gradient(
@@ -20,8 +22,12 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: var(--spacing-3xl);
-
       position: relative;
+
+      @include mq('sm') {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+      }
 
       &:before,
       &:after {
@@ -59,6 +65,11 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: var(--spacing-xxl);
+
+      @include mq('sm') {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+      }
 
       .rowSpan2 {
         grid-row: span 2;

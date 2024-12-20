@@ -1,3 +1,5 @@
+@use '@styles/mixins' as *;
+
 .featuresSection {
   width: 100%;
   background: var(--colors-surface-01);
@@ -26,6 +28,23 @@
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(3, auto);
         gap: var(--spacing-xxl);
+
+        @include mq('md') {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include mq('sm') {
+          grid-template-columns: 1fr;
+
+          .colSpan2 {
+            grid-column: unset !important;
+          }
+
+          .bigCardCustom {
+            grid-column: unset !important;
+            grid-row: unset !important;
+          }
+        }
 
         .illustration {
           position: absolute;

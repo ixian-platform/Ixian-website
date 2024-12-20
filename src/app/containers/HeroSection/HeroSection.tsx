@@ -29,7 +29,7 @@ const HeroSection = () => {
             <Button leadingIcon={<MyIcon name={'arrow_right_alt'} />}>
               {t('lorem')}
             </Button>
-            <Button variant={'text'} leadingIcon={<MyIcon name={'bolt'} />}>
+            <Button variant={'text'} leadingIcon={<MyIcon name={'charger'} />}>
               {t('lorem')}
             </Button>
           </>

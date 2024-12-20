@@ -59,11 +59,15 @@
       all 0.3s ease;
     animation: none;
     border: none;
+    //TODO: fix hambuger menu
+    pointer-events: none;
+    user-select: none;
 
     &.open {
       opacity: 1;
       transform: translateY(0);
       animation: slideInBorder 0.3s forwards;
+      pointer-events: initial;
     }
 
     a {

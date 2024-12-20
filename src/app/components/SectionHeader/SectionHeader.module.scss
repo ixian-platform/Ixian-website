@@ -1,3 +1,5 @@
+@use '@styles/mixins' as *;
+
 .sectionHeader {
   width: 100%;
   display: flex;
@@ -10,6 +12,10 @@
     margin-top: 28px;
     display: flex;
     gap: var(--spacing-xs);
+
+    @include mq('md') {
+      flex-wrap: wrap;
+    }
   }
 }
 

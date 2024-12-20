@@ -1,3 +1,5 @@
+@use '@styles/mixins' as *;
+
 .useCasesSection {
   width: 100%;
   background: linear-gradient(
@@ -7,12 +9,9 @@
   );
   border-bottom: 4px solid;
   border-image: linear-gradient(45deg, #6ee17f, #a546e4, #4d7df6) 1;
+  position: relative;
 
   .useCases {
-    background-image: url('/assets/dark/pattern-right.svg');
-    background-position: 105% 103%;
-    background-size: 40%;
-    background-repeat: no-repeat;
     padding: var(--spacing-super-xl) var(--spacing-md);
     display: flex;
     flex-direction: column;
@@ -22,10 +21,42 @@
       width: 100%;
       display: flex;
       gap: var(--spacing-xxl);
+      z-index: 1;
+
+      @include mq('md') {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: flex-start;
+
+        > div {
+          max-width: unset;
+        }
+      }
+
+      @include mq('xs') {
+        grid-template-columns: repeat(1, 1fr);
+      }
     }
 
     .buildTogether {
       color: var(--colors-text-inverse);
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background-image: url('/assets/dark/pattern-right.svg');
+    background-position: 80% 0;
+    background-repeat: no-repeat;
+    z-index: 0;
+
+    @include mq('xs') {
+      background-position: 0 0;
     }
   }
 }

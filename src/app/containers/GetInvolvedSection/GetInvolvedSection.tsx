@@ -45,7 +45,7 @@ const GetInvolvedSection = () => {
             className={classes.innerSection}
             chipContainer={
               <div className={classes.headerIcons}>
-                <MyIcon name={'icon'} />
+                <MyIcon name={'ixian_logo'} />
                 <MyIcon name={'s2_mark'} />
               </div>
             }

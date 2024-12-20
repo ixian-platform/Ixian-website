@@ -1,3 +1,5 @@
+@use '@styles/mixins' as *;
+
 .wrapperSection {
   background: var(--colors-surface-01);
   border-bottom: 1px solid var(--colors-outline-02);
@@ -15,6 +17,7 @@
     display: flex;
 
     .customSectionHeader {
+      z-index: 1;
       max-width: 600px;
     }
 
@@ -24,8 +27,20 @@
       left: 0;
       right: 0;
 
+      @include mq('md') {
+        max-height: 500px;
+      }
+
       > canvas {
         transform: translateX(30%);
+
+        @include mq('md') {
+          transform: translate(40%, -40%);
+        }
+
+        @include mq('xs') {
+          transform: translate(40%, -50%);
+        }
       }
     }
   }

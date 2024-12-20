@@ -1,3 +1,5 @@
+@use '@styles/mixins' as *;
+
 .getInvolvedSection {
   width: 100%;
   background: radial-gradient(
@@ -14,6 +16,10 @@
     display: flex;
     gap: var(--spacing-xxl);
 
+    @include mq('md') {
+      flex-direction: column;
+    }
+
     .bottomRetro {
       position: absolute;
       bottom: 0;
@@ -26,9 +32,12 @@
     .involvedCards {
       width: 100%;
       display: flex;
-      align-items: center;
       justify-content: space-between;
       gap: var(--spacing-xxl);
+
+      @include mq('md') {
+        flex-direction: column;
+      }
 
       .singleCard {
         width: 100%;
@@ -37,6 +46,10 @@
         border-radius: var(--corner-radius-lg);
         background: var(--colors-surface-01);
         border: 1px solid var(--colors-outline-02);
+
+        @include mq('md') {
+          max-width: unset;
+        }
 
         .innerSection {
           min-width: 346px;

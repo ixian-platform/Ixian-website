@@ -11,32 +11,32 @@ import MyIcon from '@components/MyIcon/MyIcon';
 
 const singleInfoData = [
   {
-    icon: 'bolt',
+    icon: 'ixian_logo',
     title: 'lorem',
     description: 'lorem',
   },
   {
-    icon: 'bolt',
+    icon: 'avg_pace',
     title: 'lorem',
     description: 'lorem',
   },
   {
-    icon: 'bolt',
+    icon: 'widgets',
     title: 'lorem',
     description: 'lorem',
   },
   {
-    icon: 'bolt',
+    icon: 'all_match',
     title: 'lorem',
     description: 'lorem',
   },
   {
-    icon: 'bolt',
+    icon: 'compare_arrows',
     title: 'lorem',
     description: 'lorem',
   },
   {
-    icon: 'bolt',
+    icon: 'call_split',
     title: 'lorem',
     description: 'lorem',
   },
@@ -71,7 +71,10 @@ const EcosystemSection = () => {
             >
               {t('lorem')}
             </Button>
-            <Button variant={'text'} leadingIcon={<MyIcon name={'icon'} />}>
+            <Button
+              variant={'text'}
+              leadingIcon={<MyIcon name={'ixian_logo'} />}
+            >
               {t('lorem')}
             </Button>
           </>
@@ -80,7 +83,7 @@ const EcosystemSection = () => {
       <div className={classes.offerInfo}>
         {singleInfoData.map((info, index) => (
           <div key={index} className={classes.singleInfo}>
-            <MyIcon name={info.icon} />
+            <MyIcon name={info.icon} rounded />
             <div>
               <TextElement type={'heading-xs'}>{t(info.title)}</TextElement>
               <TextElement type={'body-sm'}>{t(info.description)}</TextElement>
@@ -92,8 +95,8 @@ const EcosystemSection = () => {
         <BigCard
           iconContainer={
             <>
-              <MyIcon name={'bolt'} />
-              <MyIcon name={'bolt'} />
+              <MyIcon name={'spixi_logo'} rounded />
+              <MyIcon name={'wallet'} rounded />
             </>
           }
           bgImageVariant={'secondary'}
@@ -113,7 +116,7 @@ const EcosystemSection = () => {
                 </TextElement>
               }
               ctaContent={
-                <Button leadingIcon={<MyIcon name={'icon'} />}>
+                <Button leadingIcon={<MyIcon name={'spixi_logo'} />}>
                   {t('lorem')}
                 </Button>
               }
@@ -121,14 +124,14 @@ const EcosystemSection = () => {
           }
         />
         <InteractionCard
-          icon={<MyIcon name={'bolt'} />}
+          icon={<MyIcon name={'ixinames'} rounded />}
           title={t('lorem')}
           description={t('lorem')}
           fullWidth
           enableHover
         />
         <InteractionCard
-          icon={<MyIcon name={'bolt'} />}
+          icon={<MyIcon name={'ar_stickers'} rounded />}
           title={t('lorem')}
           description={t('lorem')}
           fullWidth
