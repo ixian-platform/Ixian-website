@@ -110,7 +110,7 @@ const FeaturesSection = () => {
                       {t('lorem')}
                     </Button>
                     <Button
-                      leadingIcon={<MyIcon name={'arrow_right_alt'} />}
+                      leadingIcon={<MyIcon name={'github'} />}
                       variant={'text'}
                     >
                       {t('lorem')}

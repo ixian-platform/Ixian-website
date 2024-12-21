@@ -74,8 +74,12 @@
           gap: var(--spacing-sm);
 
           .mainTitle {
-            color: var(--colors-text-02);
+            color: var(--colors-text-inverse-2);
             margin-bottom: 12px;
+          }
+
+          > a {
+            color: var(--colors-text-inverse);
           }
 
           @include mq('xs') {
