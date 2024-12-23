@@ -7,7 +7,6 @@ import { useTranslations } from 'next-intl';
 import Chip from '@components/Chip/Chip';
 import ContentWrapper from '@components/ContentWrapper/ContentWrapper';
 import NumberTicker from '@/components/ui/number-ticker';
-import TypingAnimation from '@/components/ui/typing-animation';
 
 const IxianDltSection = () => {
   const t = useTranslations();
