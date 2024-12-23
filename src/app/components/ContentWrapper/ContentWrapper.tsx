@@ -4,19 +4,19 @@ import classNames from 'classnames';
 
 interface ContentWrapperProps extends PropsWithChildren {
   className?: string;
-  wrapperSection?: boolean;
+  asWrapperSection?: boolean;
   sectionClass?: string;
   sectionId?: string;
 }
 
 const ContentWrapper = ({
   className,
-  wrapperSection,
+  asWrapperSection,
   sectionClass,
   sectionId,
   children,
 }: ContentWrapperProps) => {
-  if (wrapperSection) {
+  if (asWrapperSection) {
     return (
       <section
         className={classNames(classes.sectionWrapper, sectionClass)}

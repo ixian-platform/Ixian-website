@@ -1,44 +1,45 @@
 import classes from './HeroSection.module.scss';
 import ContentWrapper from '@components/ContentWrapper/ContentWrapper';
-import Button from '@components/Button/Button';
-import { useTranslations } from 'next-intl';
 import SectionHeader from '@components/SectionHeader/SectionHeader';
 import TextElement from '@components/TextElement/TextElement';
 import Spline from '@splinetool/react-spline/next';
-import MyIcon from '@components/MyIcon/MyIcon';
+import { ReactNode } from 'react';
+import classNames from 'classnames';
 
-const HeroSection = () => {
-  const t = useTranslations();
+interface HeroSectionProps {
+  chip?: ReactNode;
+  title: ReactNode;
+  subtitle: string;
+  ctaContent: ReactNode;
+  splinePath?: string;
+  className?: string;
+}
 
+const HeroSection = ({
+  title,
+  splinePath,
+  ctaContent,
+  subtitle,
+  chip,
+  className,
+}: HeroSectionProps) => {
   return (
     <ContentWrapper
-      wrapperSection
+      asWrapperSection
       sectionClass={classes.wrapperSection}
-      className={classes.heroSection}
+      className={classNames(classes.heroSection, className)}
     >
       <SectionHeader
         enableSlideUp
         className={classes.customSectionHeader}
-        chipContainer={
-          <TextElement type={'label-lg'}>{t('lorem')}</TextElement>
-        }
-        title={<TextElement type={'display-lg'}>{t('lorem')}</TextElement>}
-        subtitle={<TextElement type={'body-md'}>{t('lorem')}</TextElement>}
-        ctaContent={
-          <>
-            <Button leadingIcon={<MyIcon name={'arrow_right_alt'} />}>
-              {t('lorem')}
-            </Button>
-            <Button variant={'text'} leadingIcon={<MyIcon name={'charger'} />}>
-              {t('lorem')}
-            </Button>
-          </>
-        }
+        chipContainer={chip}
+        title={title}
+        subtitle={<TextElement type={'body-md'}>{subtitle}</TextElement>}
+        ctaContent={ctaContent}
       />
-      <Spline
-        scene="/assets/spline/chips.spline"
-        className={classes.chipsSpline}
-      />
+      {splinePath && (
+        <Spline scene={splinePath} className={classes.chipsSpline} />
+      )}
     </ContentWrapper>
   );
 };

@@ -18,7 +18,7 @@ const FeaturesSection = () => {
   return (
     <ContentWrapper
       sectionClass={classes.featuresSection}
-      wrapperSection
+      asWrapperSection
       className={classes.featuresWrapper}
     >
       <Image

@@ -48,7 +48,7 @@ const EcosystemSection = () => {
   return (
     <ContentWrapper
       sectionClass={classes.ecosystemSection}
-      wrapperSection
+      asWrapperSection
       className={classes.ecosystemWrapper}
     >
       <SectionHeader

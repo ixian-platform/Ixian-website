@@ -13,7 +13,7 @@ const UseCases = () => {
 
   return (
     <ContentWrapper
-      wrapperSection
+      asWrapperSection
       className={classes.useCases}
       sectionClass={classes.useCasesSection}
     >

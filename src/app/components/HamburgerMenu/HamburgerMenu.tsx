@@ -1,10 +1,11 @@
 'use client';
 
 import classes from './HamburgerMenu.module.scss';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import classNames from 'classnames';
 import Link from 'next/link';
 import { linksData } from '@components/Navbar/Navbar';
+import ThemeSwitcher from '@components/ThemeSwitcher/ThemeSwitcher';
 
 const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,6 +42,7 @@ const HamburgerMenu = () => {
             {link.label}
           </Link>
         ))}
+        <ThemeSwitcher />
       </div>
     </section>
   );

@@ -15,7 +15,7 @@ const GetInvolvedSection = () => {
 
   return (
     <ContentWrapper
-      wrapperSection
+      asWrapperSection
       className={classes.getInvolved}
       sectionClass={classes.getInvolvedSection}
       sectionId={Section.GET_INVOLVED}

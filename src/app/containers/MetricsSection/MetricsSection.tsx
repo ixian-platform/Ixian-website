@@ -14,7 +14,7 @@ const MetricsSection = () => {
 
   return (
     <ContentWrapper
-      wrapperSection
+      asWrapperSection
       className={classes.contentWrapper}
       sectionClass={classes.metricsSection}
     >
