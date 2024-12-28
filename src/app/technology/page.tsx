@@ -6,6 +6,7 @@ import HeroSection from '@/app/containers/HeroSection/HeroSection';
 import { useTranslations } from 'next-intl';
 import IxianDltSection from '@/app/containers/IxianDltSection/IxianDltSection';
 import HighlightsSection from '@/app/containers/HighlightsSection/HighlightsSection';
+import GitSection from '@/app/containers/GitSection/GitSection';
 
 export default function Technology() {
   const t = useTranslations();
@@ -30,6 +31,7 @@ export default function Technology() {
       />
       <IxianDltSection />
       <HighlightsSection />
+      <GitSection />
     </section>
   );
 }

@@ -1,0 +1,46 @@
+.milestones {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xxl);
+  transition: all 0.3s ease;
+
+  .years {
+    display: flex;
+    gap: var(--spacing-xxl);
+    align-items: center;
+    color: var(--colors-text-02);
+
+    .yearSelected {
+      color: var(--colors-text-01);
+    }
+  }
+
+  .selectedContent {
+    display: flex;
+    gap: var(--spacing-xxl);
+    flex-wrap: wrap;
+  }
+
+  .switcher {
+    display: flex;
+    gap: 12px;
+
+    .singleSwitch {
+      padding: 8px;
+      background: var(--colors-surface-03);
+      border-radius: var(--corner-radius-full);
+
+      &.disabled {
+        background: transparent;
+        pointer-events: none;
+        opacity: 0.5;
+      }
+
+      &:hover {
+        background: var(--colors-surface-02);
+        cursor: pointer;
+      }
+    }
+  }
+}
