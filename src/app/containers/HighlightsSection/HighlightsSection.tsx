@@ -40,6 +40,8 @@ const highlightsData = [
   },
 ];
 
+//TODO: make it reusable
+
 const HighlightsSection = () => {
   const t = useTranslations();
 

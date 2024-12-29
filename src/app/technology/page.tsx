@@ -7,6 +7,8 @@ import { useTranslations } from 'next-intl';
 import IxianDltSection from '@/app/containers/IxianDltSection/IxianDltSection';
 import HighlightsSection from '@/app/containers/HighlightsSection/HighlightsSection';
 import GitSection from '@/app/containers/GitSection/GitSection';
+import StartBuildingNow from '@/app/containers/StartBuildingNow/StartBuildingNow';
+import S2NetworkSection from '@/app/containers/S2NetworkSection/S2NetworkSection';
 
 export default function Technology() {
   const t = useTranslations();
@@ -32,6 +34,8 @@ export default function Technology() {
       <IxianDltSection />
       <HighlightsSection />
       <GitSection />
+      <S2NetworkSection />
+      <StartBuildingNow />
     </section>
   );
 }
