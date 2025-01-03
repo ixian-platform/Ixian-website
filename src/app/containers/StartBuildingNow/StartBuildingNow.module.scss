@@ -5,7 +5,7 @@
   border-image: linear-gradient(45deg, #6ee17f, #a546e4, #4d7df6) 1;
 
   .startBuildingContainer {
-    padding: 120px 16px;
+    padding: var(--spacing-super-xxl) var(--spacing-md);
     color: var(--colors-text-inverse);
     background-image: url('/assets/dark/pattern-right.svg');
     background-position: right;

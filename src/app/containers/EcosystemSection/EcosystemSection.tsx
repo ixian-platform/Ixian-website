@@ -85,8 +85,8 @@ const EcosystemSection = () => {
           <div key={index} className={classes.singleInfo}>
             <MyIcon name={info.icon} rounded />
             <div>
-              <TextElement type={'heading-xs'}>{t(info.title)}</TextElement>
-              <TextElement type={'body-sm'}>{t(info.description)}</TextElement>
+              <TextElement type={'heading-xs'}>{info.title}</TextElement>
+              <TextElement type={'body-sm'}>{info.description}</TextElement>
             </div>
           </div>
         ))}

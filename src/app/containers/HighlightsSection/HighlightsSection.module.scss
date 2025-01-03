@@ -1,56 +1,47 @@
 @use '@styles/mixins' as *;
 
-.highlightsSection {
-  width: 100%;
-  background: var(--colors-surface-02);
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-super);
+  padding: var(--spacing-super-xxl) var(--spacing-xxl);
+  position: relative;
 
-  .highlightsContainer {
-    padding: 124px 16px;
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background: var(--fading-border-vertical);
+  }
 
-    .wrapper {
+  &:before {
+    left: 0;
+  }
+
+  &:after {
+    right: 0;
+  }
+
+  .highlightsInfo {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-super);
+    position: relative;
+
+    @include mq('sm') {
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+    }
+
+    .singleInfo {
+      width: 100%;
       display: flex;
-      flex-direction: column;
-      gap: var(--spacing-super);
-      padding: 0 32px;
-      position: relative;
-
-      &:before,
-      &:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        height: 100%;
-        width: 1px;
-        background: var(--fading-border-vertical);
-      }
-
-      &:before {
-        left: 0;
-      }
-
-      &:after {
-        right: 0;
-      }
-
-      .highlightsInfo {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--spacing-super);
-        position: relative;
-
-        @include mq('sm') {
-          grid-template-columns: repeat(1, 1fr);
-          justify-items: center;
-        }
-
-        .singleInfo {
-          width: 100%;
-          display: flex;
-          align-items: flex-start;
-          gap: var(--spacing-md);
-        }
-      }
+      align-items: flex-start;
+      gap: var(--spacing-md);
     }
   }
 }

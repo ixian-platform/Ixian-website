@@ -7,7 +7,7 @@
 
   .gitSectionWrapper {
     width: 100%;
-    padding: 100px 16px;
+    padding: var(--spacing-super-xl) var(--spacing-md);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-super);

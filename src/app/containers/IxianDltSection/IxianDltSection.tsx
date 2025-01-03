@@ -7,6 +7,41 @@ import { useTranslations } from 'next-intl';
 import Chip from '@components/Chip/Chip';
 import ContentWrapper from '@components/ContentWrapper/ContentWrapper';
 import NumberTicker from '@/components/ui/number-ticker';
+import HighlightsSection from '@/app/containers/HighlightsSection/HighlightsSection';
+import Button from '@components/Button/Button';
+
+const dltHighlightsData = [
+  {
+    icon: 'ixian_logo',
+    title: 'lorem',
+    description: 'lorem',
+  },
+  {
+    icon: 'avg_pace',
+    title: 'lorem',
+    description: 'lorem',
+  },
+  {
+    icon: 'widgets',
+    title: 'lorem',
+    description: 'lorem',
+  },
+  {
+    icon: 'all_match',
+    title: 'lorem',
+    description: 'lorem',
+  },
+  {
+    icon: 'compare_arrows',
+    title: 'lorem',
+    description: 'lorem',
+  },
+  {
+    icon: 'call_split',
+    title: 'lorem',
+    description: 'lorem',
+  },
+];
 
 const IxianDltSection = () => {
   const t = useTranslations();
@@ -77,6 +112,20 @@ const IxianDltSection = () => {
       <TextElement className={classes.note} type={'body-sm'}>
         {t('lorem')}
       </TextElement>
+      <HighlightsSection
+        highlightsData={dltHighlightsData}
+        chipName={t('lorem')}
+        title={t('lorem')}
+        subtitle={t('lorem')}
+        ctaContent={
+          <Button
+            variant={'outlined'}
+            leadingIcon={<MyIcon name={'arrow_right_alt'} />}
+          >
+            {t('lorem')}
+          </Button>
+        }
+      />
     </ContentWrapper>
   );
 };
