@@ -26,7 +26,7 @@ export const linksData = [
   },
   {
     label: 'Build',
-    href: Routes.INDEX,
+    href: Routes.BUILD,
   },
   {
     label: 'Documentation',

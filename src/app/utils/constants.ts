@@ -1,6 +1,7 @@
 export const Routes = {
   INDEX: '/',
   TECHNOLOGY: '/technology',
+  BUILD: '/build',
   PP: '/privacy-policy',
 } as const;
 

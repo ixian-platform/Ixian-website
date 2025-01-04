@@ -6,14 +6,25 @@ import Spline from '@splinetool/react-spline/next';
 import { ReactNode } from 'react';
 import classNames from 'classnames';
 
-interface HeroSectionProps {
-  chip?: ReactNode;
-  title: ReactNode;
-  subtitle: string;
-  ctaContent: ReactNode;
-  splinePath?: string;
-  className?: string;
-}
+type HeroSectionProps =
+  | {
+      chip?: ReactNode;
+      title: ReactNode;
+      subtitle: string;
+      ctaContent: ReactNode;
+      splinePath: string;
+      leftContainer?: never;
+      className?: string;
+    }
+  | {
+      chip?: ReactNode;
+      title: ReactNode;
+      subtitle: string;
+      ctaContent: ReactNode;
+      splinePath?: never;
+      leftContainer: ReactNode;
+      className?: string;
+    };
 
 const HeroSection = ({
   title,
@@ -21,6 +32,7 @@ const HeroSection = ({
   ctaContent,
   subtitle,
   chip,
+  leftContainer,
   className,
 }: HeroSectionProps) => {
   return (
@@ -40,6 +52,7 @@ const HeroSection = ({
       {splinePath && (
         <Spline scene={splinePath} className={classes.chipsSpline} />
       )}
+      {leftContainer}
     </ContentWrapper>
   );
 };

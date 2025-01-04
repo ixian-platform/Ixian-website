@@ -9,6 +9,9 @@
   .heroSection {
     padding: 140px var(--spacing-md);
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
 
     .customSectionHeader {
       z-index: 1;
