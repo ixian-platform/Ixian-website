@@ -5,11 +5,12 @@
   background: var(--colors-surface-inverse);
   color: var(--colors-text-inverse);
   position: relative;
+  overflow: hidden;
 
   .wrapper {
     padding: 40px var(--spacing-md);
 
-    @include mq('xs') {
+    @include mq('sm') {
       padding: 24px;
     }
 
@@ -32,6 +33,10 @@
         flex-direction: column;
         gap: var(--spacing-sm);
 
+        @include mq('xs') {
+          max-width: unset;
+        }
+
         .info {
           display: flex;
           flex-direction: column;
@@ -50,10 +55,14 @@
         justify-content: flex-end;
         gap: var(--spacing-xxl);
 
-        @include mq('xs') {
-          flex-direction: column;
+        @include mq('sm') {
+          display: grid;
           gap: var(--spacing-sm);
-          align-items: flex-start;
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mq('xs') {
+          justify-items: center;
         }
 
         .singleColumn {
@@ -65,8 +74,12 @@
           gap: var(--spacing-sm);
 
           .mainTitle {
-            color: var(--colors-text-02);
+            color: var(--colors-text-inverse-2);
             margin-bottom: 12px;
+          }
+
+          > a {
+            color: var(--colors-text-inverse);
           }
 
           @include mq('xs') {
@@ -88,6 +101,11 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      @include mq('sm') {
+        flex-direction: column;
+        gap: 12px;
+      }
 
       > span {
         letter-spacing: 0.15rem;

@@ -3,40 +3,40 @@ import ContentWrapper from '@components/ContentWrapper/ContentWrapper';
 import Chip from '@components/Chip/Chip';
 import TextElement from '@components/TextElement/TextElement';
 import Button from '@components/Button/Button';
-import Icon from '@components/Icon/Icon';
 import SectionHeader from '@components/SectionHeader/SectionHeader';
 import { useTranslations } from 'next-intl';
 import InteractionCard from '@components/InteractionCard/InteractionCard';
 import BigCard from '@components/BigCard/BigCard';
+import MyIcon from '@components/MyIcon/MyIcon';
 
 const singleInfoData = [
   {
-    icon: 'bolt',
+    icon: 'ixian_logo',
     title: 'lorem',
     description: 'lorem',
   },
   {
-    icon: 'bolt',
+    icon: 'avg_pace',
     title: 'lorem',
     description: 'lorem',
   },
   {
-    icon: 'bolt',
+    icon: 'widgets',
     title: 'lorem',
     description: 'lorem',
   },
   {
-    icon: 'bolt',
+    icon: 'all_match',
     title: 'lorem',
     description: 'lorem',
   },
   {
-    icon: 'bolt',
+    icon: 'compare_arrows',
     title: 'lorem',
     description: 'lorem',
   },
   {
-    icon: 'bolt',
+    icon: 'call_split',
     title: 'lorem',
     description: 'lorem',
   },
@@ -48,7 +48,7 @@ const EcosystemSection = () => {
   return (
     <ContentWrapper
       sectionClass={classes.ecosystemSection}
-      wrapperSection
+      asWrapperSection
       className={classes.ecosystemWrapper}
     >
       <SectionHeader
@@ -67,11 +67,14 @@ const EcosystemSection = () => {
           <>
             <Button
               variant={'outlined'}
-              leadingIcon={<Icon iconName={'arrow_right_alt'} />}
+              leadingIcon={<MyIcon name={'arrow_right_alt'} />}
             >
               {t('lorem')}
             </Button>
-            <Button variant={'text'} leadingIcon={<Icon iconName={'icon'} />}>
+            <Button
+              variant={'text'}
+              leadingIcon={<MyIcon name={'ixian_logo'} />}
+            >
               {t('lorem')}
             </Button>
           </>
@@ -80,10 +83,10 @@ const EcosystemSection = () => {
       <div className={classes.offerInfo}>
         {singleInfoData.map((info, index) => (
           <div key={index} className={classes.singleInfo}>
-            <Icon iconName={info.icon} />
+            <MyIcon name={info.icon} rounded />
             <div>
-              <TextElement type={'heading-xs'}>{t(info.title)}</TextElement>
-              <TextElement type={'body-sm'}>{t(info.description)}</TextElement>
+              <TextElement type={'heading-xs'}>{info.title}</TextElement>
+              <TextElement type={'body-sm'}>{info.description}</TextElement>
             </div>
           </div>
         ))}
@@ -92,8 +95,8 @@ const EcosystemSection = () => {
         <BigCard
           iconContainer={
             <>
-              <Icon iconName={'bolt'} />
-              <Icon iconName={'bolt'} />
+              <MyIcon name={'spixi_logo'} rounded />
+              <MyIcon name={'wallet'} rounded />
             </>
           }
           bgImageVariant={'secondary'}
@@ -113,9 +116,7 @@ const EcosystemSection = () => {
                 </TextElement>
               }
               ctaContent={
-                <Button
-                  leadingIcon={<Icon iconName={'icon'} variant={'secondary'} />}
-                >
+                <Button leadingIcon={<MyIcon name={'spixi_logo'} />}>
                   {t('lorem')}
                 </Button>
               }
@@ -123,14 +124,14 @@ const EcosystemSection = () => {
           }
         />
         <InteractionCard
-          icon={<Icon iconName={'bolt'} />}
+          icon={<MyIcon name={'ixinames'} rounded />}
           title={t('lorem')}
           description={t('lorem')}
           fullWidth
           enableHover
         />
         <InteractionCard
-          icon={<Icon iconName={'bolt'} />}
+          icon={<MyIcon name={'ar_stickers'} rounded />}
           title={t('lorem')}
           description={t('lorem')}
           fullWidth

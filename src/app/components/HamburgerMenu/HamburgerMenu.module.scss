@@ -18,7 +18,7 @@
     span {
       width: 30px;
       height: 3px;
-      background: #fff;
+      background: var(--colors-text-inverse);
       border-radius: 2px;
       transition: all 0.3s linear;
       position: relative;
@@ -44,8 +44,9 @@
     display: flex;
     align-items: flex-end;
     flex-direction: column;
-    background: #0e1925;
-    top: 68px;
+    gap: var(--spacing-sm);
+    background: var(--colors-surface-inverse);
+    top: 64px;
     right: 0;
     left: 0;
     transform: translateY(-20px);
@@ -58,36 +59,31 @@
       opacity 0.3s ease,
       all 0.3s ease;
     animation: none;
-    border: none;
 
     &.open {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(-2px);
       animation: slideInBorder 0.3s forwards;
     }
 
+    &.hidden {
+      display: none;
+    }
+
     a {
-      color: #fff;
+      color: var(--colors-text-inverse);
       text-decoration: none;
-      padding: 10px 0;
       transition: color 0.3s;
       font-size: 1.5rem;
-
-      &:hover {
-        color: #3ed3f4;
-      }
     }
   }
 }
 
 @keyframes slideInBorder {
-  0% {
+  from {
     border-top: none;
   }
-  50% {
-    border-top: 1px solid #0e1925;
-  }
-  100% {
-    border-top: 1px solid #fff;
+  to {
+    border-top: 1px solid var(--colors-outline-02) !important;
   }
 }

@@ -64,7 +64,7 @@ const Footer = () => {
               </TextElement>
               {technologySubmenu.map((item) => (
                 <Link href={item.href} key={item.title}>
-                  <TextElement type={'body-sm'}>{item.title}</TextElement>
+                  <TextElement type={'label-sm'}>{item.title}</TextElement>
                 </Link>
               ))}
             </div>
@@ -74,7 +74,7 @@ const Footer = () => {
               </TextElement>
               {technologySubmenu.map((item) => (
                 <Link href={item.href} key={item.title}>
-                  <TextElement type={'body-sm'}>{item.title}</TextElement>
+                  <TextElement type={'label-sm'}>{item.title}</TextElement>
                 </Link>
               ))}
             </div>
@@ -84,7 +84,7 @@ const Footer = () => {
               </TextElement>
               {technologySubmenu.map((item) => (
                 <Link href={item.href} key={item.title}>
-                  <TextElement type={'body-sm'}>{item.title}</TextElement>
+                  <TextElement type={'label-sm'}>{item.title}</TextElement>
                 </Link>
               ))}
             </div>
@@ -94,7 +94,7 @@ const Footer = () => {
               </TextElement>
               {technologySubmenu.map((item) => (
                 <Link href={item.href} key={item.title}>
-                  <TextElement type={'body-sm'}>{item.title}</TextElement>
+                  <TextElement type={'label-sm'}>{item.title}</TextElement>
                 </Link>
               ))}
             </div>

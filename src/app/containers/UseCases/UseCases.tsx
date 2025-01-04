@@ -6,15 +6,14 @@ import Button from '@components/Button/Button';
 import SectionHeader from '@components/SectionHeader/SectionHeader';
 import { useTranslations } from 'next-intl';
 import InteractionCard from '@components/InteractionCard/InteractionCard';
-import Icon from '@components/Icon/Icon';
-import Link from 'next/link';
+import MyIcon from '@components/MyIcon/MyIcon';
 
 const UseCases = () => {
   const t = useTranslations();
 
   return (
     <ContentWrapper
-      wrapperSection
+      asWrapperSection
       className={classes.useCases}
       sectionClass={classes.useCasesSection}
     >
@@ -33,7 +32,7 @@ const UseCases = () => {
         ctaContent={
           <Button
             variant={'outlined'}
-            leadingIcon={<Icon iconName={'arrow_right_alt'} />}
+            leadingIcon={<MyIcon name={'arrow_right_alt'} />}
           >
             {t('lorem')}
           </Button>
@@ -44,45 +43,33 @@ const UseCases = () => {
           title={t('lorem')}
           description={t('lorem')}
           enableHoverImage
+          hoverImageType={'iot'}
           disableScale
-          additionalContent={
-            <Link className={classes.useCaseArrowLink} href={'/'}>
-              <Icon iconName={'arrow_forward_ios'} variant={'secondary'} />
-            </Link>
-          }
+          linkHref={'/'}
         />
         <InteractionCard
           title={t('lorem')}
           description={t('lorem')}
           enableHoverImage
+          hoverImageType={'enterprise'}
           disableScale
-          additionalContent={
-            <Link className={classes.useCaseArrowLink} href={'/'}>
-              <Icon iconName={'arrow_forward_ios'} variant={'secondary'} />
-            </Link>
-          }
+          linkHref={'/'}
         />
         <InteractionCard
           title={t('lorem')}
           description={t('lorem')}
           enableHoverImage
+          hoverImageType={'access'}
           disableScale
-          additionalContent={
-            <Link className={classes.useCaseArrowLink} href={'/'}>
-              <Icon iconName={'arrow_forward_ios'} variant={'secondary'} />
-            </Link>
-          }
+          linkHref={'/'}
         />
         <InteractionCard
           title={t('lorem')}
           description={t('lorem')}
           enableHoverImage
+          hoverImageType={'dapps'}
           disableScale
-          additionalContent={
-            <Link className={classes.useCaseArrowLink} href={'/'}>
-              <Icon iconName={'arrow_forward_ios'} variant={'secondary'} />
-            </Link>
-          }
+          linkHref={'/'}
         />
       </div>
       <SectionHeader
@@ -100,7 +87,7 @@ const UseCases = () => {
         ctaContent={
           <Button
             variant={'outlined-2'}
-            leadingIcon={<Icon iconName={'orbit'} variant={'secondary'} />}
+            leadingIcon={<MyIcon name={'orbit'} />}
           >
             {t('lorem')}
           </Button>

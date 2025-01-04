@@ -1,0 +1,39 @@
+import classes from '@/app/page.module.scss';
+import Button from '@components/Button/Button';
+import MyIcon from '@components/MyIcon/MyIcon';
+import TextElement from '@components/TextElement/TextElement';
+import HeroSection from '@/app/containers/HeroSection/HeroSection';
+import { useTranslations } from 'next-intl';
+import IxianDltSection from '@/app/containers/IxianDltSection/IxianDltSection';
+import GitSection from '@/app/containers/GitSection/GitSection';
+import StartBuildingNow from '@/app/containers/StartBuildingNow/StartBuildingNow';
+import S2NetworkSection from '@/app/containers/S2NetworkSection/S2NetworkSection';
+
+export default function Technology() {
+  const t = useTranslations();
+
+  return (
+    <section className={classes.page}>
+      <HeroSection
+        className={classes.techHero}
+        title={<TextElement type={'display-md'}>{t('lorem')}</TextElement>}
+        subtitle={t('lorem')}
+        ctaContent={
+          <>
+            <Button leadingIcon={<MyIcon name={'two_pager'} />}>
+              {t('lorem')}
+            </Button>
+            <Button variant={'text'} leadingIcon={<MyIcon name={'github'} />}>
+              {t('lorem')}
+            </Button>
+          </>
+        }
+        splinePath={'/assets/spline/chips.spline'}
+      />
+      <IxianDltSection />
+      <GitSection />
+      <S2NetworkSection />
+      <StartBuildingNow />
+    </section>
+  );
+}

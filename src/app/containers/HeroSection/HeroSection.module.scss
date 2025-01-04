@@ -1,20 +1,20 @@
+@use '@styles/mixins' as *;
+
 .wrapperSection {
   background: var(--colors-surface-01);
   border-bottom: 1px solid var(--colors-outline-02);
-  background: radial-gradient(
-    148.4% 200.17% at 125.35% 95.08%,
-    rgba(160, 240, 145, 0.21) 13.71%,
-    rgba(166, 219, 238, 0.225) 41.04%,
-    rgba(230, 203, 245, 0.18) 58.92%,
-    rgba(255, 255, 255, 0) 89.85%
-  );
+  background: var(--hero-gradient);
   position: relative;
 
   .heroSection {
     padding: 140px var(--spacing-md);
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
 
     .customSectionHeader {
+      z-index: 1;
       max-width: 600px;
     }
 
@@ -24,8 +24,20 @@
       left: 0;
       right: 0;
 
+      @include mq('md') {
+        max-height: 500px;
+      }
+
       > canvas {
         transform: translateX(30%);
+
+        @include mq('md') {
+          transform: translate(40%, -40%);
+        }
+
+        @include mq('xs') {
+          transform: translate(40%, -50%);
+        }
       }
     }
   }

@@ -1,10 +1,12 @@
+@use '@styles/mixins' as *;
+
 .featuresSection {
   width: 100%;
   background: var(--colors-surface-01);
   border-bottom: 1px solid var(--colors-outline-02);
 
   .featuresWrapper {
-    padding: 120px var(--spacing-md);
+    padding: var(--spacing-super-xxl) var(--spacing-md);
 
     .topRetro {
       position: absolute;
@@ -27,6 +29,23 @@
         grid-template-rows: repeat(3, auto);
         gap: var(--spacing-xxl);
 
+        @include mq('md') {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include mq('sm') {
+          grid-template-columns: 1fr;
+
+          .colSpan2 {
+            grid-column: unset !important;
+          }
+
+          .bigCardCustom {
+            grid-column: unset !important;
+            grid-row: unset !important;
+          }
+        }
+
         .illustration {
           position: absolute;
           top: 0;
@@ -40,14 +59,7 @@
         .bigCardCustom {
           grid-column: span 2;
           grid-row: span 2;
-          background: radial-gradient(
-              58.24% 69.73% at 96.21% 14.11%,
-              rgba(51, 114, 45, 0.1) 0%,
-              rgba(159, 63, 243, 0.1) 28.87%,
-              rgba(43, 244, 234, 0.1) 65.51%,
-              rgba(251, 252, 251, 0.1) 100%
-            ),
-            var(--colors-surface-02);
+          background: var(--gradient-bg-2);
         }
       }
     }

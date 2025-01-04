@@ -1,0 +1,44 @@
+.rounded {
+  border: 1px solid var(--colors-outline-inverse);
+  border-radius: 100%;
+  padding: 8px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 40px;
+  max-height: 40px;
+
+  &:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid var(--colors-outline-inverse);
+    border-radius: 100%;
+    animation: border-animation 0.3s linear;
+  }
+}
+
+@keyframes spin-border {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes border-animation {
+  0% {
+    border-width: 1px;
+  }
+  50% {
+    border-width: 5px;
+  }
+  100% {
+    border-width: 1px;
+  }
+}

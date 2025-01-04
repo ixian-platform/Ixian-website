@@ -6,7 +6,7 @@ export interface SectionHeaderProps {
   className?: string;
   ctaContent?: ReactNode;
   title: ReactNode;
-  subtitle: ReactNode;
+  subtitle?: ReactNode;
   chipContainer?: ReactNode;
   enableSlideUp?: boolean;
 }

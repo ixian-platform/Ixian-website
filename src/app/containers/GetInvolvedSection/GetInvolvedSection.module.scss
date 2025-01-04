@@ -1,17 +1,19 @@
+@use '@styles/mixins' as *;
+
 .getInvolvedSection {
   width: 100%;
-  background: radial-gradient(
-    58.24% 75.73% at 80% 15%,
-    rgba(51, 114, 45, 0.1) 0%,
-    rgba(159, 63, 243, 0.1) 28.87%,
-    rgba(43, 244, 234, 0.1) 65.51%,
-    rgba(251, 252, 251, 0.1) 100%
-  );
+  background: var(--gradient-bg-1);
+
+  scroll-margin-top: var(--spacing-super-xl);
 
   .getInvolved {
     padding: var(--spacing-super-xl) var(--spacing-md);
     display: flex;
     gap: var(--spacing-xxl);
+
+    @include mq('md') {
+      flex-direction: column;
+    }
 
     .bottomRetro {
       position: absolute;
@@ -25,9 +27,12 @@
     .involvedCards {
       width: 100%;
       display: flex;
-      align-items: center;
       justify-content: space-between;
       gap: var(--spacing-xxl);
+
+      @include mq('md') {
+        flex-direction: column;
+      }
 
       .singleCard {
         width: 100%;
@@ -36,6 +41,10 @@
         border-radius: var(--corner-radius-lg);
         background: var(--colors-surface-01);
         border: 1px solid var(--colors-outline-02);
+
+        @include mq('md') {
+          max-width: unset;
+        }
 
         .innerSection {
           min-width: 346px;
