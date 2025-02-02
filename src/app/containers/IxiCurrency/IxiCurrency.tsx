@@ -10,6 +10,12 @@ import MyIcon from '@components/MyIcon/MyIcon';
 import InteractionCard from '@components/InteractionCard/InteractionCard';
 import NumberTicker from '@/components/ui/number-ticker';
 import TypingAnimation from '@/components/ui/typing-animation';
+import Link from 'next/link';
+import coingecko from '@assets/coingecko.svg';
+import nonkyc from '@assets/nonkyc.svg';
+import xeggex from '@assets/xeggex.svg';
+import Image from 'next/image';
+import { coingeckoIxi, nonkycIxi, xeggexIxi } from '@utils/constants';
 
 const IxiCurrency = () => {
   const t = useTranslations('TechnologyPage.ixiCurrency');
@@ -93,8 +99,20 @@ const IxiCurrency = () => {
             fullWidth
           />
         </div>
-        <div>
-          <p>exchanges</p>
+        <div className={classes.exchangesContainer}>
+          <TextElement type={'heading-md'}>{t('exchanges')}</TextElement>
+          <TextElement type={'body-sm'}>{t('exchangesSubtitle')}</TextElement>
+          <div className={classes.images}>
+            <Link href={coingeckoIxi} target={'_blank'}>
+              <Image src={coingecko} alt={'coingecko'} />
+            </Link>
+            <Link href={xeggexIxi} target={'_blank'}>
+              <Image src={xeggex} alt={'xeggex'} />
+            </Link>
+            <Link href={nonkycIxi} target={'_blank'}>
+              <Image src={nonkyc} alt={'nonkyc'} />
+            </Link>
+          </div>
         </div>
       </div>
     </ContentWrapper>

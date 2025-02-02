@@ -259,7 +259,9 @@
         "targetBlockTime": "Target Block Time",
         "transactionFees": "Transaction Fees",
         "note": "*Data extrapolated from ixiscope and node metrics."
-      }
+      },
+      "exchanges": "Exchanges and Aggregators",
+      "exchangesSubtitle": "Get more information about $IXI and trading pairs."
     }
   }
 }

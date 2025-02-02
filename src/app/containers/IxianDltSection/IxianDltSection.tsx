@@ -82,46 +82,6 @@ const IxianDltSection = () => {
           fullWidth
         />
       </div>
-      {/*<div className={classes.dltMetrics}>*/}
-      {/*  <div className={classes.insideSingle}>*/}
-      {/*    <TextElement type={'heading-md'}>*/}
-      {/*      <NumberTicker value={0.005} className={classes.number} /> kwh*/}
-      {/*    </TextElement>*/}
-      {/*    <TextElement type={'body-md'}>{t('lorem')}</TextElement>*/}
-      {/*  </div>*/}
-      {/*  <div className={classes.insideSingle}>*/}
-      {/*    <TextElement type={'heading-md'}>*/}
-      {/*      <NumberTicker value={379} className={classes.number} />*/}
-      {/*    </TextElement>*/}
-      {/*    <TextElement type={'body-md'}>{t('lorem')}</TextElement>*/}
-      {/*  </div>*/}
-      {/*  <div className={classes.insideSingle}>*/}
-      {/*    <TextElement type={'heading-md'}>*/}
-      {/*      <NumberTicker value={0.002} className={classes.number} />**/}
-      {/*    </TextElement>*/}
-      {/*    <TextElement type={'body-md'}>{t('lorem')}</TextElement>*/}
-      {/*  </div>*/}
-      {/*  <div className={classes.insideSingle}>*/}
-      {/*    <TextElement type={'heading-md'}>*/}
-      {/*      <NumberTicker value={233} className={classes.number} />*/}
-      {/*    </TextElement>*/}
-      {/*    <TextElement type={'body-md'}>{t('lorem')}</TextElement>*/}
-      {/*  </div>*/}
-      {/*</div>*/}
-      {/*<TextElement className={classes.note} type={'body-sm'}>*/}
-      {/*  {t('lorem')}*/}
-      {/*</TextElement>*/}
-      {/*<HighlightsSection*/}
-      {/*  highlightsData={dltHighlightsData}*/}
-      {/*  chipName={t('lorem')}*/}
-      {/*  title={t('lorem')}*/}
-      {/*  subtitle={t('lorem')}*/}
-      {/*  ctaContent={*/}
-      {/*    <Button variant={'outlined'} leadingIcon={<MyIcon name={'Home'} />}>*/}
-      {/*      {t('lorem')}*/}
-      {/*    </Button>*/}
-      {/*  }*/}
-      {/*/>*/}
     </ContentWrapper>
   );
 };

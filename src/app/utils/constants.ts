@@ -14,3 +14,6 @@ export const Section = {
 export type Sections = (typeof Section)[keyof typeof Section];
 
 export const ixianGitHub = 'https://github.com/ProjectIxian';
+export const xeggexIxi = 'https://xeggex.com/market/IXI_USDT';
+export const nonkycIxi = 'https://nonkyc.io/market/IXI_USDT';
+export const coingeckoIxi = 'https://www.coingecko.com/en/coins/ixicash';
