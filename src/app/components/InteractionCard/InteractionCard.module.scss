@@ -11,8 +11,7 @@
   justify-content: space-between;
   overflow: hidden;
   border-radius: var(--corner-radius-xxl);
-  padding: var(--spacing-3xl) var(--spacing-md) var(--spacing-md)
-    var(--spacing-md);
+  padding: var(--spacing-3xl) var(--spacing-xl) var(--spacing-xl);
   transition: all 0.5s ease-in-out;
   border: 1px solid var(--colors-outline-02);
 
@@ -32,10 +31,11 @@
       max-width: 40px;
       max-height: 40px;
       transition: all 0.3s ease-in-out;
+      margin-bottom: 16px;
     }
 
     .title {
-      @include heading-xs;
+      @include heading-md;
       color: var(--colors-text-01);
     }
 
@@ -48,25 +48,36 @@
 
   &:hover {
     .arrowLink {
-      width: 100%;
-      max-width: 40px;
+      position: absolute;
+      top: var(--spacing-xl);
       display: block;
-      transform: translateY(-30px);
     }
   }
 
   .arrowLink {
+    width: 100%;
+    max-width: 40px;
     display: none;
   }
 
   &.enableHover {
     &:hover {
-      background: radial-gradient(
-        117.99% 141.4% at 125.55% 20.32%,
-        #fff 20%,
-        #3ff3ab 35.53%,
-        #c2e05e 85.5%
-      );
+      background:
+        radial-gradient(
+            117.99% 141.4% at 128.55% 44.32%,
+            rgba(44, 234, 27, 0.8) 0%,
+            rgba(159, 63, 243, 0.8) 35.53%,
+            rgba(43, 244, 234, 0.8) 85.5%
+          )
+          /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        radial-gradient(
+            119.7% 137.67% at -10.73% 113.07%,
+            #656565 0%,
+            rgba(64, 102, 160, 0.0890915) 39.41%,
+            rgba(78, 104, 160, 0) 53.09%,
+            #171f4b 100%
+          )
+          /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
     }
   }
 

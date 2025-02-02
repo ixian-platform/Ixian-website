@@ -46,14 +46,14 @@ const milestonesData: MilestonesData[] = [
 ];
 
 const Milestones = () => {
-  const t = useTranslations();
+  const t = useTranslations('TechnologyPage.milestones');
   const [selectedMilestone, setSelectedMilestone] = useState<MilestonesData>(
     milestonesData[0]
   );
 
   return (
     <section className={classes.milestones}>
-      <TextElement type={'heading-sm'}>{t('lorem')}</TextElement>
+      <TextElement type={'heading-sm'}>{t('title')}</TextElement>
       <div className={classes.years}>
         {milestonesData?.map((item) => (
           <TextElement
@@ -86,7 +86,7 @@ const Milestones = () => {
             [classes.disabled]: selectedMilestone === milestonesData[0],
           })}
         >
-          <MyIcon name={'arrow_back_ios_new'} />
+          <MyIcon name={'ArrowBackIosRounded'} />
         </div>
         <div
           onClick={() =>
@@ -97,7 +97,7 @@ const Milestones = () => {
               selectedMilestone === milestonesData[milestonesData.length - 1],
           })}
         >
-          <MyIcon name={'arrow_forward_ios'} />
+          <MyIcon name={'ArrowForwardIosRounded'} />
         </div>
       </div>
     </section>

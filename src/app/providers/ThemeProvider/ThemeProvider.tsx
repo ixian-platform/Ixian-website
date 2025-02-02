@@ -8,7 +8,7 @@ type ThemeMode = 'light' | 'dark';
 
 const ThemeProvider = ({ children }: { children: ReactNode }) => {
   const [themeMode, setThemeMode] = useState<ThemeMode>(
-    (Cookies.get('themeMode') as ThemeMode) || 'light'
+    (Cookies.get('themeMode') as ThemeMode) || 'dark'
   );
 
   useEffect(() => {

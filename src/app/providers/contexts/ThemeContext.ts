@@ -4,6 +4,7 @@ type ThemeMode = 'light' | 'dark';
 
 interface ThemeContextProps {
   themeMode: ThemeMode;
+  // eslint-disable-next-line no-unused-vars
   setThemeMode: (mode: ThemeMode) => void;
 }
 

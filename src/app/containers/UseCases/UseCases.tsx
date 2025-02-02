@@ -9,7 +9,7 @@ import InteractionCard from '@components/InteractionCard/InteractionCard';
 import MyIcon from '@components/MyIcon/MyIcon';
 
 const UseCases = () => {
-  const t = useTranslations();
+  const t = useTranslations('UseCases');
 
   return (
     <ContentWrapper
@@ -18,81 +18,49 @@ const UseCases = () => {
       sectionClass={classes.useCasesSection}
     >
       <SectionHeader
-        chipContainer={<Chip content={t('lorem')} variant={'outlined'} />}
+        chipContainer={<Chip content={t('chip')} variant={'outlined'} />}
         title={
           <TextElement type={'heading-lg'} as={'h1'}>
-            {t('lorem')}
+            {t('title')}
           </TextElement>
         }
         subtitle={
           <TextElement type={'body-md'} as={'h1'}>
-            {t('lorem')}
+            {t('subtitle')}
           </TextElement>
         }
         ctaContent={
-          <Button
-            variant={'outlined'}
-            leadingIcon={<MyIcon name={'arrow_right_alt'} />}
-          >
-            {t('lorem')}
+          <Button leadingIcon={<MyIcon name={'ArrowRightAltRounded'} />}>
+            {t('exploreUseCases')}
           </Button>
         }
       />
       <div className={classes.caseCards}>
         <InteractionCard
-          title={t('lorem')}
-          description={t('lorem')}
+          title={t('card1.title')}
+          description={t('card1.subtitle')}
           enableHoverImage
           hoverImageType={'iot'}
           disableScale
           linkHref={'/'}
         />
         <InteractionCard
-          title={t('lorem')}
-          description={t('lorem')}
-          enableHoverImage
-          hoverImageType={'enterprise'}
-          disableScale
-          linkHref={'/'}
-        />
-        <InteractionCard
-          title={t('lorem')}
-          description={t('lorem')}
+          title={t('card2.title')}
+          description={t('card2.subtitle')}
           enableHoverImage
           hoverImageType={'access'}
           disableScale
           linkHref={'/'}
         />
         <InteractionCard
-          title={t('lorem')}
-          description={t('lorem')}
+          title={t('card3.title')}
+          description={t('card3.subtitle')}
           enableHoverImage
-          hoverImageType={'dapps'}
+          hoverImageType={'enterprise'}
           disableScale
           linkHref={'/'}
         />
       </div>
-      <SectionHeader
-        className={classes.buildTogether}
-        title={
-          <TextElement type={'display-md'} as={'h1'}>
-            {t('lorem')}
-          </TextElement>
-        }
-        subtitle={
-          <TextElement type={'body-md'} as={'h1'}>
-            {t('lorem')}
-          </TextElement>
-        }
-        ctaContent={
-          <Button
-            variant={'outlined-2'}
-            leadingIcon={<MyIcon name={'orbit'} />}
-          >
-            {t('lorem')}
-          </Button>
-        }
-      />
     </ContentWrapper>
   );
 };

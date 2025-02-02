@@ -30,7 +30,9 @@ const TextElement = ({ className, as = 'p', type, children }: TextProps) => {
   const typeClass = type ? classes[type] : '';
 
   return (
-    <Component className={classNames(typeClass, className)}>
+    <Component
+      className={classNames(classes.textElement, typeClass, className)}
+    >
       {children}
     </Component>
   );

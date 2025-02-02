@@ -8,42 +8,42 @@ import { useTranslations } from 'next-intl';
 import InteractionCard from '@components/InteractionCard/InteractionCard';
 import BigCard from '@components/BigCard/BigCard';
 import MyIcon from '@components/MyIcon/MyIcon';
+import { getServerTranslations } from '@utils/getServerTranslations';
+import topRetro from '@assets/top-retro.svg';
+import Image from 'next/image';
+
+const st = await getServerTranslations();
 
 const singleInfoData = [
   {
-    icon: 'ixian_logo',
-    title: 'lorem',
-    description: 'lorem',
+    icon: 'ViewInArRounded',
+    title: st('Ecosystem.robustBlockchain'),
+    description: st('Ecosystem.robustDesc'),
   },
   {
-    icon: 'avg_pace',
-    title: 'lorem',
-    description: 'lorem',
+    icon: 'HomeRepairServiceRounded',
+    title: st('Ecosystem.devTools'),
+    description: st('Ecosystem.devToolsDesc'),
   },
   {
-    icon: 'widgets',
-    title: 'lorem',
-    description: 'lorem',
+    icon: 'WidgetsRounded',
+    title: st('Ecosystem.overlayNetwork'),
+    description: st('Ecosystem.overlayDesc'),
   },
   {
-    icon: 'all_match',
-    title: 'lorem',
-    description: 'lorem',
+    icon: 'PeopleRounded',
+    title: st('Ecosystem.communitySupport'),
+    description: st('Ecosystem.communitySupportDesc'),
   },
   {
-    icon: 'compare_arrows',
-    title: 'lorem',
-    description: 'lorem',
-  },
-  {
-    icon: 'call_split',
-    title: 'lorem',
-    description: 'lorem',
+    icon: 'CompareArrowsRounded',
+    title: st('Ecosystem.IxiCrypto'),
+    description: st('Ecosystem.IxiCryptoDesc'),
   },
 ];
 
 const EcosystemSection = () => {
-  const t = useTranslations();
+  const t = useTranslations('Ecosystem');
 
   return (
     <ContentWrapper
@@ -51,35 +51,96 @@ const EcosystemSection = () => {
       asWrapperSection
       className={classes.ecosystemWrapper}
     >
+      <Image
+        priority
+        src={topRetro}
+        alt={'top-retro'}
+        className={classes.topRetro}
+      />
       <SectionHeader
-        chipContainer={<Chip content={t('lorem')} variant={'outlined'} />}
+        chipContainer={<Chip content={t('chip')} variant={'outlined'} />}
         title={
           <TextElement type={'heading-lg'} as={'h1'}>
-            {t('lorem')}
+            {t('title')}
           </TextElement>
         }
         subtitle={
           <TextElement type={'body-md'} as={'h1'}>
-            {t('lorem')}
+            {t('subtitle')}
           </TextElement>
         }
         ctaContent={
           <>
             <Button
-              variant={'outlined'}
-              leadingIcon={<MyIcon name={'arrow_right_alt'} />}
+              variant={'primary'}
+              leadingIcon={<MyIcon name={'ArrowRightAltRounded'} />}
             >
-              {t('lorem')}
+              {t('exploreEco')}
             </Button>
             <Button
               variant={'text'}
-              leadingIcon={<MyIcon name={'ixian_logo'} />}
+              leadingIcon={<MyIcon customName={'ixian_logo'} />}
             >
-              {t('lorem')}
+              {t('whatIsIxi')}
             </Button>
           </>
         }
       />
+      <div className={classes.bottomCards}>
+        <BigCard
+          iconContainer={
+            <>
+              <MyIcon customName={'spixi_logo'} rounded />
+              <MyIcon name={'WalletRounded'} rounded />
+            </>
+          }
+          bgImageVariant={'secondary'}
+          className={classes.rowSpan2}
+          body={
+            <SectionHeader
+              className={classes.bigCardBody}
+              chipContainer={
+                <Chip
+                  content={t('decentralizedMessenger')}
+                  variant={'outlined'}
+                />
+              }
+              title={
+                <TextElement type={'heading-md'} as={'h1'}>
+                  {t('spixiChat')}
+                </TextElement>
+              }
+              subtitle={
+                <TextElement type={'body-md'} as={'h1'}>
+                  {t('spixiDesc')}
+                </TextElement>
+              }
+              ctaContent={
+                <Button leadingIcon={<MyIcon name={'Home'} />}>
+                  {t('visitSpixiWebsite')}
+                </Button>
+              }
+            />
+          }
+        />
+        <InteractionCard
+          title={t('ixiNames')}
+          description={t('namesDesc')}
+          fullWidth
+          enableHover
+          headerAdditionalContent={
+            <Chip content={t('comingSoon')} variant={'outlined'} />
+          }
+        />
+        <InteractionCard
+          className={classes.newFeaturesCardGradient}
+          icon={<MyIcon name={'AutoAwesomeRounded'} rounded />}
+          title={t('building')}
+          description={t('stayUp')}
+          fullWidth
+          enableHover
+        />
+      </div>
       <div className={classes.offerInfo}>
         {singleInfoData.map((info, index) => (
           <div key={index} className={classes.singleInfo}>
@@ -90,53 +151,6 @@ const EcosystemSection = () => {
             </div>
           </div>
         ))}
-      </div>
-      <div className={classes.bottomCards}>
-        <BigCard
-          iconContainer={
-            <>
-              <MyIcon name={'spixi_logo'} rounded />
-              <MyIcon name={'wallet'} rounded />
-            </>
-          }
-          bgImageVariant={'secondary'}
-          className={classes.rowSpan2}
-          body={
-            <SectionHeader
-              className={classes.bigCardBody}
-              chipContainer={<Chip content={t('lorem')} variant={'outlined'} />}
-              title={
-                <TextElement type={'heading-lg'} as={'h1'}>
-                  {t('lorem')}
-                </TextElement>
-              }
-              subtitle={
-                <TextElement type={'body-md'} as={'h1'}>
-                  {t('lorem')}
-                </TextElement>
-              }
-              ctaContent={
-                <Button leadingIcon={<MyIcon name={'spixi_logo'} />}>
-                  {t('lorem')}
-                </Button>
-              }
-            />
-          }
-        />
-        <InteractionCard
-          icon={<MyIcon name={'ixinames'} rounded />}
-          title={t('lorem')}
-          description={t('lorem')}
-          fullWidth
-          enableHover
-        />
-        <InteractionCard
-          icon={<MyIcon name={'ar_stickers'} rounded />}
-          title={t('lorem')}
-          description={t('lorem')}
-          fullWidth
-          enableHover
-        />
       </div>
     </ContentWrapper>
   );

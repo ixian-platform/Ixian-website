@@ -5,10 +5,12 @@ import classNames from 'classnames';
 export interface SectionHeaderProps {
   className?: string;
   ctaContent?: ReactNode;
-  title: ReactNode;
+  ctaClassName?: string;
+  title?: ReactNode;
   subtitle?: ReactNode;
   chipContainer?: ReactNode;
   enableSlideUp?: boolean;
+  fullWidth?: boolean;
 }
 
 const SectionHeader = ({
@@ -18,17 +20,22 @@ const SectionHeader = ({
   subtitle,
   ctaContent,
   enableSlideUp,
+  ctaClassName,
+  fullWidth,
 }: SectionHeaderProps) => {
   return (
     <section
       className={classNames(classes.sectionHeader, className, {
         [classes.slideUp]: enableSlideUp,
+        [classes.fullWidth]: fullWidth,
       })}
     >
       {chipContainer}
       {title}
       {subtitle}
-      <div className={classes.ctaSection}>{ctaContent}</div>
+      <div className={classNames(classes.ctaSection, ctaClassName)}>
+        {ctaContent}
+      </div>
     </section>
   );
 };

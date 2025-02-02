@@ -9,32 +9,32 @@ import InteractionCard from '@components/InteractionCard/InteractionCard';
 
 const singleInfoData = [
   {
-    icon: 'ixian_logo',
+    icon: 'Home',
     title: 'lorem',
     description: 'lorem',
   },
   {
-    icon: 'avg_pace',
+    icon: 'Home',
     title: 'lorem',
     description: 'lorem',
   },
   {
-    icon: 'widgets',
+    icon: 'Home',
     title: 'lorem',
     description: 'lorem',
   },
   {
-    icon: 'all_match',
+    icon: 'Home',
     title: 'lorem',
     description: 'lorem',
   },
   {
-    icon: 'compare_arrows',
+    icon: 'Home',
     title: 'lorem',
     description: 'lorem',
   },
   {
-    icon: 'call_split',
+    icon: 'Home',
     title: 'lorem',
     description: 'lorem',
   },
@@ -68,25 +68,25 @@ const WhyIxian = () => {
         <TextElement type={'heading-sm'}>{t('lorem')}</TextElement>
         <div className={classes.infoItems}>
           <InteractionCard
-            icon={<MyIcon name={'edit_audio'} rounded />}
+            icon={<MyIcon name={'Home'} rounded />}
             title={t('lorem')}
             description={t('lorem')}
             enableHover
           />
           <InteractionCard
-            icon={<MyIcon name={'edit_audio'} rounded />}
+            icon={<MyIcon name={'Home'} rounded />}
             title={t('lorem')}
             description={t('lorem')}
             enableHover
           />
           <InteractionCard
-            icon={<MyIcon name={'edit_audio'} rounded />}
+            icon={<MyIcon name={'Home'} rounded />}
             title={t('lorem')}
             description={t('lorem')}
             enableHover
           />
           <InteractionCard
-            icon={<MyIcon name={'edit_audio'} rounded />}
+            icon={<MyIcon name={'Home'} rounded />}
             title={t('lorem')}
             description={t('lorem')}
             enableHover

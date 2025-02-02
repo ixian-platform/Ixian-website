@@ -75,13 +75,13 @@ body {
       ),
       #0a0f0c;
     --hero-gradient: radial-gradient(
-        61.37% 50.73% at 87.54% 7%,
-        rgba(48, 162, 25, 0.3) 13.71%,
-        rgba(34, 73, 87, 0.225) 41.04%,
-        rgba(86, 16, 126, 0.130677) 67%,
-        rgba(0, 0, 0, 0) 89.85%
-      ),
-      var(--color-green-1000);
+      132.62% 149.56% at 118.2% -24.26%,
+      rgba(83, 196, 61, 0.2) 13.71%,
+      rgba(14, 3, 21, 0.0146159) 40.55%,
+      rgba(30, 239, 229, 0.12) 59.71%,
+      rgba(142, 56, 192, 0.0871183) 76.94%,
+      rgba(0, 0, 0, 0) 89.85%
+    );
     --fading-border-horizontal: linear-gradient(
       90deg,
       #0a0f0c 0%,
@@ -121,7 +121,7 @@ a {
 }
 
 .body-slide {
-  animation: rotate3D 1s forwards;
+  animation: rotate3D 0.5s forwards;
 }
 
 @keyframes bounceSkew {
@@ -144,8 +144,11 @@ a {
   0% {
     transform: rotateY(0deg);
   }
+  50% {
+    transform: rotateY(180deg);
+  }
   100% {
-    transform: rotateY(360deg);
+    transform: rotateY(0deg);
   }
 }
 

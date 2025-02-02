@@ -20,10 +20,8 @@ export default function Build() {
         subtitle={t('lorem')}
         ctaContent={
           <>
-            <Button leadingIcon={<MyIcon name={'two_pager'} />}>
-              {t('lorem')}
-            </Button>
-            <Button variant={'text'} leadingIcon={<MyIcon name={'github'} />}>
+            <Button leadingIcon={<MyIcon name={'Home'} />}>{t('lorem')}</Button>
+            <Button variant={'text'} leadingIcon={<MyIcon name={'Home'} />}>
               {t('lorem')}
             </Button>
           </>

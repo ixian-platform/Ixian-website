@@ -7,7 +7,7 @@ import Button from '@components/Button/Button';
 import MyIcon from '@components/MyIcon/MyIcon';
 
 const StartBuildingNow = () => {
-  const t = useTranslations();
+  const t = useTranslations('TechnologyPage.startBuilding');
 
   return (
     <ContentWrapper
@@ -17,14 +17,14 @@ const StartBuildingNow = () => {
     >
       <SectionHeader
         className={classes.startBuildingCustomSectionHeader}
-        title={<TextElement type={'display-md'}>{t('lorem')}</TextElement>}
-        subtitle={<TextElement type={'body-md'}>{t('lorem')}</TextElement>}
+        title={<TextElement type={'display-md'}>{t('title')}</TextElement>}
+        subtitle={<TextElement type={'body-md'}>{t('subtitle')}</TextElement>}
         ctaContent={
           <Button
             variant={'outlined-2'}
-            leadingIcon={<MyIcon name={'orbit'} />}
+            leadingIcon={<MyIcon name={'ChangeCircleRounded'} />}
           >
-            {t('lorem')}
+            {t('cta')}
           </Button>
         }
       />

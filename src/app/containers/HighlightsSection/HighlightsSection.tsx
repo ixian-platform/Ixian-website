@@ -3,7 +3,6 @@ import TextElement from '@components/TextElement/TextElement';
 import MyIcon from '@components/MyIcon/MyIcon';
 import Chip from '@components/Chip/Chip';
 import SectionHeader from '@components/SectionHeader/SectionHeader';
-import { useTranslations } from 'next-intl';
 import { ReactNode } from 'react';
 import classNames from 'classnames';
 

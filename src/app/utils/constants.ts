@@ -12,3 +12,5 @@ export const Section = {
 } as const;
 
 export type Sections = (typeof Section)[keyof typeof Section];
+
+export const ixianGitHub = 'https://github.com/ProjectIxian';

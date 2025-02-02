@@ -22,7 +22,7 @@ type HeroSectionProps =
       subtitle: string;
       ctaContent: ReactNode;
       splinePath?: never;
-      leftContainer: ReactNode;
+      leftContainer?: ReactNode;
       className?: string;
     };
 
@@ -46,11 +46,14 @@ const HeroSection = ({
         className={classes.customSectionHeader}
         chipContainer={chip}
         title={title}
-        subtitle={<TextElement type={'body-md'}>{subtitle}</TextElement>}
+        subtitle={<TextElement type={'body-lg'}>{subtitle}</TextElement>}
         ctaContent={ctaContent}
       />
       {splinePath && (
-        <Spline scene={splinePath} className={classes.chipsSpline} />
+        <Spline
+          scene={'https://prod.spline.design/zk-AJBS9ZXNtusF6/scene.splinecode'}
+          className={classes.chipsSpline}
+        />
       )}
       {leftContainer}
     </ContentWrapper>

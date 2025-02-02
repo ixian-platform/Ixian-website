@@ -8,31 +8,32 @@ import IxianDltSection from '@/app/containers/IxianDltSection/IxianDltSection';
 import GitSection from '@/app/containers/GitSection/GitSection';
 import StartBuildingNow from '@/app/containers/StartBuildingNow/StartBuildingNow';
 import S2NetworkSection from '@/app/containers/S2NetworkSection/S2NetworkSection';
+import IxiCurrency from '@/app/containers/IxiCurrency/IxiCurrency';
 
 export default function Technology() {
-  const t = useTranslations();
+  const t = useTranslations('TechnologyPage');
 
   return (
     <section className={classes.page}>
       <HeroSection
         className={classes.techHero}
-        title={<TextElement type={'display-md'}>{t('lorem')}</TextElement>}
-        subtitle={t('lorem')}
+        title={<TextElement type={'display-lg'}>{t('hero.title')}</TextElement>}
+        subtitle={t('hero.subtitle')}
         ctaContent={
           <>
-            <Button leadingIcon={<MyIcon name={'two_pager'} />}>
-              {t('lorem')}
+            <Button leadingIcon={<MyIcon name={'DescriptionRounded'} />}>
+              {t('hero.cta1')}
             </Button>
-            <Button variant={'text'} leadingIcon={<MyIcon name={'github'} />}>
-              {t('lorem')}
+            <Button variant={'text'} leadingIcon={<MyIcon name={'GitHub'} />}>
+              {t('hero.cta2')}
             </Button>
           </>
         }
-        splinePath={'/assets/spline/chips.spline'}
       />
       <IxianDltSection />
-      <GitSection />
       <S2NetworkSection />
+      <GitSection />
+      <IxiCurrency />
       <StartBuildingNow />
     </section>
   );

@@ -53,13 +53,7 @@ const Faq = () => {
               className={classes.question}
               onClick={() => handleQuestionClick(index)}
             >
-              <MyIcon
-                name={
-                  openIndex === index
-                    ? 'keyboard_arrow_up'
-                    : 'keyboard_arrow_down'
-                }
-              />
+              <MyIcon name={openIndex === index ? 'Home' : 'Home'} />
               <TextElement type={'label-lg'}>{faq.question}</TextElement>
             </div>
             <div

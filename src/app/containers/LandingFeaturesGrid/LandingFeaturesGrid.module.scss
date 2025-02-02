@@ -1,0 +1,81 @@
+@use '@styles/mixins' as *;
+
+.landingFeaturesSection {
+  width: 100%;
+  background: var(--colors-surface-01);
+
+  .landingFeatures {
+    padding: 100px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+
+    .landingFeaturesGridSingleCard {
+      overflow: hidden;
+      background: radial-gradient(
+          57.77% 138.74% at 7.69% 16.52%,
+          rgba(87, 188, 232, 0.08) 0%,
+          rgba(87, 188, 232, 0.18) 35%,
+          rgba(24, 201, 139, 0.18) 84.5%
+        ),
+        var(--colors-surface-01);
+      border-radius: var(--corner-radius-xxl);
+      padding: var(--spacing-super) var(--spacing-xl);
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+
+      @include mq('md') {
+        gap: 40px;
+      }
+
+      .cardsGrid {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+
+        @include mq('md') {
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+}
+
+.openSourceCard {
+  width: 100%;
+  background: linear-gradient(0deg, #0a0f0c, #0a0f0c),
+    radial-gradient(
+      173.13% 177.27% at 141.29% -38.75%,
+      rgba(48, 162, 25, 0.3) 13.71%,
+      rgba(34, 73, 87, 0.225) 41.04%,
+      rgba(86, 16, 126, 0.130677) 67%,
+      rgba(0, 0, 0, 0) 89.85%
+    );
+  border-radius: var(--corner-radius-xxl);
+  padding: var(--spacing-xxl) var(--spacing-xl);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+
+  @include mq('md') {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .leftSide {
+    display: flex;
+    gap: 24px;
+
+    > svg {
+      color: var(--colors-icon-01);
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      color: var(--colors-text-inverse);
+    }
+  }
+}

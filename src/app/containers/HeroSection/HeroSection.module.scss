@@ -26,18 +26,24 @@
 
       @include mq('md') {
         max-height: 500px;
+        display: none;
       }
 
       > canvas {
-        transform: translateX(30%);
+        position: absolute;
+        top: 40px;
+        right: 10%;
+        width: 800px !important;
+        height: 800px !important;
 
         @include mq('md') {
-          transform: translate(40%, -40%);
+          //transform: translate(40%, -40%);
+          display: none;
         }
-
-        @include mq('xs') {
-          transform: translate(40%, -50%);
-        }
+        //
+        //@include mq('xs') {
+        //  transform: translate(40%, -50%);
+        //}
       }
     }
   }
