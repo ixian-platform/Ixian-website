@@ -30,7 +30,7 @@ const UseCases = () => {
           </TextElement>
         }
         ctaContent={
-          <Button leadingIcon={<MyIcon name={'ArrowRightAltRounded'} />}>
+          <Button leadingIcon={<MyIcon name={'EastRounded'} />}>
             {t('exploreUseCases')}
           </Button>
         }

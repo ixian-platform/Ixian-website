@@ -49,12 +49,12 @@ const HeroSection = ({
         subtitle={<TextElement type={'body-lg'}>{subtitle}</TextElement>}
         ctaContent={ctaContent}
       />
-      {splinePath && (
-        <Spline
-          scene={'https://prod.spline.design/zk-AJBS9ZXNtusF6/scene.splinecode'}
-          className={classes.chipsSpline}
-        />
-      )}
+      {/*{splinePath && (*/}
+      {/*  <Spline*/}
+      {/*    scene={'https://prod.spline.design/zk-AJBS9ZXNtusF6/scene.splinecode'}*/}
+      {/*    className={classes.chipsSpline}*/}
+      {/*  />*/}
+      {/*)}*/}
       {leftContainer}
     </ContentWrapper>
   );

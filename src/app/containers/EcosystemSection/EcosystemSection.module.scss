@@ -2,7 +2,7 @@
 
 .ecosystemSection {
   width: 100%;
-  background: var(--gradient-bg-2);
+  background: var(--colors-surface-01);
 
   .ecosystemWrapper {
     padding: var(--spacing-super-xl) var(--spacing-md);
@@ -71,10 +71,6 @@
 
       .rowSpan2 {
         grid-row: span 2;
-      }
-
-      .bigCardBody {
-        max-width: 360px;
       }
     }
 

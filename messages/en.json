@@ -263,5 +263,68 @@
       "exchanges": "Exchanges and Aggregators",
       "exchangesSubtitle": "Get more information about $IXI and trading pairs."
     }
+  },
+  "BuildPage": {
+    "hero": {
+      "title": "Build Smarter, Spend Less",
+      "subtitle": "Launch your product on Ixian and reduce your operational costs.",
+      "cta": "Get Started Now",
+      "readyToBuild": "Ready to Build the Future?",
+      "readyToBuildSubtitle": "We believe that together we can achieve greatness. Partner with Ixian to co-create secure, scalable solutions for tomorrow’s challenges.",
+      "getStarted": "Get Started Now"
+    },
+    "whyIxian": {
+      "chip": "Why Build on Ixian",
+      "title": "Built for Developers, Designed for Mass Adoption",
+      "data1": {
+        "title": "Ixian Advantage",
+        "subtitle": "When you require trustless and secure client discovery, end-to-end communication and human readable name registration."
+      },
+      "data2": {
+        "title": "Uncompromised Security",
+        "subtitle": "Benefit from the built-in security of Ixian and reduce your operational costs."
+      },
+      "data3": {
+        "title": "Easy Integration",
+        "subtitle": "Seamless integration with Ixian’s Core DLT and Overlay Network."
+      },
+      "data4": {
+        "title": "High Scalability",
+        "subtitle": "Don’t limit your aspirations and build on the highly scalable Ixian platform."
+      },
+      "data5": {
+        "title": "Minimal Infrastructure Costs",
+        "subtitle": "Deploy your next solution on Ixian and minimize your entry costs."
+      },
+      "keyResources": {
+        "title": "Key Resources",
+        "card1": {
+            "title": "Ixian Protocol Documentation",
+            "subtitle": "Learn about Ixian protocol to kick start your next project."
+        },
+        "card2": {
+            "title": "API Documentation",
+            "subtitle": "Learn how to interact with the Ixian DLT and S2 nodes through API end-points."
+        },
+        "card3": {
+            "title": "Node Setup Guide",
+            "subtitle": "Everything you need to get your nodes up and running."
+        },
+        "card4": {
+            "title": "GitHub Repository",
+            "subtitle": "Ixian is open source. Visit our GitHub repo."
+        }
+      }
+    },
+    "faq": {
+      "title": "FAQs",
+      "subtitle": "We have some common questions answered to get you started.",
+      "q1": "How do I start developing with Ixian?",
+      "a1": "You should get going pretty fast with everything setup easily for you to read and work on. If  you have any additional questions, might want to check the community.",
+      "q2": "What can I build on Ixian?",
+      "a2": "something something",
+      "q3": "How do I participate in the Ixian network?",
+      "a3": "something something"
+    }
   }
 }

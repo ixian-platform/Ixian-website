@@ -58,6 +58,17 @@
     width: 100%;
     max-width: 40px;
     display: none;
+
+    > div {
+      border-color: #fbfcfb;
+
+      &:hover::before {
+        border-color: #fbfcfb;
+      }
+    }
+    svg {
+      color: #fbfcfb;
+    }
   }
 
   &.enableHover {

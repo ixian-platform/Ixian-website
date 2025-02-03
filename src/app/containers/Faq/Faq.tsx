@@ -9,31 +9,28 @@ import { useState } from 'react';
 import MyIcon from '@components/MyIcon/MyIcon';
 import classNames from 'classnames';
 
-const faqData = [
-  {
-    question: 'What is Ixian?',
-    answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at libero nec nunc',
-  },
-  {
-    question: 'What is Ixian?',
-    answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at libero nec nunc',
-  },
-  {
-    question: 'What is Ixian?',
-    answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at libero nec nunc',
-  },
-];
-
 const Faq = () => {
-  const t = useTranslations();
+  const t = useTranslations('BuildPage.faq');
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const handleQuestionClick = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+
+  const faqData = [
+    {
+      question: t('q1'),
+      answer: t('a1'),
+    },
+    {
+      question: t('q2'),
+      answer: t('a2'),
+    },
+    {
+      question: t('q3'),
+      answer: t('a3'),
+    },
+  ];
 
   return (
     <ContentWrapper
@@ -43,8 +40,8 @@ const Faq = () => {
     >
       <SectionHeader
         className={classes.header}
-        title={<TextElement type={'heading-lg'}>FAQ</TextElement>}
-        subtitle={<TextElement type={'body-md'}>{t('lorem')}</TextElement>}
+        title={<TextElement type={'heading-lg'}>{t('title')}</TextElement>}
+        subtitle={<TextElement type={'body-md'}>{t('subtitle')}</TextElement>}
       />
       <div className={classes.questions}>
         {faqData.map((faq, index) => (
@@ -53,7 +50,13 @@ const Faq = () => {
               className={classes.question}
               onClick={() => handleQuestionClick(index)}
             >
-              <MyIcon name={openIndex === index ? 'Home' : 'Home'} />
+              <MyIcon
+                name={
+                  openIndex === index
+                    ? 'ExpandLessRounded'
+                    : 'ExpandMoreRounded'
+                }
+              />
               <TextElement type={'label-lg'}>{faq.question}</TextElement>
             </div>
             <div

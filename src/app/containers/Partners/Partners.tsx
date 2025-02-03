@@ -58,7 +58,7 @@ const Partners = () => {
         ctaContent={
           <Button
             variant={'outlined-2'}
-            leadingIcon={<MyIcon name={'ChangeCircleRounded'} />}
+            leadingIcon={<MyIcon name={'EastRounded'} />}
           >
             {t('explorePartnerships')}
           </Button>

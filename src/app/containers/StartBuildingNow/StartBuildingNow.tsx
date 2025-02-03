@@ -2,13 +2,15 @@ import classes from './StartBuildingNow.module.scss';
 import ContentWrapper from '@components/ContentWrapper/ContentWrapper';
 import SectionHeader from '@components/SectionHeader/SectionHeader';
 import TextElement from '@components/TextElement/TextElement';
-import { useTranslations } from 'next-intl';
-import Button from '@components/Button/Button';
-import MyIcon from '@components/MyIcon/MyIcon';
+import { ReactNode } from 'react';
 
-const StartBuildingNow = () => {
-  const t = useTranslations('TechnologyPage.startBuilding');
+interface StartBuildingNowProps {
+  title: string;
+  subtitle: string;
+  cta: ReactNode;
+}
 
+const StartBuildingNow = ({ title, subtitle, cta }: StartBuildingNowProps) => {
   return (
     <ContentWrapper
       asWrapperSection
@@ -17,16 +19,9 @@ const StartBuildingNow = () => {
     >
       <SectionHeader
         className={classes.startBuildingCustomSectionHeader}
-        title={<TextElement type={'display-md'}>{t('title')}</TextElement>}
-        subtitle={<TextElement type={'body-md'}>{t('subtitle')}</TextElement>}
-        ctaContent={
-          <Button
-            variant={'outlined-2'}
-            leadingIcon={<MyIcon name={'ChangeCircleRounded'} />}
-          >
-            {t('cta')}
-          </Button>
-        }
+        title={<TextElement type={'display-md'}>{title}</TextElement>}
+        subtitle={<TextElement type={'body-md'}>{subtitle}</TextElement>}
+        ctaContent={cta}
       />
     </ContentWrapper>
   );

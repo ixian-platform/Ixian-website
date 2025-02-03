@@ -37,10 +37,9 @@
           max-width: unset;
         }
 
-        .info {
+        .socialsContainer {
           display: flex;
-          flex-direction: column;
-          gap: var(--spacing-sm);
+          gap: 12px;
         }
       }
 

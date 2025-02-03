@@ -35,7 +35,7 @@ const MetricsSection = () => {
             <>
               <Button
                 variant={'primary'}
-                leadingIcon={<MyIcon name={'ArrowRightAltRounded'} />}
+                leadingIcon={<MyIcon name={'EastRounded'} />}
               >
                 {t('howDoesItWork')}
               </Button>

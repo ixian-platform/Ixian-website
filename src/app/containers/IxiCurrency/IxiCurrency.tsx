@@ -33,7 +33,7 @@ const IxiCurrency = () => {
           subtitle={<TextElement type={'body-md'}>{t('subtitle')}</TextElement>}
           ctaContent={
             <>
-              <Button leadingIcon={<MyIcon name={'ArrowRightAltRounded'} />}>
+              <Button leadingIcon={<MyIcon name={'EastRounded'} />}>
                 {t('cta1')}
               </Button>
               <Button
@@ -85,14 +85,14 @@ const IxiCurrency = () => {
         </div>
         <div className={classes.infoCardsContainer}>
           <InteractionCard
-            icon={<MyIcon name={'Home'} rounded />}
+            icon={<MyIcon name={'MultipleStopRounded'} rounded />}
             title={t('card1.title')}
             description={t('card1.subtitle')}
             enableHover
             fullWidth
           />
           <InteractionCard
-            icon={<MyIcon name={'Home'} rounded />}
+            icon={<MyIcon name={'GrainRounded'} rounded />}
             title={t('card1.title')}
             description={t('card1.subtitle')}
             enableHover

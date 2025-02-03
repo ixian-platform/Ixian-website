@@ -37,7 +37,11 @@ const MyIcon = ({
     return `/assets/icons/${themeMode === 'dark' ? 'dark' : 'light'}/${customName}.svg`;
   }, [customName, themeMode]);
 
-  if (iconPath && customName) {
+  if (!isClient) {
+    return null; // or a placeholder
+  }
+
+  if (isClient && iconPath && customName) {
     return rounded ? (
       <div className={classes.rounded}>
         <Image
@@ -80,10 +84,6 @@ const MyIcon = ({
         />
       </div>
     );
-  }
-
-  if (!isClient) {
-    return null; // or a placeholder
   }
 
   return (

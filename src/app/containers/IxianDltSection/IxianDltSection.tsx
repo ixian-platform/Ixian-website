@@ -13,17 +13,18 @@ const st = await getServerTranslations();
 
 const dltHighlightsData = [
   {
-    icon: 'WidgetsRounded',
+    icon: 'ixinames',
     title: st('TechnologyPage.ixianDlt.highlights.data1.title'),
     description: st('TechnologyPage.ixianDlt.highlights.data1.subtitle'),
+    isCustom: true,
   },
   {
-    icon: 'ViewInArRounded',
+    icon: 'DataSaverOffRounded',
     title: st('TechnologyPage.ixianDlt.highlights.data2.title'),
     description: st('TechnologyPage.ixianDlt.highlights.data2.subtitle'),
   },
   {
-    icon: 'CompareArrowsRounded',
+    icon: 'MovingRounded',
     title: st('TechnologyPage.ixianDlt.highlights.data3.title'),
     description: st('TechnologyPage.ixianDlt.highlights.data3.subtitle'),
   },
@@ -43,7 +44,7 @@ const IxianDltSection = () => {
         title={<TextElement type={'display-md'}>{t('title')}</TextElement>}
         subtitle={<TextElement type={'body-md'}>{t('subtitle')}</TextElement>}
         ctaContent={
-          <Button leadingIcon={<MyIcon name={'ArrowRightAltRounded'} />}>
+          <Button leadingIcon={<MyIcon name={'EastRounded'} />}>
             {t('cta')}
           </Button>
         }
@@ -51,7 +52,11 @@ const IxianDltSection = () => {
       <div className={classes.dltHighlights}>
         {dltHighlightsData?.map((info, index) => (
           <div key={index} className={classes.singleInfo}>
-            <MyIcon name={info.icon} rounded />
+            {info.isCustom ? (
+              <MyIcon customName={info.icon} rounded />
+            ) : (
+              <MyIcon name={info.icon} rounded />
+            )}
             <div>
               <TextElement type={'heading-xs'}>{info.title}</TextElement>
               <TextElement type={'body-sm'}>{info.description}</TextElement>
@@ -61,21 +66,21 @@ const IxianDltSection = () => {
       </div>
       <div className={classes.infoItems}>
         <InteractionCard
-          icon={<MyIcon name={'Home'} rounded />}
+          icon={<MyIcon customName={'ixian_logo'} rounded />}
           title={t('card1.title')}
           description={t('card1.subtitle')}
           enableHover
           fullWidth
         />
         <InteractionCard
-          icon={<MyIcon name={'Home'} rounded />}
+          icon={<MyIcon name={'SpokeRounded'} rounded />}
           title={t('card2.title')}
           description={t('card2.subtitle')}
           enableHover
           fullWidth
         />
         <InteractionCard
-          icon={<MyIcon name={'Home'} rounded />}
+          icon={<MyIcon name={'AdjustRounded'} rounded />}
           title={t('card3.title')}
           description={t('card3.subtitle')}
           enableHover

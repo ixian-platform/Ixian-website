@@ -9,6 +9,10 @@
   max-width: 40px;
   max-height: 40px;
 
+  > img {
+    max-width: unset;
+  }
+
   &:hover::before {
     content: '';
     position: absolute;

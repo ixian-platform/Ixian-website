@@ -58,7 +58,7 @@ const InteractionCard = ({
       </div>
       {linkHref && (
         <Link className={classes.arrowLink} href={linkHref}>
-          <MyIcon name={'ArrowRightAltRounded'} rounded />
+          <MyIcon name={'EastRounded'} rounded />
         </Link>
       )}
       {additionalContent}

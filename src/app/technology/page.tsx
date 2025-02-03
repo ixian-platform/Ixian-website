@@ -9,6 +9,17 @@ import GitSection from '@/app/containers/GitSection/GitSection';
 import StartBuildingNow from '@/app/containers/StartBuildingNow/StartBuildingNow';
 import S2NetworkSection from '@/app/containers/S2NetworkSection/S2NetworkSection';
 import IxiCurrency from '@/app/containers/IxiCurrency/IxiCurrency';
+import { generateSEO } from '@utils/seo';
+
+export async function generateMetadata() {
+  return generateSEO({
+    title: 'Ixian Technology',
+    description: 'Explore Ixian Technology',
+    keywords: [],
+    image: '/',
+    path: '/',
+  });
+}
 
 export default function Technology() {
   const t = useTranslations('TechnologyPage');
@@ -34,7 +45,18 @@ export default function Technology() {
       <S2NetworkSection />
       <GitSection />
       <IxiCurrency />
-      <StartBuildingNow />
+      <StartBuildingNow
+        title={t('startBuilding.title')}
+        subtitle={t('startBuilding.subtitle')}
+        cta={
+          <Button
+            variant={'outlined-2'}
+            leadingIcon={<MyIcon name={'EastRounded'} />}
+          >
+            {t('startBuilding.cta')}
+          </Button>
+        }
+      />
     </section>
   );
 }

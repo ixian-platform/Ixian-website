@@ -11,6 +11,7 @@ import { useTranslations } from 'next-intl';
 import BorderWrapper from '@components/BorderWrapper/BorderWrapper';
 import Link from 'next/link';
 import { ixianGitHub } from '@utils/constants';
+import classNames from 'classnames';
 
 const LandingFeaturesGrid = () => {
   const t = useTranslations('LandingFeatures');
@@ -21,7 +22,12 @@ const LandingFeaturesGrid = () => {
       sectionClass={classes.landingFeaturesSection}
       className={classes.landingFeatures}
     >
-      <div className={classes.landingFeaturesGridSingleCard}>
+      <div
+        className={classNames(
+          classes.landingFeaturesGridSingleCard,
+          classes.card1
+        )}
+      >
         <SectionHeader
           chipContainer={
             <Chip content={t('efficiency.chip')} variant={'outlined'} />
@@ -37,20 +43,20 @@ const LandingFeaturesGrid = () => {
             </TextElement>
           }
           ctaContent={
-            <Button leadingIcon={<MyIcon name={'ArrowRightAltRounded'} />}>
+            <Button leadingIcon={<MyIcon name={'EastRounded'} />}>
               {t('efficiency.cta')}
             </Button>
           }
         />
         <div className={classes.cardsGrid}>
           <InteractionCard
-            icon={<MyIcon name={'CompareArrowsRounded'} rounded />}
+            icon={<MyIcon customName={'ixian_logo'} rounded />}
             title={t('efficiency.cards.card1.title')}
             description={t('efficiency.cards.card1.subtitle')}
             fullWidth
           />
           <InteractionCard
-            icon={<MyIcon customName={'s2_mark'} rounded />}
+            icon={<MyIcon name={'CompareArrowsRounded'} rounded />}
             title={t('efficiency.cards.card2.title')}
             description={t('efficiency.cards.card2.subtitle')}
             fullWidth
@@ -63,7 +69,12 @@ const LandingFeaturesGrid = () => {
           />
         </div>
       </div>
-      <div className={classes.landingFeaturesGridSingleCard}>
+      <div
+        className={classNames(
+          classes.landingFeaturesGridSingleCard,
+          classes.card2
+        )}
+      >
         <SectionHeader
           chipContainer={
             <Chip content={t('security.chip')} variant={'outlined'} />
@@ -75,7 +86,7 @@ const LandingFeaturesGrid = () => {
             <TextElement type={'body-md'}>{t('security.subtitle')}</TextElement>
           }
           ctaContent={
-            <Button leadingIcon={<MyIcon name={'ArrowRightAltRounded'} />}>
+            <Button leadingIcon={<MyIcon name={'EastRounded'} />}>
               {t('security.cta')}
             </Button>
           }
@@ -94,17 +105,26 @@ const LandingFeaturesGrid = () => {
             fullWidth
           />
           <InteractionCard
-            icon={<MyIcon name={'SecurityRounded'} rounded />}
+            icon={<MyIcon name={'ShieldRounded'} rounded />}
             title={t('security.cards.card3.title')}
             description={t('security.cards.card3.subtitle')}
             fullWidth
           />
         </div>
       </div>
-      <div className={classes.landingFeaturesGridSingleCard}>
+      <div
+        className={classNames(
+          classes.landingFeaturesGridSingleCard,
+          classes.card3
+        )}
+      >
         <SectionHeader
           chipContainer={
-            <Chip content={t('build.chip')} variant={'outlined'} />
+            <Chip
+              content={t('build.chip')}
+              variant={'outlined'}
+              isTextInversed
+            />
           }
           title={
             <TextElement type={'display-md'}>{t('build.title')}</TextElement>
@@ -114,7 +134,7 @@ const LandingFeaturesGrid = () => {
           }
           ctaContent={
             <>
-              <Button leadingIcon={<MyIcon name={'ArrowRightAltRounded'} />}>
+              <Button leadingIcon={<MyIcon name={'EastRounded'} />}>
                 {t('build.cta')}
               </Button>
               <Button variant={'text'} leadingIcon={<MyIcon name={'GitHub'} />}>
@@ -125,7 +145,7 @@ const LandingFeaturesGrid = () => {
         />
         <div className={classes.cardsGrid}>
           <InteractionCard
-            icon={<MyIcon name={'VerticalSplitRounded'} rounded />}
+            icon={<MyIcon customName={'s2_mark'} rounded />}
             title={t('build.cards.card1.title')}
             description={t('build.cards.card1.subtitle')}
             fullWidth
@@ -137,7 +157,7 @@ const LandingFeaturesGrid = () => {
             fullWidth
           />
           <InteractionCard
-            icon={<MyIcon name={'GitHub'} rounded />}
+            icon={<MyIcon name={'VerticalSplitRounded'} rounded />}
             title={t('build.cards.card3.title')}
             description={t('build.cards.card3.subtitle')}
             fullWidth
@@ -166,7 +186,7 @@ const LandingFeaturesGrid = () => {
           <Link passHref href={ixianGitHub} target={'_blank'}>
             <Button
               variant={'outlined'}
-              leadingIcon={<MyIcon name={'ArrowRightAltRounded'} />}
+              leadingIcon={<MyIcon name={'EastRounded'} />}
             >
               {t('openSourceCard.cta')}
             </Button>

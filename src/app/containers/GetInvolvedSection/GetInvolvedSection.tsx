@@ -55,7 +55,7 @@ const GetInvolvedSection = () => {
             }
             ctaContent={
               <Button
-                leadingIcon={<MyIcon name={'ArrowRightAltRounded'} />}
+                leadingIcon={<MyIcon name={'EastRounded'} />}
                 variant={'outlined'}
               >
                 {t('runYourNode')}
@@ -78,7 +78,7 @@ const GetInvolvedSection = () => {
             }
             ctaContent={
               <Button
-                leadingIcon={<MyIcon name={'ArrowRightAltRounded'} />}
+                leadingIcon={<MyIcon name={'EastRounded'} />}
                 variant={'outlined'}
               >
                 {t('joinCommunity')}

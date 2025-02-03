@@ -22,28 +22,28 @@ const S2NetworkSection = () => {
         title={<TextElement type={'display-md'}>{t('title')}</TextElement>}
         subtitle={<TextElement type={'body-md'}>{t('subtitle')}</TextElement>}
         ctaContent={
-          <Button leadingIcon={<MyIcon name={'ArrowRightAltRounded'} />}>
+          <Button leadingIcon={<MyIcon name={'EastRounded'} />}>
             {t('cta')}
           </Button>
         }
       />
       <div className={classes.infoItems}>
         <InteractionCard
-          icon={<MyIcon name={'Home'} rounded />}
+          icon={<MyIcon name={'GraphicEqRounded'} rounded />}
           title={t('card1.title')}
           description={t('card1.subtitle')}
           enableHover
           fullWidth
         />
         <InteractionCard
-          icon={<MyIcon name={'Home'} rounded />}
+          icon={<MyIcon customName={'s2_mark'} rounded />}
           title={t('card2.title')}
           description={t('card2.subtitle')}
           enableHover
           fullWidth
         />
         <InteractionCard
-          icon={<MyIcon name={'Home'} rounded />}
+          icon={<MyIcon name={'ShieldRounded'} rounded />}
           title={t('card3.title')}
           description={t('card3.subtitle')}
           enableHover

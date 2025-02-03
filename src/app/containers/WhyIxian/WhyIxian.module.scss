@@ -1,8 +1,9 @@
 @use '@styles/mixins' as *;
+@use '@styles/typograhphy' as *;
 
 .whyIxianSection {
   width: 100%;
-  background: var(--colors-surface-02);
+  background: var(--colors-surface-01);
 
   .whyIxianWrapper {
     display: flex;
@@ -58,6 +59,10 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: var(--spacing-xxl);
+
+        h3 {
+          @include heading-sm;
+        }
 
         @include mq('md') {
           grid-template-columns: repeat(2, 1fr);

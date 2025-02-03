@@ -23,12 +23,12 @@ const LandingContent = () => {
         subtitle={t('subtitle')}
         ctaContent={
           <>
-            <Button leadingIcon={<MyIcon name={'ArrowRightAltRounded'} />}>
+            <Button leadingIcon={<MyIcon name={'EastRounded'} />}>
               {t('start')}
             </Button>
             <Button
               variant={'text'}
-              leadingIcon={<MyIcon name={'ArrowRightAltRounded'} />}
+              leadingIcon={<MyIcon name={'EastRounded'} />}
             >
               {t('discover')}
             </Button>

@@ -1,5 +1,16 @@
 import classes from './page.module.scss';
 import LandingContent from '@/app/containers/LandingContent/LandingContent';
+import { generateSEO } from '@utils/seo';
+
+export async function generateMetadata() {
+  return generateSEO({
+    title: 'Ixian Home',
+    description: '',
+    keywords: [],
+    image: '/',
+    path: '/',
+  });
+}
 
 export default function Home() {
   return (

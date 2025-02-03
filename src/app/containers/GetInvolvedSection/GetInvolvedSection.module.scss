@@ -2,7 +2,7 @@
 
 .getInvolvedSection {
   width: 100%;
-  background: var(--gradient-bg-1);
+  background: var(--colors-surface-02);
   scroll-margin-top: var(--spacing-super-xl);
 
   .getInvolved {
@@ -46,7 +46,6 @@
         }
 
         .innerSection {
-          min-width: 346px;
           padding-top: var(--spacing-super-lg);
 
           .headerIcons {

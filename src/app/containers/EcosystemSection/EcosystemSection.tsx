@@ -26,9 +26,10 @@ const singleInfoData = [
     description: st('Ecosystem.devToolsDesc'),
   },
   {
-    icon: 'WidgetsRounded',
+    icon: 's2_mark',
     title: st('Ecosystem.overlayNetwork'),
     description: st('Ecosystem.overlayDesc'),
+    isCustom: true,
   },
   {
     icon: 'PeopleRounded',
@@ -73,7 +74,7 @@ const EcosystemSection = () => {
           <>
             <Button
               variant={'primary'}
-              leadingIcon={<MyIcon name={'ArrowRightAltRounded'} />}
+              leadingIcon={<MyIcon name={'EastRounded'} />}
             >
               {t('exploreEco')}
             </Button>
@@ -98,7 +99,6 @@ const EcosystemSection = () => {
           className={classes.rowSpan2}
           body={
             <SectionHeader
-              className={classes.bigCardBody}
               chipContainer={
                 <Chip
                   content={t('decentralizedMessenger')}
@@ -116,7 +116,10 @@ const EcosystemSection = () => {
                 </TextElement>
               }
               ctaContent={
-                <Button leadingIcon={<MyIcon name={'Home'} />}>
+                <Button
+                  variant={'outlined'}
+                  leadingIcon={<MyIcon name={'EastRounded'} />}
+                >
                   {t('visitSpixiWebsite')}
                 </Button>
               }
@@ -144,7 +147,11 @@ const EcosystemSection = () => {
       <div className={classes.offerInfo}>
         {singleInfoData.map((info, index) => (
           <div key={index} className={classes.singleInfo}>
-            <MyIcon name={info.icon} rounded />
+            {info?.isCustom ? (
+              <MyIcon customName={info.icon} rounded />
+            ) : (
+              <MyIcon name={info.icon} rounded />
+            )}
             <div>
               <TextElement type={'heading-xs'}>{info.title}</TextElement>
               <TextElement type={'body-sm'}>{info.description}</TextElement>
