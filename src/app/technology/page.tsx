@@ -13,9 +13,24 @@ import { generateSEO } from '@utils/seo';
 
 export async function generateMetadata() {
   return generateSEO({
-    title: 'Ixian Technology',
-    description: 'Explore Ixian Technology',
-    keywords: [],
+    title: 'Ixian Technology | Layer-1 Blockchain & Decentralized Network',
+    description:
+      'Discover Ixian’s powerful technology: a high-performance Layer-1 blockchain (DLT) and a Decentralized Physical Infrastructure Network (S2) enabling secure, scalable applications. Powering IoT, DePIN, and decentralized communication with $IXI.',
+    keywords: [
+      'Ixian technology',
+      'decentralized network',
+      'Layer-1 blockchain',
+      'DePIN',
+      'decentralized infrastructure',
+      'scalable blockchain',
+      'proof-of-collaborative-work',
+      'IoT blockchain',
+      'secure data streaming',
+      'decentralized communication',
+      'Ixian DLT',
+      'Ixian S2',
+      '$IXI cryptocurrency',
+    ],
     image: '/',
     path: '/',
   });

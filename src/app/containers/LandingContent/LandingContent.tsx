@@ -27,6 +27,7 @@ const LandingContent = () => {
               {t('start')}
             </Button>
             <Button
+              href={'https://www.google.com'}
               variant={'text'}
               leadingIcon={<MyIcon name={'EastRounded'} />}
             >

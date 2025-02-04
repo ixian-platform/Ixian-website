@@ -9,15 +9,26 @@ type SEOConfig = {
 };
 
 const defaultSEO: Metadata = {
-  title: 'Ixian',
-  description: 'xian - Distributed technology for the people',
+  title:
+    'Open-Source Decentralized Data Streaming | Scalable & Secure Connectivity',
+  description:
+    'Ixian is an open-source decentralized data streaming platform designed for seamless, secure, and scalable connectivity. Reduce costs, enhance security, and effortlessly integrate with IoT, smart cities, and real-time applications.',
   keywords: [
-    'ixian',
-    'network',
-    'blockchain',
-    'dlt',
-    'distributed',
-    'technology',
+    'Ixian',
+    'decentralized data streaming',
+    'open-source blockchain',
+    'scalable network',
+    'secure communication',
+    'IoT integration',
+    'smart cities blockchain',
+    'real-time data streaming',
+    'proof-of-collaborative-work',
+    'blockchain scalability',
+    'cost-efficient blockchain solutions',
+    'Web3 infrastructure',
+    'Spixi',
+    'Ixi Labs',
+    'IXI Names',
   ],
   openGraph: {
     type: 'website',

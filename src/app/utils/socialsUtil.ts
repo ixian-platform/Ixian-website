@@ -11,41 +11,41 @@ export const socials = [
   {
     img: discord,
     alt: 'discord',
-    href: '',
+    href: 'https://discord.gg/P493UN9',
   },
   {
     img: linkedin,
     alt: 'linkedin',
-    href: '',
+    href: 'https://www.linkedin.com/company/ixian-platform',
   },
   {
     img: medium,
     alt: 'medium',
-    href: '',
+    href: 'https://medium.com/ixian',
   },
   {
     img: x,
     alt: 'x',
-    href: '',
+    href: 'https://x.com/ixian_IO',
   },
   {
     img: github,
     alt: 'github',
-    href: '',
+    href: 'https://github.com/ProjectIxian',
   },
   {
     img: reddit,
     alt: 'reddit',
-    href: '',
+    href: 'https://www.reddit.com/r/ixian',
   },
   {
     img: spixi,
     alt: 'spixi',
-    href: '',
+    href: 'https://www.spixi.io/',
   },
   {
     img: telegram,
     alt: 'telegram',
-    href: '',
+    href: 'https://t.me/ixian_official_ENG',
   },
 ];

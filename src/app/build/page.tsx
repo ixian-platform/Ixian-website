@@ -13,9 +13,23 @@ import { generateSEO } from '@utils/seo';
 
 export async function generateMetadata() {
   return generateSEO({
-    title: 'Ixian Build',
-    description: 'Build with Ixian',
-    keywords: [],
+    title: 'Build on Ixian | Scalable, Secure & Cost-Effective Development',
+    description:
+      'Launch your product on Ixian and cut operational costs. Enjoy trustless security, seamless integration, high scalability, and minimal infrastructure costs with Ixian’s Core DLT and Overlay Network. Build smarter, spend less.',
+    keywords: [
+      'Build on Ixian',
+      'decentralized development',
+      'secure blockchain applications',
+      'scalable blockchain',
+      'trustless communication',
+      'end-to-end security',
+      'easy blockchain integration',
+      'minimal infrastructure costs',
+      'high-performance blockchain',
+      'DePIN development',
+      'Ixian platform',
+      '$IXI incentives',
+    ],
     image: '/',
     path: '/',
   });
