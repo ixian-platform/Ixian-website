@@ -4,13 +4,11 @@ import SectionHeader from '@components/SectionHeader/SectionHeader';
 import { useTranslations } from 'next-intl';
 import TextElement from '@components/TextElement/TextElement';
 import Chip from '@components/Chip/Chip';
-import Image from 'next/image';
-import bigGithub from '@assets/github-big.svg';
 import MyIcon from '@components/MyIcon/MyIcon';
 import Milestones from '@components/Milestones/Milestones';
 
 const GitSection = () => {
-  const t = useTranslations();
+  const t = useTranslations('TechnologyPage.gitSection');
 
   return (
     <ContentWrapper
@@ -19,17 +17,19 @@ const GitSection = () => {
       className={classes.gitSectionWrapper}
     >
       <SectionHeader
-        chipContainer={<Chip content={t('lorem')} variant={'outlined'} />}
-        title={<TextElement type={'heading-md'}>{t('lorem')}</TextElement>}
-        subtitle={<TextElement type={'body-md'}>{t('lorem')}</TextElement>}
+        className={classes.sectionHeaderGitSection}
+        chipContainer={
+          <Chip content={t('chip')} variant={'outlined'} isTextInversed />
+        }
+        title={<TextElement type={'heading-md'}>{t('title')}</TextElement>}
+        subtitle={<TextElement type={'body-md'}>{t('subtitle')}</TextElement>}
         ctaContent={
           <div className={classes.visitGithub}>
-            <Image src={bigGithub} alt={'github'} />
-            <div className={classes.text}>
-              <TextElement type={'heading-sm'}>{t('lorem')}</TextElement>
-              <TextElement type={'body-lg'}>{t('lorem')}</TextElement>
+            <div className={classes.left}>
+              <MyIcon name={'GitHub'} width={64} height={64} />
+              <TextElement type={'heading-sm'}>{t('visitIxian')}</TextElement>
             </div>
-            <MyIcon name={'arrow_forward_ios'} />
+            <MyIcon name={'ArrowForwardIosRounded'} />
           </div>
         }
       />

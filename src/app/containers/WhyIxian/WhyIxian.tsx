@@ -6,42 +6,40 @@ import SectionHeader from '@components/SectionHeader/SectionHeader';
 import Chip from '@components/Chip/Chip';
 import MyIcon from '@components/MyIcon/MyIcon';
 import InteractionCard from '@components/InteractionCard/InteractionCard';
+import { getServerTranslations } from '@utils/getServerTranslations';
+
+const st = await getServerTranslations();
 
 const singleInfoData = [
   {
-    icon: 'ixian_logo',
-    title: 'lorem',
-    description: 'lorem',
+    icon: 'Home',
+    title: st('BuildPage.whyIxian.data1.title'),
+    description: st('BuildPage.whyIxian.data1.subtitle'),
   },
   {
-    icon: 'avg_pace',
-    title: 'lorem',
-    description: 'lorem',
+    icon: 'Home',
+    title: st('BuildPage.whyIxian.data2.title'),
+    description: st('BuildPage.whyIxian.data2.subtitle'),
   },
   {
-    icon: 'widgets',
-    title: 'lorem',
-    description: 'lorem',
+    icon: 'Home',
+    title: st('BuildPage.whyIxian.data3.title'),
+    description: st('BuildPage.whyIxian.data3.subtitle'),
   },
   {
-    icon: 'all_match',
-    title: 'lorem',
-    description: 'lorem',
+    icon: 'Home',
+    title: st('BuildPage.whyIxian.data4.title'),
+    description: st('BuildPage.whyIxian.data4.subtitle'),
   },
   {
-    icon: 'compare_arrows',
-    title: 'lorem',
-    description: 'lorem',
-  },
-  {
-    icon: 'call_split',
-    title: 'lorem',
-    description: 'lorem',
+    icon: 'Home',
+    title: st('BuildPage.whyIxian.data5.title'),
+    description: st('BuildPage.whyIxian.data5.subtitle'),
   },
 ];
 
 const WhyIxian = () => {
-  const t = useTranslations();
+  const t = useTranslations('BuildPage.whyIxian');
 
   return (
     <ContentWrapper
@@ -50,8 +48,8 @@ const WhyIxian = () => {
       className={classes.whyIxianWrapper}
     >
       <SectionHeader
-        chipContainer={<Chip content={t('lorem')} variant={'primary'} />}
-        title={<TextElement type={'heading-md'}>{t('lorem')}</TextElement>}
+        chipContainer={<Chip content={t('chip')} variant={'outlined'} />}
+        title={<TextElement type={'heading-lg'}>{t('title')}</TextElement>}
       />
       <div className={classes.offerInfo}>
         {singleInfoData.map((info, index) => (
@@ -65,30 +63,30 @@ const WhyIxian = () => {
         ))}
       </div>
       <section className={classes.keyResources}>
-        <TextElement type={'heading-sm'}>{t('lorem')}</TextElement>
+        <TextElement type={'heading-md'}>{t('keyResources.title')}</TextElement>
         <div className={classes.infoItems}>
           <InteractionCard
-            icon={<MyIcon name={'edit_audio'} rounded />}
-            title={t('lorem')}
-            description={t('lorem')}
+            icon={<MyIcon name={'Home'} rounded />}
+            title={t('keyResources.card1.title')}
+            description={t('keyResources.card1.subtitle')}
             enableHover
           />
           <InteractionCard
-            icon={<MyIcon name={'edit_audio'} rounded />}
-            title={t('lorem')}
-            description={t('lorem')}
+            icon={<MyIcon name={'Home'} rounded />}
+            title={t('keyResources.card2.title')}
+            description={t('keyResources.card2.subtitle')}
             enableHover
           />
           <InteractionCard
-            icon={<MyIcon name={'edit_audio'} rounded />}
-            title={t('lorem')}
-            description={t('lorem')}
+            icon={<MyIcon name={'Home'} rounded />}
+            title={t('keyResources.card3.title')}
+            description={t('keyResources.card3.subtitle')}
             enableHover
           />
           <InteractionCard
-            icon={<MyIcon name={'edit_audio'} rounded />}
-            title={t('lorem')}
-            description={t('lorem')}
+            icon={<MyIcon name={'Home'} rounded />}
+            title={t('keyResources.card4.title')}
+            description={t('keyResources.card4.subtitle')}
             enableHover
           />
         </div>

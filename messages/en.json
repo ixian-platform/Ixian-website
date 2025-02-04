@@ -1,19 +1,330 @@
 {
   "lorem": "Lorem ipsum dolor sit amet",
   "Footer": {
-    "address": {
-      "slo": {
-        "company": "IXI Labs d.o.o.",
-        "street": "Zaloška cesta 160C",
-        "city": "1260 Ljubljana-Polje",
-        "country": "Slovenija"
-      },
-      "eng": {
-        "company": "IXI Labs LTD",
-        "street": "Suite 99 Milton Keynes Business Centre",
-        "city": "Foxhunter Drive, Milton Keynes",
-        "country": "United Kingdom"
+    "label": "The platform for decentralized data communication.",
+    "endorsed": "Proudly endorsed by IXI Labs.",
+    "ixian": "Ixian",
+    "external": {
+      "title": "External",
+      "ixiLabs": "IXI Labs",
+      "spixi": "Spixi",
+      "IXInames": "IXI Names",
+      "mineIXI": "Mine IXI",
+      "github": "GitHub"
+    },
+    "termsOfUse": "Terms of Use",
+    "privacyPolicy": "Privacy Policy",
+    "cookies": "Cookies",
+    "MIT": "MIT License"
+  },
+  "GetInvolved": {
+    "chip": "Get Involved",
+    "title": "Your Path to Impact Starts Here",
+    "subtitle": "Ixian is an open platform that welcomes everyone. Join the community, collaborate with innovators, and help shape the future of Internet.",
+    "earn": "Earn $IXI Rewards",
+    "earnDesc": "Support the Ixian network while earning $IXI rewards. Contribute to a decentralized, scalable blockchain and gain from the growth of the platform.",
+    "joinCommunityTitle": "Join the Community",
+    "joinCommunityDesc": "Connect with the Ixian community. Every contribution counts towards the decentralized future we're building.",
+    "runYourNode": "Run your IXI Node",
+    "joinCommunity": "Join Community"
+  },
+  "Metrics": {
+    "chip": "Why Ixian",
+    "title": "Built for Scalability, Security and Real-world Use",
+    "subtitle": "Ixian is designed for real-world applications, providing the scalability and security needed to power trillions of devices across industries—from IoT to smart cities. We’re reducing infrastructure overhead and complexity in multi-user environments.",
+    "howDoesItWork": "How Does It Work",
+    "readWhitepaper": "Read the White Paper",
+    "connectedDevices": "Connected Devices",
+    "dataTransfers": "Data Transfers",
+    "peakTps": "Peak TPS YTD",
+    "activeIxianDltNodes": "Active Ixian DLT Nodes",
+    "transactionFees": "Transaction Fees",
+    "note": "*Data extrapolated from ixiscope and node metrics.",
+    "targetBlockTime": "Target Block Time",
+    "onChainTransactions": "On-chain Transactions"
+  },
+  "Ecosystem": {
+    "chip": "Ecosystem",
+    "title": "Discover and Co-create a Vibrant Ecosystem",
+    "subtitle": "Ixian’s ecosystem unites cutting-edge technologies, tools, and a community to drive collaboration and growth. Built on a scalable blockchain with overlay DePIN, it supports a wide range of applications. Whether you’re a developer, entrepreneur, or innovator, Ixian provides the foundation to drive your vision forward.",
+    "exploreEco": "Discover More",
+    "whatIsIxi": "What is IXI",
+    "robustBlockchain": "Robust Layer-1 Blockchain",
+    "robustDesc": "Ixian DLT forms the backbone of the platform and the ecosystem, supporting device discovery and high volume of low-cost microtransactions.",
+    "overlayNetwork": "Overlay DePIN",
+    "overlayDesc": "Ixian S2 ensures seamless data exchange across decentralized networks, driving real-time communication between connected devices.",
+    "IxiCrypto": "IXI Cryptocurrency",
+    "IxiCryptoDesc": "Low-cost and high-throughput, $IXI is the native cryptocurrency that powers the entire ecosystem.",
+    "devTools": "Developer Tools",
+    "devToolsDesc": "Ixian provides a set of developer tools, including SDKs, APIs, and open-source libraries, offering developers the flexibility and scalability needed to build innovative solutions.",
+    "communitySupport": "Community Support",
+    "communitySupportDesc": "Share knowledge, collaborate on new projects, and receive support as you build the next generation of decentralized applications.",
+    "decentralizedMessenger": "Decentralized Messenger",
+    "spixiChat": "Spixi Private Chat and Wallet.",
+    "spixiDesc": "Spixi is a secure, user-friendly chat and wallet application which demonstrates the power of the Ixian platform. ",
+    "ixiNames": "IXI Names",
+    "namesDesc": "Attach your cryptographic addresses (IXI, BTC, SOL, ETH,...) and other data to a human-readable name. Secured by blockchain, it’s the first step in disrupting traditional name services.",
+    "comingSoon": "Coming Soon",
+    "building": "We're building new features.",
+    "stayUp": "Stay up to date with Ixian as we roll out new and exciting features.",
+    "visitSpixiWebsite": "Visit Spixi Website"
+  },
+  "UseCases": {
+    "chip": "Real-World Application",
+    "title": "Solving Tomorrows Challenges Today",
+    "subtitle": "We collaborate with industry partners to drive innovation, streamline integration, and empower businesses to deploy next-gen solutions on the Ixian platform.",
+    "exploreUseCases": "Explore Use-Cases",
+    "card1": {
+      "title": "Secure IoT",
+        "subtitle": "Securely connect smart devices, sensors, drones, and vehicles without centralized control and without single points of failure."
+    },
+    "card2": {
+      "title": "Smart Access Control",
+        "subtitle": "Revolutionize hotel check-ins or secure home access with device-based controls."
+    },
+    "card3": {
+      "title": "Low-cost Infrastructure",
+        "subtitle": "Enable private, encrypted network and facilitate secure communication for your organization."
+    }
+  },
+  "Partners": {
+    "buildTogether": "Shift the Paradigm, Decentralize With Ixian.",
+    "buildSubtitle": "Ixian is ready for your next step, are you?",
+    "explorePartnerships": "Explore Partnerships",
+    "chip": "Partners"
+  },
+  "LandingHero": {
+    "chip": "The Open-Source Decentralized Data Streaming Platform",
+    "title": "Building Blocks for a Connected World",
+    "subtitle": "Bringing together a world of devices with secure, seamless, and reliable connections. Allowing you to cut costs, enhance security, and confidently deploy products and services at scale.",
+    "start": "Start Building with Ixian",
+    "discover": "Discover the Platform"
+  },
+  "LandingFeatures": {
+    "security": {
+      "chip": "Security & Privacy",
+      "title": "Keep your data communications secure.",
+      "subtitle": "Whether it’s connecting IoT devices, running smart cities and factories, or transmitting voice and video, Ixian eliminates the need for a trusted third party, helping users maintain full security and control.",
+      "cta": "Learn about IXI Security",
+      "cards": {
+        "card1": {
+          "title": "Trustless Authorization",
+          "subtitle": "Ixian platform uses Public Key Infrastructure as an identifier which enables client authentication, secure and trustless device discovery, serving as a foundation for secure communication."
+        },
+        "card2": {
+          "title": "Trustless Device Discovery",
+          "subtitle": "Instantly discover and connect a world of devices across the internet. Ixian’s self-sovereign client discovery enables smooth integration and communication between all connected devices."
+        },
+        "card3": {
+          "title": "Secure Communication",
+          "subtitle": "Ensure your data is transmitted securely between devices across the internet without relying on third-party intermediaries. Ixian is bringing a paradigm shift in online device communication."
+        }
       }
+    },
+    "efficiency": {
+      "chip": "Efficiency & Scalability",
+      "title": "Harness the efficiency and seamless scalability.",
+      "subtitle": "Unlock the power of scalable, high-performance applications with minimal resource usage. Enjoy lower deployment and operational costs, effortlessly handling large volumes of data and on-chain transactions, all while scaling your business more efficiently and affordably",
+      "cta": "Learn About Ixian Tech",
+      "cards": {
+        "card1": {
+          "title": "Scalable Platform",
+          "subtitle": "The Ixian Platform is designed for limitless scalability, with no theoretical limit to how many devices can interact with the network. It’s designed to support a connected world of devices, now and into the future."
+        },
+        "card2": {
+          "title": "High-transaction Throughput",
+          "subtitle": "With no theoretical limit to how many transactions the network can process, Ixian will super-charge your high-demand application or service."
+        },
+        "card3": {
+          "title": "Low Resource Usage",
+          "subtitle": "Transactions, data processing and communication between devices occur with minimal resource consumption, reducing operational costs."
+        }
+      }
+    },
+    "build": {
+      "chip": "Build with Ixian",
+      "title": "Minimize infrastructure costs and move fast.",
+      "subtitle": "Ixian provides the tools and resources you need to easily integrate Ixian tech into your applications.",
+      "cta": "Start Building",
+      "cta2": "Visit GitHub",
+      "cards": {
+        "card1": {
+          "title": "Decentralized Data Streaming",
+          "subtitle": "Broadcast and exchange data securely across Ixian’s distributed network, eliminating the need for trusted third parties while maintaining robust security."
+        },
+        "card2": {
+          "title": "Monetize With $IXI Cryptocurrency",
+          "subtitle": "Utilize $IXI monetization within your apps and services. Ixian’s native cryptocurrency is fast, robust and scalable."
+        },
+        "card3": {
+          "title": "Cross-platform Support",
+          "subtitle": "Ixian is designed to support multiple platforms and devices, making it easy to integrate with existing infrastructure and scale across industries."
+        }
+      }
+    },
+    "openSourceCard": {
+      "title": "Open-source Since 2018",
+      "subtitle": "Visit Ixian Project on GitHub",
+      "cta": "Visit Ixian's GitHub"
+    }
+  },
+  "TechnologyPage": {
+    "hero": {
+      "title": "Two Layers, One Powerful Platform",
+      "subtitle": "Ixian operates through two key decentralized networks Ixian DLT and Ixian S2, which together form the foundation for a wide range of secure, global network applications. ",
+      "cta1": "Read Whitepaper",
+      "cta2": "Visit GitHub"
+    },
+    "startBuilding": {
+      "title": "Start Building Now",
+      "subtitle": "We believe that together we can achieve greatness. Partner with Ixian to co-create solutions for tomorrow’s challenges.",
+      "cta": "Build Now"
+    },
+    "gitSection": {
+      "chip": "Open-Source Since 2018",
+      "title": "Backed by Over 20 Years of Research",
+      "subtitle": "Based on decades of research in the fields of cryptography, distributed networks, highly scalable systems and data structures. ",
+      "visitIxian": "Visit Ixian Project on GitHub"
+    },
+    "milestones": {
+      "title": "Milestones"
+    },
+    "ixianDlt": {
+      "chip": "Ixian DLT",
+      "title": "High-Performance Layer-1 Blockchain",
+      "subtitle": "Designed for efficiency and scalability, Ixian DLT forms the backbone of the Ixian Platform. The DLT network leverages proof-of-collaborative-work to handle large volumes of transactions efficiently.",
+      "cta": "Start your IXI DLT Node",
+      "highlights": {
+        "data1": {
+            "title": "IXI Names Registry ",
+            "subtitle": "Allows users to register human-readable names and attach their cryptographic or other addresses (IXI, BTC, SOL, ETH, Email, URL...)."
+        },
+        "data2": {
+            "title": "Transaction Processing",
+            "subtitle": "Ixian DLT allows users to transfer $IXI cryptocurrency between each other, and maintains an immutable history of all transactions."
+        },
+        "data3": {
+            "title": "No Theoretical Scaling Limit",
+            "subtitle": "Ixian is built to scale horizontally. This means that there is no theoretical limit to how many devices can connect to the platform and how many transactions the network can process."
+        }
+      },
+      "card1": {
+        "title": "$IXI Cryptocurrency",
+        "subtitle": "Native cryptocurrency of the Ixian Platform. Designed for minimal transaction fees and efficiency."
+      },
+        "card2": {
+            "title": "Proof-of-Collaborative-Work",
+            "subtitle": "A novel approach that combines the benefits of Proof-of-Work with more efficient collaboration between nodes. Ixian is built to minimize the risk of forking."
+        },
+        "card3": {
+            "title": "Simplicity",
+            "subtitle": "Ixian DLT is a no-fuss blockchain. By avoiding additional complexity and overhead, it offers an efficient and performance oriented solution."
+        }
+    },
+    "ixianS2": {
+      "chip": "Ixian S2",
+      "title": "Distributed Overlay DePIN",
+      "subtitle": "Ixian S2 is an overlay Decentralized Physical Infrastructure Network which augments the Ixian DLT by relaying transactions, SPV proofs and presences between users and the blockchain. Its primary function however is to relay data between any two end-points or users, facilitating the device-to-device and user-to-user communication. S2 network’s capability increases as more nodes join, supporting the growing demands of decentralized applications and Internet-of-Things ecosystems.",
+      "cta": "Start your IXI S2 Node",
+      "card1": {
+        "title": "Trustless Device Discovery",
+        "subtitle": "Instantly discover and connect billions of devices across the network. Ixian’s trustless device discovery enables smooth integration and communication between connected devices."
+      },
+      "card2": {
+        "title": "Trustless Communication",
+        "subtitle": "Unlock secure communication and trustless device discovery with decentralized control of your data. This feature ensures privacy and authenticity, allowing for secure interactions across the network."
+      },
+      "card3": {
+        "title": "Secure Data Transfer",
+        "subtitle": "Stream data securely between devices across the internet, eliminating the need for trusted third party while maintaining robust security."
+      }
+    },
+    "ixiCurrency": {
+      "chip": "$IXI Cryptocurrency",
+      "title": "Ixian’s Native Cryptocurrency",
+      "subtitle": "By creating an incentive for node operators, $IXI powers the platform. With its fixed supply, fast and efficient transactions, it creates the foundation for an ecosystem of value.",
+      "cta1": "View $IXI emissions details",
+      "cta2": "Mine IXI Now",
+      "card1": {
+        "title": "Low-Cost & Fast Transactions",
+        "subtitle": "With minimal fees, $IXI is ensuring the ecosystem runs smoothly without the burden of high costs. Transactions are designed to be fast, efficient, and to scale effortlessly. This allows indie developers, businesses as well as users to benefit from affordability, reliability and speed."
+      },
+      "card2": {
+        "title": "Fair Distribution",
+        "subtitle": "$IXI is generated through block rewards for DLT node operators, ensuring a decentralized and equitable distribution. There were no pre-sales or private sales, making the process fully transparent and accessible to all participants. 9% of the total projected supply is allocated as a pre-mine for platform and ecosystem development."
+      },
+      "metrics": {
+        "supply": "Projected Supply in Year 2125",
+        "peakTps": "Peak TPS YTD",
+        "targetBlockTime": "Target Block Time",
+        "transactionFees": "Transaction Fees",
+        "note": "*Data extrapolated from ixiscope and node metrics."
+      },
+      "exchanges": "Exchanges and Aggregators",
+      "exchangesSubtitle": "Get more information about $IXI and trading pairs."
+    }
+  },
+  "BuildPage": {
+    "hero": {
+      "title": "Build Smarter, Spend Less",
+      "subtitle": "Launch your product on Ixian and reduce your operational costs.",
+      "cta": "Get Started Now",
+      "readyToBuild": "Ready to Build the Future?",
+      "readyToBuildSubtitle": "We believe that together we can achieve greatness. Partner with Ixian to co-create secure, scalable solutions for tomorrow’s challenges.",
+      "getStarted": "Get Started Now"
+    },
+    "whyIxian": {
+      "chip": "Why Build on Ixian",
+      "title": "Built for Developers, Designed for Mass Adoption",
+      "data1": {
+        "title": "Ixian Advantage",
+        "subtitle": "When you require trustless and secure client discovery, end-to-end communication and human readable name registration."
+      },
+      "data2": {
+        "title": "Uncompromised Security",
+        "subtitle": "Benefit from the built-in security of Ixian and reduce your operational costs."
+      },
+      "data3": {
+        "title": "Easy Integration",
+        "subtitle": "Seamless integration with Ixian’s Core DLT and Overlay Network."
+      },
+      "data4": {
+        "title": "High Scalability",
+        "subtitle": "Don’t limit your aspirations and build on the highly scalable Ixian platform."
+      },
+      "data5": {
+        "title": "Minimal Infrastructure Costs",
+        "subtitle": "Deploy your next solution on Ixian and minimize your entry costs."
+      },
+      "keyResources": {
+        "title": "Key Resources",
+        "card1": {
+            "title": "Ixian Protocol Documentation",
+            "subtitle": "Learn about Ixian protocol to kick start your next project."
+        },
+        "card2": {
+            "title": "API Documentation",
+            "subtitle": "Learn how to interact with the Ixian DLT and S2 nodes through API end-points."
+        },
+        "card3": {
+            "title": "Node Setup Guide",
+            "subtitle": "Everything you need to get your nodes up and running."
+        },
+        "card4": {
+            "title": "GitHub Repository",
+            "subtitle": "Ixian is open source. Visit our GitHub repo."
+        }
+      }
+    },
+    "faq": {
+      "title": "FAQs",
+      "subtitle": "We have some common questions answered to get you started.",
+      "q1": "How do I start developing with Ixian?",
+      "a1": "You should get going pretty fast with everything setup easily for you to read and work on. If  you have any additional questions, might want to check the community.",
+      "q2": "What can I build on Ixian?",
+      "a2": "something something",
+      "q3": "How do I participate in the Ixian network?",
+      "a3": "something something"
     }
   }
 }

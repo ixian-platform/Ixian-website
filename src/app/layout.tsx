@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import './globals.scss';
 import ThemeProvider from '@/app/providers/ThemeProvider/ThemeProvider';
 import Navbar from '@components/Navbar/Navbar';
@@ -18,11 +17,6 @@ const inter = Inter({
   weight: ['400', '500', '600', '700'],
 });
 
-export const metadata: Metadata = {
-  title: 'Ixian',
-  description: 'Ixian - Distributed technology for the people',
-};
-
 export default async function RootLayout({
   children,
 }: Readonly<{
@@ -33,7 +27,11 @@ export default async function RootLayout({
 
   return (
     <ThemeProvider>
-      <html lang={locale} className={Cookies.get('themeMode')}>
+      <html
+        lang={locale}
+        className={Cookies.get('themeMode')}
+        suppressHydrationWarning={true}
+      >
         <NextIntlClientProvider messages={messages}>
           <body
             className={`${spaceGrotesk.className} ${inter.className} bodyLayout`}

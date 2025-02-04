@@ -2,13 +2,13 @@
 
 .getInvolvedSection {
   width: 100%;
-  background: var(--gradient-bg-1);
-
+  background: var(--colors-surface-02);
   scroll-margin-top: var(--spacing-super-xl);
 
   .getInvolved {
     padding: var(--spacing-super-xl) var(--spacing-md);
     display: flex;
+    flex-direction: column;
     gap: var(--spacing-xxl);
 
     @include mq('md') {
@@ -36,7 +36,6 @@
 
       .singleCard {
         width: 100%;
-        max-width: 394px;
         padding: var(--spacing-xl);
         border-radius: var(--corner-radius-lg);
         background: var(--colors-surface-01);
@@ -47,7 +46,6 @@
         }
 
         .innerSection {
-          min-width: 346px;
           padding-top: var(--spacing-super-lg);
 
           .headerIcons {

@@ -2,13 +2,22 @@
 
 .ecosystemSection {
   width: 100%;
-  background: var(--gradient-bg-2);
+  background: var(--colors-surface-01);
 
   .ecosystemWrapper {
     padding: var(--spacing-super-xl) var(--spacing-md);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-3xl);
+
+    .topRetro {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 1249px;
+    }
 
     .offerInfo {
       width: 100%;
@@ -53,7 +62,7 @@
       width: 100%;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: var(--spacing-xxl);
+      gap: 40px;
 
       @include mq('sm') {
         grid-template-columns: repeat(1, 1fr);
@@ -62,10 +71,6 @@
 
       .rowSpan2 {
         grid-row: span 2;
-      }
-
-      .bigCardBody {
-        max-width: 360px;
       }
     }
 
@@ -76,4 +81,23 @@
       z-index: 0;
     }
   }
+}
+
+.newFeaturesCardGradient {
+  background:
+    radial-gradient(
+        117.99% 141.4% at 128.55% 44.32%,
+        rgba(44, 234, 27, 0.4) 0%,
+        rgba(159, 63, 243, 0.4) 35.53%,
+        rgba(43, 244, 234, 0.4) 85.5%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    radial-gradient(
+        119.7% 137.67% at -10.73% 113.07%,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0.0890915) 39.41%,
+        rgba(255, 255, 255, 0) 53.09%,
+        #ffffff 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
 }

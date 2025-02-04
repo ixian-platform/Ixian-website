@@ -4,15 +4,16 @@
   flex-direction: column;
   gap: var(--spacing-xxl);
   transition: all 0.3s ease;
+  color: var(--colors-text-inverse);
 
   .years {
     display: flex;
     gap: var(--spacing-xxl);
     align-items: center;
-    color: var(--colors-text-02);
+    color: var(--colors-text-inverse-2);
 
     .yearSelected {
-      color: var(--colors-text-01);
+      color: var(--colors-text-inverse);
     }
   }
 
@@ -28,17 +29,24 @@
 
     .singleSwitch {
       padding: 8px;
-      background: var(--colors-surface-03);
       border-radius: var(--corner-radius-full);
+
+      > svg {
+        color: var(--colors-icon-inverse);
+      }
 
       &.disabled {
         background: transparent;
         pointer-events: none;
         opacity: 0.5;
+
+        > svg {
+          color: var(--colors-icon-disabled);
+        }
       }
 
       &:hover {
-        background: var(--colors-surface-02);
+        background: var(--colors-icon-on-disabled);
         cursor: pointer;
       }
     }

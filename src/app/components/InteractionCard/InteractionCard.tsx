@@ -16,6 +16,7 @@ interface InteractionCardProps {
   enableHoverImage?: boolean;
   hoverImageType?: 'access' | 'dapps' | 'enterprise' | 'iot';
   additionalContent?: ReactNode;
+  headerAdditionalContent?: ReactNode;
   linkHref?: string;
 }
 
@@ -31,6 +32,7 @@ const InteractionCard = ({
   enableHoverImage,
   additionalContent,
   linkHref,
+  headerAdditionalContent,
   hoverImageType,
 }: InteractionCardProps) => {
   return (
@@ -49,13 +51,14 @@ const InteractionCard = ({
       )}
     >
       <div className={classes.content}>
+        {headerAdditionalContent}
         {icon && <div className={classes.icon}>{icon}</div>}
         <h3 className={classes.title}>{title}</h3>
         <p className={classes.description}>{description}</p>
       </div>
       {linkHref && (
         <Link className={classes.arrowLink} href={linkHref}>
-          <MyIcon name={'arrow_forward_ios'} />
+          <MyIcon name={'EastRounded'} rounded />
         </Link>
       )}
       {additionalContent}

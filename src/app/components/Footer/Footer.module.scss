@@ -37,15 +37,9 @@
           max-width: unset;
         }
 
-        .info {
+        .socialsContainer {
           display: flex;
-          flex-direction: column;
-          gap: var(--spacing-sm);
-
-          .address {
-            display: flex;
-            flex-direction: column;
-          }
+          gap: 12px;
         }
       }
 
@@ -80,6 +74,16 @@
 
           > a {
             color: var(--colors-text-inverse);
+          }
+
+          .externalLink {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            svg {
+              color: var(--colors-text-inverse);
+            }
           }
 
           @include mq('xs') {

@@ -11,7 +11,7 @@ import { Section } from '@utils/constants';
 import MyIcon from '@components/MyIcon/MyIcon';
 
 const GetInvolvedSection = () => {
-  const t = useTranslations();
+  const t = useTranslations('GetInvolved');
 
   return (
     <ContentWrapper
@@ -27,15 +27,15 @@ const GetInvolvedSection = () => {
         className={classes.bottomRetro}
       />
       <SectionHeader
-        chipContainer={<Chip content={t('lorem')} variant={'outlined'} />}
+        chipContainer={<Chip content={t('chip')} variant={'outlined'} />}
         title={
           <TextElement type={'heading-lg'} as={'h1'}>
-            {t('lorem')}
+            {t('title')}
           </TextElement>
         }
         subtitle={
           <TextElement type={'body-md'} as={'h1'}>
-            {t('lorem')}
+            {t('subtitle')}
           </TextElement>
         }
       />
@@ -45,18 +45,20 @@ const GetInvolvedSection = () => {
             className={classes.innerSection}
             chipContainer={
               <div className={classes.headerIcons}>
-                <MyIcon name={'ixian_logo'} />
-                <MyIcon name={'s2_mark'} />
+                <MyIcon customName={'ixian_logo'} />
+                <MyIcon customName={'s2_mark'} />
               </div>
             }
-            title={<TextElement type={'heading-sm'}>{t('lorem')}</TextElement>}
-            subtitle={<TextElement type={'body-sm'}>{t('lorem')}</TextElement>}
+            title={<TextElement type={'heading-sm'}>{t('earn')}</TextElement>}
+            subtitle={
+              <TextElement type={'body-sm'}>{t('earnDesc')}</TextElement>
+            }
             ctaContent={
               <Button
-                leadingIcon={<MyIcon name={'arrow_right_alt'} />}
+                leadingIcon={<MyIcon name={'EastRounded'} />}
                 variant={'outlined'}
               >
-                {t('lorem')}
+                {t('runYourNode')}
               </Button>
             }
           />
@@ -64,20 +66,22 @@ const GetInvolvedSection = () => {
         <div className={classes.singleCard}>
           <SectionHeader
             className={classes.innerSection}
-            chipContainer={
-              <div className={classes.headerIcons}>
-                <MyIcon name={'diversity_2'} rounded />
-                <MyIcon name={'wallet'} rounded />
-              </div>
+            title={
+              <TextElement type={'heading-sm'}>
+                {t('joinCommunityTitle')}
+              </TextElement>
             }
-            title={<TextElement type={'heading-sm'}>{t('lorem')}</TextElement>}
-            subtitle={<TextElement type={'body-sm'}>{t('lorem')}</TextElement>}
+            subtitle={
+              <TextElement type={'body-sm'}>
+                {t('joinCommunityDesc')}
+              </TextElement>
+            }
             ctaContent={
               <Button
-                leadingIcon={<MyIcon name={'arrow_right_alt'} />}
+                leadingIcon={<MyIcon name={'EastRounded'} />}
                 variant={'outlined'}
               >
-                {t('lorem')}
+                {t('joinCommunity')}
               </Button>
             }
           />

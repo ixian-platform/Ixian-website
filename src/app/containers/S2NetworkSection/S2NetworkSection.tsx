@@ -6,30 +6,10 @@ import Chip from '@components/Chip/Chip';
 import TextElement from '@components/TextElement/TextElement';
 import InteractionCard from '@components/InteractionCard/InteractionCard';
 import MyIcon from '@components/MyIcon/MyIcon';
-import NumberTicker from '@/components/ui/number-ticker';
-import HighlightsSection from '@/app/containers/HighlightsSection/HighlightsSection';
 import Button from '@components/Button/Button';
 
-const s2HighlightsData = [
-  {
-    icon: 'ixian_logo',
-    title: 'lorem',
-    description: 'lorem',
-  },
-  {
-    icon: 'avg_pace',
-    title: 'lorem',
-    description: 'lorem',
-  },
-  {
-    icon: 'widgets',
-    title: 'lorem',
-    description: 'lorem',
-  },
-];
-
 const S2NetworkSection = () => {
-  const t = useTranslations();
+  const t = useTranslations('TechnologyPage.ixianS2');
 
   return (
     <ContentWrapper
@@ -38,80 +18,38 @@ const S2NetworkSection = () => {
       className={classes.ixianDltContainer}
     >
       <SectionHeader
-        chipContainer={<Chip content={t('lorem')} variant={'primary'} />}
-        title={<TextElement type={'heading-md'}>{t('lorem')}</TextElement>}
-        subtitle={<TextElement type={'body-md'}>{t('lorem')}</TextElement>}
-      />
-      <div className={classes.infoItems}>
-        <InteractionCard
-          icon={<MyIcon name={'edit_audio'} rounded />}
-          title={t('lorem')}
-          description={t('lorem')}
-          enableHover
-        />
-        <InteractionCard
-          icon={<MyIcon name={'edit_audio'} rounded />}
-          title={t('lorem')}
-          description={t('lorem')}
-          enableHover
-        />
-        <InteractionCard
-          icon={<MyIcon name={'edit_audio'} rounded />}
-          title={t('lorem')}
-          description={t('lorem')}
-          enableHover
-        />
-        <InteractionCard
-          icon={<MyIcon name={'edit_audio'} rounded />}
-          title={t('lorem')}
-          description={t('lorem')}
-          enableHover
-        />
-      </div>
-      <div className={classes.dltMetrics}>
-        <div className={classes.insideSingle}>
-          <TextElement type={'heading-md'}>
-            <NumberTicker value={0.005} className={classes.number} /> kwh
-          </TextElement>
-          <TextElement type={'body-md'}>{t('lorem')}</TextElement>
-        </div>
-        <div className={classes.insideSingle}>
-          <TextElement type={'heading-md'}>
-            <NumberTicker value={379} className={classes.number} />
-          </TextElement>
-          <TextElement type={'body-md'}>{t('lorem')}</TextElement>
-        </div>
-        <div className={classes.insideSingle}>
-          <TextElement type={'heading-md'}>
-            <NumberTicker value={0.002} className={classes.number} />*
-          </TextElement>
-          <TextElement type={'body-md'}>{t('lorem')}</TextElement>
-        </div>
-        <div className={classes.insideSingle}>
-          <TextElement type={'heading-md'}>
-            <NumberTicker value={233} className={classes.number} />
-          </TextElement>
-          <TextElement type={'body-md'}>{t('lorem')}</TextElement>
-        </div>
-      </div>
-      <TextElement className={classes.note} type={'body-sm'}>
-        {t('lorem')}
-      </TextElement>
-      <HighlightsSection
-        highlightsClassName={classes.s2Highlights}
-        highlightsData={s2HighlightsData}
-        chipName={t('lorem')}
-        title={t('lorem')}
-        subtitle={t('lorem')}
+        chipContainer={<Chip content={t('chip')} variant={'outlined'} />}
+        title={<TextElement type={'display-md'}>{t('title')}</TextElement>}
+        subtitle={<TextElement type={'body-md'}>{t('subtitle')}</TextElement>}
         ctaContent={
-          <Button
-            variant={'outlined'}
-            leadingIcon={<MyIcon name={'arrow_right_alt'} />}
-          >
-            {t('lorem')}
+          <Button leadingIcon={<MyIcon name={'EastRounded'} />}>
+            {t('cta')}
           </Button>
         }
       />
+      <div className={classes.infoItems}>
+        <InteractionCard
+          icon={<MyIcon name={'GraphicEqRounded'} rounded />}
+          title={t('card1.title')}
+          description={t('card1.subtitle')}
+          enableHover
+          fullWidth
+        />
+        <InteractionCard
+          icon={<MyIcon customName={'s2_mark'} rounded />}
+          title={t('card2.title')}
+          description={t('card2.subtitle')}
+          enableHover
+          fullWidth
+        />
+        <InteractionCard
+          icon={<MyIcon name={'ShieldRounded'} rounded />}
+          title={t('card3.title')}
+          description={t('card3.subtitle')}
+          enableHover
+          fullWidth
+        />
+      </div>
     </ContentWrapper>
   );
 };

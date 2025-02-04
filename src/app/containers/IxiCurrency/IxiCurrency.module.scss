@@ -1,0 +1,112 @@
+@use '@styles/mixins' as *;
+@use '@styles/typograhphy' as *;
+
+.ixiCurrencySection {
+  width: 100%;
+  background: var(--colors-surface-01);
+
+  .ixiCurrency {
+    padding: var(--spacing-super-xl) var(--spacing-md);
+
+    .innerCard {
+      background: radial-gradient(
+        165.4% 152.35% at 111.86% 19.02%,
+        rgba(160, 240, 145, 0.105) 13.71%,
+        rgba(166, 219, 238, 0.1125) 41.04%,
+        rgba(20, 82, 126, 0.09) 67%,
+        rgba(255, 255, 255, 0) 89.85%,
+        #a6dbee1d 10%
+      );
+
+      padding: var(--spacing-super) var(--spacing-xl);
+      border-radius: var(--corner-radius-xxl);
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+
+      .infoCardsContainer {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+
+        @include mq('md') {
+          flex-direction: column;
+        }
+      }
+
+      .exchangesContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+
+        .images {
+          padding: 44px 0;
+          display: flex;
+          gap: 80px;
+
+          @include mq('md') {
+            flex-direction: column;
+          }
+        }
+      }
+
+      .currencyMetrics {
+        .mainMetrics {
+          width: 100%;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          position: relative;
+          gap: var(--spacing-md);
+
+          @include mq('md') {
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+          @include mq('sm') {
+            grid-template-columns: repeat(1, 1fr);
+          }
+
+          &:before,
+          &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: var(--fading-border-horizontal);
+          }
+
+          &:before {
+            top: 0;
+          }
+
+          &:after {
+            bottom: 0;
+          }
+
+          .insideSingle {
+            width: 100%;
+            padding: var(--spacing-md);
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-xxs);
+            align-items: flex-start;
+
+            :first-child {
+              color: var(--colors-text-action);
+            }
+
+            .number {
+              @include heading-md;
+            }
+          }
+        }
+
+        .note {
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+}

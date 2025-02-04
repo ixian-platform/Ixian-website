@@ -1,0 +1,51 @@
+@use '@styles/mixins' as *;
+
+.partnersSection {
+  width: 100%;
+  background: var(--colors-surface-inverse);
+  border-bottom: 4px solid;
+  border-image: linear-gradient(45deg, #6ee17f, #a546e4, #4d7df6) 1;
+
+  background-image: var(--pattern);
+  background-position: right;
+  background-repeat: no-repeat;
+
+  .partners {
+    padding: 240px 16px 100px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+
+    @include mq('md') {
+      padding-top: 80px;
+      gap: 40px;
+    }
+
+    .buildTogether {
+      align-items: center;
+      color: var(--colors-text-inverse);
+      text-align: center;
+    }
+
+    .center {
+      justify-content: center;
+    }
+
+    .partnerImages {
+      padding: 0 40px 80px 40px;
+      border-bottom: 2px solid;
+      border-image: linear-gradient(45deg, #6ee17f, #a546e4, #4d7df6) 1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 64px;
+      align-items: center;
+      justify-items: center;
+
+      @include mq('sm') {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+      }
+    }
+  }
+}

@@ -1,4 +1,11 @@
 @use '@styles/typograhphy' as *;
+@use '@styles/mixins' as *;
+
+.textElement {
+  @include mq('sm') {
+    word-break: break-word;
+  }
+}
 
 // Display styles
 .display-lg {

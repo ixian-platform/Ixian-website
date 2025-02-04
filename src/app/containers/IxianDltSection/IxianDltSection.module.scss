@@ -11,16 +11,28 @@
     flex-direction: column;
     gap: var(--spacing-super);
 
-    .infoItems {
+    .dltHighlights {
+      width: 100%;
+      max-width: 600px;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: var(--spacing-xxl);
+      grid-template-columns: repeat(1, 1fr);
+      gap: 40px;
+
+      .singleInfo {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        gap: var(--spacing-md);
+      }
+    }
+
+    .infoItems {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
 
       @include mq('md') {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      @include mq('sm') {
         grid-template-columns: 1fr;
       }
     }
