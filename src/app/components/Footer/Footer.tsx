@@ -86,7 +86,6 @@ const Footer = () => {
                 <TextElement type={'label-sm'}>
                   {t('external.ixiLabs')}
                 </TextElement>
-                <MyIcon name={'Launch'} height={12} width={12} />
               </Link>
               <Link
                 href={'/'}
@@ -96,7 +95,6 @@ const Footer = () => {
                 <TextElement type={'label-sm'}>
                   {t('external.spixi')}
                 </TextElement>
-                <MyIcon name={'Launch'} height={12} width={12} />
               </Link>
               <Link
                 href={'/'}
@@ -106,7 +104,6 @@ const Footer = () => {
                 <TextElement type={'label-sm'}>
                   {t('external.IXInames')}
                 </TextElement>
-                <MyIcon name={'Launch'} height={12} width={12} />
               </Link>
               <Link
                 href={'/'}
@@ -116,7 +113,6 @@ const Footer = () => {
                 <TextElement type={'label-sm'}>
                   {t('external.mineIXI')}
                 </TextElement>
-                <MyIcon name={'Launch'} height={12} width={12} />
               </Link>
               <Link
                 href={'/'}
@@ -126,7 +122,6 @@ const Footer = () => {
                 <TextElement type={'label-sm'}>
                   {t('external.github')}
                 </TextElement>
-                <MyIcon name={'Launch'} height={12} width={12} />
               </Link>
             </div>
           </div>

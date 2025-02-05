@@ -7,10 +7,13 @@ import Chip from '@components/Chip/Chip';
 import MyIcon from '@components/MyIcon/MyIcon';
 import InteractionCard from '@components/InteractionCard/InteractionCard';
 import { getServerTranslations } from '@utils/getServerTranslations';
+import CharacteristicsLayout, {
+  SingleData,
+} from '@components/CharacteristicsLayout/CharacteristicsLayout';
 
 const st = await getServerTranslations();
 
-const singleInfoData = [
+const singleInfoData: SingleData[] = [
   {
     icon: 'Home',
     title: st('BuildPage.whyIxian.data1.title'),
@@ -51,17 +54,7 @@ const WhyIxian = () => {
         chipContainer={<Chip content={t('chip')} variant={'outlined'} />}
         title={<TextElement type={'heading-lg'}>{t('title')}</TextElement>}
       />
-      <div className={classes.offerInfo}>
-        {singleInfoData.map((info, index) => (
-          <div key={index} className={classes.singleInfo}>
-            <MyIcon name={info.icon} rounded />
-            <div>
-              <TextElement type={'heading-xs'}>{info.title}</TextElement>
-              <TextElement type={'body-sm'}>{info.description}</TextElement>
-            </div>
-          </div>
-        ))}
-      </div>
+      <CharacteristicsLayout data={singleInfoData} />
       <section className={classes.keyResources}>
         <TextElement type={'heading-md'}>{t('keyResources.title')}</TextElement>
         <div className={classes.infoItems}>

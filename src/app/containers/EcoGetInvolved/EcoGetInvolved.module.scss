@@ -1,14 +1,12 @@
 @use '@styles/mixins' as *;
+@use '@styles/typograhphy' as *;
 
-.ecosystemSection {
+.ecoGetInvolvedSection {
   width: 100%;
   background: var(--colors-surface-01);
 
-  .ecosystemWrapper {
-    padding: var(--spacing-super-xl) var(--spacing-md);
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-3xl);
+  .ecoGetInvolved {
+    padding: var(--spacing-super-xxl) var(--spacing-md);
 
     .topRetro {
       position: absolute;
@@ -19,10 +17,38 @@
       max-width: 1249px;
     }
 
+    .socialCards {
+      width: 100%;
+      display: flex;
+      gap: 32px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: var(--spacing-super-xxl);
+
+      .customCard {
+        max-width: 180px;
+        max-height: 156px;
+        min-height: unset;
+
+        div[class*='content'] {
+          h3 {
+            @include label-lg;
+          }
+
+          div[class*='icon'] {
+            border: 1px solid var(--colors-outline-02);
+            border-radius: 99px;
+            padding: 8px;
+            background: var(--colors-surface-inverse);
+          }
+        }
+      }
+    }
+
     .bottomCards {
       width: 100%;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(1, 1fr);
       gap: 40px;
 
       @include mq('sm') {
@@ -30,8 +56,12 @@
         justify-items: center;
       }
 
-      .rowSpan2 {
-        grid-row: span 2;
+      .colSpan2 {
+        grid-column: span 2;
+      }
+
+      .marginBot {
+        margin-bottom: 16px;
       }
     }
   }

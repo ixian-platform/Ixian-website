@@ -1,0 +1,31 @@
+.contributeSection {
+  width: 100%;
+  background: var(--colors-surface-inverse);
+  border-bottom: 4px solid;
+  border-image: linear-gradient(45deg, #6ee17f, #a546e4, #4d7df6) 1;
+
+  .contribute {
+    padding: var(--spacing-super-lg) var(--spacing-md);
+    display: flex;
+    color: var(--colors-text-inverse);
+    gap: 10px;
+
+    .header {
+      flex: unset;
+    }
+
+    .info {
+      grid-template-columns: repeat(1, 1fr);
+
+      .singleInfo {
+        flex-direction: column;
+
+        div:last-child {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+@use '@styles/mixins' as *;
+@use '@styles/typograhphy' as *;
+
+.poweringIxianSection {
+  width: 100%;
+  background: var(--colors-surface-01);
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(45deg, #6ee17f, #a546e4, #4d7df6) 1;
+
+  .poweringIxian {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: var(--spacing-super-xl) var(--spacing-md);
+
+    .resourcesContainer {
+      color: var(--colors-text-inverse);
+      margin-top: 40px;
+      padding: var(--spacing-super) var(--spacing-xl);
+      border-radius: var(--corner-radius-xxl);
+      background: radial-gradient(
+          173.13% 177.27% at 141.29% -38.75%,
+          rgba(48, 162, 25, 0.3) 13.71%,
+          rgba(34, 73, 87, 0.225) 41.04%,
+          rgba(86, 16, 126, 0.130677) 67%,
+          rgba(0, 0, 0, 0) 89.85%
+        ),
+        linear-gradient(0deg, #0a0f0c, #0a0f0c),
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      .images {
+        padding: 44px 0;
+        display: flex;
+        gap: 80px;
+
+        @include mq('md') {
+          flex-direction: column;
+        }
+      }
+
+      .innerCards {
+        border-top: 1px solid var(--colors-outline-inverse);
+        padding: 64px 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .text {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .linkCards {
+          width: 100%;
+          display: flex;
+          gap: 32px;
+
+          > div {
+            max-width: 272px;
+            min-height: unset;
+            background: var(--colors-surface-inverse-2);
+
+            p,
+            h3 {
+              color: var(--colors-text-inverse);
+            }
+
+            div[class*='rounded'] {
+              border-color: #fbfcfb;
+              &:hover::before {
+                border-color: #fbfcfb;
+              }
+
+              svg {
+                color: #fbfcfb;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -11,6 +11,7 @@ export interface SectionHeaderProps {
   chipContainer?: ReactNode;
   enableSlideUp?: boolean;
   fullWidth?: boolean;
+  inverseText?: boolean;
 }
 
 const SectionHeader = ({
@@ -22,12 +23,14 @@ const SectionHeader = ({
   enableSlideUp,
   ctaClassName,
   fullWidth,
+  inverseText,
 }: SectionHeaderProps) => {
   return (
     <section
       className={classNames(classes.sectionHeader, className, {
         [classes.slideUp]: enableSlideUp,
         [classes.fullWidth]: fullWidth,
+        [classes.inverseText]: inverseText,
       })}
     >
       {chipContainer}

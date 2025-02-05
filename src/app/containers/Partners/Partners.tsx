@@ -45,6 +45,7 @@ const Partners = () => {
       </div>
       <SectionHeader
         className={classes.buildTogether}
+        inverseText
         title={
           <TextElement type={'heading-lg'} as={'h1'}>
             {t('buildTogether')}

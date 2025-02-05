@@ -52,7 +52,6 @@ export default function Build() {
         leftContainer={<Image src={code1} alt={'code1'} />}
       />
       <WhyIxian />
-      <Faq />
       <StartBuildingNow
         title={t('readyToBuild')}
         subtitle={t('readyToBuildSubtitle')}

@@ -11,7 +11,7 @@ type HeroSectionProps =
       chip?: ReactNode;
       title: ReactNode;
       subtitle: string;
-      ctaContent: ReactNode;
+      ctaContent?: ReactNode;
       splinePath: string;
       leftContainer?: never;
       className?: string;
@@ -20,7 +20,7 @@ type HeroSectionProps =
       chip?: ReactNode;
       title: ReactNode;
       subtitle: string;
-      ctaContent: ReactNode;
+      ctaContent?: ReactNode;
       splinePath?: never;
       leftContainer?: ReactNode;
       className?: string;

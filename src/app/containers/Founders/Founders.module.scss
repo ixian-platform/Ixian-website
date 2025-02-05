@@ -1,0 +1,27 @@
+.foundersSection {
+  width: 100%;
+  background: var(--colors-surface-inverse);
+
+  .founders {
+    padding: var(--spacing-super-xl) var(--spacing-md);
+
+    .cardsContainer {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+
+      .card {
+        background: var(--colors-surface-inverse-2);
+        border-radius: var(--corner-radius-xxl);
+        padding: var(--spacing-md);
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--colors-outline-inverse-2);
+        min-height: 216px;
+        align-content: center;
+        justify-content: center;
+        gap: 20px;
+      }
+    }
+  }
+}

@@ -18,7 +18,7 @@ const StartBuildingNow = ({ title, subtitle, cta }: StartBuildingNowProps) => {
       className={classes.startBuildingContainer}
     >
       <SectionHeader
-        className={classes.startBuildingCustomSectionHeader}
+        inverseText
         title={<TextElement type={'display-md'}>{title}</TextElement>}
         subtitle={<TextElement type={'body-md'}>{subtitle}</TextElement>}
         ctaContent={cta}

@@ -7,7 +7,7 @@ import MyIcon from '@components/MyIcon/MyIcon';
 interface InteractionCardProps {
   icon?: ReactNode;
   title: string;
-  description: string;
+  description?: string;
   className?: string;
   fullWidth?: boolean;
   enableHover?: boolean;
@@ -54,7 +54,7 @@ const InteractionCard = ({
         {headerAdditionalContent}
         {icon && <div className={classes.icon}>{icon}</div>}
         <h3 className={classes.title}>{title}</h3>
-        <p className={classes.description}>{description}</p>
+        {description && <p className={classes.description}>{description}</p>}
       </div>
       {linkHref && (
         <Link className={classes.arrowLink} href={linkHref}>
