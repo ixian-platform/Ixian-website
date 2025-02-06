@@ -37,6 +37,13 @@ const UseCases = () => {
       />
       <div className={classes.caseCards}>
         <InteractionCard
+          onHoverHeader={
+            <Chip
+              content={t('inProgress')}
+              variant={'outlined'}
+              isTextInversed
+            />
+          }
           title={t('card1.title')}
           description={t('card1.subtitle')}
           enableHoverImage
@@ -44,6 +51,13 @@ const UseCases = () => {
           disableScale
         />
         <InteractionCard
+          onHoverHeader={
+            <Chip
+              content={t('inProgress')}
+              variant={'outlined'}
+              isTextInversed
+            />
+          }
           title={t('card2.title')}
           description={t('card2.subtitle')}
           enableHoverImage
@@ -51,6 +65,13 @@ const UseCases = () => {
           disableScale
         />
         <InteractionCard
+          onHoverHeader={
+            <Chip
+              content={t('inProgress')}
+              variant={'outlined'}
+              isTextInversed
+            />
+          }
           title={t('card3.title')}
           description={t('card3.subtitle')}
           enableHoverImage

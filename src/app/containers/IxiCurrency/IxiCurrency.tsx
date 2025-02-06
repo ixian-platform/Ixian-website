@@ -50,14 +50,12 @@ const IxiCurrency = () => {
             icon={<MyIcon name={'MultipleStopRounded'} rounded />}
             title={t('card1.title')}
             description={t('card1.subtitle')}
-            enableHover
             fullWidth
           />
           <InteractionCard
             icon={<MyIcon name={'GrainRounded'} rounded />}
             title={t('card1.title')}
             description={t('card1.subtitle')}
-            enableHover
             fullWidth
           />
         </div>

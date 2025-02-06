@@ -11,7 +11,6 @@ import Image from 'next/image';
 import benchmarked from '@assets/partners/benchmarked.svg';
 import even from '@assets/partners/even.svg';
 import ixilabs from '@assets/partners/ixilabs.svg';
-import nodezro from '@assets/partners/nodezro.svg';
 import robotina from '@assets/partners/robotina.svg';
 import vivat from '@assets/partners/vivat.svg';
 import Link from 'next/link';
@@ -40,7 +39,7 @@ const Partners = () => {
         </Link>
         <Image src={vivat} alt={'vivat'} />
         <Image src={benchmarked} alt={'benchmarked'} />
-        <Image src={nodezro} alt={'nodezro'} />
+        {/*<Image src={nodezro} alt={'nodezro'} />*/}
         <Image src={even} alt={'even'} />
       </div>
       <SectionHeader

@@ -36,9 +36,11 @@ const SectionHeader = ({
       {chipContainer}
       {title}
       {subtitle}
-      <div className={classNames(classes.ctaSection, ctaClassName)}>
-        {ctaContent}
-      </div>
+      {ctaContent && (
+        <div className={classNames(classes.ctaSection, ctaClassName)}>
+          {ctaContent}
+        </div>
+      )}
     </section>
   );
 };

@@ -89,7 +89,6 @@ const EcoGetInvolved = () => {
           title={ecoT('ixiNames')}
           description={ecoT('namesDesc')}
           fullWidth
-          enableHover
           icon={<MyIcon customName={'ixinames'} rounded />}
           headerAdditionalContent={
             <Chip
@@ -105,7 +104,6 @@ const EcoGetInvolved = () => {
           title={ecoT('building')}
           description={ecoT('stayUp')}
           fullWidth
-          enableHover
         />
       </div>
     </ContentWrapper>

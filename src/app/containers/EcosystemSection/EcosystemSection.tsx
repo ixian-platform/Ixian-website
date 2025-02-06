@@ -133,7 +133,6 @@ const EcosystemSection = () => {
           title={t('ixiNames')}
           description={t('namesDesc')}
           fullWidth
-          enableHover
           headerAdditionalContent={
             <Chip content={t('comingSoon')} variant={'outlined'} />
           }
@@ -144,7 +143,6 @@ const EcosystemSection = () => {
           title={t('building')}
           description={t('stayUp')}
           fullWidth
-          enableHover
         />
       </div>
       <CharacteristicsLayout data={singleInfoData} />

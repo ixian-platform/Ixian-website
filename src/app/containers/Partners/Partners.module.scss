@@ -37,6 +37,7 @@
       border-image: linear-gradient(45deg, #6ee17f, #a546e4, #4d7df6) 1;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
       gap: 64px;
       align-items: center;
       justify-items: center;

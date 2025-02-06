@@ -59,28 +59,28 @@ const WhyIxian = () => {
         <TextElement type={'heading-md'}>{t('keyResources.title')}</TextElement>
         <div className={classes.infoItems}>
           <InteractionCard
+            fullWidth
             icon={<MyIcon name={'Home'} rounded />}
             title={t('keyResources.card1.title')}
             description={t('keyResources.card1.subtitle')}
-            enableHover
           />
           <InteractionCard
+            fullWidth
             icon={<MyIcon name={'Home'} rounded />}
             title={t('keyResources.card2.title')}
             description={t('keyResources.card2.subtitle')}
-            enableHover
           />
           <InteractionCard
+            fullWidth
             icon={<MyIcon name={'Home'} rounded />}
             title={t('keyResources.card3.title')}
             description={t('keyResources.card3.subtitle')}
-            enableHover
           />
           <InteractionCard
+            fullWidth
             icon={<MyIcon name={'Home'} rounded />}
             title={t('keyResources.card4.title')}
             description={t('keyResources.card4.subtitle')}
-            enableHover
           />
         </div>
       </section>

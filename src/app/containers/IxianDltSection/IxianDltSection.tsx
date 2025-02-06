@@ -69,21 +69,18 @@ const IxianDltSection = () => {
           icon={<MyIcon customName={'ixian_logo'} rounded />}
           title={t('card1.title')}
           description={t('card1.subtitle')}
-          enableHover
           fullWidth
         />
         <InteractionCard
           icon={<MyIcon name={'SpokeRounded'} rounded />}
           title={t('card2.title')}
           description={t('card2.subtitle')}
-          enableHover
           fullWidth
         />
         <InteractionCard
           icon={<MyIcon name={'AdjustRounded'} rounded />}
           title={t('card3.title')}
           description={t('card3.subtitle')}
-          enableHover
           fullWidth
         />
       </div>
