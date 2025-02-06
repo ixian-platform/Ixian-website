@@ -9,7 +9,7 @@ import Button from '@components/Button/Button';
 import MyIcon from '@components/MyIcon/MyIcon';
 
 const Partnership = () => {
-  const t = useTranslations('Partnership.hero');
+  const t = useTranslations('AboutUsPage.partnerships');
 
   return (
     <ContentWrapper
@@ -19,9 +19,9 @@ const Partnership = () => {
     >
       <div className={classes.innerContent}>
         <SectionHeader
-          chipContainer={<Chip content={'test'} variant={'outlined'} />}
+          chipContainer={<Chip content={t('chip')} variant={'outlined'} />}
           title={<TextElement type={'heading-lg'}>{t('title')}</TextElement>}
-          subtitle={<TextElement type={'body-md'}>{t('title')}</TextElement>}
+          subtitle={<TextElement type={'body-md'}>{t('subtitle')}</TextElement>}
           ctaContent={
             <Button leadingIcon={<MyIcon name={'EastRounded'} />}>
               {t('cta')}

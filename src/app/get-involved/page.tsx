@@ -7,7 +7,8 @@ import PoweringIxian from '@/app/containers/PoweringIxian/PoweringIxian';
 import Contribute from '@/app/containers/Contribute/Contribute';
 
 export default function EcosystemGetInvolved() {
-  const t = useTranslations('EcosystemPage.hero');
+  const t = useTranslations('EcoGetInvolvedPage.hero');
+
   return (
     <section className={classes.page}>
       <HeroSection

@@ -8,7 +8,6 @@ import Image from 'next/image';
 import ixianLogo from '@assets/ixian-logo.svg';
 import React from 'react';
 import { useTranslations } from 'next-intl';
-import MyIcon from '@components/MyIcon/MyIcon';
 import { socials } from '@utils/socialsUtil';
 import Copyright from '@components/Copyright/Copyright';
 

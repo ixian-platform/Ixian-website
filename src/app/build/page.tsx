@@ -7,7 +7,6 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import code1 from '@assets/code1.svg';
 import WhyIxian from '@/app/containers/WhyIxian/WhyIxian';
-import Faq from '@/app/containers/Faq/Faq';
 import StartBuildingNow from '@/app/containers/StartBuildingNow/StartBuildingNow';
 import { generateSEO } from '@utils/seo';
 

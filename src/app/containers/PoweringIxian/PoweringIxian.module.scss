@@ -49,6 +49,7 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+        gap: 40px;
 
         .text {
           width: 100%;
@@ -62,10 +63,17 @@
           display: flex;
           gap: 32px;
 
+          .linkCardTitle {
+            @include label-lg;
+          }
+
           > div {
             max-width: 272px;
             min-height: unset;
+            height: 100%;
             background: var(--colors-surface-inverse-2);
+            padding: 26px 16px;
+            gap: 12px;
 
             p,
             h3 {

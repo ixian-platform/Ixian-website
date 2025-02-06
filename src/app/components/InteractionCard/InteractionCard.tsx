@@ -18,6 +18,7 @@ interface InteractionCardProps {
   additionalContent?: ReactNode;
   headerAdditionalContent?: ReactNode;
   linkHref?: string;
+  titleClassName?: string;
 }
 
 const InteractionCard = ({
@@ -34,6 +35,7 @@ const InteractionCard = ({
   linkHref,
   headerAdditionalContent,
   hoverImageType,
+  titleClassName,
 }: InteractionCardProps) => {
   return (
     <div
@@ -53,7 +55,7 @@ const InteractionCard = ({
       <div className={classes.content}>
         {headerAdditionalContent}
         {icon && <div className={classes.icon}>{icon}</div>}
-        <h3 className={classes.title}>{title}</h3>
+        <h3 className={classNames(classes.title, titleClassName)}>{title}</h3>
         {description && <p className={classes.description}>{description}</p>}
       </div>
       {linkHref && (

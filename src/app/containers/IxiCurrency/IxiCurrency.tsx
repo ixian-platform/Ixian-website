@@ -8,8 +8,6 @@ import Button from '@components/Button/Button';
 import { useTranslations } from 'next-intl';
 import MyIcon from '@components/MyIcon/MyIcon';
 import InteractionCard from '@components/InteractionCard/InteractionCard';
-import NumberTicker from '@/components/ui/number-ticker';
-import TypingAnimation from '@/components/ui/typing-animation';
 import Link from 'next/link';
 import coingecko from '@assets/coingecko.svg';
 import nonkyc from '@assets/nonkyc.svg';

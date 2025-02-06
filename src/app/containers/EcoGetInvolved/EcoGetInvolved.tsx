@@ -14,7 +14,8 @@ import BigCard from '@components/BigCard/BigCard';
 import Button from '@components/Button/Button';
 
 const EcoGetInvolved = () => {
-  const t = useTranslations('EcosystemPage.hero');
+  const t = useTranslations('EcoGetInvolvedPage.community');
+  const ecoT = useTranslations('Ecosystem');
 
   return (
     <ContentWrapper
@@ -64,38 +65,35 @@ const EcoGetInvolved = () => {
           body={
             <SectionHeader
               chipContainer={
-                <Chip
-                  content={t('decentralizedMessenger')}
-                  variant={'outlined'}
-                />
+                <Chip content={t('spixiCard.chip')} variant={'outlined'} />
               }
               title={
                 <TextElement type={'heading-md'} as={'h1'}>
-                  {t('spixiChat')}
+                  {t('spixiCard.title')}
                 </TextElement>
               }
               subtitle={
                 <TextElement type={'body-md'} as={'h1'}>
-                  {t('spixiDesc')}
+                  {t('spixiCard.subtitle')}
                 </TextElement>
               }
               ctaContent={
                 <Button leadingIcon={<MyIcon customName={'spixi_logo'} />}>
-                  download
+                  {t('spixiCard.cta')}
                 </Button>
               }
             />
           }
         />
         <InteractionCard
-          title={t('ixiNames')}
-          description={t('namesDesc')}
+          title={ecoT('ixiNames')}
+          description={ecoT('namesDesc')}
           fullWidth
           enableHover
           icon={<MyIcon customName={'ixinames'} rounded />}
           headerAdditionalContent={
             <Chip
-              content={t('comingSoon')}
+              content={ecoT('comingSoon')}
               variant={'outlined'}
               className={classes.marginBot}
             />
@@ -104,8 +102,8 @@ const EcoGetInvolved = () => {
         <InteractionCard
           className={classes.newFeaturesCardGradient}
           icon={<MyIcon name={'AutoAwesomeRounded'} rounded />}
-          title={t('building')}
-          description={t('stayUp')}
+          title={ecoT('building')}
+          description={ecoT('stayUp')}
           fullWidth
           enableHover
         />

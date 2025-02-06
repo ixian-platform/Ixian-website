@@ -19,23 +19,23 @@ const Founders = () => {
       <SectionHeader
         inverseText
         chipContainer={
-          <Chip isTextInversed content={'test'} variant={'outlined'} />
+          <Chip isTextInversed content={t('chip')} variant={'outlined'} />
         }
         title={<TextElement type={'heading-md'}>{t('title')}</TextElement>}
-        subtitle={<TextElement type={'body-md'}>{t('title')}</TextElement>}
+        subtitle={<TextElement type={'body-md'}>{t('subtitle')}</TextElement>}
       />
       <div className={classes.cardsContainer}>
         <div className={classes.card}>
           <MyIcon name={'LinkedIn'} rounded />
-          <TextElement type={'label-lg'}>{t('title')}</TextElement>
+          <TextElement type={'label-lg'}>{t('marko')}</TextElement>
         </div>
         <div className={classes.card}>
           <MyIcon name={'LinkedIn'} rounded />
-          <TextElement type={'label-lg'}>{t('title')}</TextElement>
+          <TextElement type={'label-lg'}>{t('chris')}</TextElement>
         </div>
         <div className={classes.card}>
           <MyIcon name={'LinkedIn'} rounded />
-          <TextElement type={'label-lg'}>{t('title')}</TextElement>
+          <TextElement type={'label-lg'}>{t('damir')}</TextElement>
         </div>
       </div>
     </ContentWrapper>

@@ -11,6 +11,8 @@
       flex-wrap: wrap;
 
       .card {
+        width: 100%;
+        max-width: 252px;
         background: var(--colors-surface-inverse-2);
         border-radius: var(--corner-radius-xxl);
         padding: var(--spacing-md);

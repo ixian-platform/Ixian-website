@@ -13,8 +13,11 @@ import xeggex from '@assets/xeggex.svg';
 import nonkyc from '@assets/nonkyc.svg';
 import InteractionCard from '@components/InteractionCard/InteractionCard';
 import MyIcon from '@components/MyIcon/MyIcon';
+import { useTranslations } from 'next-intl';
 
 const PoweringIxian = () => {
+  const t = useTranslations('EcoGetInvolvedPage.poweringIxian');
+
   return (
     <ContentWrapper
       asWrapperSection
@@ -22,14 +25,14 @@ const PoweringIxian = () => {
       className={classes.poweringIxian}
     >
       <SectionHeader
-        title={<TextElement type={'heading-lg'}>test</TextElement>}
-        subtitle={<TextElement type={'body-md'}>test</TextElement>}
-        chipContainer={<Chip content={'test'} variant={'outlined'} />}
+        title={<TextElement type={'heading-lg'}>{t('title')}</TextElement>}
+        subtitle={<TextElement type={'body-md'}>{t('subtitle')}</TextElement>}
+        chipContainer={<Chip content={t('chip')} variant={'outlined'} />}
       />
       <IxiMetrics />
       <div className={classes.resourcesContainer}>
-        <TextElement type={'heading-sm'}>Resources</TextElement>
-        <TextElement type={'heading-lg'}>Resources</TextElement>
+        <TextElement type={'heading-sm'}>{t('resources.label')}</TextElement>
+        <TextElement type={'heading-lg'}>{t('resources.title')}</TextElement>
         <div className={classes.images}>
           <Link href={coingeckoIxi} target={'_blank'}>
             <Image src={coingecko} alt={'coingecko'} />
@@ -41,90 +44,42 @@ const PoweringIxian = () => {
             <Image src={nonkyc} alt={'nonkyc'} />
           </Link>
         </div>
-        <div className={classes.innerCards}>
-          <div className={classes.text}>
-            <TextElement type={'heading-md'}>Resources</TextElement>
-            <TextElement type={'body-md'}>Resources</TextElement>
+        {['wallets', 'miners', 'miningPools'].map((res) => (
+          <div className={classes.innerCards} key={res}>
+            <div className={classes.text}>
+              <TextElement type={'heading-md'}>
+                {t(`resources.${res}.title`)}
+              </TextElement>
+              <TextElement type={'body-md'}>
+                {t(`resources.${res}.subtitle`)}
+              </TextElement>
+            </div>
+            <div className={classes.linkCards}>
+              <InteractionCard
+                titleClassName={classes.linkCardTitle}
+                disableScale
+                icon={
+                  <Link href={'/'} passHref>
+                    <MyIcon name={'EastRounded'} rounded />
+                  </Link>
+                }
+                title={t(`resources.${res}.card1.title`)}
+                description={t(`resources.${res}.card1.subtitle`)}
+              />
+              <InteractionCard
+                titleClassName={classes.linkCardTitle}
+                disableScale
+                icon={
+                  <Link href={'/'} passHref>
+                    <MyIcon name={'EastRounded'} rounded />
+                  </Link>
+                }
+                title={t(`resources.${res}.card2.title`)}
+                description={t(`resources.${res}.card2.subtitle`)}
+              />
+            </div>
           </div>
-          <div className={classes.linkCards}>
-            <InteractionCard
-              disableScale
-              icon={
-                <Link href={'/'} passHref>
-                  <MyIcon name={'EastRounded'} rounded />
-                </Link>
-              }
-              title={'test'}
-              description={'test'}
-            />
-            <InteractionCard
-              disableScale
-              icon={
-                <Link href={'/'} passHref>
-                  <MyIcon name={'EastRounded'} rounded />
-                </Link>
-              }
-              title={'test'}
-              description={'test'}
-            />
-          </div>
-        </div>
-        <div className={classes.innerCards}>
-          <div className={classes.text}>
-            <TextElement type={'heading-md'}>Resources</TextElement>
-            <TextElement type={'body-md'}>Resources</TextElement>
-          </div>
-          <div className={classes.linkCards}>
-            <InteractionCard
-              disableScale
-              icon={
-                <Link href={'/'} passHref>
-                  <MyIcon name={'EastRounded'} rounded />
-                </Link>
-              }
-              title={'test'}
-              description={'test'}
-            />
-            <InteractionCard
-              disableScale
-              icon={
-                <Link href={'/'} passHref>
-                  <MyIcon name={'EastRounded'} rounded />
-                </Link>
-              }
-              title={'test'}
-              description={'test'}
-            />
-          </div>
-        </div>
-        <div className={classes.innerCards}>
-          <div className={classes.text}>
-            <TextElement type={'heading-md'}>Resources</TextElement>
-            <TextElement type={'body-md'}>Resources</TextElement>
-          </div>
-          <div className={classes.linkCards}>
-            <InteractionCard
-              disableScale
-              icon={
-                <Link href={'/'} passHref>
-                  <MyIcon name={'EastRounded'} rounded />
-                </Link>
-              }
-              title={'test'}
-              description={'test'}
-            />
-            <InteractionCard
-              disableScale
-              icon={
-                <Link href={'/'} passHref>
-                  <MyIcon name={'EastRounded'} rounded />
-                </Link>
-              }
-              title={'test'}
-              description={'test'}
-            />
-          </div>
-        </div>
+        ))}
       </div>
     </ContentWrapper>
   );

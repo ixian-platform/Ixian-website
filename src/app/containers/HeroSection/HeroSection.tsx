@@ -2,7 +2,6 @@ import classes from './HeroSection.module.scss';
 import ContentWrapper from '@components/ContentWrapper/ContentWrapper';
 import SectionHeader from '@components/SectionHeader/SectionHeader';
 import TextElement from '@components/TextElement/TextElement';
-import Spline from '@splinetool/react-spline/next';
 import { ReactNode } from 'react';
 import classNames from 'classnames';
 
@@ -28,7 +27,6 @@ type HeroSectionProps =
 
 const HeroSection = ({
   title,
-  splinePath,
   ctaContent,
   subtitle,
   chip,

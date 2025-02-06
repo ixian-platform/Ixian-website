@@ -326,5 +326,107 @@
       "q3": "How do I participate in the Ixian network?",
       "a3": "something something"
     }
+  },
+  "AboutUsPage": {
+    "hero": {
+      "title": "Founded in 2017",
+      "subtitle": "Our mission is to create a world where devices can communicate efficiently and securely, without the need for central intermediaries. We aim to provide a scalable, decentralized infrastructure that powers the future of IoT, smart cities, and beyond.",
+      "cta": "Connect With Us on LinkedIn"
+    },
+    "founders": {
+      "chip": "Founders",
+      "title": "United by a Shared Vision",
+      "subtitle": "Ixian’s founders are passionate innovators and engineers with extensive knowledge and expertise in blockchain, decentralized technology, cryptography, secure communications, and authorization. Committed to building the future of decentralized technology",
+      "marko": "Marko Arh Tadic",
+      "chris": "Cristian Ciorba",
+      "damir": "Damir Rekic"
+    },
+    "partnerships": {
+      "chip": "Partnerships",
+      "title": "Ready for the Future?",
+      "subtitle": "Ixian is building the infrastructure that will connect the next wave of IoT and other online devices. We want you to be a part of it. Whether you’re a developer, business, or partner, there are endless opportunities to get involved.",
+      "cta": "Send Us a Message"
+    }
+  },
+  "EcoGetInvolvedPage": {
+    "hero": {
+      "title": "Discover the Ecosystem",
+      "subtitle": "Ixian’s ecosystem is young and evolving."
+    },
+    "community": {
+      "chip": "Get Involved",
+      "title": "Community First",
+      "subtitle": "Ixian thrives on the collective efforts of a passionate community. Whether you're a developer, designer, translator, or simply an enthusiast, there's a place for you to make an impact. Join us and help shape the future of decentralized technology, one contribution at a time.",
+      "spixiCard": {
+        "chip": "Wallet & Chat",
+        "title": "Spixi Private Chat and Wallet",
+        "subtitle": "The best way to interact with the Ixian ecosystem, and the best wallet to hold your $IXI. Take control of your communications with decentralized messenger.",
+        "cta": "Download Spixi Now"
+      }
+    },
+    "poweringIxian": {
+      "chip": "Powering Ixian",
+      "title": "$IXI Cryptocurrency",
+      "subtitle": "By creating an incentive for node operators, $IXI powers the platform. With fast and efficient transactions, it creates the foundation for an ecosystem of value.",
+      "resources": {
+        "label": "Resources",
+        "title": "Exchanges and Aggregators",
+        "wallets": {
+          "title": "Wallets",
+          "subtitle": "Did you know you can mine $IXI? Ixian uses Argon mining for fair distribution. Download the miner, setup and start.",
+          "card1": {
+            "title": "LiteWallet",
+            "subtitle": "CLI Based Light Wallet."
+          },
+          "card2": {
+            "title": "Spixi",
+            "subtitle": "Best wallet for holding and using your $IXI"
+          }
+        },
+        "miners": {
+          "title": "$IXI Miners",
+          "subtitle": "Did you know you can mine $IXI? Ixian uses Argon mining for fair distribution. Download the miner, setup and start.",
+          "card1": {
+            "title": "IXIWatt",
+            "subtitle": "Official GUI Miner"
+          },
+          "card2": {
+            "title": "Third-party Miner",
+            "subtitle": "Built by members of the community."
+          }
+        },
+        "miningPools": {
+          "title": "Mining Pools",
+          "subtitle": "You can mine $IXI on the following pools:",
+          "card1": {
+            "title": "mineixi.com",
+            "subtitle": "Official mining pool."
+          },
+          "card2": {
+            "title": "HashExpress",
+            "subtitle": "Community mining pool."
+          }
+        }
+      }
+    },
+    "contribute": {
+      "chip": "Contribute",
+      "title": "Help Shape the Future of Ixian",
+      "subtitle": "Contribute to Ixian’s growth by helping with development, writing documentation, and promoting the platform.",
+      "cta1": "Contribute on GitHub",
+      "cta2": "Get in Touch",
+      "data1": {
+        "title": "Educate",
+        "subtitle": "Create guides, curate documentation, provide examples and help with translations."
+      },
+        "data2": {
+            "title": "Develop",
+            "subtitle": "Contribute to Ixian’s development."
+        },
+        "data3": {
+            "title": "Spread the Word",
+            "subtitle": "Become an Ixian Ambassador."
+        }
+    }
   }
 }

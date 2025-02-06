@@ -42,7 +42,6 @@ const UseCases = () => {
           enableHoverImage
           hoverImageType={'iot'}
           disableScale
-          linkHref={'/'}
         />
         <InteractionCard
           title={t('card2.title')}
@@ -50,7 +49,6 @@ const UseCases = () => {
           enableHoverImage
           hoverImageType={'access'}
           disableScale
-          linkHref={'/'}
         />
         <InteractionCard
           title={t('card3.title')}
@@ -58,7 +56,6 @@ const UseCases = () => {
           enableHoverImage
           hoverImageType={'enterprise'}
           disableScale
-          linkHref={'/'}
         />
       </div>
     </ContentWrapper>
