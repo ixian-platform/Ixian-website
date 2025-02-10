@@ -10,6 +10,9 @@ import InteractionCard from '@components/InteractionCard/InteractionCard';
 import { useTranslations } from 'next-intl';
 
 import classNames from 'classnames';
+import topRetro from '@assets/top-retro.svg';
+import Image from 'next/image';
+import { ixianGitHub, Routes } from '@utils/constants';
 
 const LandingFeaturesGrid = () => {
   const t = useTranslations('LandingFeatures');
@@ -20,19 +23,16 @@ const LandingFeaturesGrid = () => {
       sectionClass={classes.landingFeaturesSection}
       className={classes.landingFeatures}
     >
+      <Image priority src={topRetro} alt={'top-retro'} className={'topRetro'} />
       <div
         className={classNames(
           classes.landingFeaturesGridSingleCard,
-          classes.card3
+          classes.card1
         )}
       >
         <SectionHeader
           chipContainer={
-            <Chip
-              content={t('build.chip')}
-              variant={'outlined'}
-              isTextInversed
-            />
+            <Chip content={t('build.chip')} variant={'outlined'} />
           }
           title={
             <TextElement type={'display-md'}>{t('build.title')}</TextElement>
@@ -42,10 +42,18 @@ const LandingFeaturesGrid = () => {
           }
           ctaContent={
             <>
-              <Button leadingIcon={<MyIcon name={'EastRounded'} />}>
+              <Button
+                href={Routes.BUILD}
+                leadingIcon={<MyIcon name={'EastRounded'} />}
+              >
                 {t('build.cta')}
               </Button>
-              <Button variant={'text'} leadingIcon={<MyIcon name={'GitHub'} />}>
+              <Button
+                href={ixianGitHub}
+                isExternal
+                variant={'text'}
+                leadingIcon={<MyIcon name={'GitHub'} />}
+              >
                 {t('build.cta2')}
               </Button>
             </>
@@ -65,17 +73,50 @@ const LandingFeaturesGrid = () => {
             fullWidth
           />
           <InteractionCard
-            icon={<MyIcon name={'VerticalSplitRounded'} rounded />}
+            icon={<MyIcon name={'DevicesRounded'} rounded />}
             title={t('build.cards.card3.title')}
             description={t('build.cards.card3.subtitle')}
             fullWidth
           />
         </div>
       </div>
+      <div className={classes.poweredByIxianArticleCard}>
+        <div>image</div>
+        <div>
+          <SectionHeader
+            inverseText
+            chipContainer={
+              <Chip
+                content={t('article1.chip')}
+                variant={'outlined'}
+                isTextInversed
+              />
+            }
+            title={
+              <TextElement type={'heading-md'}>
+                {t('article1.title')}
+              </TextElement>
+            }
+            subtitle={
+              <TextElement type={'body-md'}>
+                {t('article1.subtitle')}
+              </TextElement>
+            }
+            ctaContent={
+              <Button
+                variant={'outlined'}
+                leadingIcon={<MyIcon name={'EastRounded'} />}
+              >
+                {t('article1.cta')}
+              </Button>
+            }
+          />
+        </div>
+      </div>
       <div
         className={classNames(
           classes.landingFeaturesGridSingleCard,
-          classes.card1
+          classes.card2
         )}
       >
         <SectionHeader
@@ -93,20 +134,23 @@ const LandingFeaturesGrid = () => {
             </TextElement>
           }
           ctaContent={
-            <Button leadingIcon={<MyIcon name={'EastRounded'} />}>
+            <Button
+              href={Routes.TECHNOLOGY}
+              leadingIcon={<MyIcon name={'EastRounded'} />}
+            >
               {t('efficiency.cta')}
             </Button>
           }
         />
         <div className={classes.cardsGrid}>
           <InteractionCard
-            icon={<MyIcon customName={'ixian_logo'} rounded />}
+            icon={<MyIcon name={'LinearScaleRounded'} rounded />}
             title={t('efficiency.cards.card1.title')}
             description={t('efficiency.cards.card1.subtitle')}
             fullWidth
           />
           <InteractionCard
-            icon={<MyIcon name={'CompareArrowsRounded'} rounded />}
+            icon={<MyIcon name={'SwitchAccessShortcutAddRounded'} rounded />}
             title={t('efficiency.cards.card2.title')}
             description={t('efficiency.cards.card2.subtitle')}
             fullWidth
@@ -122,7 +166,7 @@ const LandingFeaturesGrid = () => {
       <div
         className={classNames(
           classes.landingFeaturesGridSingleCard,
-          classes.card2
+          classes.card3
         )}
       >
         <SectionHeader
@@ -136,26 +180,29 @@ const LandingFeaturesGrid = () => {
             <TextElement type={'body-md'}>{t('security.subtitle')}</TextElement>
           }
           ctaContent={
-            <Button leadingIcon={<MyIcon name={'EastRounded'} />}>
+            <Button
+              href={Routes.TECHNOLOGY}
+              leadingIcon={<MyIcon name={'EastRounded'} />}
+            >
               {t('security.cta')}
             </Button>
           }
         />
         <div className={classes.cardsGrid}>
           <InteractionCard
-            icon={<MyIcon name={'PlayForWorkRounded'} rounded />}
+            icon={<MyIcon name={'StartRounded'} rounded />}
             title={t('security.cards.card1.title')}
             description={t('security.cards.card1.subtitle')}
             fullWidth
           />
           <InteractionCard
-            icon={<MyIcon name={'GraphicEqRounded'} rounded />}
+            icon={<MyIcon name={'DeviceHubRounded'} rounded />}
             title={t('security.cards.card2.title')}
             description={t('security.cards.card2.subtitle')}
             fullWidth
           />
           <InteractionCard
-            icon={<MyIcon name={'ShieldRounded'} rounded />}
+            icon={<MyIcon name={'SyncLockRounded'} rounded />}
             title={t('security.cards.card3.title')}
             description={t('security.cards.card3.subtitle')}
             fullWidth

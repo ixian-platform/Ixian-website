@@ -7,6 +7,7 @@ import TextElement from '@components/TextElement/TextElement';
 import InteractionCard from '@components/InteractionCard/InteractionCard';
 import MyIcon from '@components/MyIcon/MyIcon';
 import Button from '@components/Button/Button';
+import { Section } from '@utils/constants';
 
 const S2NetworkSection = () => {
   const t = useTranslations('TechnologyPage.ixianS2');
@@ -16,6 +17,7 @@ const S2NetworkSection = () => {
       asWrapperSection
       sectionClass={classes.ixianDltSection}
       className={classes.ixianDltContainer}
+      sectionId={Section.IXIAN_S2_NETWORK}
     >
       <SectionHeader
         chipContainer={<Chip content={t('chip')} variant={'outlined'} />}

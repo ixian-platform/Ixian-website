@@ -24,12 +24,7 @@ const EcoGetInvolved = () => {
       asWrapperSection
       className={classes.ecoGetInvolved}
     >
-      <Image
-        priority
-        src={topRetro}
-        alt={'top-retro'}
-        className={classes.topRetro}
-      />
+      <Image priority src={topRetro} alt={'top-retro'} className={'topRetro'} />
       <SectionHeader
         chipContainer={<Chip content={t('chip')} variant={'outlined'} />}
         title={

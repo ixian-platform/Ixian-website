@@ -29,11 +29,6 @@ const UseCases = () => {
             {t('subtitle')}
           </TextElement>
         }
-        ctaContent={
-          <Button leadingIcon={<MyIcon name={'EastRounded'} />}>
-            {t('exploreUseCases')}
-          </Button>
-        }
       />
       <div className={classes.caseCards}>
         <InteractionCard

@@ -13,7 +13,7 @@ import coingecko from '@assets/coingecko.svg';
 import nonkyc from '@assets/nonkyc.svg';
 import xeggex from '@assets/xeggex.svg';
 import Image from 'next/image';
-import { coingeckoIxi, nonkycIxi, xeggexIxi } from '@utils/constants';
+import { coingeckoIxi, nonkycIxi, Section, xeggexIxi } from '@utils/constants';
 import IxiMetrics from '@components/IxiMetrics/IxiMetrics';
 
 const IxiCurrency = () => {
@@ -24,6 +24,7 @@ const IxiCurrency = () => {
       asWrapperSection
       className={classes.ixiCurrency}
       sectionClass={classes.ixiCurrencySection}
+      sectionId={Section.IXI_TOKEN}
     >
       <div className={classes.innerCard}>
         <SectionHeader

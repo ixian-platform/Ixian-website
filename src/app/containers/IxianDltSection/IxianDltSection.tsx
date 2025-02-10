@@ -8,6 +8,7 @@ import Chip from '@components/Chip/Chip';
 import ContentWrapper from '@components/ContentWrapper/ContentWrapper';
 import Button from '@components/Button/Button';
 import { getServerTranslations } from '@utils/getServerTranslations';
+import { Section } from '@utils/constants';
 
 const st = await getServerTranslations();
 
@@ -38,6 +39,7 @@ const IxianDltSection = () => {
       asWrapperSection
       sectionClass={classes.ixianDltSection}
       className={classes.ixianDltContainer}
+      sectionId={Section.IXIAN_DLT}
     >
       <SectionHeader
         chipContainer={<Chip content={t('chip')} variant={'outlined'} />}

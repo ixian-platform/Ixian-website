@@ -3,7 +3,7 @@ import ContentWrapper from '@components/ContentWrapper/ContentWrapper';
 import Link from 'next/link';
 import { Routes } from '@utils/constants';
 import TextElement from '@components/TextElement/TextElement';
-import { technologySubmenu } from '@utils/menuUtils';
+import { getInvolvedMenu, learnMenu, resourcesMenu } from '@utils/menuUtils';
 import Image from 'next/image';
 import ixianLogo from '@assets/ixian-logo.svg';
 import React from 'react';
@@ -45,9 +45,9 @@ const Footer = () => {
           <div className={classes.rightContent}>
             <div className={classes.singleColumn}>
               <TextElement type={'label-sm'} className={classes.mainTitle}>
-                Resources
+                {t('learn')}
               </TextElement>
-              {technologySubmenu.map((item) => (
+              {learnMenu.map((item) => (
                 <Link href={item.href} key={item.title}>
                   <TextElement type={'label-sm'}>{item.title}</TextElement>
                 </Link>
@@ -55,9 +55,9 @@ const Footer = () => {
             </div>
             <div className={classes.singleColumn}>
               <TextElement type={'label-sm'} className={classes.mainTitle}>
-                Resources
+                {t('resources')}
               </TextElement>
-              {technologySubmenu.map((item) => (
+              {resourcesMenu.map((item) => (
                 <Link href={item.href} key={item.title}>
                   <TextElement type={'label-sm'}>{item.title}</TextElement>
                 </Link>
@@ -65,9 +65,9 @@ const Footer = () => {
             </div>
             <div className={classes.singleColumn}>
               <TextElement type={'label-sm'} className={classes.mainTitle}>
-                Resources
+                {t('getInvolved')}
               </TextElement>
-              {technologySubmenu.map((item) => (
+              {getInvolvedMenu.map((item) => (
                 <Link href={item.href} key={item.title}>
                   <TextElement type={'label-sm'}>{item.title}</TextElement>
                 </Link>

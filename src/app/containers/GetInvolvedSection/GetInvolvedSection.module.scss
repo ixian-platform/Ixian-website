@@ -9,7 +9,7 @@
     padding: var(--spacing-super-xl) var(--spacing-md);
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-xxl);
+    gap: var(--spacing-super);
 
     @include mq('md') {
       flex-direction: column;
@@ -37,12 +37,13 @@
       .singleCard {
         width: 100%;
         padding: var(--spacing-xl);
+        padding-top: var(--spacing-super);
         border-radius: var(--corner-radius-lg);
         background: var(--colors-surface-01);
         border: 1px solid var(--colors-outline-02);
 
         &:nth-child(2) {
-          padding-top: calc(var(--spacing-xl) + var(--spacing-sm) + 24px);
+          padding-top: calc(var(--spacing-super) + var(--spacing-sm) + 24px);
         }
 
         @include mq('md') {

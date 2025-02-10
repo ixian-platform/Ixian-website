@@ -15,17 +15,18 @@ import CharacteristicsLayout, {
   SingleData,
 } from '@components/CharacteristicsLayout/CharacteristicsLayout';
 import classNames from 'classnames';
+import { Routes, spixiWebsite } from '@utils/constants';
 
 const st = await getServerTranslations();
 
 const singleInfoData: SingleData[] = [
   {
-    icon: 'ViewInArRounded',
+    icon: 'WidgetsRounded',
     title: st('Ecosystem.robustBlockchain'),
     description: st('Ecosystem.robustDesc'),
   },
   {
-    icon: 'HomeRepairServiceRounded',
+    icon: 'ApiRounded',
     title: st('Ecosystem.devTools'),
     description: st('Ecosystem.devToolsDesc'),
   },
@@ -36,12 +37,13 @@ const singleInfoData: SingleData[] = [
     isCustom: true,
   },
   {
-    icon: 'PeopleRounded',
+    icon: 'LocalLibraryRounded',
     title: st('Ecosystem.communitySupport'),
     description: st('Ecosystem.communitySupportDesc'),
   },
   {
-    icon: 'CompareArrowsRounded',
+    icon: 'ixian_logo',
+    isCustom: true,
     title: st('Ecosystem.IxiCrypto'),
     description: st('Ecosystem.IxiCryptoDesc'),
   },
@@ -56,12 +58,7 @@ const EcosystemSection = () => {
       asWrapperSection
       className={classes.ecosystemWrapper}
     >
-      <Image
-        priority
-        src={topRetro}
-        alt={'top-retro'}
-        className={classes.topRetro}
-      />
+      <Image priority src={topRetro} alt={'top-retro'} className={'topRetro'} />
       <SectionHeader
         chipContainer={<Chip content={t('chip')} variant={'outlined'} />}
         title={
@@ -77,6 +74,7 @@ const EcosystemSection = () => {
         ctaContent={
           <>
             <Button
+              href={Routes.GET_INVOLVED}
               variant={'primary'}
               leadingIcon={<MyIcon name={'EastRounded'} />}
             >
@@ -84,7 +82,7 @@ const EcosystemSection = () => {
             </Button>
             <Button
               variant={'text'}
-              leadingIcon={<MyIcon customName={'ixian_logo'} />}
+              leadingIcon={<MyIcon name={'QuestionMarkRounded'} />}
             >
               {t('whatIsIxi')}
             </Button>
@@ -93,12 +91,7 @@ const EcosystemSection = () => {
       />
       <div className={classes.bottomCards}>
         <BigCard
-          iconContainer={
-            <>
-              <MyIcon customName={'spixi_logo'} rounded />
-              <MyIcon name={'WalletRounded'} rounded />
-            </>
-          }
+          iconContainer={<MyIcon name={'WalletRounded'} rounded />}
           bgImageVariant={'secondary'}
           className={classes.rowSpan2}
           body={
@@ -121,6 +114,8 @@ const EcosystemSection = () => {
               }
               ctaContent={
                 <Button
+                  href={spixiWebsite}
+                  isExternal
                   variant={'outlined'}
                   leadingIcon={<MyIcon name={'EastRounded'} />}
                 >
@@ -136,7 +131,7 @@ const EcosystemSection = () => {
           description={t('namesDesc')}
           fullWidth
           headerAdditionalContent={
-            <Chip content={t('comingSoon')} variant={'outlined'} />
+            <Chip content={t('inProgress')} variant={'outlined'} />
           }
         />
         <InteractionCard
@@ -144,7 +139,7 @@ const EcosystemSection = () => {
             classes.newFeaturesCardGradient,
             classes.minHeight
           )}
-          icon={<MyIcon name={'AutoAwesomeRounded'} rounded />}
+          icon={<MyIcon name={'ViewInArRounded'} rounded />}
           title={t('building')}
           description={t('stayUp')}
           fullWidth

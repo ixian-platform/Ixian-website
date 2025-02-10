@@ -6,7 +6,7 @@ import TextElement from '@components/TextElement/TextElement';
 import Chip from '@components/Chip/Chip';
 import IxiMetrics from '@components/IxiMetrics/IxiMetrics';
 import Link from 'next/link';
-import { coingeckoIxi, nonkycIxi, xeggexIxi } from '@utils/constants';
+import { coingeckoIxi, nonkycIxi, Section, xeggexIxi } from '@utils/constants';
 import Image from 'next/image';
 import coingecko from '@assets/coingecko.svg';
 import xeggex from '@assets/xeggex.svg';
@@ -23,6 +23,7 @@ const PoweringIxian = () => {
       asWrapperSection
       sectionClass={classes.poweringIxianSection}
       className={classes.poweringIxian}
+      sectionId={Section.RESOURCES}
     >
       <SectionHeader
         title={<TextElement type={'heading-lg'}>{t('title')}</TextElement>}

@@ -21,12 +21,7 @@ const FeaturesSection = () => {
       asWrapperSection
       className={classes.featuresWrapper}
     >
-      <Image
-        priority
-        src={topRetro}
-        alt={'top-retro'}
-        className={classes.topRetro}
-      />
+      <Image priority src={topRetro} alt={'top-retro'} className={'topRetro'} />
       <div className={classes.content}>
         <SectionHeader
           chipContainer={<Chip content={t('lorem')} variant={'outlined'} />}

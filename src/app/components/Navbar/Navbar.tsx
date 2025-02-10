@@ -12,7 +12,6 @@ import ixianLogo from '@assets/ixian-logo.svg';
 import Image from 'next/image';
 import ThemeSwitcher from '@components/ThemeSwitcher/ThemeSwitcher';
 import React from 'react';
-import { technologySubmenu } from '@utils/menuUtils';
 
 export const linksData = [
   {
@@ -22,7 +21,6 @@ export const linksData = [
   {
     label: 'Technology',
     href: Routes.TECHNOLOGY,
-    submenu: technologySubmenu,
   },
   {
     label: 'Build',
@@ -35,10 +33,6 @@ export const linksData = [
   {
     label: 'Get Involved',
     href: Routes.GET_INVOLVED,
-  },
-  {
-    label: 'About Us',
-    href: Routes.ABOUT_US,
   },
 ];
 

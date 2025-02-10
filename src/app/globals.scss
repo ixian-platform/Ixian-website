@@ -15,7 +15,17 @@ body {
   //LIGHT
   --pattern: url('/assets/light/pattern-right.svg');
   --spixi-bg: url('/assets/light/spixi-bg.png');
-  --hero-gradient: var(--colors-surface-01);
+  --hero-gradient: linear-gradient(
+      112.75deg,
+      #e2f6fd 2.08%,
+      #f2f7ee 51.72%,
+      #e9f0fb 97.54%
+    ),
+    linear-gradient(
+      0deg,
+      var(--colors-surface-01, #fbfcfb),
+      var(--colors-surface-01, #fbfcfb)
+    );
   --fading-border-horizontal: linear-gradient(
     90deg,
     #fbfcfb 0%,
@@ -30,12 +40,30 @@ body {
     #c0c8c4 77.5%,
     #f2f4f3 98%
   );
+  --cardGradient: linear-gradient(
+      112.75deg,
+      #e2f6fd 2.08%,
+      #f2f7ee 51.72%,
+      #e9f0fb 97.54%
+    ),
+    linear-gradient(
+      0deg,
+      var(--colors-surface-01, #fbfcfb),
+      var(--colors-surface-01, #fbfcfb)
+    );
+  --cardGradient2: var(--cardGradient);
+  --sectionGradient: linear-gradient(112.75deg, #e2f6fd 2.08%, #f2f7ee 68.42%),
+    linear-gradient(
+      0deg,
+      var(--colors-surface-01, #fbfcfb),
+      var(--colors-surface-01, #fbfcfb)
+    );
 
   //DARK
   html.dark & {
     --pattern: url('/assets/dark/pattern-right.svg');
     --spixi-bg: url('/assets/dark/spixi-bg.png');
-    --hero-gradient: var(--colors-surface-01);
+    --hero-gradient: linear-gradient(113.05deg, #0a0e07 -0.14%, #02201e 46.25%);
     --fading-border-horizontal: linear-gradient(
       90deg,
       #0a0f0c 0%,
@@ -50,6 +78,24 @@ body {
       #646464 77.93%,
       #0a0f0c 98%
     );
+    --cardGradient: var(--colors-surface-02);
+    --cardGradient2: linear-gradient(
+        112.75deg,
+        #042c39 2.08%,
+        #0f393d 51.72%,
+        #092454 97.54%
+      ),
+      linear-gradient(
+        0deg,
+        var(--colors-surface-01, #0a0f0c),
+        var(--colors-surface-01, #0a0f0c)
+      );
+    --sectionGradient: linear-gradient(112.75deg, #02161d 2.08%, #0d1109 68.42%),
+      linear-gradient(
+        0deg,
+        var(--colors-surface-01, #0a0f0c),
+        var(--colors-surface-01, #0a0f0c)
+      );
   }
 }
 
@@ -169,4 +215,13 @@ a {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.topRetro {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1249px;
 }

@@ -12,6 +12,7 @@ import Partners from '@/app/containers/Partners/Partners';
 import LandingFeaturesGrid from '@/app/containers/LandingFeaturesGrid/LandingFeaturesGrid';
 import Chip from '@components/Chip/Chip';
 import OpenSourceCard from '@components/OpenSourceCard/OpenSourceCard';
+import { Routes } from '@utils/constants';
 
 const LandingContent = () => {
   const t = useTranslations('LandingHero');
@@ -24,11 +25,14 @@ const LandingContent = () => {
         subtitle={t('subtitle')}
         ctaContent={
           <>
-            <Button leadingIcon={<MyIcon name={'EastRounded'} />}>
+            <Button
+              href={Routes.BUILD}
+              leadingIcon={<MyIcon name={'EastRounded'} />}
+            >
               {t('start')}
             </Button>
             <Button
-              href={'https://www.google.com'}
+              href={Routes.TECHNOLOGY}
               variant={'text'}
               leadingIcon={<MyIcon name={'EastRounded'} />}
             >

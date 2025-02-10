@@ -7,6 +7,7 @@ import { useTranslations } from 'next-intl';
 import Chip from '@components/Chip/Chip';
 import Button from '@components/Button/Button';
 import MyIcon from '@components/MyIcon/MyIcon';
+import { Section } from '@utils/constants';
 
 const Partnership = () => {
   const t = useTranslations('AboutUsPage.partnerships');
@@ -16,6 +17,7 @@ const Partnership = () => {
       asWrapperSection
       className={classes.partnership}
       sectionClass={classes.partnershipSection}
+      sectionId={Section.PARTNERSHIPS}
     >
       <div className={classes.innerContent}>
         <SectionHeader

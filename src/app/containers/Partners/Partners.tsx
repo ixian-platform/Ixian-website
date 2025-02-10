@@ -14,6 +14,7 @@ import ixilabs from '@assets/partners/ixilabs.svg';
 import robotina from '@assets/partners/robotina.svg';
 import vivat from '@assets/partners/vivat.svg';
 import Link from 'next/link';
+import { Routes } from '@utils/constants';
 
 const Partners = () => {
   const t = useTranslations('Partners');
@@ -57,6 +58,7 @@ const Partners = () => {
         }
         ctaContent={
           <Button
+            href={Routes.ABOUT_US}
             variant={'outlined-2'}
             leadingIcon={<MyIcon name={'EastRounded'} />}
           >

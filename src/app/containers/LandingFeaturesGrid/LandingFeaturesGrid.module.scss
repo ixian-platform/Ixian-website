@@ -5,10 +5,24 @@
   background: var(--colors-surface-01);
 
   .landingFeatures {
-    padding: 100px 16px;
+    padding: var(--spacing-super-lg) var(--spacing-md);
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 120px;
+
+    .poweredByIxianArticleCard {
+      border-radius: var(--corner-radius-xl);
+      padding: var(--spacing-super-lg) var(--spacing-xl);
+      background: linear-gradient(
+        112.75deg,
+        #366d66 2.08%,
+        #0a6d8f 34.54%,
+        #3e126e 97.54%
+      );
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+    }
 
     .landingFeaturesGridSingleCard {
       overflow: hidden;
@@ -36,43 +50,14 @@
 }
 
 .card1 {
-  background: radial-gradient(
-      57.77% 138.74% at 7.69% 16.52%,
-      rgba(87, 188, 232, 0.2) 0%,
-      rgba(87, 188, 232, 0.45) 35%,
-      rgba(24, 201, 139, 0.45) 84.5%
-    ),
-    linear-gradient(
-      0deg,
-      var(--colors-surface-01, #fbfcfb),
-      var(--colors-surface-01, #fbfcfb)
-    );
+  padding-top: 0 !important;
+  background: var(--colors-surface-01);
 }
 
 .card2 {
-  background: radial-gradient(
-      50% 120% at 80% 20%,
-      rgba(87, 188, 232, 0.2) 0%,
-      rgba(87, 188, 232, 0.45) 40%,
-      rgba(24, 201, 139, 0.45) 90%
-    ),
-    linear-gradient(
-      45deg,
-      var(--colors-surface-01, #fbfcfb),
-      var(--colors-surface-01, #fbfcfb)
-    );
+  background: var(--cardGradient);
 }
 
 .card3 {
-  background: radial-gradient(
-      80% 100% at 30% 30%,
-      rgba(87, 188, 232, 0.2) 0%,
-      rgba(87, 188, 232, 0.45) 50%,
-      rgba(24, 201, 139, 0.45) 100%
-    ),
-    linear-gradient(
-      90deg,
-      var(--colors-surface-01, #fbfcfb),
-      var(--colors-surface-01, #fbfcfb)
-    );
+  background: var(--colors-surface-01);
 }
