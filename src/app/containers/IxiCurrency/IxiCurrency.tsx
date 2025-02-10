@@ -8,14 +8,13 @@ import Button from '@components/Button/Button';
 import { useTranslations } from 'next-intl';
 import MyIcon from '@components/MyIcon/MyIcon';
 import InteractionCard from '@components/InteractionCard/InteractionCard';
-import NumberTicker from '@/components/ui/number-ticker';
-import TypingAnimation from '@/components/ui/typing-animation';
 import Link from 'next/link';
 import coingecko from '@assets/coingecko.svg';
 import nonkyc from '@assets/nonkyc.svg';
 import xeggex from '@assets/xeggex.svg';
 import Image from 'next/image';
 import { coingeckoIxi, nonkycIxi, xeggexIxi } from '@utils/constants';
+import IxiMetrics from '@components/IxiMetrics/IxiMetrics';
 
 const IxiCurrency = () => {
   const t = useTranslations('TechnologyPage.ixiCurrency');
@@ -45,57 +44,18 @@ const IxiCurrency = () => {
             </>
           }
         />
-        <div className={classes.currencyMetrics}>
-          <div className={classes.mainMetrics}>
-            <div className={classes.insideSingle}>
-              <TextElement type={'heading-md'}>
-                <NumberTicker value={21} className={classes.number} /> BN
-              </TextElement>
-              <TextElement type={'body-md'}>{t('metrics.supply')}</TextElement>
-            </div>
-            <div className={classes.insideSingle}>
-              <TextElement type={'heading-md'}>
-                <NumberTicker value={379} className={classes.number} />
-              </TextElement>
-              <TextElement type={'body-md'}>{t('metrics.peakTps')}</TextElement>
-            </div>
-            <div className={classes.insideSingle}>
-              <TextElement type={'heading-md'}>
-                <NumberTicker value={30} className={classes.number} />s
-              </TextElement>
-              <TextElement type={'body-md'}>
-                {t('metrics.targetBlockTime')}
-              </TextElement>
-            </div>
-            <div className={classes.insideSingle}>
-              <TextElement type={'heading-lg'} as={'div'}>
-                <TypingAnimation
-                  text={'<$0.00001*'}
-                  className={classes.number}
-                />
-              </TextElement>
-              <TextElement type={'body-sm'}>
-                {t('metrics.transactionFees')}
-              </TextElement>
-            </div>
-          </div>
-          <TextElement className={classes.note} type={'body-sm'}>
-            {t('metrics.note')}
-          </TextElement>
-        </div>
+        <IxiMetrics />
         <div className={classes.infoCardsContainer}>
           <InteractionCard
             icon={<MyIcon name={'MultipleStopRounded'} rounded />}
             title={t('card1.title')}
             description={t('card1.subtitle')}
-            enableHover
             fullWidth
           />
           <InteractionCard
             icon={<MyIcon name={'GrainRounded'} rounded />}
             title={t('card1.title')}
             description={t('card1.subtitle')}
-            enableHover
             fullWidth
           />
         </div>

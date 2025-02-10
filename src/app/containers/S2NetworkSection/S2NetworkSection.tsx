@@ -32,21 +32,18 @@ const S2NetworkSection = () => {
           icon={<MyIcon name={'GraphicEqRounded'} rounded />}
           title={t('card1.title')}
           description={t('card1.subtitle')}
-          enableHover
           fullWidth
         />
         <InteractionCard
           icon={<MyIcon customName={'s2_mark'} rounded />}
           title={t('card2.title')}
           description={t('card2.subtitle')}
-          enableHover
           fullWidth
         />
         <InteractionCard
           icon={<MyIcon name={'ShieldRounded'} rounded />}
           title={t('card3.title')}
           description={t('card3.subtitle')}
-          enableHover
           fullWidth
         />
       </div>

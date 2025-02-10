@@ -1,0 +1,110 @@
+@use '@styles/mixins' as *;
+@use '@styles/typograhphy' as *;
+
+.ecoGetInvolvedSection {
+  width: 100%;
+  background: var(--colors-surface-01);
+
+  .ecoGetInvolved {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: var(--spacing-super-xxl) var(--spacing-md);
+
+    .topRetro {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 1249px;
+    }
+
+    .socialCards {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+
+      .customCard {
+        max-width: 180px;
+        min-height: 156px;
+
+        .title {
+          @include label-lg;
+        }
+
+        div[class*='content'] {
+          div[class*='icon'] {
+            border: 1px solid var(--colors-outline-02);
+            border-radius: 99px;
+            padding: 8px;
+            background: var(--colors-surface-inverse);
+          }
+        }
+      }
+    }
+
+    .bottomCards {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+
+      @include mq('sm') {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+      }
+
+      .colSpan2 {
+        min-height: 511px;
+        grid-column: span 2;
+      }
+
+      .marginBot {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+.minHeight {
+  min-height: 349px;
+}
+
+.ixiNamesGradient {
+  background:
+    radial-gradient(
+      57.77% 138.74% at 7.69% 16.52%,
+      rgba(87, 232, 181, 0.04) 0%,
+      rgba(87, 232, 104, 0.09) 35%,
+      rgba(195, 201, 24, 0.09) 84.5%
+    ),
+    linear-gradient(
+        0deg,
+        var(--colors-surface-01, #fbfcfb),
+        var(--colors-surface-01, #fbfcfb)
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+}
+
+.newFeaturesCardGradient {
+  background:
+    radial-gradient(
+        117.99% 141.4% at 128.55% 44.32%,
+        rgba(44, 234, 27, 0.4) 0%,
+        rgba(159, 63, 243, 0.4) 35.53%,
+        rgba(43, 244, 234, 0.4) 85.5%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    radial-gradient(
+        119.7% 137.67% at -10.73% 113.07%,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0.0890915) 39.41%,
+        rgba(255, 255, 255, 0) 53.09%,
+        #ffffff 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+}

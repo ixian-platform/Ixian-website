@@ -11,45 +11,6 @@
     gap: var(--spacing-super);
     padding: var(--spacing-super-lg) var(--spacing-md);
 
-    .offerInfo {
-      width: 100%;
-      padding: var(--spacing-3xl) var(--spacing-xxl);
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: var(--spacing-3xl);
-      position: relative;
-
-      @include mq('sm') {
-        grid-template-columns: repeat(1, 1fr);
-        justify-items: center;
-      }
-
-      &:before,
-      &:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        height: 100%;
-        width: 1px;
-        background: var(--fading-border-vertical);
-      }
-
-      &:before {
-        left: 0;
-      }
-
-      &:after {
-        right: 0;
-      }
-
-      .singleInfo {
-        width: 100%;
-        display: flex;
-        align-items: flex-start;
-        gap: var(--spacing-md);
-      }
-    }
-
     .keyResources {
       display: flex;
       flex-direction: column;

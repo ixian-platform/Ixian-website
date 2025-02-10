@@ -27,6 +27,10 @@
   max-width: unset;
 }
 
+.inverseText {
+  color: var(--colors-text-inverse);
+}
+
 .slideUp {
   > * {
     animation: fadeInUp 0.5s ease-out;

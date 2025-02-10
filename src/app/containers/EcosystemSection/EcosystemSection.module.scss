@@ -8,7 +8,7 @@
     padding: var(--spacing-super-xl) var(--spacing-md);
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-3xl);
+    gap: var(--spacing-super-lg);
 
     .topRetro {
       position: absolute;
@@ -17,45 +17,6 @@
       transform: translateX(-50%);
       width: 100%;
       max-width: 1249px;
-    }
-
-    .offerInfo {
-      width: 100%;
-      padding: var(--spacing-3xl) var(--spacing-xxl);
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: var(--spacing-3xl);
-      position: relative;
-
-      @include mq('sm') {
-        grid-template-columns: repeat(1, 1fr);
-        justify-items: center;
-      }
-
-      &:before,
-      &:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        height: 100%;
-        width: 1px;
-        background: var(--fading-border-vertical);
-      }
-
-      &:before {
-        left: 0;
-      }
-
-      &:after {
-        right: 0;
-      }
-
-      .singleInfo {
-        width: 100%;
-        display: flex;
-        align-items: flex-start;
-        gap: var(--spacing-md);
-      }
     }
 
     .bottomCards {
@@ -73,14 +34,11 @@
         grid-row: span 2;
       }
     }
-
-    .spixiHalfImg {
-      position: absolute;
-      right: 0;
-      top: 0;
-      z-index: 0;
-    }
   }
+}
+
+.minHeight {
+  min-height: 264px;
 }
 
 .newFeaturesCardGradient {

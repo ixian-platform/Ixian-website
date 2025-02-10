@@ -7,10 +7,13 @@ import Chip from '@components/Chip/Chip';
 import MyIcon from '@components/MyIcon/MyIcon';
 import InteractionCard from '@components/InteractionCard/InteractionCard';
 import { getServerTranslations } from '@utils/getServerTranslations';
+import CharacteristicsLayout, {
+  SingleData,
+} from '@components/CharacteristicsLayout/CharacteristicsLayout';
 
 const st = await getServerTranslations();
 
-const singleInfoData = [
+const singleInfoData: SingleData[] = [
   {
     icon: 'Home',
     title: st('BuildPage.whyIxian.data1.title'),
@@ -36,6 +39,11 @@ const singleInfoData = [
     title: st('BuildPage.whyIxian.data5.title'),
     description: st('BuildPage.whyIxian.data5.subtitle'),
   },
+  {
+    icon: 'Home',
+    title: st('BuildPage.whyIxian.data6.title'),
+    description: st('BuildPage.whyIxian.data6.subtitle'),
+  },
 ];
 
 const WhyIxian = () => {
@@ -51,43 +59,33 @@ const WhyIxian = () => {
         chipContainer={<Chip content={t('chip')} variant={'outlined'} />}
         title={<TextElement type={'heading-lg'}>{t('title')}</TextElement>}
       />
-      <div className={classes.offerInfo}>
-        {singleInfoData.map((info, index) => (
-          <div key={index} className={classes.singleInfo}>
-            <MyIcon name={info.icon} rounded />
-            <div>
-              <TextElement type={'heading-xs'}>{info.title}</TextElement>
-              <TextElement type={'body-sm'}>{info.description}</TextElement>
-            </div>
-          </div>
-        ))}
-      </div>
+      <CharacteristicsLayout data={singleInfoData} />
       <section className={classes.keyResources}>
         <TextElement type={'heading-md'}>{t('keyResources.title')}</TextElement>
         <div className={classes.infoItems}>
           <InteractionCard
-            icon={<MyIcon name={'Home'} rounded />}
+            fullWidth
+            icon={<MyIcon name={'EastRounded'} rounded />}
             title={t('keyResources.card1.title')}
             description={t('keyResources.card1.subtitle')}
-            enableHover
           />
           <InteractionCard
-            icon={<MyIcon name={'Home'} rounded />}
+            fullWidth
+            icon={<MyIcon name={'EastRounded'} rounded />}
             title={t('keyResources.card2.title')}
             description={t('keyResources.card2.subtitle')}
-            enableHover
           />
           <InteractionCard
-            icon={<MyIcon name={'Home'} rounded />}
+            fullWidth
+            icon={<MyIcon name={'EastRounded'} rounded />}
             title={t('keyResources.card3.title')}
             description={t('keyResources.card3.subtitle')}
-            enableHover
           />
           <InteractionCard
-            icon={<MyIcon name={'Home'} rounded />}
+            fullWidth
+            icon={<MyIcon name={'EastRounded'} rounded />}
             title={t('keyResources.card4.title')}
             description={t('keyResources.card4.subtitle')}
-            enableHover
           />
         </div>
       </section>

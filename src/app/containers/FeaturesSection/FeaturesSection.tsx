@@ -68,25 +68,21 @@ const FeaturesSection = () => {
             icon={<MyIcon name={'Home'} rounded />}
             title={t('lorem')}
             description={t('lorem')}
-            enableHover
           />
           <InteractionCard
             icon={<MyIcon name={'Home'} rounded />}
             title={t('lorem')}
             description={t('lorem')}
-            enableHover
           />
           <InteractionCard
             icon={<MyIcon name={'Home'} rounded />}
             title={t('lorem')}
             description={t('lorem')}
-            enableHover
           />
           <InteractionCard
             icon={<MyIcon name={'Home'} rounded />}
             title={t('lorem')}
             description={t('lorem')}
-            enableHover
           />
           <BigCard
             body={
@@ -132,13 +128,11 @@ const FeaturesSection = () => {
             icon={<MyIcon name={'Home'} rounded />}
             title={t('lorem')}
             description={t('lorem')}
-            enableHover
           />
           <InteractionCard
             icon={<MyIcon name={'Home'} rounded />}
             title={t('lorem')}
             description={t('lorem')}
-            enableHover
           />
         </div>
       </div>

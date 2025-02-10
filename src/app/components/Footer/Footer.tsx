@@ -8,7 +8,6 @@ import Image from 'next/image';
 import ixianLogo from '@assets/ixian-logo.svg';
 import React from 'react';
 import { useTranslations } from 'next-intl';
-import MyIcon from '@components/MyIcon/MyIcon';
 import { socials } from '@utils/socialsUtil';
 import Copyright from '@components/Copyright/Copyright';
 
@@ -86,7 +85,6 @@ const Footer = () => {
                 <TextElement type={'label-sm'}>
                   {t('external.ixiLabs')}
                 </TextElement>
-                <MyIcon name={'Launch'} height={12} width={12} />
               </Link>
               <Link
                 href={'/'}
@@ -96,7 +94,6 @@ const Footer = () => {
                 <TextElement type={'label-sm'}>
                   {t('external.spixi')}
                 </TextElement>
-                <MyIcon name={'Launch'} height={12} width={12} />
               </Link>
               <Link
                 href={'/'}
@@ -106,7 +103,6 @@ const Footer = () => {
                 <TextElement type={'label-sm'}>
                   {t('external.IXInames')}
                 </TextElement>
-                <MyIcon name={'Launch'} height={12} width={12} />
               </Link>
               <Link
                 href={'/'}
@@ -116,7 +112,6 @@ const Footer = () => {
                 <TextElement type={'label-sm'}>
                   {t('external.mineIXI')}
                 </TextElement>
-                <MyIcon name={'Launch'} height={12} width={12} />
               </Link>
               <Link
                 href={'/'}
@@ -126,7 +121,6 @@ const Footer = () => {
                 <TextElement type={'label-sm'}>
                   {t('external.github')}
                 </TextElement>
-                <MyIcon name={'Launch'} height={12} width={12} />
               </Link>
             </div>
           </div>

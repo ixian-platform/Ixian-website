@@ -17,7 +17,7 @@ const GitSection = () => {
       className={classes.gitSectionWrapper}
     >
       <SectionHeader
-        className={classes.sectionHeaderGitSection}
+        inverseText
         chipContainer={
           <Chip content={t('chip')} variant={'outlined'} isTextInversed />
         }

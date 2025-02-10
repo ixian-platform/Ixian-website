@@ -11,6 +11,7 @@ import MyIcon from '@components/MyIcon/MyIcon';
 import Partners from '@/app/containers/Partners/Partners';
 import LandingFeaturesGrid from '@/app/containers/LandingFeaturesGrid/LandingFeaturesGrid';
 import Chip from '@components/Chip/Chip';
+import OpenSourceCard from '@components/OpenSourceCard/OpenSourceCard';
 
 const LandingContent = () => {
   const t = useTranslations('LandingHero');
@@ -37,6 +38,7 @@ const LandingContent = () => {
         }
         splinePath={'/assets/spline/lines.spline'}
       />
+      <OpenSourceCard />
       <LandingFeaturesGrid />
       <MetricsSection />
       <UseCases />

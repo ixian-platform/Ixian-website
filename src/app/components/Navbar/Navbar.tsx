@@ -3,7 +3,7 @@
 import classes from './Navbar.module.scss';
 import Link from 'next/link';
 
-import { Routes, Section } from '@utils/constants';
+import { ixidocs, Routes } from '@utils/constants';
 import ContentWrapper from '@components/ContentWrapper/ContentWrapper';
 import { useMediaQuery } from 'react-responsive';
 import HamburgerMenu from '@components/HamburgerMenu/HamburgerMenu';
@@ -30,11 +30,15 @@ export const linksData = [
   },
   {
     label: 'Documentation',
-    href: Routes.INDEX,
+    href: ixidocs,
   },
   {
     label: 'Get Involved',
-    href: `${Routes.INDEX}#${Section.GET_INVOLVED}`,
+    href: Routes.GET_INVOLVED,
+  },
+  {
+    label: 'About Us',
+    href: Routes.ABOUT_US,
   },
 ];
 

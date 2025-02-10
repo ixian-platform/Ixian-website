@@ -11,10 +11,14 @@ import MyIcon from '@components/MyIcon/MyIcon';
 import { getServerTranslations } from '@utils/getServerTranslations';
 import topRetro from '@assets/top-retro.svg';
 import Image from 'next/image';
+import CharacteristicsLayout, {
+  SingleData,
+} from '@components/CharacteristicsLayout/CharacteristicsLayout';
+import classNames from 'classnames';
 
 const st = await getServerTranslations();
 
-const singleInfoData = [
+const singleInfoData: SingleData[] = [
   {
     icon: 'ViewInArRounded',
     title: st('Ecosystem.robustBlockchain'),
@@ -127,38 +131,26 @@ const EcosystemSection = () => {
           }
         />
         <InteractionCard
+          className={classes.minHeight}
           title={t('ixiNames')}
           description={t('namesDesc')}
           fullWidth
-          enableHover
           headerAdditionalContent={
             <Chip content={t('comingSoon')} variant={'outlined'} />
           }
         />
         <InteractionCard
-          className={classes.newFeaturesCardGradient}
+          className={classNames(
+            classes.newFeaturesCardGradient,
+            classes.minHeight
+          )}
           icon={<MyIcon name={'AutoAwesomeRounded'} rounded />}
           title={t('building')}
           description={t('stayUp')}
           fullWidth
-          enableHover
         />
       </div>
-      <div className={classes.offerInfo}>
-        {singleInfoData.map((info, index) => (
-          <div key={index} className={classes.singleInfo}>
-            {info?.isCustom ? (
-              <MyIcon customName={info.icon} rounded />
-            ) : (
-              <MyIcon name={info.icon} rounded />
-            )}
-            <div>
-              <TextElement type={'heading-xs'}>{info.title}</TextElement>
-              <TextElement type={'body-sm'}>{info.description}</TextElement>
-            </div>
-          </div>
-        ))}
-      </div>
+      <CharacteristicsLayout data={singleInfoData} />
     </ContentWrapper>
   );
 };

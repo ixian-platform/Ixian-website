@@ -8,3 +8,13 @@
 .techHero {
   padding: var(--spacing-super-xl) var(--spacing-md);
 }
+
+.notFoundSection {
+  width: 100%;
+  min-height: 800px;
+  background: var(--colors-surface-01);
+
+  .notFound {
+    padding: 120px 16px;
+  }
+}
