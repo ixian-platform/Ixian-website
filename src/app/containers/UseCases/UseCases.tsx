@@ -2,11 +2,9 @@ import classes from './UseCases.module.scss';
 import ContentWrapper from '@components/ContentWrapper/ContentWrapper';
 import Chip from '@components/Chip/Chip';
 import TextElement from '@components/TextElement/TextElement';
-import Button from '@components/Button/Button';
 import SectionHeader from '@components/SectionHeader/SectionHeader';
 import { useTranslations } from 'next-intl';
 import InteractionCard from '@components/InteractionCard/InteractionCard';
-import MyIcon from '@components/MyIcon/MyIcon';
 
 const UseCases = () => {
   const t = useTranslations('UseCases');
