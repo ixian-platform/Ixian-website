@@ -4,14 +4,15 @@
 .interactionCard {
   width: 100%;
   max-width: 288px;
-  min-height: 264px;
+  min-height: 320px;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
   border-radius: var(--corner-radius-xxl);
-  padding: var(--spacing-3xl) var(--spacing-xl) var(--spacing-xl);
+  padding: var(--spacing-3xl) var(--spacing-xl) var(--spacing-md)
+    var(--spacing-xl);
   transition: all 0.5s ease-in-out;
   border: 1px solid var(--colors-outline-02);
 

@@ -39,6 +39,11 @@ const singleInfoData: SingleData[] = [
     title: st('BuildPage.whyIxian.data5.title'),
     description: st('BuildPage.whyIxian.data5.subtitle'),
   },
+  {
+    icon: 'Home',
+    title: st('BuildPage.whyIxian.data6.title'),
+    description: st('BuildPage.whyIxian.data6.subtitle'),
+  },
 ];
 
 const WhyIxian = () => {
@@ -60,25 +65,25 @@ const WhyIxian = () => {
         <div className={classes.infoItems}>
           <InteractionCard
             fullWidth
-            icon={<MyIcon name={'Home'} rounded />}
+            icon={<MyIcon name={'EastRounded'} rounded />}
             title={t('keyResources.card1.title')}
             description={t('keyResources.card1.subtitle')}
           />
           <InteractionCard
             fullWidth
-            icon={<MyIcon name={'Home'} rounded />}
+            icon={<MyIcon name={'EastRounded'} rounded />}
             title={t('keyResources.card2.title')}
             description={t('keyResources.card2.subtitle')}
           />
           <InteractionCard
             fullWidth
-            icon={<MyIcon name={'Home'} rounded />}
+            icon={<MyIcon name={'EastRounded'} rounded />}
             title={t('keyResources.card3.title')}
             description={t('keyResources.card3.subtitle')}
           />
           <InteractionCard
             fullWidth
-            icon={<MyIcon name={'Home'} rounded />}
+            icon={<MyIcon name={'EastRounded'} rounded />}
             title={t('keyResources.card4.title')}
             description={t('keyResources.card4.subtitle')}
           />

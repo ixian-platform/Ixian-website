@@ -12,6 +12,7 @@ import InteractionCard from '@components/InteractionCard/InteractionCard';
 import MyIcon from '@components/MyIcon/MyIcon';
 import BigCard from '@components/BigCard/BigCard';
 import Button from '@components/Button/Button';
+import classNames from 'classnames';
 
 const EcoGetInvolved = () => {
   const t = useTranslations('EcoGetInvolvedPage.community');
@@ -47,13 +48,14 @@ const EcoGetInvolved = () => {
           ?.filter((item) => !['github', 'spixi']?.includes(item.alt))
           ?.map((item) => (
             <InteractionCard
+              href={'test'}
               className={classes.customCard}
+              titleClassName={classes.title}
               key={item.label}
               icon={
                 <Image src={item.img} alt={item.alt} width={40} height={40} />
               }
               title={item.label}
-              description={''}
             />
           ))}
       </div>
@@ -86,6 +88,7 @@ const EcoGetInvolved = () => {
           }
         />
         <InteractionCard
+          className={classNames(classes.ixiNamesGradient, classes.minHeight)}
           title={ecoT('ixiNames')}
           description={ecoT('namesDesc')}
           fullWidth
@@ -99,7 +102,10 @@ const EcoGetInvolved = () => {
           }
         />
         <InteractionCard
-          className={classes.newFeaturesCardGradient}
+          className={classNames(
+            classes.newFeaturesCardGradient,
+            classes.minHeight
+          )}
           icon={<MyIcon name={'AutoAwesomeRounded'} rounded />}
           title={ecoT('building')}
           description={ecoT('stayUp')}

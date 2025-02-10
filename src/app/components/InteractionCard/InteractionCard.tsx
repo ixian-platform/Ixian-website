@@ -2,7 +2,6 @@ import classes from './InteractionCard.module.scss';
 import { ReactNode } from 'react';
 import classNames from 'classnames';
 import Link from 'next/link';
-import MyIcon from '@components/MyIcon/MyIcon';
 
 interface InteractionCardProps {
   icon?: ReactNode;
@@ -13,12 +12,12 @@ interface InteractionCardProps {
   enableHover?: boolean;
   disableScale?: boolean;
   bgImageVariant?: 'primary' | 'secondary';
-  enableHoverImage?: boolean;
   hoverImageType?: 'access' | 'dapps' | 'enterprise' | 'iot';
   additionalContent?: ReactNode;
   headerAdditionalContent?: ReactNode;
   onHoverHeader?: ReactNode;
   titleClassName?: string;
+  href?: string;
 }
 
 const InteractionCard = ({
@@ -30,14 +29,14 @@ const InteractionCard = ({
   enableHover,
   disableScale,
   bgImageVariant = 'primary',
-  enableHoverImage,
   additionalContent,
   onHoverHeader,
   headerAdditionalContent,
   hoverImageType,
   titleClassName,
+  href,
 }: InteractionCardProps) => {
-  return (
+  const cardContent = (
     <div
       className={classNames(
         classes.interactionCard,
@@ -48,7 +47,7 @@ const InteractionCard = ({
           [classes.fullWidth]: fullWidth,
           [classes.enableHover]: enableHover,
           [classes.disableScale]: disableScale,
-          [classes.enableHoverImage]: enableHoverImage,
+          [classes.enableHoverImage]: !!hoverImageType,
         }
       )}
     >
@@ -63,6 +62,14 @@ const InteractionCard = ({
       )}
       {additionalContent}
     </div>
+  );
+
+  return href ? (
+    <Link href={href} passHref style={{ width: '100%' }}>
+      {cardContent}
+    </Link>
+  ) : (
+    cardContent
   );
 };
 

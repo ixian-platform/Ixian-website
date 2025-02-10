@@ -15,30 +15,7 @@ body {
   //LIGHT
   --pattern: url('/assets/light/pattern-right.svg');
   --spixi-bg: url('/assets/light/spixi-bg.png');
-  --gradient-bg-1: radial-gradient(
-      58.24% 69.73% at 96.21% 14.11%,
-      rgba(51, 114, 45, 0.1) 0%,
-      rgba(159, 63, 243, 0.1) 28.87%,
-      rgba(43, 244, 234, 0.1) 65.51%,
-      rgba(251, 252, 251, 0.1) 100%
-    ),
-    var(--colors-surface-01);
-  --gradient-bg-2: radial-gradient(
-      58.24% 69.73% at 96.21% 14.11%,
-      rgba(51, 114, 45, 0.1) 0%,
-      rgba(159, 63, 243, 0.1) 28.87%,
-      rgba(43, 244, 234, 0.1) 65.51%,
-      rgba(251, 252, 251, 0.1) 100%
-    ),
-    var(--colors-surface-02);
-  --hero-gradient: radial-gradient(
-      148.4% 200.17% at 125.35% 95.08%,
-      rgba(160, 240, 145, 0.21) 13.71%,
-      rgba(166, 219, 238, 0.225) 41.04%,
-      rgba(230, 203, 245, 0.18) 58.92%,
-      rgba(255, 255, 255, 0) 89.85%
-    ),
-    #fbfcfb;
+  --hero-gradient: var(--colors-surface-01);
   --fading-border-horizontal: linear-gradient(
     90deg,
     #fbfcfb 0%,
@@ -58,30 +35,7 @@ body {
   html.dark & {
     --pattern: url('/assets/dark/pattern-right.svg');
     --spixi-bg: url('/assets/dark/spixi-bg.png');
-    --gradient-bg-1: radial-gradient(
-        173.13% 177.27% at 141.29% -38.75%,
-        rgba(48, 162, 25, 0.3) 13.71%,
-        rgba(34, 73, 87, 0.225) 41.04%,
-        rgba(86, 16, 126, 0.130677) 67%,
-        rgba(0, 0, 0, 0) 89.85%
-      ),
-      var(--color-grey-1000);
-    --gradient-bg-2: radial-gradient(
-        173.13% 177.27% at 141.29% -38.75%,
-        rgba(48, 162, 25, 0.3) 13.71%,
-        rgba(34, 73, 87, 0.225) 41.04%,
-        rgba(86, 16, 126, 0.130677) 67%,
-        rgba(0, 0, 0, 0) 89.85%
-      ),
-      #0a0f0c;
-    --hero-gradient: radial-gradient(
-      132.62% 149.56% at 118.2% -24.26%,
-      rgba(83, 196, 61, 0.2) 13.71%,
-      rgba(14, 3, 21, 0.0146159) 40.55%,
-      rgba(30, 239, 229, 0.12) 59.71%,
-      rgba(142, 56, 192, 0.0871183) 76.94%,
-      rgba(0, 0, 0, 0) 89.85%
-    );
+    --hero-gradient: var(--colors-surface-01);
     --fading-border-horizontal: linear-gradient(
       90deg,
       #0a0f0c 0%,

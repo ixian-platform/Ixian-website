@@ -6,6 +6,9 @@
   background: var(--colors-surface-01);
 
   .ecoGetInvolved {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
     padding: var(--spacing-super-xxl) var(--spacing-md);
 
     .topRetro {
@@ -20,21 +23,20 @@
     .socialCards {
       width: 100%;
       display: flex;
-      gap: 32px;
       justify-content: space-between;
+      gap: 32px;
       flex-wrap: wrap;
-      margin-bottom: var(--spacing-super-xxl);
+      margin-bottom: 24px;
 
       .customCard {
         max-width: 180px;
-        max-height: 156px;
-        min-height: unset;
+        min-height: 156px;
+
+        .title {
+          @include label-lg;
+        }
 
         div[class*='content'] {
-          h3 {
-            @include label-lg;
-          }
-
           div[class*='icon'] {
             border: 1px solid var(--colors-outline-02);
             border-radius: 99px;
@@ -48,7 +50,7 @@
     .bottomCards {
       width: 100%;
       display: grid;
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 40px;
 
       @include mq('sm') {
@@ -57,6 +59,7 @@
       }
 
       .colSpan2 {
+        min-height: 511px;
         grid-column: span 2;
       }
 
@@ -65,6 +68,26 @@
       }
     }
   }
+}
+
+.minHeight {
+  min-height: 349px;
+}
+
+.ixiNamesGradient {
+  background:
+    radial-gradient(
+      57.77% 138.74% at 7.69% 16.52%,
+      rgba(87, 232, 181, 0.04) 0%,
+      rgba(87, 232, 104, 0.09) 35%,
+      rgba(195, 201, 24, 0.09) 84.5%
+    ),
+    linear-gradient(
+        0deg,
+        var(--colors-surface-01, #fbfcfb),
+        var(--colors-surface-01, #fbfcfb)
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
 }
 
 .newFeaturesCardGradient {

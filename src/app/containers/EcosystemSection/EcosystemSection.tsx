@@ -14,6 +14,7 @@ import Image from 'next/image';
 import CharacteristicsLayout, {
   SingleData,
 } from '@components/CharacteristicsLayout/CharacteristicsLayout';
+import classNames from 'classnames';
 
 const st = await getServerTranslations();
 
@@ -130,6 +131,7 @@ const EcosystemSection = () => {
           }
         />
         <InteractionCard
+          className={classes.minHeight}
           title={t('ixiNames')}
           description={t('namesDesc')}
           fullWidth
@@ -138,7 +140,10 @@ const EcosystemSection = () => {
           }
         />
         <InteractionCard
-          className={classes.newFeaturesCardGradient}
+          className={classNames(
+            classes.newFeaturesCardGradient,
+            classes.minHeight
+          )}
           icon={<MyIcon name={'AutoAwesomeRounded'} rounded />}
           title={t('building')}
           description={t('stayUp')}
