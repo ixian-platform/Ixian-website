@@ -7,9 +7,9 @@
   .startBuildingContainer {
     padding: var(--spacing-super-xxl) var(--spacing-md);
     color: var(--colors-text-inverse);
-    background-image: url('/assets/dark/pattern-right.svg');
-    background-position: right;
-    background-size: contain;
-    background-repeat: no-repeat;
+
+    //background-position: right;
+    //background-size: contain;
+    //background-repeat: no-repeat;
   }
 }

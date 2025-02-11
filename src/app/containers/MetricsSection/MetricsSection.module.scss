@@ -15,6 +15,10 @@
     gap: var(--spacing-super);
     align-items: flex-start;
 
+    @include mq('sm') {
+      padding: 100px var(--spacing-sm);
+    }
+
     .patternImg {
       position: absolute;
       right: 0;

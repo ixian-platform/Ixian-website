@@ -11,6 +11,10 @@
     flex-direction: column;
     gap: var(--spacing-super);
 
+    @include mq('sm') {
+      padding: 100px var(--spacing-sm);
+    }
+
     @include mq('md') {
       flex-direction: column;
     }

@@ -13,6 +13,10 @@
     align-items: center;
     gap: 100px;
 
+    @include mq('sm') {
+      padding: 100px var(--spacing-sm);
+    }
+
     .customSectionHeader {
       z-index: 1;
     }

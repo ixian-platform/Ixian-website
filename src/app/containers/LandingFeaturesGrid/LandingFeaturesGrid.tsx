@@ -81,8 +81,8 @@ const LandingFeaturesGrid = () => {
         </div>
       </div>
       <div className={classes.poweredByIxianArticleCard}>
-        <div>image</div>
-        <div>
+        <div className={classes.left} />
+        <div className={classes.right}>
           <SectionHeader
             inverseText
             chipContainer={

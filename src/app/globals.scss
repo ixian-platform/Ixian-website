@@ -1,3 +1,4 @@
+@use 'styles/mixins' as *;
 @forward 'styles/tokens/_theme';
 @tailwind base;
 @tailwind components;
@@ -13,7 +14,14 @@ body {
 
   //Custom theme variables
   //LIGHT
-  --pattern: url('/assets/light/pattern-right.svg');
+  --build: url('/assets/light/build.svg');
+  --eco-spixi: url('/assets/light/exo-spixi.svg');
+  --efficiency: url('/assets/light/efficiency.svg');
+  --parnters: url('/assets/light/partners.svg');
+  --privacy: url('/assets/light/privacy.svg');
+  --spixi-eco: url('/assets/light/spixi-eco.png');
+  --spixi-uc: url('/assets/light/spixi-uc.png');
+  --why: url('/assets/light/why.svg');
   --spixi-bg: url('/assets/light/spixi-bg.png');
   --hero-gradient: linear-gradient(
       112.75deg,
@@ -61,7 +69,14 @@ body {
 
   //DARK
   html.dark & {
-    --pattern: url('/assets/dark/pattern-right.svg');
+    --build: url('/assets/dark/build.svg');
+    --eco-spixi: url('/assets/dark/exo-spixi.svg');
+    --efficiency: url('/assets/dark/efficiency.svg');
+    --parnters: url('/assets/dark/partners.svg');
+    --privacy: url('/assets/dark/privacy.svg');
+    --spixi-eco: url('/assets/dark/spixi-eco.png');
+    --spixi-uc: url('/assets/dark/spixi-uc.png');
+    --why: url('/assets/dark/why.svg');
     --spixi-bg: url('/assets/dark/spixi-bg.png');
     --hero-gradient: linear-gradient(113.05deg, #0a0e07 -0.14%, #02201e 46.25%);
     --fading-border-horizontal: linear-gradient(
@@ -224,4 +239,8 @@ a {
   transform: translateX(-50%);
   width: 100%;
   max-width: 1249px;
+
+  @include mq('sm') {
+    display: none;
+  }
 }

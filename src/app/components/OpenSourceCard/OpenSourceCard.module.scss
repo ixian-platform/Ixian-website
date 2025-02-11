@@ -32,12 +32,17 @@
 
     @include mq('md') {
       flex-direction: column;
+      justify-content: flex-start;
       gap: 24px;
     }
 
     .leftSide {
       display: flex;
       gap: 24px;
+
+      @include mq('sm') {
+        flex-direction: column;
+      }
 
       > svg {
         color: var(--colors-icon-01);

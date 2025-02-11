@@ -11,11 +11,6 @@
   gap: var(--spacing-xs);
   @include label-md;
 
-  @include mq('sm') {
-    width: 100%;
-    justify-content: center;
-  }
-
   svg {
     color: inherit;
   }

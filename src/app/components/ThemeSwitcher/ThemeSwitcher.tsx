@@ -3,7 +3,7 @@
 import classes from './ThemeSwitcher.module.scss';
 import { useTheme } from '@/app/providers/ThemeProvider/ThemeProvider';
 import { useEffect, useState } from 'react';
-import moonIcon from '@assets/icons/dark/night_sight_auto.svg';
+import moonIcon from '@assets/moon-auto.svg';
 import Image from 'next/image';
 
 const ThemeSwitcher = () => {

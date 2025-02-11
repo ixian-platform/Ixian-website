@@ -10,6 +10,11 @@
     flex-direction: column;
     gap: 120px;
 
+    @include mq('sm') {
+      padding: 64px var(--spacing-sm);
+      gap: 64px;
+    }
+
     .poweredByIxianArticleCard {
       border-radius: var(--corner-radius-xl);
       padding: var(--spacing-super-lg) var(--spacing-xl);
@@ -22,6 +27,22 @@
       display: flex;
       justify-content: space-between;
       gap: 24px;
+
+      @include mq('sm') {
+        flex-direction: column;
+      }
+
+      .left {
+        width: 100%;
+        background-image: var(--spixi-uc);
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      .right {
+        width: 100%;
+      }
     }
 
     .landingFeaturesGridSingleCard {
@@ -52,6 +73,10 @@
 .card1 {
   padding-top: 0 !important;
   background: var(--colors-surface-01);
+
+  @include mq('sm') {
+    padding-bottom: 0 !important;
+  }
 }
 
 .card2 {
