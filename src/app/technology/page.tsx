@@ -10,6 +10,8 @@ import StartBuildingNow from '@/app/containers/StartBuildingNow/StartBuildingNow
 import S2NetworkSection from '@/app/containers/S2NetworkSection/S2NetworkSection';
 import IxiCurrency from '@/app/containers/IxiCurrency/IxiCurrency';
 import { generateSEO } from '@utils/seo';
+import Chip from '@components/Chip/Chip';
+import { ixianGitHub, ixidocs, Routes } from '@utils/constants';
 
 export async function generateMetadata() {
   return generateSEO({
@@ -42,15 +44,25 @@ export default function Technology() {
   return (
     <section className={classes.page}>
       <HeroSection
-        className={classes.techHero}
+        sectionClassName={classes.techHero}
+        chip={<Chip content={t('hero.chip')} variant={'outlined'} />}
         title={<TextElement type={'display-lg'}>{t('hero.title')}</TextElement>}
         subtitle={t('hero.subtitle')}
         ctaContent={
           <>
-            <Button leadingIcon={<MyIcon name={'DescriptionRounded'} />}>
+            <Button
+              href={ixidocs}
+              isExternal
+              leadingIcon={<MyIcon name={'DescriptionRounded'} />}
+            >
               {t('hero.cta1')}
             </Button>
-            <Button variant={'text'} leadingIcon={<MyIcon name={'GitHub'} />}>
+            <Button
+              href={ixianGitHub}
+              isExternal
+              variant={'text'}
+              leadingIcon={<MyIcon name={'GitHub'} />}
+            >
               {t('hero.cta2')}
             </Button>
           </>
@@ -65,6 +77,7 @@ export default function Technology() {
         subtitle={t('startBuilding.subtitle')}
         cta={
           <Button
+            href={Routes.BUILD}
             variant={'outlined-2'}
             leadingIcon={<MyIcon name={'EastRounded'} />}
           >

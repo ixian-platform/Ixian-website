@@ -13,6 +13,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   leadingIcon?: ReactNode;
   href?: string;
   isExternal?: boolean;
+  isInverse?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -23,11 +24,14 @@ const Button: React.FC<ButtonProps> = ({
   leadingIcon,
   href,
   isExternal,
+  isInverse,
   ...props
 }) => {
   const button = (
     <button
-      className={classNames(classes.button, classes[variant], className)}
+      className={classNames(classes.button, classes[variant], className, {
+        [classes.isInverse]: isInverse,
+      })}
       {...props}
     >
       {leadingIcon}

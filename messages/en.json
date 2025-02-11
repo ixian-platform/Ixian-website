@@ -180,19 +180,20 @@
   "TechnologyPage": {
     "hero": {
       "title": "Two Layers, One Powerful Platform",
-      "subtitle": "Ixian operates through two key decentralized networks Ixian DLT and Ixian S2, which together form the foundation for a wide range of secure, global network applications. ",
+      "subtitle": "Ixian operates through two key decentralized networks Ixian DLT and Ixian S2, which together form the foundation for a wide range of secure, global network applications.",
       "cta1": "Read Whitepaper",
-      "cta2": "Visit GitHub"
+      "cta2": "Visit GitHub",
+      "chip": "The Platform"
     },
     "startBuilding": {
       "title": "Start Building Now",
-      "subtitle": "We believe that together we can achieve greatness. Partner with Ixian to co-create solutions for tomorrow’s challenges.",
+      "subtitle": "Start reducing costs while improving the security and reliability of your project.",
       "cta": "Build Now"
     },
     "gitSection": {
-      "chip": "Open-Source Since 2018",
-      "title": "Backed by Over 20 Years of Research",
-      "subtitle": "Based on decades of research in the fields of cryptography, distributed networks, highly scalable systems and data structures. ",
+      "chip": "Since 2018",
+      "title": "Proudly Open-Source ",
+      "subtitle": "We are committed to building Ixian in public. It's open source and available for anyone to contribute to or audit on GitHub.",
       "visitIxian": "Visit Ixian Project on GitHub"
     },
     "milestones": {
@@ -278,24 +279,24 @@
       "title": "Build Smarter, Spend Less",
       "subtitle": "Launch your product on Ixian and reduce your operational costs.",
       "cta": "Get Started Now",
-      "readyToBuild": "Ready to Build the Future?",
-      "readyToBuildSubtitle": "We believe that together we can achieve greatness. Partner with Ixian to co-create secure, scalable solutions for tomorrow’s challenges.",
+      "readyToBuild": "Ready to Build?",
+      "readyToBuildSubtitle": "Start reducing costs while improving the security and reliability of your project.",
       "getStarted": "Get Started Now"
     },
     "whyIxian": {
       "chip": "Why Build on Ixian",
-      "title": "Built for Developers, Designed for Mass Adoption",
+      "title": "Designed for Mass Adoption",
       "data1": {
-        "title": "Ixian Advantage",
+        "title": "The Ixian Advantage",
         "subtitle": "When you require trustless and secure client discovery, end-to-end communication and human readable name registration."
       },
       "data2": {
         "title": "Uncompromised Security",
-        "subtitle": "Benefit from the built-in security of Ixian and reduce your operational costs."
+        "subtitle": "Built on the principle of trustless authentication and self-sovereignty, Ixian boosts your project’s security."
       },
       "data3": {
         "title": "Easy Integration",
-        "subtitle": "Seamless integration with Ixian’s Core DLT and Overlay Network."
+        "subtitle": "Get up and running with Ixian’s core DLT and Overlay networks in a few simple steps."
       },
       "data4": {
         "title": "High Scalability",
@@ -307,7 +308,7 @@
       },
       "data6": {
         "title": "Minimal Infrastructure Costs",
-        "subtitle": "Deploy your next solution on Ixian and minimize your entry costs."
+        "subtitle": "Significantly reduce your operational costs by off-loading parts or entire project’s infrastructure to Ixian’s decentralized platform."
       },
       "keyResources": {
         "title": "Key Resources",

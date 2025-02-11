@@ -18,6 +18,7 @@ interface InteractionCardProps {
   onHoverHeader?: ReactNode;
   titleClassName?: string;
   href?: string;
+  isExternal?: boolean;
 }
 
 const InteractionCard = ({
@@ -35,6 +36,7 @@ const InteractionCard = ({
   hoverImageType,
   titleClassName,
   href,
+  isExternal,
 }: InteractionCardProps) => {
   const cardContent = (
     <div
@@ -65,7 +67,12 @@ const InteractionCard = ({
   );
 
   return href ? (
-    <Link href={href} passHref style={{ width: '100%' }}>
+    <Link
+      href={href}
+      target={isExternal ? '_blank' : undefined}
+      passHref
+      style={{ width: '100%' }}
+    >
       {cardContent}
     </Link>
   ) : (

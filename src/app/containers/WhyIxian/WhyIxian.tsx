@@ -10,37 +10,39 @@ import { getServerTranslations } from '@utils/getServerTranslations';
 import CharacteristicsLayout, {
   SingleData,
 } from '@components/CharacteristicsLayout/CharacteristicsLayout';
+import { ixianGitHub, ixidocs } from '@utils/constants';
 
 const st = await getServerTranslations();
 
 const singleInfoData: SingleData[] = [
   {
-    icon: 'Home',
+    icon: 'ixian_logo',
+    isCustom: true,
     title: st('BuildPage.whyIxian.data1.title'),
     description: st('BuildPage.whyIxian.data1.subtitle'),
   },
   {
-    icon: 'Home',
+    icon: 'SecurityRounded',
     title: st('BuildPage.whyIxian.data2.title'),
     description: st('BuildPage.whyIxian.data2.subtitle'),
   },
   {
-    icon: 'Home',
+    icon: 'DynamicFeedRounded',
     title: st('BuildPage.whyIxian.data3.title'),
     description: st('BuildPage.whyIxian.data3.subtitle'),
   },
   {
-    icon: 'Home',
+    icon: 'MergeRounded',
     title: st('BuildPage.whyIxian.data4.title'),
     description: st('BuildPage.whyIxian.data4.subtitle'),
   },
   {
-    icon: 'Home',
+    icon: 'OnlinePredictionRounded',
     title: st('BuildPage.whyIxian.data5.title'),
     description: st('BuildPage.whyIxian.data5.subtitle'),
   },
   {
-    icon: 'Home',
+    icon: 'SettingsSuggestRounded',
     title: st('BuildPage.whyIxian.data6.title'),
     description: st('BuildPage.whyIxian.data6.subtitle'),
   },
@@ -64,26 +66,34 @@ const WhyIxian = () => {
         <TextElement type={'heading-md'}>{t('keyResources.title')}</TextElement>
         <div className={classes.infoItems}>
           <InteractionCard
+            href={ixidocs}
+            isExternal
             fullWidth
             icon={<MyIcon name={'EastRounded'} rounded />}
             title={t('keyResources.card1.title')}
             description={t('keyResources.card1.subtitle')}
           />
           <InteractionCard
+            href={ixidocs}
+            isExternal
             fullWidth
             icon={<MyIcon name={'EastRounded'} rounded />}
             title={t('keyResources.card2.title')}
             description={t('keyResources.card2.subtitle')}
           />
           <InteractionCard
+            href={ixidocs}
+            isExternal
             fullWidth
             icon={<MyIcon name={'EastRounded'} rounded />}
             title={t('keyResources.card3.title')}
             description={t('keyResources.card3.subtitle')}
           />
           <InteractionCard
+            href={ixianGitHub}
+            isExternal
             fullWidth
-            icon={<MyIcon name={'EastRounded'} rounded />}
+            icon={<MyIcon name={'GitHub'} rounded />}
             title={t('keyResources.card4.title')}
             description={t('keyResources.card4.subtitle')}
           />

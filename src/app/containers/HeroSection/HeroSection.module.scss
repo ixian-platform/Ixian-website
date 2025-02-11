@@ -1,7 +1,6 @@
 @use '@styles/mixins' as *;
 
 .wrapperSection {
-  background: var(--colors-surface-01);
   border-bottom: 1px solid var(--colors-outline-02);
   background: var(--hero-gradient);
   position: relative;

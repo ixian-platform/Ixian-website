@@ -8,24 +8,26 @@ import Chip from '@components/Chip/Chip';
 import ContentWrapper from '@components/ContentWrapper/ContentWrapper';
 import Button from '@components/Button/Button';
 import { getServerTranslations } from '@utils/getServerTranslations';
-import { Section } from '@utils/constants';
+import { Section, startDlt } from '@utils/constants';
+import topRetro from '@assets/top-retro.svg';
+import Image from 'next/image';
+import { SingleData } from '@components/CharacteristicsLayout/CharacteristicsLayout';
 
 const st = await getServerTranslations();
 
-const dltHighlightsData = [
+const dltHighlightsData: SingleData[] = [
   {
-    icon: 'ixinames',
+    icon: 'AppRegistrationRounded',
     title: st('TechnologyPage.ixianDlt.highlights.data1.title'),
     description: st('TechnologyPage.ixianDlt.highlights.data1.subtitle'),
-    isCustom: true,
   },
   {
-    icon: 'DataSaverOffRounded',
+    icon: 'TrackChangesRounded',
     title: st('TechnologyPage.ixianDlt.highlights.data2.title'),
     description: st('TechnologyPage.ixianDlt.highlights.data2.subtitle'),
   },
   {
-    icon: 'MovingRounded',
+    icon: 'AnimationRounded',
     title: st('TechnologyPage.ixianDlt.highlights.data3.title'),
     description: st('TechnologyPage.ixianDlt.highlights.data3.subtitle'),
   },
@@ -41,12 +43,17 @@ const IxianDltSection = () => {
       className={classes.ixianDltContainer}
       sectionId={Section.IXIAN_DLT}
     >
+      <Image priority src={topRetro} alt={'top-retro'} className={'topRetro'} />
       <SectionHeader
         chipContainer={<Chip content={t('chip')} variant={'outlined'} />}
         title={<TextElement type={'display-md'}>{t('title')}</TextElement>}
         subtitle={<TextElement type={'body-md'}>{t('subtitle')}</TextElement>}
         ctaContent={
-          <Button leadingIcon={<MyIcon name={'EastRounded'} />}>
+          <Button
+            href={startDlt}
+            isExternal
+            leadingIcon={<MyIcon name={'EastRounded'} />}
+          >
             {t('cta')}
           </Button>
         }
@@ -74,18 +81,19 @@ const IxianDltSection = () => {
           fullWidth
         />
         <InteractionCard
-          icon={<MyIcon name={'SpokeRounded'} rounded />}
+          icon={<MyIcon name={'MoveUpRounded'} rounded />}
           title={t('card2.title')}
           description={t('card2.subtitle')}
           fullWidth
         />
         <InteractionCard
-          icon={<MyIcon name={'AdjustRounded'} rounded />}
+          icon={<MyIcon name={'ZoomOutMapRounded'} rounded />}
           title={t('card3.title')}
           description={t('card3.subtitle')}
           fullWidth
         />
       </div>
+      <div className={classes.rainbowDivider} />
     </ContentWrapper>
   );
 };

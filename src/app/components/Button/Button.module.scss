@@ -21,6 +21,10 @@
   }
 }
 
+.isInverse {
+  color: var(--colors-text-on-action) !important;
+}
+
 .primary {
   background-color: var(--colors-surface-action);
   color: var(--colors-text-on-action);

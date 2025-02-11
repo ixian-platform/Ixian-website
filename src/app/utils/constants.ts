@@ -28,3 +28,6 @@ export const nonkycIxi = 'https://nonkyc.io/market/IXI_USDT';
 export const coingeckoIxi = 'https://www.coingecko.com/en/coins/ixicash';
 export const ixiscope = 'https://explorer.ixian.io/';
 export const spixiWebsite = 'https://spixi.io/';
+export const startDlt = 'https://github.com/ProjectIxian/Ixian-DLT/releases/';
+export const startS2 = 'https://github.com/ProjectIxian/Ixian-S2/releases/';
+export const ixiEmissions = 'https://explorer.ixian.io/?p=emissions';

@@ -8,16 +8,12 @@
   .ixiCurrency {
     padding: var(--spacing-super-xl) var(--spacing-md);
 
-    .innerCard {
-      background: radial-gradient(
-        165.4% 152.35% at 111.86% 19.02%,
-        rgba(160, 240, 145, 0.105) 13.71%,
-        rgba(166, 219, 238, 0.1125) 41.04%,
-        rgba(20, 82, 126, 0.09) 67%,
-        rgba(255, 255, 255, 0) 89.85%,
-        #a6dbee1d 10%
-      );
+    @include mq('sm') {
+      padding: 64px var(--spacing-sm);
+    }
 
+    .innerCard {
+      background: var(--currency-gradient);
       padding: var(--spacing-super) var(--spacing-xl);
       border-radius: var(--corner-radius-xxl);
       display: flex;

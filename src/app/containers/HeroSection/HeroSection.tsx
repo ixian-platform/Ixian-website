@@ -14,6 +14,7 @@ type HeroSectionProps =
       splinePath: string;
       leftContainer?: never;
       className?: string;
+      sectionClassName?: string;
     }
   | {
       chip?: ReactNode;
@@ -23,6 +24,7 @@ type HeroSectionProps =
       splinePath?: never;
       leftContainer?: ReactNode;
       className?: string;
+      sectionClassName?: string;
     };
 
 const HeroSection = ({
@@ -32,11 +34,12 @@ const HeroSection = ({
   chip,
   leftContainer,
   className,
+  sectionClassName,
 }: HeroSectionProps) => {
   return (
     <ContentWrapper
       asWrapperSection
-      sectionClass={classes.wrapperSection}
+      sectionClass={classNames(classes.wrapperSection, sectionClassName)}
       className={classNames(classes.heroSection, className)}
     >
       <SectionHeader

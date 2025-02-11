@@ -34,6 +34,7 @@ body {
       var(--colors-surface-01, #fbfcfb),
       var(--colors-surface-01, #fbfcfb)
     );
+  --tech-gradient: var(--hero-gradient);
   --fading-border-horizontal: linear-gradient(
     90deg,
     #fbfcfb 0%,
@@ -66,6 +67,17 @@ body {
       var(--colors-surface-01, #fbfcfb),
       var(--colors-surface-01, #fbfcfb)
     );
+  --currency-gradient: linear-gradient(
+      112.75deg,
+      #e2f6fd 2.08%,
+      #f2f7ee 51.72%,
+      #e9f0fb 97.54%
+    ),
+    linear-gradient(
+      0deg,
+      var(--colors-surface-01, #fbfcfb),
+      var(--colors-surface-01, #fbfcfb)
+    );
 
   //DARK
   html.dark & {
@@ -79,6 +91,25 @@ body {
     --why: url('/assets/dark/why.svg');
     --spixi-bg: url('/assets/dark/spixi-bg.png');
     --hero-gradient: linear-gradient(113.05deg, #0a0e07 -0.14%, #02201e 46.25%);
+    --tech-gradient: radial-gradient(
+        173.13% 177.27% at 141.29% -38.75%,
+        rgba(48, 162, 25, 0.3) 13.71%,
+        rgba(34, 73, 87, 0.225) 41.04%,
+        rgba(86, 16, 126, 0.130677) 67%,
+        rgba(0, 0, 0, 0) 89.85%
+      ),
+      linear-gradient(0deg, #0a0f0c, #0a0f0c);
+    --currency-gradient: radial-gradient(
+        57.77% 138.74% at 7.69% 16.52%,
+        rgba(229, 87, 232, 0.05) 0%,
+        rgba(102, 87, 232, 0.1125) 35%,
+        rgba(24, 107, 201, 0.1125) 84.5%
+      ),
+      linear-gradient(
+        0deg,
+        var(--colors-surface-01, #0a0f0c),
+        var(--colors-surface-01, #0a0f0c)
+      );
     --fading-border-horizontal: linear-gradient(
       90deg,
       #0a0f0c 0%,

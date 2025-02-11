@@ -13,7 +13,14 @@ import coingecko from '@assets/coingecko.svg';
 import nonkyc from '@assets/nonkyc.svg';
 import xeggex from '@assets/xeggex.svg';
 import Image from 'next/image';
-import { coingeckoIxi, nonkycIxi, Section, xeggexIxi } from '@utils/constants';
+import {
+  coingeckoIxi,
+  ixiEmissions,
+  nonkycIxi,
+  Routes,
+  Section,
+  xeggexIxi,
+} from '@utils/constants';
 import IxiMetrics from '@components/IxiMetrics/IxiMetrics';
 
 const IxiCurrency = () => {
@@ -33,10 +40,15 @@ const IxiCurrency = () => {
           subtitle={<TextElement type={'body-md'}>{t('subtitle')}</TextElement>}
           ctaContent={
             <>
-              <Button leadingIcon={<MyIcon name={'EastRounded'} />}>
+              <Button
+                href={ixiEmissions}
+                isExternal
+                leadingIcon={<MyIcon name={'EastRounded'} />}
+              >
                 {t('cta1')}
               </Button>
               <Button
+                href={`${Routes.GET_INVOLVED}#${Section.RESOURCES}`}
                 variant={'text'}
                 leadingIcon={<MyIcon name={'DescriptionRounded'} />}
               >
@@ -48,15 +60,15 @@ const IxiCurrency = () => {
         <IxiMetrics />
         <div className={classes.infoCardsContainer}>
           <InteractionCard
-            icon={<MyIcon name={'MultipleStopRounded'} rounded />}
+            icon={<MyIcon name={'ClearAllRounded'} rounded />}
             title={t('card1.title')}
             description={t('card1.subtitle')}
             fullWidth
           />
           <InteractionCard
-            icon={<MyIcon name={'GrainRounded'} rounded />}
-            title={t('card1.title')}
-            description={t('card1.subtitle')}
+            icon={<MyIcon name={'CycloneRounded'} rounded />}
+            title={t('card2.title')}
+            description={t('card2.subtitle')}
             fullWidth
           />
         </div>

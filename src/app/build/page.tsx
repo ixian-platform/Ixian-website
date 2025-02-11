@@ -9,6 +9,7 @@ import code1 from '@assets/code1.svg';
 import WhyIxian from '@/app/containers/WhyIxian/WhyIxian';
 import StartBuildingNow from '@/app/containers/StartBuildingNow/StartBuildingNow';
 import { generateSEO } from '@utils/seo';
+import { ixidocs } from '@utils/constants';
 
 export async function generateMetadata() {
   return generateSEO({
@@ -44,11 +45,14 @@ export default function Build() {
         title={<TextElement type={'display-md'}>{t('title')}</TextElement>}
         subtitle={t('subtitle')}
         ctaContent={
-          <Button leadingIcon={<MyIcon name={'EastRounded'} />}>
+          <Button
+            href={ixidocs}
+            isExternal
+            leadingIcon={<MyIcon name={'EastRounded'} />}
+          >
             {t('cta')}
           </Button>
         }
-        leftContainer={<Image src={code1} alt={'code1'} />}
       />
       <WhyIxian />
       <StartBuildingNow
@@ -56,7 +60,9 @@ export default function Build() {
         subtitle={t('readyToBuildSubtitle')}
         cta={
           <Button
-            variant={'outlined-2'}
+            isInverse
+            href={ixidocs}
+            isExternal
             leadingIcon={<MyIcon name={'EastRounded'} />}
           >
             {t('getStarted')}

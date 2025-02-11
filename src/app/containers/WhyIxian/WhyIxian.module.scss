@@ -11,6 +11,10 @@
     gap: var(--spacing-super);
     padding: var(--spacing-super-lg) var(--spacing-md);
 
+    @include mq('sm') {
+      padding: 64px var(--spacing-sm);
+    }
+
     .keyResources {
       display: flex;
       flex-direction: column;
@@ -25,7 +29,7 @@
           @include heading-sm;
         }
 
-        @include mq('md') {
+        @include mq('lg') {
           grid-template-columns: repeat(2, 1fr);
         }
 
