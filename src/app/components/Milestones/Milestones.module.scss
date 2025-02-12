@@ -1,3 +1,5 @@
+@use '@styles/mixins' as *;
+
 .milestones {
   width: 100%;
   display: flex;
@@ -11,6 +13,7 @@
     gap: var(--spacing-xxl);
     align-items: center;
     color: var(--colors-text-inverse-2);
+    flex-wrap: wrap;
 
     .yearSelected {
       color: var(--colors-text-inverse);
@@ -18,9 +21,13 @@
   }
 
   .selectedContent {
+    min-height: 200px;
     display: flex;
     gap: var(--spacing-xxl);
-    flex-wrap: wrap;
+
+    @include mq('md') {
+      flex-direction: column;
+    }
   }
 
   .switcher {

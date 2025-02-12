@@ -21,7 +21,7 @@ export const Section = {
 
 export type Sections = (typeof Section)[keyof typeof Section];
 
-export const ixiLabsEmail = '';
+export const ixiLabsEmail = 'info@ixian.io';
 export const ixidocs = 'https://docs.ixian.io/';
 export const ixianGitHub = 'https://github.com/ProjectIxian';
 export const xeggexIxi = 'https://xeggex.com/market/IXI_USDT';

@@ -11,6 +11,7 @@ import {
   benchmarkedLink,
   evenLink,
   ixiLabs,
+  ixiLabsEmail,
   robotinaLink,
   Section,
   vivatLink,
@@ -41,7 +42,7 @@ const Partnership = () => {
           subtitle={<TextElement type={'body-md'}>{t('subtitle')}</TextElement>}
           ctaContent={
             <Button
-              href={'mailto:jaka.pozun@gmail.com'}
+              href={`mailto:${ixiLabsEmail}`}
               leadingIcon={<MyIcon name={'EastRounded'} />}
             >
               {t('cta')}

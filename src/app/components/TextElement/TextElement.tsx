@@ -1,5 +1,9 @@
 import classes from './TextElement.module.scss';
-import { ElementType, PropsWithChildren } from 'react';
+import {
+  ComponentPropsWithoutRef,
+  ElementType,
+  PropsWithChildren,
+} from 'react';
 import classNames from 'classnames';
 
 type TextAsTypes = 'span' | 'div' | 'p' | 'h1';
@@ -25,13 +29,20 @@ interface TextProps extends PropsWithChildren {
   type: TextTypes;
 }
 
-const TextElement = ({ className, as = 'p', type, children }: TextProps) => {
+const TextElement = ({
+  className,
+  as = 'p',
+  type,
+  children,
+  ...props
+}: TextProps & ComponentPropsWithoutRef<TextAsTypes>) => {
   const Component = as as ElementType;
   const typeClass = type ? classes[type] : '';
 
   return (
     <Component
       className={classNames(classes.textElement, typeClass, className)}
+      {...props}
     >
       {children}
     </Component>
