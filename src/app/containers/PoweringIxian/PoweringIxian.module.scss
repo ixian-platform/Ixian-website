@@ -4,9 +4,10 @@
 .poweringIxianSection {
   width: 100%;
   background: var(--colors-surface-01);
-  border-top: 2px solid;
-  border-bottom: 2px solid;
+  border-top: 4px solid;
+  border-bottom: 4px solid;
   border-image: linear-gradient(45deg, #6ee17f, #a546e4, #4d7df6) 1;
+  scroll-margin-top: var(--spacing-sm);
 
   .poweringIxian {
     display: flex;
@@ -14,20 +15,20 @@
     gap: 40px;
     padding: var(--spacing-super-xl) var(--spacing-md);
 
+    @include mq('sm') {
+      padding: 64px var(--spacing-sm);
+    }
+
     .resourcesContainer {
       color: var(--colors-text-inverse);
       margin-top: 40px;
       padding: var(--spacing-super) var(--spacing-xl);
       border-radius: var(--corner-radius-xxl);
-      background: radial-gradient(
-          173.13% 177.27% at 141.29% -38.75%,
-          rgba(48, 162, 25, 0.3) 13.71%,
-          rgba(34, 73, 87, 0.225) 41.04%,
-          rgba(86, 16, 126, 0.130677) 67%,
-          rgba(0, 0, 0, 0) 89.85%
-        ),
-        linear-gradient(0deg, #0a0f0c, #0a0f0c),
-        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+      background: var(--resources-gradient);
+
+      @include mq('sm') {
+        padding: var(--spacing-xxl) var(--spacing-xl);
+      }
 
       display: flex;
       flex-direction: column;
@@ -40,6 +41,7 @@
 
         @include mq('md') {
           flex-direction: column;
+          align-items: center;
         }
       }
 
@@ -50,6 +52,11 @@
         display: flex;
         justify-content: space-between;
         gap: 40px;
+
+        @include mq('sm') {
+          flex-direction: column;
+          padding: 32px 0;
+        }
 
         .text {
           width: 100%;
@@ -63,17 +70,25 @@
           display: flex;
           gap: 32px;
 
+          @include mq('sm') {
+            flex-direction: column;
+          }
+
           .linkCardTitle {
             @include label-lg;
           }
 
-          > div {
+          .singleSmallCard {
             max-width: 272px;
             min-height: unset;
             height: 100%;
             background: var(--colors-surface-inverse-2);
             padding: 26px 16px;
             gap: 12px;
+
+            @include mq('sm') {
+              max-width: unset;
+            }
 
             p,
             h3 {

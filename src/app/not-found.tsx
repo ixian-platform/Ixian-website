@@ -4,6 +4,10 @@ import SectionHeader from '@components/SectionHeader/SectionHeader';
 import TextElement from '@components/TextElement/TextElement';
 import Button from '@components/Button/Button';
 import MyIcon from '@components/MyIcon/MyIcon';
+import { getServerTranslations } from '@utils/getServerTranslations';
+import { Routes } from '@utils/constants';
+
+const t = await getServerTranslations();
 
 export default async function NotFound() {
   return (
@@ -13,22 +17,33 @@ export default async function NotFound() {
         sectionClass={classes.notFoundSection}
         className={classes.notFound}
       >
-        <SectionHeader
-          title={<TextElement type={'display-lg'}>Page Not Found</TextElement>}
-          subtitle={
-            <TextElement type={'body-md'}>
-              The page you are looking for doesnt exist
-            </TextElement>
-          }
-          ctaContent={
-            <Button
-              leadingIcon={<MyIcon name={'WestRounded'} />}
-              variant={'outlined'}
-            >
-              Back to Home
-            </Button>
-          }
-        />
+        <div className={classes.notFoundInnerCard}>
+          <SectionHeader
+            chipContainer={
+              <TextElement type={'display-lg'}>
+                {t('NotFound.code')}
+              </TextElement>
+            }
+            title={
+              <TextElement type={'heading-lg'}>
+                {t('NotFound.title')}
+              </TextElement>
+            }
+            subtitle={
+              <TextElement type={'body-lg'}>
+                {t('NotFound.subtitle')}
+              </TextElement>
+            }
+            ctaContent={
+              <Button
+                href={Routes.INDEX}
+                leadingIcon={<MyIcon name={'EastRounded'} />}
+              >
+                {t('NotFound.cta')}
+              </Button>
+            }
+          />
+        </div>
       </ContentWrapper>
     </section>
   );

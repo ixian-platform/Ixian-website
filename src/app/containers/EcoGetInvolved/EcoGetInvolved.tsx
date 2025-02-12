@@ -13,9 +13,11 @@ import MyIcon from '@components/MyIcon/MyIcon';
 import BigCard from '@components/BigCard/BigCard';
 import Button from '@components/Button/Button';
 import classNames from 'classnames';
+import { spixiDownload } from '@utils/constants';
 
 const EcoGetInvolved = () => {
   const t = useTranslations('EcoGetInvolvedPage.community');
+  const heroT = useTranslations('EcoGetInvolvedPage.hero');
   const ecoT = useTranslations('Ecosystem');
 
   return (
@@ -26,33 +28,48 @@ const EcoGetInvolved = () => {
     >
       <Image priority src={topRetro} alt={'top-retro'} className={'topRetro'} />
       <SectionHeader
-        chipContainer={<Chip content={t('chip')} variant={'outlined'} />}
         title={
-          <TextElement type={'heading-lg'} as={'h1'}>
-            {t('title')}
+          <TextElement type={'display-md'} as={'h1'}>
+            {heroT('title')}
           </TextElement>
         }
         subtitle={
-          <TextElement type={'body-md'} as={'h1'}>
-            {t('subtitle')}
+          <TextElement type={'body-lg'} as={'h1'}>
+            {heroT('subtitle')}
           </TextElement>
         }
       />
-      <div className={classes.socialCards}>
-        {socials
-          ?.filter((item) => !['github', 'spixi']?.includes(item.alt))
-          ?.map((item) => (
-            <InteractionCard
-              href={'test'}
-              className={classes.customCard}
-              titleClassName={classes.title}
-              key={item.label}
-              icon={
-                <Image src={item.img} alt={item.alt} width={40} height={40} />
-              }
-              title={item.label}
-            />
-          ))}
+      <div className={classes.communityCard}>
+        <SectionHeader
+          chipContainer={<Chip content={t('chip')} variant={'outlined'} />}
+          title={
+            <TextElement type={'heading-lg'} as={'h1'}>
+              {t('title')}
+            </TextElement>
+          }
+          subtitle={
+            <TextElement type={'body-md'} as={'h1'}>
+              {t('subtitle')}
+            </TextElement>
+          }
+        />
+        <div className={classes.socialCards}>
+          {socials
+            ?.filter((item) => !['github', 'spixi']?.includes(item.alt))
+            ?.map((item) => (
+              <InteractionCard
+                href={item.href}
+                isExternal
+                className={classes.customCard}
+                titleClassName={classes.title}
+                key={item.label}
+                icon={
+                  <Image src={item.img} alt={item.alt} width={24} height={24} />
+                }
+                title={item.label}
+              />
+            ))}
+        </div>
       </div>
       <div className={classes.bottomCards}>
         <BigCard
@@ -75,7 +92,11 @@ const EcoGetInvolved = () => {
                 </TextElement>
               }
               ctaContent={
-                <Button leadingIcon={<MyIcon customName={'spixi_logo'} />}>
+                <Button
+                  href={spixiDownload}
+                  isExternal
+                  leadingIcon={<MyIcon name={'EastRounded'} />}
+                >
                   {t('spixiCard.cta')}
                 </Button>
               }
@@ -83,14 +104,14 @@ const EcoGetInvolved = () => {
           }
         />
         <InteractionCard
-          className={classNames(classes.ixiNamesGradient, classes.minHeight)}
+          className={classNames(classes.minHeight)}
           title={ecoT('ixiNames')}
           description={ecoT('namesDesc')}
           fullWidth
           icon={<MyIcon customName={'ixinames'} rounded />}
           headerAdditionalContent={
             <Chip
-              content={ecoT('comingSoon')}
+              content={ecoT('inProgress')}
               variant={'outlined'}
               className={classes.marginBot}
             />
@@ -101,7 +122,7 @@ const EcoGetInvolved = () => {
             classes.newFeaturesCardGradient,
             classes.minHeight
           )}
-          icon={<MyIcon name={'AutoAwesomeRounded'} rounded />}
+          icon={<MyIcon name={'ViewInArRounded'} rounded />}
           title={ecoT('building')}
           description={ecoT('stayUp')}
           fullWidth

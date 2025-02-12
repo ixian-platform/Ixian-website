@@ -77,8 +77,9 @@ export default function Technology() {
         subtitle={t('startBuilding.subtitle')}
         cta={
           <Button
+            isInverse
             href={Routes.BUILD}
-            variant={'outlined-2'}
+            variant={'outlined'}
             leadingIcon={<MyIcon name={'EastRounded'} />}
           >
             {t('startBuilding.cta')}

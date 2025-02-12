@@ -264,7 +264,7 @@
         "subtitle": "$IXI is generated through block rewards for DLT node operators, ensuring a decentralized and equitable distribution. There were no pre-sales or private sales, making the process fully transparent and accessible to all participants. 9% of the total projected supply is allocated as a pre-mine for platform and ecosystem development."
       },
       "metrics": {
-        "supply": "Projected Supply in Year 2125",
+        "supply": "Projected Max Supply",
         "peakTps": "Peak TPS YTD",
         "targetBlockTime": "Target Block Time",
         "transactionFees": "Transaction Fees",
@@ -343,21 +343,24 @@
   },
   "AboutUsPage": {
     "hero": {
-      "title": "Founded in 2017",
+      "title": "About Ixian",
       "subtitle": "Our mission is to create a world where devices can communicate efficiently and securely, without the need for central intermediaries. We aim to provide a scalable, decentralized infrastructure that powers the future of IoT, smart cities, and beyond.",
       "cta": "Connect With Us on LinkedIn"
     },
     "founders": {
       "chip": "Founders",
-      "title": "United by a Shared Vision",
-      "subtitle": "Ixian’s founders are passionate innovators and engineers with extensive knowledge and expertise in blockchain, decentralized technology, cryptography, secure communications, and authorization. Committed to building the future of decentralized technology",
+      "title": "Driven by Innovation, United by a Shared Vision",
+      "subtitle": "Ixian’s founders are passionate innovators and engineers with extensive knowledge and expertise in blockchain, decentralized technology, cryptography and secure communications. Committed to shaping the more secure and interconnected world.",
       "marko": "Marko Arh Tadic",
       "chris": "Cristian Ciorba",
-      "damir": "Damir Rekic"
+      "damir": "Damir Rekic",
+      "markoLinkedin": "https://www.linkedin.com/in/marko-arh-tadi%C4%8D-569b2a43/",
+      "chrisLinkedin": "https://www.linkedin.com/in/cciorba/",
+      "damirLinkedin": "https://www.linkedin.com/in/damir-rekic-ixian/"
     },
     "partnerships": {
       "chip": "Partnerships",
-      "title": "Ready for the Future?",
+      "title": "Advancing Decentralized Infrastructure Together",
       "subtitle": "Ixian is building the infrastructure that will connect the next wave of IoT and other online devices. We want you to be a part of it. Whether you’re a developer, business, or partner, there are endless opportunities to get involved.",
       "cta": "Send Us a Message"
     }
@@ -365,7 +368,7 @@
   "EcoGetInvolvedPage": {
     "hero": {
       "title": "Discover the Ecosystem",
-      "subtitle": "Ixian’s ecosystem is young and evolving."
+      "subtitle": "Ixian’s ecosystem is dynamic and evolving fast."
     },
     "community": {
       "chip": "Get Involved",
@@ -389,10 +392,12 @@
           "title": "Wallets",
           "subtitle": "Did you know you can mine $IXI? Ixian uses Argon mining for fair distribution. Download the miner, setup and start.",
           "card1": {
+            "href": "https://github.com/ProjectIxian/Ixian-LiteWallet/releases",
             "title": "LiteWallet",
             "subtitle": "CLI Based Light Wallet."
           },
           "card2": {
+            "href": "https://www.spixi.io/download/",
             "title": "Spixi",
             "subtitle": "Best wallet for holding and using your $IXI"
           }
@@ -401,10 +406,12 @@
           "title": "$IXI Miners",
           "subtitle": "Did you know you can mine $IXI? Ixian uses Argon mining for fair distribution. Download the miner, setup and start.",
           "card1": {
+            "href": "https://github.com/ProjectIxian/IxiWatt/releases",
             "title": "IXIWatt",
             "subtitle": "Official GUI Miner"
           },
           "card2": {
+            "href": "https://github.com/bogdanadnan/iximiner/releases",
             "title": "Third-party Miner",
             "subtitle": "Built by members of the community."
           }
@@ -413,10 +420,12 @@
           "title": "Mining Pools",
           "subtitle": "You can mine $IXI on the following pools:",
           "card1": {
+            "href": "https://mineixi.com/",
             "title": "mineixi.com",
             "subtitle": "Official mining pool."
           },
           "card2": {
+            "href": "https://ixi.hash.express/",
             "title": "HashExpress",
             "subtitle": "Community mining pool."
           }
@@ -442,5 +451,11 @@
             "subtitle": "Become an Ixian Ambassador."
         }
     }
+  },
+  "NotFound": {
+    "code": "404",
+    "title": "This Node is Offline...",
+    "subtitle": "Even decentralized networks have missing links sometimes. Let’s get you back to the mainnet!",
+    "cta": "Return Home"
   }
 }

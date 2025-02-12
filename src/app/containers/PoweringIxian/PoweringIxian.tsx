@@ -46,7 +46,7 @@ const PoweringIxian = () => {
           </Link>
         </div>
         {['wallets', 'miners', 'miningPools'].map((res) => (
-          <div className={classes.innerCards} key={res}>
+          <div className={classes.innerCards} key={res} id={Section.IXI_MINING}>
             <div className={classes.text}>
               <TextElement type={'heading-md'}>
                 {t(`resources.${res}.title`)}
@@ -57,24 +57,22 @@ const PoweringIxian = () => {
             </div>
             <div className={classes.linkCards}>
               <InteractionCard
+                className={classes.singleSmallCard}
+                href={t(`resources.${res}.card1.href`)}
+                isExternal
                 titleClassName={classes.linkCardTitle}
                 disableScale
-                icon={
-                  <Link href={'/'} passHref>
-                    <MyIcon name={'EastRounded'} rounded />
-                  </Link>
-                }
+                icon={<MyIcon name={'EastRounded'} rounded />}
                 title={t(`resources.${res}.card1.title`)}
                 description={t(`resources.${res}.card1.subtitle`)}
               />
               <InteractionCard
+                className={classes.singleSmallCard}
+                href={t(`resources.${res}.card2.href`)}
+                isExternal
                 titleClassName={classes.linkCardTitle}
                 disableScale
-                icon={
-                  <Link href={'/'} passHref>
-                    <MyIcon name={'EastRounded'} rounded />
-                  </Link>
-                }
+                icon={<MyIcon name={'EastRounded'} rounded />}
                 title={t(`resources.${res}.card2.title`)}
                 description={t(`resources.${res}.card2.subtitle`)}
               />

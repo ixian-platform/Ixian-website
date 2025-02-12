@@ -15,15 +15,21 @@ interface CharacteristicsLayoutProps {
   data: SingleData[];
   className?: string;
   singleInfoClassName?: string;
+  isInverse?: boolean;
 }
 
 const CharacteristicsLayout = ({
   data,
   className,
   singleInfoClassName,
+  isInverse,
 }: CharacteristicsLayoutProps) => {
   return (
-    <div className={classNames(classes.infoContainer, className)}>
+    <div
+      className={classNames(classes.infoContainer, className, {
+        [classes.inverse]: isInverse,
+      })}
+    >
       {data?.map((info, index) => (
         <div
           key={index}

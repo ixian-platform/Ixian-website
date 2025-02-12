@@ -21,6 +21,7 @@ export const Section = {
 
 export type Sections = (typeof Section)[keyof typeof Section];
 
+export const ixiLabsEmail = '';
 export const ixidocs = 'https://docs.ixian.io/';
 export const ixianGitHub = 'https://github.com/ProjectIxian';
 export const xeggexIxi = 'https://xeggex.com/market/IXI_USDT';
@@ -31,3 +32,10 @@ export const spixiWebsite = 'https://spixi.io/';
 export const startDlt = 'https://github.com/ProjectIxian/Ixian-DLT/releases/';
 export const startS2 = 'https://github.com/ProjectIxian/Ixian-S2/releases/';
 export const ixiEmissions = 'https://explorer.ixian.io/?p=emissions';
+export const spixiDownload = 'https://www.spixi.io/download';
+export const ixianLinkedIn = 'https://www.linkedin.com/company/ixian-platform';
+export const ixiLabs = 'www.ixilabs.com';
+export const robotinaLink = 'https://www.robotina.si';
+export const vivatLink = 'https://www.vivatgroup.net/';
+export const benchmarkedLink = 'https://benchmarked.co/';
+export const evenLink = 'https://even.si/';

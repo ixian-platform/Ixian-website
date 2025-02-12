@@ -22,7 +22,8 @@
 }
 
 .isInverse {
-  color: var(--colors-text-on-action) !important;
+  color: var(--colors-text-brand-primary) !important;
+  border-color: var(--colors-text-brand-primary) !important;
 }
 
 .primary {
@@ -57,6 +58,10 @@
     background-color: transparent;
     color: var(--colors-text-action-pressed);
   }
+
+  &.isInverse:hover {
+    background-color: var(--color-neutral-900);
+  }
 }
 
 .outlined {
@@ -67,6 +72,10 @@
   &:hover {
     background-color: var(--colors-surface-03);
     color: var(--colors-text-action-hover);
+  }
+
+  &.isInverse:hover {
+    background-color: var(--color-neutral-900);
   }
 }
 

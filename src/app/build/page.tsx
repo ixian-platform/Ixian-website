@@ -4,8 +4,6 @@ import TextElement from '@components/TextElement/TextElement';
 import Button from '@components/Button/Button';
 import MyIcon from '@components/MyIcon/MyIcon';
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
-import code1 from '@assets/code1.svg';
 import WhyIxian from '@/app/containers/WhyIxian/WhyIxian';
 import StartBuildingNow from '@/app/containers/StartBuildingNow/StartBuildingNow';
 import { generateSEO } from '@utils/seo';
@@ -60,6 +58,7 @@ export default function Build() {
         subtitle={t('readyToBuildSubtitle')}
         cta={
           <Button
+            variant={'outlined'}
             isInverse
             href={ixidocs}
             isExternal

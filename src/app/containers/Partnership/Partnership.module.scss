@@ -1,23 +1,33 @@
+@use '@styles/mixins' as *;
+
 .partnershipSection {
   width: 100%;
   background: var(--colors-surface-01);
+  scroll-margin-top: var(--spacing-super-md);
 
   .partnership {
     padding: var(--spacing-xxl) var(--spacing-md);
+    padding-bottom: 120px;
+
+    @include mq('sm') {
+      padding: 100px var(--spacing-sm);
+    }
 
     .innerContent {
       padding: var(--spacing-super) var(--spacing-xl);
       border-radius: var(--corner-radius-xxl);
-      background:
-        radial-gradient(
-          165.4% 152.35% at 111.86% -19.02%,
-          rgba(160, 240, 145, 0.105) 13.71%,
-          rgba(166, 219, 238, 0.1125) 41.04%,
-          rgba(20, 82, 126, 0.09) 67%,
-          rgba(255, 255, 255, 0) 89.85%
-        ),
-        #fbfcfb
-          /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+      background: var(--sectionGradient);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 80px;
+
+      .partnerImages {
+        display: flex;
+        gap: 64px;
+        align-items: center;
+        justify-items: center;
+      }
     }
   }
 }
