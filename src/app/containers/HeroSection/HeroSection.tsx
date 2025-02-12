@@ -5,27 +5,15 @@ import TextElement from '@components/TextElement/TextElement';
 import { ReactNode } from 'react';
 import classNames from 'classnames';
 
-type HeroSectionProps =
-  | {
-      chip?: ReactNode;
-      title: ReactNode;
-      subtitle: string;
-      ctaContent?: ReactNode;
-      splinePath: string;
-      leftContainer?: never;
-      className?: string;
-      sectionClassName?: string;
-    }
-  | {
-      chip?: ReactNode;
-      title: ReactNode;
-      subtitle: string;
-      ctaContent?: ReactNode;
-      splinePath?: never;
-      leftContainer?: ReactNode;
-      className?: string;
-      sectionClassName?: string;
-    };
+interface HeroSectionProps {
+  chip?: ReactNode;
+  title: ReactNode;
+  subtitle: string;
+  ctaContent?: ReactNode;
+  leftContainer?: ReactNode;
+  className?: string;
+  sectionClassName?: string;
+}
 
 const HeroSection = ({
   title,
@@ -50,12 +38,6 @@ const HeroSection = ({
         subtitle={<TextElement type={'body-lg'}>{subtitle}</TextElement>}
         ctaContent={ctaContent}
       />
-      {/*{splinePath && (*/}
-      {/*  <Spline*/}
-      {/*    scene={'https://prod.spline.design/zk-AJBS9ZXNtusF6/scene.splinecode'}*/}
-      {/*    className={classes.chipsSpline}*/}
-      {/*  />*/}
-      {/*)}*/}
       {leftContainer}
     </ContentWrapper>
   );

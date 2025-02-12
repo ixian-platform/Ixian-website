@@ -12,6 +12,7 @@ import IxiCurrency from '@/app/containers/IxiCurrency/IxiCurrency';
 import { generateSEO } from '@utils/seo';
 import Chip from '@components/Chip/Chip';
 import { ixianGitHub, ixidocs, Routes } from '@utils/constants';
+import Spline from '@splinetool/react-spline';
 
 export async function generateMetadata() {
   return generateSEO({
@@ -66,6 +67,14 @@ export default function Technology() {
               {t('hero.cta2')}
             </Button>
           </>
+        }
+        leftContainer={
+          <Spline
+            scene={
+              'https://prod.spline.design/GEjl-wd9OZq5GXKR/scene.splinecode'
+            }
+            className={classes.techPageSpline}
+          />
         }
       />
       <IxianDltSection />
