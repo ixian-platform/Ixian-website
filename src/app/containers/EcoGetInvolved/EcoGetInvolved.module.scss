@@ -71,6 +71,10 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 40px;
 
+      .bigCardSectionHeader {
+        max-width: 576px;
+      }
+
       @include mq('sm') {
         grid-template-columns: repeat(1, 1fr);
         justify-items: center;

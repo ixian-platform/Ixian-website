@@ -14,12 +14,14 @@
     }
 
     .innerCard {
-      background: var(--currency-gradient);
       padding: var(--spacing-super) var(--spacing-xl);
       border-radius: var(--corner-radius-xxl);
       display: flex;
       flex-direction: column;
       gap: 80px;
+      background: var(--ixi-currency), var(--currency-gradient);
+      background-position: top right;
+      background-repeat: no-repeat;
 
       @include mq('sm') {
         padding: 40px 16px;

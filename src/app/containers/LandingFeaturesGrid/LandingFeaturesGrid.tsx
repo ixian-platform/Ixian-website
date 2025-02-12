@@ -84,6 +84,7 @@ const LandingFeaturesGrid = () => {
         <div className={classes.left} />
         <div className={classes.right}>
           <SectionHeader
+            className={classes.poweredSectionHeader}
             inverseText
             chipContainer={
               <Chip

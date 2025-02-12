@@ -30,12 +30,17 @@
 }
 
 .secondary {
-  background-image: var(--spixi-bg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-image: var(--spixi-eco), var(--eco-spixi);
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, 80%;
+  background-position:
+    right,
+    right top;
+}
 
-  @include mq('xs') {
-    //background-position: right;
-  }
+.tertiary {
+  background-image: var(--spixi-rotated), var(--eco-spixi);
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;
+  background-position: right, 60%;
 }

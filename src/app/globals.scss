@@ -15,7 +15,7 @@ body {
   //Custom theme variables
   //LIGHT
   --build: url('/assets/light/build.svg');
-  --eco-spixi: url('/assets/light/exo-spixi.svg');
+  --eco-spixi: url('/assets/light/eco-spixi.svg');
   --efficiency: url('/assets/light/efficiency.svg');
   --parnters: url('/assets/light/partners.svg');
   --privacy: url('/assets/light/privacy.svg');
@@ -23,6 +23,10 @@ body {
   --spixi-uc: url('/assets/light/spixi-uc.png');
   --why: url('/assets/light/why.svg');
   --spixi-bg: url('/assets/light/spixi-bg.png');
+  --top-tech: url('/assets/light/top-tech.svg');
+  --ixi-currency: url('/assets/light/ixi-currency.svg');
+  --spixi-rotated: url('/assets/light/spixi-rotate.png');
+  --partnerships: url('/assets/light/partnerships.svg');
   --hero-gradient: linear-gradient(
       112.75deg,
       #e2f6fd 2.08%,
@@ -90,7 +94,7 @@ body {
   //DARK
   html.dark & {
     --build: url('/assets/dark/build.svg');
-    --eco-spixi: url('/assets/dark/exo-spixi.svg');
+    --eco-spixi: url('/assets/dark/eco-spixi.svg');
     --efficiency: url('/assets/dark/efficiency.svg');
     --parnters: url('/assets/dark/partners.svg');
     --privacy: url('/assets/dark/privacy.svg');
@@ -98,6 +102,10 @@ body {
     --spixi-uc: url('/assets/dark/spixi-uc.png');
     --why: url('/assets/dark/why.svg');
     --spixi-bg: url('/assets/dark/spixi-bg.png');
+    --top-tech: url('/assets/dark/top-tech.svg');
+    --ixi-currency: url('/assets/dark/ixi-currency.svg');
+    --spixi-rotated: url('/assets/dark/spixi-rotate.png');
+    --partnerships: url('/assets/dark/partnerships.svg');
     --hero-gradient: linear-gradient(113.05deg, #0a0e07 -0.14%, #02201e 46.25%);
     --tech-gradient: radial-gradient(
         173.13% 177.27% at 141.29% -38.75%,

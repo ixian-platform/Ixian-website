@@ -8,6 +8,8 @@ import WhyIxian from '@/app/containers/WhyIxian/WhyIxian';
 import StartBuildingNow from '@/app/containers/StartBuildingNow/StartBuildingNow';
 import { generateSEO } from '@utils/seo';
 import { ixidocs } from '@utils/constants';
+import Image from 'next/image';
+import buildHeroImage from '@assets/other/build-hero.png';
 
 export async function generateMetadata() {
   return generateSEO({
@@ -38,7 +40,6 @@ export default function Build() {
 
   return (
     <section className={classes.page}>
-      {/*TODO: add padding top and bottom*/}
       <HeroSection
         sectionClassName={classes.techHero}
         title={<TextElement type={'display-md'}>{t('title')}</TextElement>}
@@ -51,6 +52,15 @@ export default function Build() {
           >
             {t('cta')}
           </Button>
+        }
+        leftContainer={
+          <Image
+            src={buildHeroImage}
+            alt={'code'}
+            priority
+            quality={100}
+            width={600}
+          />
         }
       />
       <WhyIxian />

@@ -12,6 +12,10 @@
     color: var(--colors-text-inverse);
     gap: 40px;
     justify-content: space-between;
+    background-image: url('/assets/other/contribute.svg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: top right;
 
     @include mq('sm') {
       padding: 64px var(--spacing-sm);

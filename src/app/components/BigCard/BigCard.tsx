@@ -4,7 +4,7 @@ import { ReactNode } from 'react';
 import classNames from 'classnames';
 
 interface BigCardProps {
-  bgImageVariant?: 'primary' | 'secondary';
+  bgImageVariant?: 'primary' | 'secondary' | 'tertiary';
   absoluteImage?: ReactNode;
   className?: string;
   iconContainer?: ReactNode;

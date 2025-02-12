@@ -9,6 +9,9 @@
   .startBuildingContainer {
     padding: var(--spacing-super-xxl) var(--spacing-md);
     color: var(--colors-text-inverse);
+    background-image: url('/assets/other/building.svg');
+    background-position: top right;
+    background-repeat: no-repeat;
 
     @include mq('sm') {
       padding: 64px var(--spacing-sm);

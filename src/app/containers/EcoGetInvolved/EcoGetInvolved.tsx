@@ -74,10 +74,11 @@ const EcoGetInvolved = () => {
       <div className={classes.bottomCards}>
         <BigCard
           iconContainer={<MyIcon name={'WalletRounded'} rounded />}
-          bgImageVariant={'secondary'}
+          bgImageVariant={'tertiary'}
           className={classes.colSpan2}
           body={
             <SectionHeader
+              className={classes.bigCardSectionHeader}
               chipContainer={
                 <Chip content={t('spixiCard.chip')} variant={'outlined'} />
               }

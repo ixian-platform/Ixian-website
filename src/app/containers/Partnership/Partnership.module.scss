@@ -16,7 +16,9 @@
     .innerContent {
       padding: var(--spacing-super) var(--spacing-xl);
       border-radius: var(--corner-radius-xxl);
-      background: var(--sectionGradient);
+      background: var(--partnerships), var(--sectionGradient);
+      background-repeat: no-repeat;
+      background-position: top left;
       display: flex;
       flex-direction: column;
       align-items: center;

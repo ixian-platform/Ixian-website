@@ -9,8 +9,6 @@ import ContentWrapper from '@components/ContentWrapper/ContentWrapper';
 import Button from '@components/Button/Button';
 import { getServerTranslations } from '@utils/getServerTranslations';
 import { Section, startDlt } from '@utils/constants';
-import topRetro from '@assets/top-retro.svg';
-import Image from 'next/image';
 import { SingleData } from '@components/CharacteristicsLayout/CharacteristicsLayout';
 
 const st = await getServerTranslations();
@@ -43,7 +41,6 @@ const IxianDltSection = () => {
       className={classes.ixianDltContainer}
       sectionId={Section.IXIAN_DLT}
     >
-      <Image priority src={topRetro} alt={'top-retro'} className={'topRetro'} />
       <SectionHeader
         chipContainer={<Chip content={t('chip')} variant={'outlined'} />}
         title={<TextElement type={'display-md'}>{t('title')}</TextElement>}

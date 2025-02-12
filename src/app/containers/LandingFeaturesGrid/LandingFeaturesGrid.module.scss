@@ -27,6 +27,7 @@
       display: flex;
       justify-content: space-between;
       gap: 24px;
+      position: relative;
 
       @include mq('sm') {
         padding: 40px 16px;
@@ -35,14 +36,25 @@
 
       .left {
         width: 100%;
-        background-image: var(--spixi-uc);
-        background-position: center top;
-        background-repeat: no-repeat;
-        background-size: contain;
+
+        &::before {
+          content: '';
+          position: absolute;
+          inset: 0; /* Covers the entire card */
+          background-image: var(--spixi-uc);
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: left 28px bottom -50px;
+        }
       }
 
       .right {
         width: 100%;
+        z-index: 1;
+
+        .poweredSectionHeader {
+          width: 100%;
+        }
 
         .poweredChip {
           border-color: #fbfcfb;
@@ -78,7 +90,9 @@
 
 .card1 {
   padding: 0 !important;
-  background: var(--colors-surface-01);
+  background-image: var(--build);
+  background-repeat: no-repeat;
+  background-position: right center;
   border-radius: unset !important;
 
   @include mq('sm') {
@@ -87,11 +101,16 @@
 }
 
 .card2 {
-  background: var(--cardGradient);
+  background: var(--cardGradient), var(--efficiency);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-blend-mode: multiply;
 }
 
 .card3 {
-  background: var(--colors-surface-01);
+  background-image: var(--privacy);
+  background-repeat: no-repeat;
+  background-position: right top;
   padding: 0 8px !important;
   border-radius: unset !important;
 }

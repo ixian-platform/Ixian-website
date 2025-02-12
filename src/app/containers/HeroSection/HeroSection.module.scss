@@ -10,10 +10,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 100px;
+    gap: 80px;
 
     @include mq('sm') {
       padding: 40px var(--spacing-sm);
+      flex-direction: column;
+      gap: 40px;
+
+      img {
+        max-width: 80%;
+      }
     }
 
     .customSectionHeader {

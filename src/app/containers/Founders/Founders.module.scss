@@ -13,7 +13,8 @@
     }
 
     .foundersCardContainer {
-      background: radial-gradient(
+      background: url('/assets/other/founders.svg'),
+        radial-gradient(
           173.13% 177.27% at 141.29% -38.75%,
           rgba(48, 162, 25, 0.3) 13.71%,
           rgba(34, 73, 87, 0.225) 41.04%,
@@ -21,6 +22,9 @@
           rgba(0, 0, 0, 0) 89.85%
         ),
         linear-gradient(0deg, #0a0f0c, #0a0f0c);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right top;
       padding: var(--spacing-super) var(--spacing-xl);
       border-radius: var(--corner-radius-xxl);
       display: flex;
@@ -52,6 +56,7 @@
           max-width: 252px;
           background: #0a0f0c;
           min-height: 168px;
+          border-color: #585a59;
 
           @include mq('sm') {
             max-width: unset;
