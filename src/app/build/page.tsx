@@ -38,8 +38,9 @@ export default function Build() {
 
   return (
     <section className={classes.page}>
+      {/*TODO: add padding top and bottom*/}
       <HeroSection
-        className={classes.techHero}
+        sectionClassName={classes.techHero}
         title={<TextElement type={'display-md'}>{t('title')}</TextElement>}
         subtitle={t('subtitle')}
         ctaContent={

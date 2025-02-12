@@ -182,38 +182,6 @@ a {
   flex-direction: column;
 }
 
-.body-slide {
-  animation: rotate3D 0.5s forwards;
-}
-
-@keyframes bounceSkew {
-  0%,
-  100% {
-    transform: translateX(0) skew(0deg);
-  }
-  25% {
-    transform: translateX(-10px) skew(-10deg);
-  }
-  50% {
-    transform: translateX(10px) skew(10deg);
-  }
-  75% {
-    transform: translateX(-5px) skew(-5deg);
-  }
-}
-
-@keyframes rotate3D {
-  0% {
-    transform: rotateY(0deg);
-  }
-  50% {
-    transform: rotateY(180deg);
-  }
-  100% {
-    transform: rotateY(0deg);
-  }
-}
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -287,7 +255,7 @@ a {
   width: 100%;
   max-width: 1249px;
 
-  @include mq('sm') {
-    display: none;
-  }
+  //@include mq('sm') {
+  //  display: none;
+  //}
 }

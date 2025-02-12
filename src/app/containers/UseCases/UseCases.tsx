@@ -5,6 +5,7 @@ import TextElement from '@components/TextElement/TextElement';
 import SectionHeader from '@components/SectionHeader/SectionHeader';
 import { useTranslations } from 'next-intl';
 import InteractionCard from '@components/InteractionCard/InteractionCard';
+import MyIcon from '@components/MyIcon/MyIcon';
 
 const UseCases = () => {
   const t = useTranslations('UseCases');
@@ -30,6 +31,7 @@ const UseCases = () => {
       />
       <div className={classes.caseCards}>
         <InteractionCard
+          className={classes.eachCard}
           onHoverHeader={
             <Chip
               content={t('inProgress')}
@@ -43,6 +45,7 @@ const UseCases = () => {
           disableScale
         />
         <InteractionCard
+          className={classes.eachCard}
           onHoverHeader={
             <Chip
               content={t('inProgress')}
@@ -56,13 +59,10 @@ const UseCases = () => {
           disableScale
         />
         <InteractionCard
-          onHoverHeader={
-            <Chip
-              content={t('inProgress')}
-              variant={'outlined'}
-              isTextInversed
-            />
-          }
+          className={classes.eachCard}
+          href={'https://medium.com/@Ixian_IO'}
+          isExternal
+          onHoverHeader={<MyIcon name={'EastRounded'} rounded />}
           title={t('card3.title')}
           description={t('card3.subtitle')}
           hoverImageType={'enterprise'}

@@ -15,6 +15,7 @@ export default function AboutUsPage() {
     <section className={classes.page}>
       <div className={classes.aboutUsHero}>
         <SectionHeader
+          className={classes.aboutUsHeroSectionHeader}
           centerAll
           title={<TextElement type={'display-md'}>{t('title')}</TextElement>}
           subtitle={<TextElement type={'body-md'}>{t('subtitle')}</TextElement>}

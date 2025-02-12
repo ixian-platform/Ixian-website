@@ -11,6 +11,7 @@
   @include mq('sm') {
     grid-template-columns: repeat(1, 1fr);
     justify-items: center;
+    padding: 8px;
   }
 
   &:before,
@@ -46,6 +47,10 @@
     display: flex;
     align-items: flex-start;
     gap: var(--spacing-md);
+
+    @include mq('sm') {
+      flex-direction: column;
+    }
 
     .textContainer {
       display: flex;

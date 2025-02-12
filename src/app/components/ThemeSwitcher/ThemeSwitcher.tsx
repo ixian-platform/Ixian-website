@@ -16,12 +16,7 @@ const ThemeSwitcher = () => {
 
   const clickHandler = () => {
     document.body.classList.add('body-slide');
-    setTimeout(() => {
-      setThemeMode(themeMode === 'light' ? 'dark' : 'light');
-    }, 500);
-    setTimeout(() => {
-      document.body.classList.remove('body-slide');
-    }, 1000);
+    setThemeMode(themeMode === 'light' ? 'dark' : 'light');
   };
 
   if (!isMounted) {

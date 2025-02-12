@@ -12,6 +12,7 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^6.4.1",
+    "@smakss/react-scroll-direction": "^4.2.0",
     "@splinetool/react-spline": "^4.0.0",
     "@splinetool/runtime": "^1.9.48",
     "class-variance-authority": "^0.7.0",

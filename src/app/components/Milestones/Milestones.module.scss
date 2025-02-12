@@ -15,6 +15,27 @@
     color: var(--colors-text-inverse-2);
     flex-wrap: wrap;
 
+    @include mq('sm') {
+      width: 100%;
+      gap: 12px;
+      flex-wrap: unset;
+      overflow-x: auto;
+      min-height: 60px;
+
+      &::-webkit-scrollbar {
+        height: 4px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: gray;
+        border-radius: 4px;
+      }
+
+      p {
+        word-break: unset;
+      }
+    }
+
     .yearSelected {
       color: var(--colors-text-inverse);
     }
@@ -24,6 +45,11 @@
     min-height: 200px;
     display: flex;
     gap: var(--spacing-xxl);
+
+    .milestone {
+      width: 100%;
+      max-width: 394px;
+    }
 
     @include mq('md') {
       flex-direction: column;

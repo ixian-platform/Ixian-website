@@ -22,11 +22,26 @@
       align-items: center;
       gap: 80px;
 
+      @include mq('sm') {
+        padding: 40px var(--spacing-md);
+      }
+
       .partnerImages {
+        width: 100%;
         display: flex;
         gap: 64px;
         align-items: center;
-        justify-items: center;
+        justify-content: center;
+
+        @include mq('sm') {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 24px;
+
+          img {
+            max-width: 70%;
+          }
+        }
       }
     }
   }

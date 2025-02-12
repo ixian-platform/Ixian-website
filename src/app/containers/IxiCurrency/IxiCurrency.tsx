@@ -60,12 +60,14 @@ const IxiCurrency = () => {
         <IxiMetrics />
         <div className={classes.infoCardsContainer}>
           <InteractionCard
+            className={classes.singleCard}
             icon={<MyIcon name={'ClearAllRounded'} rounded />}
             title={t('card1.title')}
             description={t('card1.subtitle')}
             fullWidth
           />
           <InteractionCard
+            className={classes.singleCard}
             icon={<MyIcon name={'CycloneRounded'} rounded />}
             title={t('card2.title')}
             description={t('card2.subtitle')}

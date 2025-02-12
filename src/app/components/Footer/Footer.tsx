@@ -135,12 +135,6 @@ const Footer = () => {
             <Link href={Routes.PP}>
               <TextElement type={'label-sm'}>Privacy Policy</TextElement>
             </Link>
-            <Link href={Routes.PP}>
-              <TextElement type={'label-sm'}>Cookies</TextElement>
-            </Link>{' '}
-            <Link href={Routes.PP}>
-              <TextElement type={'label-sm'}>MIT License</TextElement>
-            </Link>
           </div>
         </div>
       </ContentWrapper>

@@ -82,7 +82,7 @@ const EcosystemSection = () => {
             </Button>
             <Button
               variant={'text'}
-              leadingIcon={<MyIcon name={'QuestionMarkRounded'} />}
+              leadingIcon={<MyIcon name={'EastRounded'} />}
             >
               {t('whatIsIxi')}
             </Button>

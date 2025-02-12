@@ -16,7 +16,7 @@
     align-items: flex-start;
 
     @include mq('sm') {
-      padding: 100px var(--spacing-sm);
+      padding: 64px var(--spacing-sm);
     }
 
     .patternImg {

@@ -17,9 +17,12 @@
   display: flex;
   justify-content: center;
 
+  .aboutUsHeroSectionHeader {
+    max-width: 800px;
+  }
+
   @include mq('sm') {
-    padding: 100px var(--spacing-sm);
-    padding-bottom: 64px;
+    padding: 64px var(--spacing-sm);
   }
 }
 

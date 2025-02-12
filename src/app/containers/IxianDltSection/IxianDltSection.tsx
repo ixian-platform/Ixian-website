@@ -66,7 +66,7 @@ const IxianDltSection = () => {
             ) : (
               <MyIcon name={info.icon} rounded />
             )}
-            <div>
+            <div className={classes.texts}>
               <TextElement type={'heading-xs'}>{info.title}</TextElement>
               <TextElement type={'body-sm'}>{info.description}</TextElement>
             </div>

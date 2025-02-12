@@ -90,6 +90,7 @@ const LandingFeaturesGrid = () => {
                 content={t('article1.chip')}
                 variant={'outlined'}
                 isTextInversed
+                className={classes.poweredChip}
               />
             }
             title={
@@ -104,6 +105,9 @@ const LandingFeaturesGrid = () => {
             }
             ctaContent={
               <Button
+                href={'https://medium.com/ixian-io'}
+                isExternal
+                isInverse
                 variant={'outlined'}
                 leadingIcon={<MyIcon name={'EastRounded'} />}
               >

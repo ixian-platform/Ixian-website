@@ -18,6 +18,8 @@
 
   @include mq('sm') {
     max-width: unset;
+    padding-left: 12px;
+    padding-right: 12px;
   }
 
   .content {

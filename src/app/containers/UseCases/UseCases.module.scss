@@ -12,7 +12,7 @@
     gap: var(--spacing-super);
 
     @include mq('sm') {
-      padding: 100px var(--spacing-sm);
+      padding: 64px var(--spacing-sm);
     }
 
     @include mq('md') {
@@ -36,7 +36,7 @@
         padding: 0;
       }
 
-      > div {
+      .eachCard {
         max-width: unset;
       }
 

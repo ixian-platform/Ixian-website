@@ -30,22 +30,20 @@
       .socialCards {
         width: 100%;
         display: flex;
-        justify-content: space-between;
         gap: 32px;
         margin-bottom: 24px;
-        flex-wrap: wrap;
 
-        > a {
-          max-width: 176px;
-
-          @include mq('sm') {
-            max-width: unset;
-          }
+        @include mq('md') {
+          flex-wrap: wrap;
+          justify-content: center;
         }
 
         .customCard {
-          max-width: 176px;
           min-height: 156px;
+
+          &:hover {
+            background: var(--cardGradient);
+          }
 
           @include mq('sm') {
             max-width: unset;

@@ -12,6 +12,7 @@ import ixianLogo from '@assets/ixian-logo.svg';
 import Image from 'next/image';
 import ThemeSwitcher from '@components/ThemeSwitcher/ThemeSwitcher';
 import React from 'react';
+import useDetectScroll from '@smakss/react-scroll-direction';
 
 export const linksData = [
   {
@@ -38,6 +39,7 @@ export const linksData = [
 
 const Navbar = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const { scrollDir } = useDetectScroll();
 
   const desktopMenu = (
     <>
@@ -71,7 +73,11 @@ const Navbar = () => {
   );
 
   return (
-    <nav className={classes.navbar}>
+    <nav
+      className={classNames(classes.navbar, {
+        [classes.hidden]: scrollDir === 'down' || undefined,
+      })}
+    >
       <ContentWrapper
         className={classNames(classes.content, {
           [classes.contentMobile]: isMobile,

@@ -1,4 +1,5 @@
 @use '@styles/mixins' as *;
+@use '@styles/typograhphy' as *;
 
 .gitSection {
   width: 100%;
@@ -16,6 +17,7 @@
 
     @include mq('sm') {
       padding: 64px var(--spacing-sm);
+      gap: 32px;
     }
 
     .gitDivider {
@@ -36,8 +38,16 @@
       justify-content: space-between;
       align-items: center;
 
+      @include mq('sm') {
+        padding: 8px;
+      }
+
       > svg {
         color: var(--colors-icon-inverse);
+
+        @include mq('sm') {
+          display: none;
+        }
       }
 
       &:hover {
@@ -49,6 +59,14 @@
         display: flex;
         gap: 24px;
         align-items: center;
+
+        @include mq('sm') {
+          gap: 8px;
+
+          p {
+            @include label-lg;
+          }
+        }
 
         > svg {
           color: var(--colors-icon-inverse);

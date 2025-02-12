@@ -9,7 +9,7 @@
     padding: var(--spacing-super-xl) var(--spacing-md);
 
     @include mq('sm') {
-      padding: 100px var(--spacing-sm);
+      padding: 0 var(--spacing-sm);
     }
 
     .foundersCardContainer {
@@ -68,13 +68,13 @@
         }
 
         .damir {
-          background-image: url('/assets/founders/damir.jpg');
+          //background-image: url('/assets/founders/damir.jpg');
           background-size: cover;
           background-repeat: no-repeat;
           background-position: center;
         }
         .chris {
-          background-image: url('/assets/founders/chris.jpg');
+          //background-image: url('/assets/founders/chris.jpg');
           background-size: cover;
           background-repeat: no-repeat;
           background-position: center;
