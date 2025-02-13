@@ -14,23 +14,41 @@
   gap: 24px;
   position: relative;
 
+  @include mq('md') {
+    flex-direction: column-reverse;
+  }
+
   @include mq('sm') {
     padding: 40px 16px;
-    flex-direction: column;
   }
 
   .left {
     width: 100%;
 
-    //&::before {
-    //  content: '';
-    //  position: absolute;
-    //  inset: 0; /* Covers the entire card */
-    //  background-image: var(--spixi-uc);
-    //  background-repeat: no-repeat;
-    //  background-size: contain;
-    //  background-position: left 28px bottom -50px;
-    //}
+    @include mq('md') {
+      min-height: 350px;
+    }
+
+    @include mq('sm') {
+      min-height: 180px;
+    }
+
+    img {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translateX(100px);
+
+      @include mq('md') {
+        transform: translateX(50%);
+      }
+
+      @include mq('sm') {
+        transform: unset;
+        left: 32px;
+        max-width: 260px;
+      }
+    }
   }
 
   .right {

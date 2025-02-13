@@ -17,8 +17,9 @@ const PoweredByIxian = () => {
 
   return (
     <div className={classes.poweredByIxianArticleCard}>
-      <Image src={spixiUc} alt={'spixi-image'} />
-
+      <div className={classes.left}>
+        <Image src={spixiUc} alt={'spixi-image'} />
+      </div>
       <div className={classes.right}>
         <SectionHeader
           className={classes.poweredSectionHeader}
