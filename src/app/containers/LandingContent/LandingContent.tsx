@@ -13,8 +13,7 @@ import LandingFeaturesGrid from '@/app/containers/LandingFeaturesGrid/LandingFea
 import Chip from '@components/Chip/Chip';
 import OpenSourceCard from '@components/OpenSourceCard/OpenSourceCard';
 import { Routes } from '@utils/constants';
-import Spline from '@splinetool/react-spline';
-import classes from './LandingContent.module.scss';
+import CircleSpline from '@components/CircleSpline/CircleSpline';
 
 const LandingContent = () => {
   const t = useTranslations('LandingHero');
@@ -42,15 +41,7 @@ const LandingContent = () => {
             </Button>
           </>
         }
-        leftContainer={
-          <Spline
-            // scene={'/assets/spline/cubic.spline'}
-            scene={
-              'https://prod.spline.design/zk-AJBS9ZXNtusF6/scene.splinecode'
-            }
-            className={classes.chipsSpline}
-          />
-        }
+        leftContainer={<CircleSpline />}
       />
       <OpenSourceCard />
       <LandingFeaturesGrid />

@@ -13,6 +13,7 @@ import { generateSEO } from '@utils/seo';
 import Chip from '@components/Chip/Chip';
 import { ixianGitHub, ixidocs, Routes } from '@utils/constants';
 import Spline from '@splinetool/react-spline';
+import ChipsSpline from '@components/ChipsSpline/ChipsSpline';
 
 export async function generateMetadata() {
   return generateSEO({
@@ -68,12 +69,7 @@ export default function Technology() {
             </Button>
           </>
         }
-        leftContainer={
-          <Spline
-            scene={'/assets/spline/chips.spline'}
-            className={classes.techPageSpline}
-          />
-        }
+        leftContainer={<ChipsSpline />}
       />
       <IxianDltSection />
       <S2NetworkSection />
