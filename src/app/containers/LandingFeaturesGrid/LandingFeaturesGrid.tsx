@@ -13,7 +13,6 @@ import classNames from 'classnames';
 import topRetro from '@assets/top-retro.svg';
 import Image from 'next/image';
 import { ixianGitHub, Routes } from '@utils/constants';
-import useImages from '@utils/useImages';
 import PoweredByIxian from '@components/Articles/PoweredByIxian/PoweredByIxian';
 
 const LandingFeaturesGrid = () => {

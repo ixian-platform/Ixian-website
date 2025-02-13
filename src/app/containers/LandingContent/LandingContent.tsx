@@ -44,6 +44,7 @@ const LandingContent = () => {
         }
         leftContainer={
           <Spline
+            // scene={'/assets/spline/cubic.spline'}
             scene={
               'https://prod.spline.design/zk-AJBS9ZXNtusF6/scene.splinecode'
             }

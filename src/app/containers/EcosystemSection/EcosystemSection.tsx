@@ -96,6 +96,7 @@ const EcosystemSection = () => {
           className={classes.rowSpan2}
           body={
             <SectionHeader
+              className={classes.ecoBigCardSectionHeader}
               chipContainer={
                 <Chip
                   content={t('decentralizedMessenger')}

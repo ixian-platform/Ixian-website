@@ -73,6 +73,11 @@
 
       .bigCardSectionHeader {
         max-width: 576px;
+
+        @include mq('sm') {
+          justify-content: unset;
+          gap: 12px;
+        }
       }
 
       @include mq('sm') {
@@ -86,6 +91,7 @@
 
         @include mq('sm') {
           grid-column: unset;
+          min-height: 668px;
         }
       }
 

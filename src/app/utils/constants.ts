@@ -41,3 +41,5 @@ export const robotinaLink = 'https://www.robotina.si';
 export const vivatLink = 'https://www.vivatgroup.net/';
 export const benchmarkedLink = 'https://benchmarked.co/';
 export const evenLink = 'https://even.si/';
+export const ixianFirstArticle =
+  'https://medium.com/ixian/how-spixi-minimized-infrastructure-costs-with-decentralized-technology-8a45ef7c6597';

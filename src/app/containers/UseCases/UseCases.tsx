@@ -6,6 +6,7 @@ import SectionHeader from '@components/SectionHeader/SectionHeader';
 import { useTranslations } from 'next-intl';
 import InteractionCard from '@components/InteractionCard/InteractionCard';
 import MyIcon from '@components/MyIcon/MyIcon';
+import { ixianFirstArticle } from '@utils/constants';
 
 const UseCases = () => {
   const t = useTranslations('UseCases');
@@ -60,7 +61,7 @@ const UseCases = () => {
         />
         <InteractionCard
           className={classes.eachCard}
-          href={'https://medium.com/@Ixian_IO'}
+          href={ixianFirstArticle}
           isExternal
           onHoverHeader={<MyIcon name={'EastRounded'} rounded />}
           title={t('card3.title')}

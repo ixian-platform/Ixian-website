@@ -27,6 +27,13 @@
 
       .rowSpan2 {
         grid-row: span 2;
+
+        .ecoBigCardSectionHeader {
+          @include mq('sm') {
+            justify-content: unset;
+            gap: 12px;
+          }
+        }
       }
     }
   }

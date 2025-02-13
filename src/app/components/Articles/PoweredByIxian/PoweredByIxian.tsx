@@ -10,6 +10,7 @@ import MyIcon from '@components/MyIcon/MyIcon';
 import classes from './PoweredByIxian.module.scss';
 import useImages from '@utils/useImages';
 import { useTranslations } from 'next-intl';
+import { ixianFirstArticle } from '@utils/constants';
 
 const PoweredByIxian = () => {
   const { spixiUc } = useImages();
@@ -40,7 +41,7 @@ const PoweredByIxian = () => {
           }
           ctaContent={
             <Button
-              href={'https://medium.com/ixian-io'}
+              href={ixianFirstArticle}
               isExternal
               isInverse
               variant={'outlined'}
