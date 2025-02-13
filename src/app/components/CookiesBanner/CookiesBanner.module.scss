@@ -1,0 +1,40 @@
+@use '@styles/mixins' as *;
+
+.cookiesBanner {
+  background: red;
+  position: fixed;
+  bottom: var(--spacing-md);
+  right: var(--spacing-md);
+  background: var(--cardGradient2);
+  padding: var(--spacing-xl);
+  border-radius: var(--corner-radius-xxl);
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 480px;
+  gap: var(--spacing-md);
+  border: 1px solid var(--colors-outline-03);
+
+  @include mq('sm') {
+    max-width: 100%;
+    right: 8xp;
+    left: 8px;
+    margin: 0 auto;
+    width: calc(100% - 16px);
+  }
+
+  .link {
+    text-decoration: underline;
+    width: max-content;
+
+    &:hover {
+      color: var(--colors-text-action);
+    }
+  }
+
+  .buttons {
+    display: flex;
+    gap: var(--spacing-md);
+  }
+}
