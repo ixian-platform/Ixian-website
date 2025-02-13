@@ -20,6 +20,8 @@
 
     @include mq('sm') {
       padding: 64px var(--spacing-sm);
+      background-size: contain;
+      background-position: center -80px;
     }
 
     .patternImg {

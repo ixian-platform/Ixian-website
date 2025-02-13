@@ -34,20 +34,9 @@
       flex-direction: column;
       gap: 40px;
 
-      .images {
-        width: 100%;
-        display: flex;
-        gap: 80px;
-
-        @include mq('md') {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 24px;
-
-          img {
-            max-width: 70%;
-          }
-        }
+      .customImages {
+        justify-content: flex-start;
+        padding: 22px 0;
       }
 
       .innerCards {

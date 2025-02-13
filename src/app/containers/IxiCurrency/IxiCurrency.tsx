@@ -8,20 +8,9 @@ import Button from '@components/Button/Button';
 import { useTranslations } from 'next-intl';
 import MyIcon from '@components/MyIcon/MyIcon';
 import InteractionCard from '@components/InteractionCard/InteractionCard';
-import Link from 'next/link';
-import coingecko from '@assets/coingecko.svg';
-import nonkyc from '@assets/nonkyc.svg';
-import xeggex from '@assets/xeggex.svg';
-import Image from 'next/image';
-import {
-  coingeckoIxi,
-  ixiEmissions,
-  nonkycIxi,
-  Routes,
-  Section,
-  xeggexIxi,
-} from '@utils/constants';
+import { ixiEmissions, Routes, Section } from '@utils/constants';
 import IxiMetrics from '@components/IxiMetrics/IxiMetrics';
+import ExchangesImages from '@components/ExchangesImages/ExchangesImages';
 
 const IxiCurrency = () => {
   const t = useTranslations('TechnologyPage.ixiCurrency');
@@ -77,17 +66,7 @@ const IxiCurrency = () => {
         <div className={classes.exchangesContainer}>
           <TextElement type={'heading-md'}>{t('exchanges')}</TextElement>
           <TextElement type={'body-sm'}>{t('exchangesSubtitle')}</TextElement>
-          <div className={classes.images}>
-            <Link href={coingeckoIxi} target={'_blank'}>
-              <Image src={coingecko} alt={'coingecko'} />
-            </Link>
-            <Link href={xeggexIxi} target={'_blank'}>
-              <Image src={xeggex} alt={'xeggex'} />
-            </Link>
-            <Link href={nonkycIxi} target={'_blank'}>
-              <Image src={nonkyc} alt={'nonkyc'} />
-            </Link>
-          </div>
+          <ExchangesImages />
         </div>
       </div>
     </ContentWrapper>

@@ -21,6 +21,8 @@
     @include mq('sm') {
       padding: 64px var(--spacing-sm);
       gap: 32px;
+      background-size: contain;
+      background-position: 60px -80px;
     }
 
     .gitDivider {
@@ -33,7 +35,7 @@
       padding: var(--spacing-xl);
       max-width: 800px;
       background: var(--colors-surface-inverse);
-      border: 2px solid var(--colors-outline-02);
+      border: 2px solid #373937;
       border-radius: var(--corner-radius-lg);
       min-height: 112px;
       display: flex;

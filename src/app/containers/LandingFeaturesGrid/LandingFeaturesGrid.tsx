@@ -13,6 +13,8 @@ import classNames from 'classnames';
 import topRetro from '@assets/top-retro.svg';
 import Image from 'next/image';
 import { ixianGitHub, Routes } from '@utils/constants';
+import useImages from '@utils/useImages';
+import PoweredByIxian from '@components/Articles/PoweredByIxian/PoweredByIxian';
 
 const LandingFeaturesGrid = () => {
   const t = useTranslations('LandingFeatures');
@@ -80,44 +82,7 @@ const LandingFeaturesGrid = () => {
           />
         </div>
       </div>
-      <div className={classes.poweredByIxianArticleCard}>
-        <div className={classes.left} />
-        <div className={classes.right}>
-          <SectionHeader
-            className={classes.poweredSectionHeader}
-            inverseText
-            chipContainer={
-              <Chip
-                content={t('article1.chip')}
-                variant={'outlined'}
-                isTextInversed
-                className={classes.poweredChip}
-              />
-            }
-            title={
-              <TextElement type={'heading-md'}>
-                {t('article1.title')}
-              </TextElement>
-            }
-            subtitle={
-              <TextElement type={'body-md'}>
-                {t('article1.subtitle')}
-              </TextElement>
-            }
-            ctaContent={
-              <Button
-                href={'https://medium.com/ixian-io'}
-                isExternal
-                isInverse
-                variant={'outlined'}
-                leadingIcon={<MyIcon name={'EastRounded'} />}
-              >
-                {t('article1.cta')}
-              </Button>
-            }
-          />
-        </div>
-      </div>
+      <PoweredByIxian />
       <div
         className={classNames(
           classes.landingFeaturesGridSingleCard,

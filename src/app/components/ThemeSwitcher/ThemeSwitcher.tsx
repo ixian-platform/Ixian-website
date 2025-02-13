@@ -3,8 +3,7 @@
 import classes from './ThemeSwitcher.module.scss';
 import { useTheme } from '@/app/providers/ThemeProvider/ThemeProvider';
 import { useEffect, useState } from 'react';
-import moonIcon from '@assets/moon-auto.svg';
-import Image from 'next/image';
+import MyIcon from '@components/MyIcon/MyIcon';
 
 const ThemeSwitcher = () => {
   const { themeMode, setThemeMode } = useTheme();
@@ -25,7 +24,14 @@ const ThemeSwitcher = () => {
 
   return (
     <div className={classes.themeSwitcher} onClick={clickHandler}>
-      <Image src={moonIcon} width={24} height={24} priority alt={'moon-icon'} />
+      <MyIcon
+        color={'#F3F7F4'}
+        name={
+          themeMode === 'light' ? 'Brightness2Rounded' : 'Brightness5Rounded'
+        }
+        width={24}
+        height={24}
+      />
     </div>
   );
 };

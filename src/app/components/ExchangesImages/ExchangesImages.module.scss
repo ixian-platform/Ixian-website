@@ -1,0 +1,20 @@
+@use '@styles/mixins' as *;
+
+.images {
+  width: 100%;
+  padding: 44px 0;
+  display: flex;
+  gap: 80px;
+  align-items: center;
+  justify-content: center;
+
+  @include mq('md') {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+
+    img {
+      max-width: 70%;
+    }
+  }
+}

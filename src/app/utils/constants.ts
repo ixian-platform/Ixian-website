@@ -4,6 +4,8 @@ export const Routes = {
   BUILD: '/build',
   GET_INVOLVED: '/get-involved',
   PP: '/privacy-policy',
+  TERMS: '/terms-of-use',
+  COOKIES: '/cookie-policy',
   ABOUT_US: '/about-us',
 } as const;
 

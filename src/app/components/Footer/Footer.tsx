@@ -129,11 +129,14 @@ const Footer = () => {
         <div className={classes.copyright}>
           <Copyright />
           <div className={classes.legalItems}>
-            <Link href={Routes.PP}>
+            <Link href={Routes.TERMS}>
               <TextElement type={'label-sm'}>Terms of Use</TextElement>
             </Link>
             <Link href={Routes.PP}>
               <TextElement type={'label-sm'}>Privacy Policy</TextElement>
+            </Link>
+            <Link href={Routes.COOKIES}>
+              <TextElement type={'label-sm'}>Cookie Policy</TextElement>
             </Link>
           </div>
         </div>

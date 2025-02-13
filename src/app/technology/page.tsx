@@ -70,9 +70,7 @@ export default function Technology() {
         }
         leftContainer={
           <Spline
-            scene={
-              'https://prod.spline.design/GEjl-wd9OZq5GXKR/scene.splinecode'
-            }
+            scene={'/assets/spline/chips.spline'}
             className={classes.techPageSpline}
           />
         }

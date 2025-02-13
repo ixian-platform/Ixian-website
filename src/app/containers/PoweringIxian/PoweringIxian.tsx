@@ -14,6 +14,7 @@ import nonkyc from '@assets/nonkyc.svg';
 import InteractionCard from '@components/InteractionCard/InteractionCard';
 import MyIcon from '@components/MyIcon/MyIcon';
 import { useTranslations } from 'next-intl';
+import ExchangesImages from '@components/ExchangesImages/ExchangesImages';
 
 const PoweringIxian = () => {
   const t = useTranslations('EcoGetInvolvedPage.poweringIxian');
@@ -34,17 +35,7 @@ const PoweringIxian = () => {
       <div className={classes.resourcesContainer}>
         <TextElement type={'heading-sm'}>{t('resources.label')}</TextElement>
         <TextElement type={'heading-lg'}>{t('resources.title')}</TextElement>
-        <div className={classes.images}>
-          <Link href={coingeckoIxi} target={'_blank'}>
-            <Image src={coingecko} alt={'coingecko'} />
-          </Link>
-          <Link href={xeggexIxi} target={'_blank'}>
-            <Image src={xeggex} alt={'xeggex'} />
-          </Link>
-          <Link href={nonkycIxi} target={'_blank'}>
-            <Image src={nonkyc} alt={'nonkyc'} />
-          </Link>
-        </div>
+        <ExchangesImages forceTheme={'dark'} className={classes.customImages} />
         {['wallets', 'miners', 'miningPools'].map((res) => (
           <div className={classes.innerCards} key={res} id={Section.IXI_MINING}>
             <div className={classes.text}>

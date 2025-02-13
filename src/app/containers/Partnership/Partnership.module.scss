@@ -26,6 +26,7 @@
 
       @include mq('sm') {
         padding: 40px var(--spacing-md);
+        background: var(--sectionGradient);
       }
 
       .partnerImages {

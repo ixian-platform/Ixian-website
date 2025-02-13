@@ -13,10 +13,10 @@
 
   > canvas {
     position: absolute;
-    top: -18%;
-    right: 4%;
-    width: 800px !important;
-    height: 800px !important;
+    top: -2%;
+    right: 6%;
+    width: 600px !important;
+    height: 600px !important;
 
     @include mq('md') {
       //transform: translate(40%, -40%);

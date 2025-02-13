@@ -30,6 +30,7 @@ export const linksData = [
   {
     label: 'Documentation',
     href: ixidocs,
+    isExternal: true,
   },
   {
     label: 'Get Involved',
@@ -54,7 +55,11 @@ const Navbar = () => {
       </Link>
       <div className={classes.links}>
         {linksData.map((link, index) => (
-          <Link key={index} href={link.href}>
+          <Link
+            key={index}
+            href={link.href}
+            target={link.isExternal ? '_blank' : ''}
+          >
             {link.label}
           </Link>
         ))}

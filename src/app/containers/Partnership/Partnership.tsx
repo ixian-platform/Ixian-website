@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import ContentWrapper from '@components/ContentWrapper/ContentWrapper';
 import classes from './Partnership.module.scss';
@@ -18,14 +20,11 @@ import {
 } from '@utils/constants';
 import Link from 'next/link';
 import Image from 'next/image';
-import ixilabs from '@assets/partners/ixilabs.svg';
-import robotina from '@assets/partners/robotina.svg';
-import vivat from '@assets/partners/vivat.svg';
-import benchmarked from '@assets/partners/benchmarked.svg';
-import even from '@assets/partners/even.svg';
+import useImages from '@utils/useImages';
 
 const Partnership = () => {
   const t = useTranslations('AboutUsPage.partnerships');
+  const { ixilabs, benchmark, vivat, even, robotina } = useImages();
 
   return (
     <ContentWrapper
@@ -60,9 +59,8 @@ const Partnership = () => {
             <Image src={vivat} alt={'vivat'} />
           </Link>
           <Link href={benchmarkedLink} target={'_blank'}>
-            <Image src={benchmarked} alt={'benchmarked'} />
+            <Image src={benchmark} alt={'benchmarked'} />
           </Link>
-          {/*<Image src={nodezro} alt={'nodezro'} />*/}
           <Link href={evenLink} target={'_blank'}>
             <Image src={even} alt={'even'} />
           </Link>

@@ -17,7 +17,7 @@ const S2NetworkSection = () => {
     <ContentWrapper
       asWrapperSection
       sectionClass={classes.ixianDltSection}
-      className={classNames(classes.ixianDltContainer, classes.noPaddingTop)}
+      className={classNames(classes.ixianDltContainer, classes.s2)}
       sectionId={Section.IXIAN_S2_NETWORK}
     >
       <SectionHeader

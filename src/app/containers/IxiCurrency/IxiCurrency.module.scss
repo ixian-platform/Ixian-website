@@ -26,6 +26,10 @@
       @include mq('sm') {
         padding: 40px 16px;
         gap: 40px;
+        background-size: contain, auto;
+        background-position:
+          60px top,
+          0 0;
       }
 
       .infoCardsContainer {
@@ -49,23 +53,6 @@
         flex-direction: column;
         gap: 8px;
         align-items: center;
-
-        .images {
-          width: 100%;
-          padding: 44px 0;
-          display: flex;
-          gap: 80px;
-
-          @include mq('md') {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-
-            img {
-              max-width: 70%;
-            }
-          }
-        }
       }
     }
   }

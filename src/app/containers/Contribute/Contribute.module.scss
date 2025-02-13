@@ -20,6 +20,7 @@
     @include mq('sm') {
       padding: 64px var(--spacing-sm);
       flex-direction: column;
+      background-size: 50%;
     }
 
     .header {
