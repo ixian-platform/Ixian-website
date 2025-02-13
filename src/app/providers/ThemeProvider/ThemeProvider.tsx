@@ -4,7 +4,7 @@ import { ReactNode, useContext, useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
 import ThemeContext from '@/app/providers/contexts/ThemeContext';
 
-type ThemeMode = 'light' | 'dark';
+export type ThemeMode = 'light' | 'dark';
 
 const ThemeProvider = ({ children }: { children: ReactNode }) => {
   const [themeMode, setThemeMode] = useState<ThemeMode>(

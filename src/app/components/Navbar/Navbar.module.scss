@@ -10,6 +10,11 @@
   z-index: 9999;
   margin: 0 auto;
   border-bottom: 1px solid var(--colors-outline-02);
+  transition: transform 0.3s ease-in-out;
+
+  &.hidden {
+    transform: translateY(-100%);
+  }
 
   .content {
     padding: var(--spacing-md) 8px;

@@ -15,7 +15,10 @@
     "termsOfUse": "Terms of Use",
     "privacyPolicy": "Privacy Policy",
     "cookies": "Cookies",
-    "MIT": "MIT License"
+    "MIT": "MIT License",
+    "learn": "Learn",
+    "resources": "Resources",
+    "getInvolved": "Get Involved"
   },
   "GetInvolved": {
     "chip": "Get Involved",
@@ -31,7 +34,7 @@
   "Metrics": {
     "chip": "Why Ixian",
     "title": "Built for Scalability, Security and Real-world Use",
-    "subtitle": "Ixian is designed for real-world applications, providing the scalability and security needed to power trillions of devices across industries—from IoT to smart cities. We’re reducing infrastructure overhead and complexity in multi-user environments.",
+    "subtitle": "Ixian is designed for real-world applications, providing the scalability and security needed to power a world of devices across industries—from end-user applications to IoT and smart cities. We’re reducing operational overhead and complexity in multi-user environments.",
     "howDoesItWork": "How Does It Work",
     "readWhitepaper": "Read the White Paper",
     "connectedDevices": "Connected Devices",
@@ -53,7 +56,7 @@
     "robustDesc": "Ixian DLT forms the backbone of the platform and the ecosystem, supporting device discovery and high volume of low-cost microtransactions.",
     "overlayNetwork": "Overlay DePIN",
     "overlayDesc": "Ixian S2 ensures seamless data exchange across decentralized networks, driving real-time communication between connected devices.",
-    "IxiCrypto": "IXI Cryptocurrency",
+    "IxiCrypto": "$IXI Cryptocurrency",
     "IxiCryptoDesc": "Low-cost and high-throughput, $IXI is the native cryptocurrency that powers the entire ecosystem.",
     "devTools": "Developer Tools",
     "devToolsDesc": "Ixian provides a set of developer tools, including SDKs, APIs, and open-source libraries, offering developers the flexibility and scalability needed to build innovative solutions.",
@@ -64,7 +67,7 @@
     "spixiDesc": "Spixi is a secure, user-friendly chat and wallet application which demonstrates the power of the Ixian platform. ",
     "ixiNames": "IXI Names",
     "namesDesc": "Attach your cryptographic addresses (IXI, BTC, SOL, ETH,...) and other data to a human-readable name. Secured by blockchain, it’s the first step in disrupting traditional name services.",
-    "comingSoon": "Coming Soon",
+    "inProgress": "In Progress",
     "building": "We're building new features.",
     "stayUp": "Stay up to date with Ixian as we roll out new and exciting features.",
     "visitSpixiWebsite": "Visit Spixi Website"
@@ -73,7 +76,6 @@
     "chip": "Real-World Application",
     "title": "Solving Tomorrows Challenges Today",
     "subtitle": "We collaborate with industry partners to drive innovation, streamline integration, and empower businesses to deploy next-gen solutions on the Ixian platform.",
-    "exploreUseCases": "Explore Use-Cases",
     "inProgress": "In Progress",
     "card1": {
       "title": "Secure IoT",
@@ -89,14 +91,14 @@
     }
   },
   "Partners": {
-    "buildTogether": "Shift the Paradigm, Decentralize With Ixian.",
+    "buildTogether": "Shift the Paradigm, Decentralize With Ixian",
     "buildSubtitle": "Ixian is ready for your next step, are you?",
     "explorePartnerships": "Explore Partnerships",
     "chip": "Partners"
   },
   "LandingHero": {
     "chip": "The Open-Source Decentralized Data Streaming Platform",
-    "title": "Building Blocks for a Connected World",
+    "title": "The Building Blocks of a Connected World",
     "subtitle": "Bringing together a world of devices with secure, seamless, and reliable connections. Allowing you to cut costs, enhance security, and confidently deploy products and services at scale.",
     "start": "Start Building with Ixian",
     "discover": "Discover the Platform"
@@ -104,13 +106,13 @@
   "LandingFeatures": {
     "security": {
       "chip": "Security & Privacy",
-      "title": "Keep your data communications secure.",
+      "title": "Make Your Data Communications Secure",
       "subtitle": "Whether it’s connecting IoT devices, running smart cities and factories, or transmitting voice and video, Ixian eliminates the need for a trusted third party, helping users maintain full security and control.",
       "cta": "Learn about IXI Security",
       "cards": {
         "card1": {
-          "title": "Trustless Authorization",
-          "subtitle": "Ixian platform uses Public Key Infrastructure as an identifier which enables client authentication, secure and trustless device discovery, serving as a foundation for secure communication."
+          "title": "Secure & Trustless Authorization",
+          "subtitle": "The Ixian platform uses Public Key Infrastructure as an identifier which enables client authentication, secure and trustless device discovery, serving as a foundation for the security of the platform."
         },
         "card2": {
           "title": "Trustless Device Discovery",
@@ -124,8 +126,8 @@
     },
     "efficiency": {
       "chip": "Efficiency & Scalability",
-      "title": "Harness the efficiency and seamless scalability.",
-      "subtitle": "Unlock the power of scalable, high-performance applications with minimal resource usage. Enjoy lower deployment and operational costs, effortlessly handling large volumes of data and on-chain transactions, all while scaling your business more efficiently and affordably",
+      "title": "Harness Efficiency and Scalability With Ixian",
+      "subtitle": "Unlock the power of scalable, high-performance applications with minimal resource usage. Enjoy lower deployment and operational costs, effortlessly handling large volumes of data and on-chain transactions, all while scaling your business more efficiently and affordably.",
       "cta": "Learn About Ixian Tech",
       "cards": {
         "card1": {
@@ -134,18 +136,18 @@
         },
         "card2": {
           "title": "High-transaction Throughput",
-          "subtitle": "With no theoretical limit to how many transactions the network can process, Ixian will super-charge your high-demand application or service."
+          "subtitle": "With no theoretical limit to how many transactions the network can process (by design), Ixian will super-charge your high-demand application or service."
         },
         "card3": {
           "title": "Low Resource Usage",
-          "subtitle": "Transactions, data processing and communication between devices occur with minimal resource consumption, reducing operational costs."
+          "subtitle": "Transactions, data processing and communication between devices occur with minimal resource consumption, reducing your operational costs."
         }
       }
     },
     "build": {
       "chip": "Build with Ixian",
-      "title": "Minimize infrastructure costs and move fast.",
-      "subtitle": "Ixian provides the tools and resources you need to easily integrate Ixian tech into your applications.",
+      "title": "Minimize Infrastructure Costs and Move Faster",
+      "subtitle": "Ixian provides the tools and resources you need to easily integrate our tech into your applications.",
       "cta": "Start Building",
       "cta2": "Visit GitHub",
       "cards": {
@@ -159,32 +161,39 @@
         },
         "card3": {
           "title": "Cross-platform Support",
-          "subtitle": "Ixian is designed to support multiple platforms and devices, making it easy to integrate with existing infrastructure and scale across industries."
+          "subtitle": "Ixian is designed to support multiple platforms and devices, making it easy to integrate with existing infrastructure and scale across businesses."
         }
       }
     },
     "openSourceCard": {
       "title": "Open-source Since 2018",
-      "subtitle": "Visit Ixian Project on GitHub",
+      "subtitle": "Decentralization starts with openness. Our commitment to open-source means continuous innovation, community-driven development, and trustless technology.",
       "cta": "Visit Ixian's GitHub"
+    },
+    "article1": {
+      "chip": "Powered by Ixian",
+      "title": "Learn how a chat app that is used by thousands, runs without costs.",
+      "subtitle": "A private chat app and wallet, built on the Ixian decentralized network, operates without server costs while ensuring security and privacy.",
+      "cta": "Read Case Study"
     }
   },
   "TechnologyPage": {
     "hero": {
       "title": "Two Layers, One Powerful Platform",
-      "subtitle": "Ixian operates through two key decentralized networks Ixian DLT and Ixian S2, which together form the foundation for a wide range of secure, global network applications. ",
+      "subtitle": "Ixian operates through two key decentralized networks Ixian DLT and Ixian S2, which together form the foundation for a wide range of secure, global network applications.",
       "cta1": "Read Whitepaper",
-      "cta2": "Visit GitHub"
+      "cta2": "Visit GitHub",
+      "chip": "The Platform"
     },
     "startBuilding": {
       "title": "Start Building Now",
-      "subtitle": "We believe that together we can achieve greatness. Partner with Ixian to co-create solutions for tomorrow’s challenges.",
+      "subtitle": "Start reducing costs while improving the security and reliability of your project.",
       "cta": "Build Now"
     },
     "gitSection": {
-      "chip": "Open-Source Since 2018",
-      "title": "Backed by Over 20 Years of Research",
-      "subtitle": "Based on decades of research in the fields of cryptography, distributed networks, highly scalable systems and data structures. ",
+      "chip": "Since 2018",
+      "title": "Proudly Open-Source ",
+      "subtitle": "We are committed to building Ixian in public. It's open source and available for anyone to contribute to or audit on GitHub.",
       "visitIxian": "Visit Ixian Project on GitHub"
     },
     "milestones": {
@@ -255,7 +264,7 @@
         "subtitle": "$IXI is generated through block rewards for DLT node operators, ensuring a decentralized and equitable distribution. There were no pre-sales or private sales, making the process fully transparent and accessible to all participants. 9% of the total projected supply is allocated as a pre-mine for platform and ecosystem development."
       },
       "metrics": {
-        "supply": "Projected Supply in Year 2125",
+        "supply": "Projected Max Supply",
         "peakTps": "Peak TPS YTD",
         "targetBlockTime": "Target Block Time",
         "transactionFees": "Transaction Fees",
@@ -270,24 +279,24 @@
       "title": "Build Smarter, Spend Less",
       "subtitle": "Launch your product on Ixian and reduce your operational costs.",
       "cta": "Get Started Now",
-      "readyToBuild": "Ready to Build the Future?",
-      "readyToBuildSubtitle": "We believe that together we can achieve greatness. Partner with Ixian to co-create secure, scalable solutions for tomorrow’s challenges.",
+      "readyToBuild": "Ready to Build?",
+      "readyToBuildSubtitle": "Start reducing costs while improving the security and reliability of your project.",
       "getStarted": "Get Started Now"
     },
     "whyIxian": {
       "chip": "Why Build on Ixian",
-      "title": "Built for Developers, Designed for Mass Adoption",
+      "title": "Designed for Mass Adoption",
       "data1": {
-        "title": "Ixian Advantage",
+        "title": "The Ixian Advantage",
         "subtitle": "When you require trustless and secure client discovery, end-to-end communication and human readable name registration."
       },
       "data2": {
         "title": "Uncompromised Security",
-        "subtitle": "Benefit from the built-in security of Ixian and reduce your operational costs."
+        "subtitle": "Built on the principle of trustless authentication and self-sovereignty, Ixian boosts your project’s security."
       },
       "data3": {
         "title": "Easy Integration",
-        "subtitle": "Seamless integration with Ixian’s Core DLT and Overlay Network."
+        "subtitle": "Get up and running with Ixian’s core DLT and Overlay networks in a few simple steps."
       },
       "data4": {
         "title": "High Scalability",
@@ -299,7 +308,7 @@
       },
       "data6": {
         "title": "Minimal Infrastructure Costs",
-        "subtitle": "Deploy your next solution on Ixian and minimize your entry costs."
+        "subtitle": "Significantly reduce your operational costs by off-loading parts or entire project’s infrastructure to Ixian’s decentralized platform."
       },
       "keyResources": {
         "title": "Key Resources",
@@ -334,21 +343,24 @@
   },
   "AboutUsPage": {
     "hero": {
-      "title": "Founded in 2017",
+      "title": "About Ixian",
       "subtitle": "Our mission is to create a world where devices can communicate efficiently and securely, without the need for central intermediaries. We aim to provide a scalable, decentralized infrastructure that powers the future of IoT, smart cities, and beyond.",
       "cta": "Connect With Us on LinkedIn"
     },
     "founders": {
       "chip": "Founders",
-      "title": "United by a Shared Vision",
-      "subtitle": "Ixian’s founders are passionate innovators and engineers with extensive knowledge and expertise in blockchain, decentralized technology, cryptography, secure communications, and authorization. Committed to building the future of decentralized technology",
+      "title": "Driven by Innovation, United by a Shared Vision",
+      "subtitle": "Ixian’s founders are passionate innovators and engineers with extensive knowledge and expertise in blockchain, decentralized technology, cryptography and secure communications. Committed to shaping the more secure and interconnected world.",
       "marko": "Marko Arh Tadic",
       "chris": "Cristian Ciorba",
-      "damir": "Damir Rekic"
+      "damir": "Damir Rekic",
+      "markoLinkedin": "https://www.linkedin.com/in/marko-arh-tadi%C4%8D-569b2a43/",
+      "chrisLinkedin": "https://www.linkedin.com/in/cciorba/",
+      "damirLinkedin": "https://www.linkedin.com/in/damir-rekic-ixian/"
     },
     "partnerships": {
       "chip": "Partnerships",
-      "title": "Ready for the Future?",
+      "title": "Advancing Decentralized Infrastructure Together",
       "subtitle": "Ixian is building the infrastructure that will connect the next wave of IoT and other online devices. We want you to be a part of it. Whether you’re a developer, business, or partner, there are endless opportunities to get involved.",
       "cta": "Send Us a Message"
     }
@@ -356,7 +368,7 @@
   "EcoGetInvolvedPage": {
     "hero": {
       "title": "Discover the Ecosystem",
-      "subtitle": "Ixian’s ecosystem is young and evolving."
+      "subtitle": "Ixian’s ecosystem is dynamic and evolving fast."
     },
     "community": {
       "chip": "Get Involved",
@@ -380,10 +392,12 @@
           "title": "Wallets",
           "subtitle": "Did you know you can mine $IXI? Ixian uses Argon mining for fair distribution. Download the miner, setup and start.",
           "card1": {
+            "href": "https://github.com/ProjectIxian/Ixian-LiteWallet/releases",
             "title": "LiteWallet",
             "subtitle": "CLI Based Light Wallet."
           },
           "card2": {
+            "href": "https://www.spixi.io/download/",
             "title": "Spixi",
             "subtitle": "Best wallet for holding and using your $IXI"
           }
@@ -392,10 +406,12 @@
           "title": "$IXI Miners",
           "subtitle": "Did you know you can mine $IXI? Ixian uses Argon mining for fair distribution. Download the miner, setup and start.",
           "card1": {
+            "href": "https://github.com/ProjectIxian/IxiWatt/releases",
             "title": "IXIWatt",
             "subtitle": "Official GUI Miner"
           },
           "card2": {
+            "href": "https://github.com/bogdanadnan/iximiner/releases",
             "title": "Third-party Miner",
             "subtitle": "Built by members of the community."
           }
@@ -404,10 +420,12 @@
           "title": "Mining Pools",
           "subtitle": "You can mine $IXI on the following pools:",
           "card1": {
+            "href": "https://mineixi.com/",
             "title": "mineixi.com",
             "subtitle": "Official mining pool."
           },
           "card2": {
+            "href": "https://ixi.hash.express/",
             "title": "HashExpress",
             "subtitle": "Community mining pool."
           }
@@ -433,5 +451,11 @@
             "subtitle": "Become an Ixian Ambassador."
         }
     }
+  },
+  "NotFound": {
+    "code": "404",
+    "title": "This Node is Offline...",
+    "subtitle": "Even decentralized networks have missing links sometimes. Let’s get you back to the mainnet!",
+    "cta": "Return Home"
   }
 }

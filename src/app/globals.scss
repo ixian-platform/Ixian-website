@@ -1,3 +1,4 @@
+@use 'styles/mixins' as *;
 @forward 'styles/tokens/_theme';
 @tailwind base;
 @tailwind components;
@@ -13,9 +14,31 @@ body {
 
   //Custom theme variables
   //LIGHT
-  --pattern: url('/assets/light/pattern-right.svg');
+  --build: url('/assets/light/build.svg');
+  --eco-spixi: url('/assets/light/eco-spixi.svg');
+  --efficiency: url('/assets/light/efficiency.svg');
+  --parnters: url('/assets/light/partners.svg');
+  --privacy: url('/assets/light/privacy.svg');
+  --spixi-eco: url('/assets/light/spixi-eco.png');
+  --spixi-uc: url('/assets/light/spixi-uc.png');
+  --why: url('/assets/light/why.svg');
   --spixi-bg: url('/assets/light/spixi-bg.png');
-  --hero-gradient: var(--colors-surface-01);
+  --top-tech: url('/assets/light/top-tech.svg');
+  --ixi-currency: url('/assets/light/ixi-currency.svg');
+  --spixi-rotated: url('/assets/light/spixi-rotate.png');
+  --partnerships: url('/assets/light/partnerships.svg');
+  --hero-gradient: linear-gradient(
+      112.75deg,
+      #e2f6fd 2.08%,
+      #f2f7ee 51.72%,
+      #e9f0fb 97.54%
+    ),
+    linear-gradient(
+      0deg,
+      var(--colors-surface-01, #fbfcfb),
+      var(--colors-surface-01, #fbfcfb)
+    );
+  --tech-gradient: var(--hero-gradient);
   --fading-border-horizontal: linear-gradient(
     90deg,
     #fbfcfb 0%,
@@ -30,12 +53,79 @@ body {
     #c0c8c4 77.5%,
     #f2f4f3 98%
   );
+  --cardGradient: linear-gradient(
+      112.75deg,
+      #e2f6fd 2.08%,
+      #f2f7ee 51.72%,
+      #e9f0fb 97.54%
+    ),
+    linear-gradient(
+      0deg,
+      var(--colors-surface-01, #fbfcfb),
+      var(--colors-surface-01, #fbfcfb)
+    );
+  --cardGradient2: var(--cardGradient);
+  --sectionGradient: linear-gradient(112.75deg, #e2f6fd 2.08%, #f2f7ee 68.42%),
+    linear-gradient(
+      0deg,
+      var(--colors-surface-01, #fbfcfb),
+      var(--colors-surface-01, #fbfcfb)
+    );
+  --currency-gradient: linear-gradient(
+      112.75deg,
+      #e2f6fd 2.08%,
+      #f2f7ee 51.72%,
+      #e9f0fb 97.54%
+    ),
+    linear-gradient(
+      0deg,
+      var(--colors-surface-01, #fbfcfb),
+      var(--colors-surface-01, #fbfcfb)
+    );
+  --resources-gradient: radial-gradient(
+      173.13% 177.27% at 141.29% -38.75%,
+      rgba(48, 162, 25, 0.3) 13.71%,
+      rgba(34, 73, 87, 0.225) 41.04%,
+      rgba(86, 16, 126, 0.130677) 67%,
+      rgba(0, 0, 0, 0) 89.85%
+    ),
+    linear-gradient(0deg, #0a0f0c, #0a0f0c);
 
   //DARK
   html.dark & {
-    --pattern: url('/assets/dark/pattern-right.svg');
+    --build: url('/assets/dark/build.svg');
+    --eco-spixi: url('/assets/dark/eco-spixi.svg');
+    --efficiency: url('/assets/dark/efficiency.svg');
+    --parnters: url('/assets/dark/partners.svg');
+    --privacy: url('/assets/dark/privacy.svg');
+    --spixi-eco: url('/assets/dark/spixi-eco.png');
+    --spixi-uc: url('/assets/dark/spixi-uc.png');
+    --why: url('/assets/dark/why.svg');
     --spixi-bg: url('/assets/dark/spixi-bg.png');
-    --hero-gradient: var(--colors-surface-01);
+    --top-tech: url('/assets/dark/top-tech.svg');
+    --ixi-currency: url('/assets/dark/ixi-currency.svg');
+    --spixi-rotated: url('/assets/dark/spixi-rotate.png');
+    --partnerships: url('/assets/dark/partnerships.svg');
+    --hero-gradient: linear-gradient(113.05deg, #0a0e07 -0.14%, #02201e 46.25%);
+    --tech-gradient: radial-gradient(
+        173.13% 177.27% at 141.29% -38.75%,
+        rgba(48, 162, 25, 0.3) 13.71%,
+        rgba(34, 73, 87, 0.225) 41.04%,
+        rgba(86, 16, 126, 0.130677) 67%,
+        rgba(0, 0, 0, 0) 89.85%
+      ),
+      linear-gradient(0deg, #0a0f0c, #0a0f0c);
+    --currency-gradient: radial-gradient(
+        57.77% 138.74% at 7.69% 16.52%,
+        rgba(229, 87, 232, 0.05) 0%,
+        rgba(102, 87, 232, 0.1125) 35%,
+        rgba(24, 107, 201, 0.1125) 84.5%
+      ),
+      linear-gradient(
+        0deg,
+        var(--colors-surface-01, #0a0f0c),
+        var(--colors-surface-01, #0a0f0c)
+      );
     --fading-border-horizontal: linear-gradient(
       90deg,
       #0a0f0c 0%,
@@ -50,6 +140,32 @@ body {
       #646464 77.93%,
       #0a0f0c 98%
     );
+    --cardGradient: var(--colors-surface-02);
+    --cardGradient2: linear-gradient(
+        112.75deg,
+        #042c39 2.08%,
+        #0f393d 51.72%,
+        #092454 97.54%
+      ),
+      linear-gradient(
+        0deg,
+        var(--colors-surface-01, #0a0f0c),
+        var(--colors-surface-01, #0a0f0c)
+      );
+    --sectionGradient: linear-gradient(112.75deg, #02161d 2.08%, #0d1109 68.42%),
+      linear-gradient(
+        0deg,
+        var(--colors-surface-01, #0a0f0c),
+        var(--colors-surface-01, #0a0f0c)
+      );
+    --resources-gradient: radial-gradient(
+        173.13% 177.27% at 141.29% -38.75%,
+        rgba(48, 162, 25, 0.3) 13.71%,
+        rgba(34, 73, 87, 0.225) 41.04%,
+        rgba(86, 16, 126, 0.130677) 67%,
+        rgba(0, 0, 0, 0) 89.85%
+      ),
+      linear-gradient(0deg, #0a0f0c, #0a0f0c);
   }
 }
 
@@ -72,38 +188,6 @@ a {
 .bodyLayout {
   display: flex;
   flex-direction: column;
-}
-
-.body-slide {
-  animation: rotate3D 0.5s forwards;
-}
-
-@keyframes bounceSkew {
-  0%,
-  100% {
-    transform: translateX(0) skew(0deg);
-  }
-  25% {
-    transform: translateX(-10px) skew(-10deg);
-  }
-  50% {
-    transform: translateX(10px) skew(10deg);
-  }
-  75% {
-    transform: translateX(-5px) skew(-5deg);
-  }
-}
-
-@keyframes rotate3D {
-  0% {
-    transform: rotateY(0deg);
-  }
-  50% {
-    transform: rotateY(180deg);
-  }
-  100% {
-    transform: rotateY(0deg);
-  }
 }
 
 @layer base {
@@ -169,4 +253,17 @@ a {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.topRetro {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1249px;
+
+  //@include mq('sm') {
+  //  display: none;
+  //}
 }

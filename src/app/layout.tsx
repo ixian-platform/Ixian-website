@@ -6,6 +6,7 @@ import Cookies from 'js-cookie';
 import { getLocale, getMessages } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
 import { Inter, Space_Grotesk } from 'next/font/google';
+import CookiesBanner from '@components/CookiesBanner/CookiesBanner';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -39,6 +40,7 @@ export default async function RootLayout({
             <Navbar />
             {children}
             <Footer />
+            <CookiesBanner />
           </body>
         </NextIntlClientProvider>
       </html>

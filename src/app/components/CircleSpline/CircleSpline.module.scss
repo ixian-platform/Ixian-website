@@ -1,0 +1,20 @@
+@use '@styles/mixins' as *;
+
+.circleSpline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  > canvas {
+    position: absolute;
+    top: -26px;
+    right: -300px;
+    width: 800px !important;
+    height: 800px !important;
+
+    @include mq('sm') {
+      display: none !important;
+    }
+  }
+}

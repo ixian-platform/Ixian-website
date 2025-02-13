@@ -8,15 +8,6 @@
   .featuresWrapper {
     padding: var(--spacing-super-xxl) var(--spacing-md);
 
-    .topRetro {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      max-width: 1249px;
-    }
-
     .content {
       display: flex;
       flex-direction: column;

@@ -18,6 +18,8 @@
 
   @include mq('sm') {
     max-width: unset;
+    padding-left: 12px;
+    padding-right: 12px;
   }
 
   .content {
@@ -25,7 +27,7 @@
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    gap: var(--spacing-xxs);
+    gap: var(--spacing-xs);
     transition: all 0.5s ease-in-out;
 
     .icon {
@@ -93,7 +95,6 @@
   }
 
   &.enableHoverImage {
-    border: none;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

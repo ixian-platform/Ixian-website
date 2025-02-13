@@ -6,6 +6,7 @@ import github from '@assets/socials/github.svg';
 import reddit from '@assets/socials/reddit.svg';
 import spixi from '@assets/socials/spixi.svg';
 import telegram from '@assets/socials/telegram.svg';
+import { ixianLinkedIn } from '@utils/constants';
 
 export const socials = [
   {
@@ -17,7 +18,7 @@ export const socials = [
   {
     img: linkedin,
     alt: 'linkedin',
-    href: 'https://www.linkedin.com/company/ixian-platform',
+    href: ixianLinkedIn,
     label: 'Linkedin',
   },
   {

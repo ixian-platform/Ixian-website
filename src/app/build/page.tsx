@@ -4,11 +4,12 @@ import TextElement from '@components/TextElement/TextElement';
 import Button from '@components/Button/Button';
 import MyIcon from '@components/MyIcon/MyIcon';
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
-import code1 from '@assets/code1.svg';
 import WhyIxian from '@/app/containers/WhyIxian/WhyIxian';
 import StartBuildingNow from '@/app/containers/StartBuildingNow/StartBuildingNow';
 import { generateSEO } from '@utils/seo';
+import { ixidocs } from '@utils/constants';
+import Image from 'next/image';
+import buildHeroImage from '@assets/other/build-hero.png';
 
 export async function generateMetadata() {
   return generateSEO({
@@ -40,15 +41,27 @@ export default function Build() {
   return (
     <section className={classes.page}>
       <HeroSection
-        className={classes.techHero}
+        sectionClassName={classes.techHero}
         title={<TextElement type={'display-md'}>{t('title')}</TextElement>}
         subtitle={t('subtitle')}
         ctaContent={
-          <Button leadingIcon={<MyIcon name={'EastRounded'} />}>
+          <Button
+            href={ixidocs}
+            isExternal
+            leadingIcon={<MyIcon name={'EastRounded'} />}
+          >
             {t('cta')}
           </Button>
         }
-        leftContainer={<Image src={code1} alt={'code1'} />}
+        leftContainer={
+          <Image
+            src={buildHeroImage}
+            alt={'code'}
+            priority
+            quality={100}
+            width={600}
+          />
+        }
       />
       <WhyIxian />
       <StartBuildingNow
@@ -56,7 +69,10 @@ export default function Build() {
         subtitle={t('readyToBuildSubtitle')}
         cta={
           <Button
-            variant={'outlined-2'}
+            variant={'outlined'}
+            isInverse
+            href={ixidocs}
+            isExternal
             leadingIcon={<MyIcon name={'EastRounded'} />}
           >
             {t('getStarted')}

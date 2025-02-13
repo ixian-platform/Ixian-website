@@ -23,6 +23,7 @@
       @include mq('xs') {
         flex-direction: column;
         gap: var(--spacing-md);
+        gap: 40px;
       }
 
       .leftContent {
@@ -51,7 +52,7 @@
 
         @include mq('sm') {
           display: grid;
-          gap: var(--spacing-sm);
+          gap: 40px;
           grid-template-columns: repeat(2, 1fr);
         }
 

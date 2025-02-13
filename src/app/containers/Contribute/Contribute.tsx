@@ -11,6 +11,7 @@ import Chip from '@components/Chip/Chip';
 import Button from '@components/Button/Button';
 import MyIcon from '@components/MyIcon/MyIcon';
 import { useTranslations } from 'next-intl';
+import { ixianGitHub, Routes, Section } from '@utils/constants';
 
 const st = await getServerTranslations();
 
@@ -52,12 +53,17 @@ const Contribute = () => {
         ctaContent={
           <>
             <Button
+              isInverse
+              href={ixianGitHub}
+              isExternal
               variant={'outlined'}
               leadingIcon={<MyIcon name={'GitHub'} />}
             >
               {t('cta1')}
             </Button>
             <Button
+              isInverse
+              href={`${Routes.ABOUT_US}$${Section.PARTNERSHIPS}`}
               variant={'text'}
               leadingIcon={<MyIcon name={'EastRounded'} />}
             >
@@ -70,6 +76,7 @@ const Contribute = () => {
         data={singleInfoData}
         className={classes.info}
         singleInfoClassName={classes.singleInfo}
+        isInverse
       />
     </ContentWrapper>
   );

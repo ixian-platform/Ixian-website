@@ -1,28 +1,89 @@
+@use '@styles/mixins' as *;
+@use '@styles/typograhphy' as *;
+
 .foundersSection {
   width: 100%;
-  background: var(--colors-surface-inverse);
+  background: var(--colors-surface-01);
 
   .founders {
     padding: var(--spacing-super-xl) var(--spacing-md);
 
-    .cardsContainer {
-      display: flex;
-      gap: 32px;
-      flex-wrap: wrap;
+    @include mq('sm') {
+      padding: 0 var(--spacing-sm);
+    }
 
-      .card {
+    .foundersCardContainer {
+      background: url('/assets/other/founders.svg'),
+        radial-gradient(
+          173.13% 177.27% at 141.29% -38.75%,
+          rgba(48, 162, 25, 0.3) 13.71%,
+          rgba(34, 73, 87, 0.225) 41.04%,
+          rgba(86, 16, 126, 0.130677) 67%,
+          rgba(0, 0, 0, 0) 89.85%
+        ),
+        linear-gradient(0deg, #0a0f0c, #0a0f0c);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right top;
+      padding: var(--spacing-super) var(--spacing-xl);
+      border-radius: var(--corner-radius-xxl);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: var(--spacing-super);
+
+      .cardsContainer {
         width: 100%;
-        max-width: 252px;
-        background: var(--colors-surface-inverse-2);
-        border-radius: var(--corner-radius-xxl);
-        padding: var(--spacing-md);
         display: flex;
-        flex-direction: column;
-        border: 1px solid var(--colors-outline-inverse-2);
-        min-height: 216px;
-        align-content: center;
+        align-items: center;
         justify-content: center;
-        gap: 20px;
+        gap: 32px;
+
+        @include mq('sm') {
+          flex-direction: column;
+        }
+
+        a {
+          max-width: 252px;
+
+          @include mq('sm') {
+            max-width: unset;
+          }
+        }
+
+        .card {
+          width: 100%;
+          max-width: 252px;
+          background: #0a0f0c;
+          min-height: 168px;
+          border-color: #585a59;
+
+          @include mq('sm') {
+            max-width: unset;
+          }
+
+          svg {
+            color: var(--colors-text-inverse);
+          }
+
+          .cardTitle {
+            @include label-lg;
+            color: var(--colors-text-inverse);
+          }
+        }
+
+        .damir {
+          //background-image: url('/assets/founders/damir.jpg');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+        .chris {
+          //background-image: url('/assets/founders/chris.jpg');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
       }
     }
   }

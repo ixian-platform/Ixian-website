@@ -8,13 +8,9 @@ import Button from '@components/Button/Button';
 import { useTranslations } from 'next-intl';
 import MyIcon from '@components/MyIcon/MyIcon';
 import InteractionCard from '@components/InteractionCard/InteractionCard';
-import Link from 'next/link';
-import coingecko from '@assets/coingecko.svg';
-import nonkyc from '@assets/nonkyc.svg';
-import xeggex from '@assets/xeggex.svg';
-import Image from 'next/image';
-import { coingeckoIxi, nonkycIxi, xeggexIxi } from '@utils/constants';
+import { ixiEmissions, Routes, Section } from '@utils/constants';
 import IxiMetrics from '@components/IxiMetrics/IxiMetrics';
+import ExchangesImages from '@components/ExchangesImages/ExchangesImages';
 
 const IxiCurrency = () => {
   const t = useTranslations('TechnologyPage.ixiCurrency');
@@ -24,6 +20,7 @@ const IxiCurrency = () => {
       asWrapperSection
       className={classes.ixiCurrency}
       sectionClass={classes.ixiCurrencySection}
+      sectionId={Section.IXI_TOKEN}
     >
       <div className={classes.innerCard}>
         <SectionHeader
@@ -32,10 +29,15 @@ const IxiCurrency = () => {
           subtitle={<TextElement type={'body-md'}>{t('subtitle')}</TextElement>}
           ctaContent={
             <>
-              <Button leadingIcon={<MyIcon name={'EastRounded'} />}>
+              <Button
+                href={ixiEmissions}
+                isExternal
+                leadingIcon={<MyIcon name={'EastRounded'} />}
+              >
                 {t('cta1')}
               </Button>
               <Button
+                href={`${Routes.GET_INVOLVED}#${Section.RESOURCES}`}
                 variant={'text'}
                 leadingIcon={<MyIcon name={'DescriptionRounded'} />}
               >
@@ -47,32 +49,24 @@ const IxiCurrency = () => {
         <IxiMetrics />
         <div className={classes.infoCardsContainer}>
           <InteractionCard
-            icon={<MyIcon name={'MultipleStopRounded'} rounded />}
+            className={classes.singleCard}
+            icon={<MyIcon name={'ClearAllRounded'} rounded />}
             title={t('card1.title')}
             description={t('card1.subtitle')}
             fullWidth
           />
           <InteractionCard
-            icon={<MyIcon name={'GrainRounded'} rounded />}
-            title={t('card1.title')}
-            description={t('card1.subtitle')}
+            className={classes.singleCard}
+            icon={<MyIcon name={'CycloneRounded'} rounded />}
+            title={t('card2.title')}
+            description={t('card2.subtitle')}
             fullWidth
           />
         </div>
         <div className={classes.exchangesContainer}>
           <TextElement type={'heading-md'}>{t('exchanges')}</TextElement>
           <TextElement type={'body-sm'}>{t('exchangesSubtitle')}</TextElement>
-          <div className={classes.images}>
-            <Link href={coingeckoIxi} target={'_blank'}>
-              <Image src={coingecko} alt={'coingecko'} />
-            </Link>
-            <Link href={xeggexIxi} target={'_blank'}>
-              <Image src={xeggex} alt={'xeggex'} />
-            </Link>
-            <Link href={nonkycIxi} target={'_blank'}>
-              <Image src={nonkyc} alt={'nonkyc'} />
-            </Link>
-          </div>
+          <ExchangesImages />
         </div>
       </div>
     </ContentWrapper>

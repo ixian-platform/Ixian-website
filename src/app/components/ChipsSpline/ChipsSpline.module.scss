@@ -1,0 +1,20 @@
+@use '@styles/mixins' as *;
+
+.chipsSpline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  > canvas {
+    position: absolute;
+    top: -2%;
+    right: -80px;
+    width: 600px !important;
+    height: 600px !important;
+
+    @include mq('sm') {
+      display: none !important;
+    }
+  }
+}

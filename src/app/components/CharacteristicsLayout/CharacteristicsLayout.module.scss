@@ -11,6 +11,7 @@
   @include mq('sm') {
     grid-template-columns: repeat(1, 1fr);
     justify-items: center;
+    padding: 8px;
   }
 
   &:before,
@@ -21,6 +22,16 @@
     height: 100%;
     width: 1px;
     background: var(--fading-border-vertical);
+
+    :has(.inverse) & {
+      background: linear-gradient(
+        180deg,
+        #0a0f0c 0%,
+        #555555 20.25%,
+        #646464 77.93%,
+        #0a0f0c 98%
+      );
+    }
   }
 
   &:before {
@@ -36,5 +47,21 @@
     display: flex;
     align-items: flex-start;
     gap: var(--spacing-md);
+
+    @include mq('sm') {
+      flex-direction: column;
+    }
+
+    .textContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+
+  &.inverse {
+    .singleInfo svg {
+      color: var(--colors-icon-inverse);
+    }
   }
 }

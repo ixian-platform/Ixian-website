@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import bottomRetro from '@assets/bottom-retro.svg';
 import Button from '@components/Button/Button';
-import { Section } from '@utils/constants';
+import { Routes, Section } from '@utils/constants';
 import MyIcon from '@components/MyIcon/MyIcon';
 
 const GetInvolvedSection = () => {
@@ -55,6 +55,7 @@ const GetInvolvedSection = () => {
             }
             ctaContent={
               <Button
+                href={`${Routes.TECHNOLOGY}#${Section.IXIAN_DLT}`}
                 leadingIcon={<MyIcon name={'EastRounded'} />}
                 variant={'outlined'}
               >
@@ -78,6 +79,7 @@ const GetInvolvedSection = () => {
             }
             ctaContent={
               <Button
+                href={Routes.GET_INVOLVED}
                 leadingIcon={<MyIcon name={'EastRounded'} />}
                 variant={'outlined'}
               >

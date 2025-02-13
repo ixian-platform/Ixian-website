@@ -2,26 +2,27 @@
 @use '@styles/mixins' as *;
 
 .metricsSection {
-  background: var(--colors-surface-01);
+  background: var(--sectionGradient);
   border-top: 4px solid;
   border-image: linear-gradient(45deg, #6ee17f, #a546e4, #4d7df6) 1;
-}
 
-.contentWrapper {
-  width: 100%;
-  position: relative;
-
-  .mainCard {
-    background-color: var(--colors-surface-01);
-    background-image: var(--pattern);
-    background-position: top right;
-    background-size: 45%;
-    background-repeat: no-repeat;
-    padding: var(--spacing-super-xl) 24px;
+  .metrics {
+    width: 100%;
+    position: relative;
+    padding: var(--spacing-super-xl) var(--spacing-md);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-super);
     align-items: flex-start;
+    background-image: var(--why);
+    background-repeat: no-repeat;
+    background-position: right top;
+
+    @include mq('sm') {
+      padding: 64px var(--spacing-sm);
+      background-size: contain;
+      background-position: center -80px;
+    }
 
     .patternImg {
       position: absolute;
@@ -32,7 +33,6 @@
 
     .metricsContainer {
       width: 100%;
-      background: var(--colors-surface-01);
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, auto);
@@ -74,7 +74,7 @@
         align-items: flex-start;
 
         :first-child {
-          color: var(--colors-text-info);
+          color: var(--colors-text-action);
         }
 
         .number {

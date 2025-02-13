@@ -1,3 +1,5 @@
+@use '@styles/mixins' as *;
+
 .page {
   width: 100%;
   height: 100%;
@@ -6,15 +8,66 @@
 }
 
 .techHero {
+  background: var(--tech-gradient) !important;
+}
+
+.aboutUsHero {
+  background: var(--colors-surface-01);
   padding: var(--spacing-super-xl) var(--spacing-md);
+  display: flex;
+  justify-content: center;
+
+  .aboutUsHeroSectionHeader {
+    max-width: 800px;
+  }
+
+  @include mq('sm') {
+    padding: 64px var(--spacing-sm);
+  }
 }
 
 .notFoundSection {
   width: 100%;
   min-height: 800px;
-  background: var(--colors-surface-01);
+  background: var(--colors-surface-02);
 
   .notFound {
-    padding: 120px 16px;
+    padding: 100px 16px;
+
+    .notFoundInnerCard {
+      background: var(--colors-surface-01);
+      padding: var(--spacing-super-xxl) var(--spacing-xl);
+      border-radius: var(--corner-radius-xxl);
+      border: 2px solid #c8eefb;
+    }
+  }
+}
+
+.techPageSpline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  @include mq('md') {
+    max-height: 500px;
+    display: none;
+  }
+
+  > canvas {
+    position: absolute;
+    top: -18%;
+    right: 4%;
+    width: 800px !important;
+    height: 800px !important;
+
+    @include mq('md') {
+      //transform: translate(40%, -40%);
+      display: none;
+    }
+    //
+    //@include mq('xs') {
+    //  transform: translate(40%, -50%);
+    //}
   }
 }

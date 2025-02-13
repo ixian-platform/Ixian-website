@@ -14,6 +14,14 @@ import ixilabs from '@assets/partners/ixilabs.svg';
 import robotina from '@assets/partners/robotina.svg';
 import vivat from '@assets/partners/vivat.svg';
 import Link from 'next/link';
+import {
+  benchmarkedLink,
+  evenLink,
+  ixiLabs,
+  robotinaLink,
+  Routes,
+  vivatLink,
+} from '@utils/constants';
 
 const Partners = () => {
   const t = useTranslations('Partners');
@@ -31,16 +39,22 @@ const Partners = () => {
         className={classes.buildTogether}
       />
       <div className={classes.partnerImages}>
-        <Link href={'https://ixilabs.com/'} target={'_blank'}>
+        <Link href={ixiLabs} target={'_blank'}>
           <Image src={ixilabs} alt={'ixilabs'} />
         </Link>
-        <Link href={'https://robotina.com/'} target={'_blank'}>
+        <Link href={robotinaLink} target={'_blank'}>
           <Image src={robotina} alt={'robotina'} />
         </Link>
-        <Image src={vivat} alt={'vivat'} />
-        <Image src={benchmarked} alt={'benchmarked'} />
+        <Link href={vivatLink} target={'_blank'}>
+          <Image src={vivat} alt={'vivat'} />
+        </Link>
+        <Link href={benchmarkedLink} target={'_blank'}>
+          <Image src={benchmarked} alt={'benchmarked'} />
+        </Link>
         {/*<Image src={nodezro} alt={'nodezro'} />*/}
-        <Image src={even} alt={'even'} />
+        <Link href={evenLink} target={'_blank'}>
+          <Image src={even} alt={'even'} />
+        </Link>
       </div>
       <SectionHeader
         className={classes.buildTogether}
@@ -57,6 +71,7 @@ const Partners = () => {
         }
         ctaContent={
           <Button
+            href={Routes.ABOUT_US}
             variant={'outlined-2'}
             leadingIcon={<MyIcon name={'EastRounded'} />}
           >

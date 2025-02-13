@@ -6,44 +6,7 @@ import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import classNames from 'classnames';
 import MyIcon from '@components/MyIcon/MyIcon';
-
-interface Milestone {
-  title: string;
-  description: string;
-}
-
-interface MilestonesData {
-  index: number;
-  year: string;
-  milestones: Milestone[];
-}
-
-const milestonesData: MilestonesData[] = [
-  {
-    index: 0,
-    year: '2017',
-    milestones: [
-      {
-        title: 'Developed and deployed Ixian Prototypes',
-        description: 'Ixian DLT Prototype, Ixian S2 prototype and Spixi...',
-      },
-      {
-        title: 'Did something else',
-        description: 'something else...',
-      },
-    ],
-  },
-  {
-    index: 1,
-    year: '2018',
-    milestones: [
-      {
-        title: 'Spixi app launch',
-        description: 'We launched the Spixi app...',
-      },
-    ],
-  },
-];
+import { MilestonesData, milestonesData } from '@utils/milestonesUtils';
 
 const Milestones = () => {
   const t = useTranslations('TechnologyPage.milestones');
@@ -57,6 +20,8 @@ const Milestones = () => {
       <div className={classes.years}>
         {milestonesData?.map((item) => (
           <TextElement
+            style={{ cursor: 'pointer' }}
+            onClick={() => setSelectedMilestone(item)}
             key={item.index}
             type={
               selectedMilestone?.year === item.year ? 'label-lg' : 'body-lg'

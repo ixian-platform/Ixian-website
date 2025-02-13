@@ -33,16 +33,13 @@ const IxiMetrics = () => {
         </div>
         <div className={classes.insideSingle}>
           <TextElement type={'heading-lg'} as={'div'}>
-            <TypingAnimation text={'<$0.00001*'} className={classes.number} />
+            <TypingAnimation text={'<$0.00001'} className={classes.number} />
           </TextElement>
           <TextElement type={'body-sm'}>
             {t('metrics.transactionFees')}
           </TextElement>
         </div>
       </div>
-      <TextElement className={classes.note} type={'body-sm'}>
-        {t('metrics.note')}
-      </TextElement>
     </div>
   );
 };

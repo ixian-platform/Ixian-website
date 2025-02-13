@@ -14,6 +14,11 @@
   position: relative;
   overflow: hidden;
 
+  @include mq('sm') {
+    padding-top: 32px;
+    min-height: 660px;
+  }
+
   div,
   section {
     z-index: 99;
@@ -30,12 +35,33 @@
 }
 
 .secondary {
-  background-image: var(--spixi-bg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-image: var(--spixi-eco), var(--eco-spixi);
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, 60%;
+  background-position:
+    right,
+    right top;
 
-  @include mq('xs') {
-    //background-position: right;
+  @include mq('sm') {
+    background-image: var(--spixi-rotated), var(--eco-spixi);
+    background-size: 90%, 90%;
+    background-position:
+      50% 120%,
+      200px -80px;
+  }
+}
+
+.tertiary {
+  background-image: var(--spixi-rotated), var(--eco-spixi);
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;
+  background-position: right, 60%;
+
+  @include mq('sm') {
+    background-image: var(--spixi-rotated), var(--eco-spixi);
+    background-size: 90%, 90%;
+    background-position:
+      50% 120%,
+      200px -80px;
   }
 }

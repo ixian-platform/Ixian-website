@@ -2,11 +2,11 @@ import classes from './UseCases.module.scss';
 import ContentWrapper from '@components/ContentWrapper/ContentWrapper';
 import Chip from '@components/Chip/Chip';
 import TextElement from '@components/TextElement/TextElement';
-import Button from '@components/Button/Button';
 import SectionHeader from '@components/SectionHeader/SectionHeader';
 import { useTranslations } from 'next-intl';
 import InteractionCard from '@components/InteractionCard/InteractionCard';
 import MyIcon from '@components/MyIcon/MyIcon';
+import { ixianFirstArticle } from '@utils/constants';
 
 const UseCases = () => {
   const t = useTranslations('UseCases');
@@ -29,14 +29,10 @@ const UseCases = () => {
             {t('subtitle')}
           </TextElement>
         }
-        ctaContent={
-          <Button leadingIcon={<MyIcon name={'EastRounded'} />}>
-            {t('exploreUseCases')}
-          </Button>
-        }
       />
       <div className={classes.caseCards}>
         <InteractionCard
+          className={classes.eachCard}
           onHoverHeader={
             <Chip
               content={t('inProgress')}
@@ -50,6 +46,7 @@ const UseCases = () => {
           disableScale
         />
         <InteractionCard
+          className={classes.eachCard}
           onHoverHeader={
             <Chip
               content={t('inProgress')}
@@ -63,13 +60,10 @@ const UseCases = () => {
           disableScale
         />
         <InteractionCard
-          onHoverHeader={
-            <Chip
-              content={t('inProgress')}
-              variant={'outlined'}
-              isTextInversed
-            />
-          }
+          className={classes.eachCard}
+          href={ixianFirstArticle}
+          isExternal
+          onHoverHeader={<MyIcon name={'EastRounded'} rounded />}
           title={t('card3.title')}
           description={t('card3.subtitle')}
           hoverImageType={'enterprise'}

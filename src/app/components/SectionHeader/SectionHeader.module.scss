@@ -11,6 +11,11 @@
   justify-content: space-between;
   height: 100%;
 
+  @include mq('sm') {
+    width: 100%;
+    flex: unset;
+  }
+
   .ctaSection {
     width: 100%;
     margin-top: 28px;
@@ -18,7 +23,7 @@
     gap: var(--spacing-xs);
 
     @include mq('md') {
-      flex-wrap: wrap;
+      flex-direction: column;
     }
   }
 }
@@ -29,6 +34,24 @@
 
 .inverseText {
   color: var(--colors-text-inverse);
+}
+
+.centerAll {
+  align-items: center;
+  text-align: center;
+
+  @include mq('sm') {
+    align-items: flex-start;
+    text-align: unset;
+
+    .ctaSection {
+      justify-content: flex-start;
+    }
+  }
+
+  .ctaSection {
+    justify-content: center;
+  }
 }
 
 .slideUp {

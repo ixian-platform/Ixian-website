@@ -12,7 +12,7 @@ import ixianLogo from '@assets/ixian-logo.svg';
 import Image from 'next/image';
 import ThemeSwitcher from '@components/ThemeSwitcher/ThemeSwitcher';
 import React from 'react';
-import { technologySubmenu } from '@utils/menuUtils';
+import useDetectScroll from '@smakss/react-scroll-direction';
 
 export const linksData = [
   {
@@ -22,7 +22,6 @@ export const linksData = [
   {
     label: 'Technology',
     href: Routes.TECHNOLOGY,
-    submenu: technologySubmenu,
   },
   {
     label: 'Build',
@@ -31,19 +30,17 @@ export const linksData = [
   {
     label: 'Documentation',
     href: ixidocs,
+    isExternal: true,
   },
   {
     label: 'Get Involved',
     href: Routes.GET_INVOLVED,
   },
-  {
-    label: 'About Us',
-    href: Routes.ABOUT_US,
-  },
 ];
 
 const Navbar = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const { scrollDir } = useDetectScroll();
 
   const desktopMenu = (
     <>
@@ -58,7 +55,11 @@ const Navbar = () => {
       </Link>
       <div className={classes.links}>
         {linksData.map((link, index) => (
-          <Link key={index} href={link.href}>
+          <Link
+            key={index}
+            href={link.href}
+            target={link.isExternal ? '_blank' : ''}
+          >
             {link.label}
           </Link>
         ))}
@@ -77,7 +78,11 @@ const Navbar = () => {
   );
 
   return (
-    <nav className={classes.navbar}>
+    <nav
+      className={classNames(classes.navbar, {
+        [classes.hidden]: scrollDir === 'down' || undefined,
+      })}
+    >
       <ContentWrapper
         className={classNames(classes.content, {
           [classes.contentMobile]: isMobile,

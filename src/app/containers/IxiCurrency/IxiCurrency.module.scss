@@ -4,30 +4,44 @@
 .ixiCurrencySection {
   width: 100%;
   background: var(--colors-surface-01);
+  scroll-margin-top: var(--spacing-super-xl);
 
   .ixiCurrency {
     padding: var(--spacing-super-xl) var(--spacing-md);
 
-    .innerCard {
-      background: radial-gradient(
-        165.4% 152.35% at 111.86% 19.02%,
-        rgba(160, 240, 145, 0.105) 13.71%,
-        rgba(166, 219, 238, 0.1125) 41.04%,
-        rgba(20, 82, 126, 0.09) 67%,
-        rgba(255, 255, 255, 0) 89.85%,
-        #a6dbee1d 10%
-      );
+    @include mq('sm') {
+      padding: 64px var(--spacing-sm);
+    }
 
+    .innerCard {
       padding: var(--spacing-super) var(--spacing-xl);
       border-radius: var(--corner-radius-xxl);
       display: flex;
       flex-direction: column;
       gap: 80px;
+      background: var(--ixi-currency), var(--currency-gradient);
+      background-position: top right;
+      background-repeat: no-repeat;
+
+      @include mq('sm') {
+        padding: 40px 16px;
+        gap: 40px;
+        background-size: contain, auto;
+        background-position:
+          60px top,
+          0 0;
+      }
 
       .infoCardsContainer {
         display: flex;
         justify-content: space-between;
         gap: 40px;
+
+        .singleCard {
+          @include mq('sm') {
+            padding-bottom: 32px;
+          }
+        }
 
         @include mq('md') {
           flex-direction: column;
@@ -39,16 +53,6 @@
         flex-direction: column;
         gap: 8px;
         align-items: center;
-
-        .images {
-          padding: 44px 0;
-          display: flex;
-          gap: 80px;
-
-          @include mq('md') {
-            flex-direction: column;
-          }
-        }
       }
     }
   }

@@ -1,5 +1,5 @@
 import classes from './InteractionCard.module.scss';
-import { ReactNode } from 'react';
+import { Fragment, ReactNode } from 'react';
 import classNames from 'classnames';
 import Link from 'next/link';
 
@@ -18,6 +18,7 @@ interface InteractionCardProps {
   onHoverHeader?: ReactNode;
   titleClassName?: string;
   href?: string;
+  isExternal?: boolean;
 }
 
 const InteractionCard = ({
@@ -35,8 +36,44 @@ const InteractionCard = ({
   hoverImageType,
   titleClassName,
   href,
+  isExternal,
 }: InteractionCardProps) => {
   const cardContent = (
+    <Fragment>
+      <div className={classes.content}>
+        {headerAdditionalContent}
+        {icon && <div className={classes.icon}>{icon}</div>}
+        <h3 className={classNames(classes.title, titleClassName)}>{title}</h3>
+        {description && <p className={classes.description}>{description}</p>}
+      </div>
+      {onHoverHeader && (
+        <div className={classes.onHoverHeader}>{onHoverHeader}</div>
+      )}
+      {additionalContent}
+    </Fragment>
+  );
+
+  return href ? (
+    <Link
+      href={href}
+      target={isExternal ? '_blank' : undefined}
+      passHref
+      className={classNames(
+        classes.interactionCard,
+        className,
+        classes[bgImageVariant],
+        classes[hoverImageType || ''],
+        {
+          [classes.fullWidth]: fullWidth,
+          [classes.enableHover]: enableHover,
+          [classes.disableScale]: disableScale,
+          [classes.enableHoverImage]: !!hoverImageType,
+        }
+      )}
+    >
+      {cardContent}
+    </Link>
+  ) : (
     <div
       className={classNames(
         classes.interactionCard,
@@ -51,25 +88,8 @@ const InteractionCard = ({
         }
       )}
     >
-      <div className={classes.content}>
-        {headerAdditionalContent}
-        {icon && <div className={classes.icon}>{icon}</div>}
-        <h3 className={classNames(classes.title, titleClassName)}>{title}</h3>
-        {description && <p className={classes.description}>{description}</p>}
-      </div>
-      {onHoverHeader && (
-        <div className={classes.onHoverHeader}>{onHoverHeader}</div>
-      )}
-      {additionalContent}
-    </div>
-  );
-
-  return href ? (
-    <Link href={href} passHref style={{ width: '100%' }}>
       {cardContent}
-    </Link>
-  ) : (
-    cardContent
+    </div>
   );
 };
 

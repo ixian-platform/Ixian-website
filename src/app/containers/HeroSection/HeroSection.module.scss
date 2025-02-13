@@ -1,7 +1,6 @@
 @use '@styles/mixins' as *;
 
 .wrapperSection {
-  background: var(--colors-surface-01);
   border-bottom: 1px solid var(--colors-outline-02);
   background: var(--hero-gradient);
   position: relative;
@@ -11,39 +10,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 100px;
+    gap: 80px;
+
+    @include mq('sm') {
+      padding: 40px var(--spacing-sm);
+      flex-direction: column;
+      gap: 40px;
+
+      img {
+        max-width: 80%;
+      }
+    }
 
     .customSectionHeader {
       z-index: 1;
-    }
-
-    .chipsSpline {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-
-      @include mq('md') {
-        max-height: 500px;
-        display: none;
-      }
-
-      > canvas {
-        position: absolute;
-        top: 40px;
-        right: 10%;
-        width: 800px !important;
-        height: 800px !important;
-
-        @include mq('md') {
-          //transform: translate(40%, -40%);
-          display: none;
-        }
-        //
-        //@include mq('xs') {
-        //  transform: translate(40%, -50%);
-        //}
-      }
     }
   }
 }
