@@ -99,6 +99,25 @@
     background-size: cover;
     background-position: center;
 
+    @include mq('sm') {
+      background-size: 110%;
+      &.access {
+        background-image: url('/assets/access.svg');
+      }
+
+      &.dapps {
+        background-image: url('/assets/dapps.svg');
+      }
+
+      &.enterprise {
+        background-image: url('/assets/enterprise.svg');
+      }
+
+      &.iot {
+        background-image: url('/assets/iot.svg');
+      }
+    }
+
     &:hover {
       .content {
         transform: translateY(50%);

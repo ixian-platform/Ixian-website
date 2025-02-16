@@ -48,7 +48,11 @@ const Footer = () => {
                 {t('learn')}
               </TextElement>
               {learnMenu.map((item) => (
-                <Link href={item.href} key={item.title}>
+                <Link
+                  href={item.href}
+                  key={item.title}
+                  target={item.isExternal ? '_blank' : ''}
+                >
                   <TextElement type={'label-sm'}>{item.title}</TextElement>
                 </Link>
               ))}
@@ -58,7 +62,11 @@ const Footer = () => {
                 {t('resources')}
               </TextElement>
               {resourcesMenu.map((item) => (
-                <Link href={item.href} key={item.title}>
+                <Link
+                  href={item.href}
+                  key={item.title}
+                  target={item.isExternal ? '_blank' : ''}
+                >
                   <TextElement type={'label-sm'}>{item.title}</TextElement>
                 </Link>
               ))}
@@ -68,7 +76,11 @@ const Footer = () => {
                 {t('getInvolved')}
               </TextElement>
               {getInvolvedMenu.map((item) => (
-                <Link href={item.href} key={item.title}>
+                <Link
+                  href={item.href}
+                  key={item.title}
+                  target={item.isExternal ? '_blank' : ''}
+                >
                   <TextElement type={'label-sm'}>{item.title}</TextElement>
                 </Link>
               ))}

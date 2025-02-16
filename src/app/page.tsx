@@ -4,7 +4,7 @@ import { generateSEO } from '@utils/seo';
 
 export async function generateMetadata() {
   return generateSEO({
-    title: 'Ixian Home',
+    title: 'Ixian',
     description: '',
     keywords: [],
     image: '/',

@@ -7,6 +7,7 @@ import { getLocale, getMessages } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
 import { Inter, Space_Grotesk } from 'next/font/google';
 import CookiesBanner from '@components/CookiesBanner/CookiesBanner';
+import ScrollToTop from '@components/ScrollToTop/ScrollToTop';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -27,12 +28,12 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <ThemeProvider>
-      <html
-        lang={locale}
-        className={Cookies.get('themeMode')}
-        suppressHydrationWarning={true}
-      >
+    <html
+      lang={locale}
+      className={Cookies.get('themeMode') || 'dark'}
+      suppressHydrationWarning={true}
+    >
+      <ThemeProvider>
         <NextIntlClientProvider messages={messages}>
           <body
             className={`${spaceGrotesk.className} ${inter.className} bodyLayout`}
@@ -40,10 +41,11 @@ export default async function RootLayout({
             <Navbar />
             {children}
             <Footer />
+            <ScrollToTop />
             <CookiesBanner />
           </body>
         </NextIntlClientProvider>
-      </html>
-    </ThemeProvider>
+      </ThemeProvider>
+    </html>
   );
 }

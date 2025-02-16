@@ -6,10 +6,17 @@ import classNames from 'classnames';
 import Link from 'next/link';
 import { linksData } from '@components/Navbar/Navbar';
 import ThemeSwitcher from '@components/ThemeSwitcher/ThemeSwitcher';
+import { useClickAway } from '@uidotdev/usehooks';
 
 const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [shouldHide, setShouldHide] = useState(false);
+
+  // eslint-disable-next-line  @typescript-eslint/no-explicit-any
+  const ref: any = useClickAway(() => {
+    setShouldHide(false);
+    setIsOpen(false);
+  });
 
   const toggleMenu = () => {
     setShouldHide(false);
@@ -25,7 +32,7 @@ const HamburgerMenu = () => {
   }, [isOpen]);
 
   return (
-    <section className={classes.hamburgerMenu}>
+    <section className={classes.hamburgerMenu} ref={ref}>
       <button className={classes.hamburgerIcon} onClick={toggleMenu}>
         <span className={classNames({ [classes.open]: isOpen })}></span>
         <span className={classNames({ [classes.open]: isOpen })}></span>
@@ -42,7 +49,7 @@ const HamburgerMenu = () => {
             {link.label}
           </Link>
         ))}
-        <ThemeSwitcher />
+        <ThemeSwitcher toggleMenu={toggleMenu} />
       </div>
     </section>
   );

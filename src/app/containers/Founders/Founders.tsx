@@ -30,7 +30,7 @@ const Founders = () => {
         />
         <div className={classes.cardsContainer}>
           <InteractionCard
-            href={'as'}
+            href={t('markoLinkedin')}
             isExternal
             icon={<MyIcon name={'LinkedIn'} width={40} height={40} />}
             title={t('marko')}
@@ -38,7 +38,7 @@ const Founders = () => {
             titleClassName={classes.cardTitle}
           />
           <InteractionCard
-            href={'as'}
+            href={t('chrisLinkedin')}
             isExternal
             icon={<MyIcon name={'LinkedIn'} width={40} height={40} />}
             title={t('chris')}
@@ -46,7 +46,7 @@ const Founders = () => {
             titleClassName={classes.cardTitle}
           />
           <InteractionCard
-            href={'as'}
+            href={t('damirLinkedin')}
             isExternal
             icon={<MyIcon name={'LinkedIn'} width={40} height={40} />}
             title={t('damir')}
