@@ -64,4 +64,8 @@ export const getInvolvedMenu: IMenu[] = [
     title: 'Join Community',
     href: Routes.GET_INVOLVED,
   },
+  {
+    title: 'About Us',
+    href: Routes.ABOUT_US,
+  },
 ];

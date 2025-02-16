@@ -1,7 +1,13 @@
 import classes from './Footer.module.scss';
 import ContentWrapper from '@components/ContentWrapper/ContentWrapper';
 import Link from 'next/link';
-import { Routes } from '@utils/constants';
+import {
+  ixianGitHub,
+  ixiLabs,
+  mineIxiLink,
+  Routes,
+  spixiWebsite,
+} from '@utils/constants';
 import TextElement from '@components/TextElement/TextElement';
 import { getInvolvedMenu, learnMenu, resourcesMenu } from '@utils/menuUtils';
 import Image from 'next/image';
@@ -90,7 +96,7 @@ const Footer = () => {
                 {t('external.title')}
               </TextElement>
               <Link
-                href={'/'}
+                href={ixiLabs}
                 target={'_blank'}
                 className={classes.externalLink}
               >
@@ -99,7 +105,7 @@ const Footer = () => {
                 </TextElement>
               </Link>
               <Link
-                href={'/'}
+                href={spixiWebsite}
                 target={'_blank'}
                 className={classes.externalLink}
               >
@@ -107,17 +113,17 @@ const Footer = () => {
                   {t('external.spixi')}
                 </TextElement>
               </Link>
+              {/*<Link*/}
+              {/*  href={'/'}*/}
+              {/*  target={'_blank'}*/}
+              {/*  className={classes.externalLink}*/}
+              {/*>*/}
+              {/*  <TextElement type={'label-sm'}>*/}
+              {/*    {t('external.IXInames')}*/}
+              {/*  </TextElement>*/}
+              {/*</Link>*/}
               <Link
-                href={'/'}
-                target={'_blank'}
-                className={classes.externalLink}
-              >
-                <TextElement type={'label-sm'}>
-                  {t('external.IXInames')}
-                </TextElement>
-              </Link>
-              <Link
-                href={'/'}
+                href={mineIxiLink}
                 target={'_blank'}
                 className={classes.externalLink}
               >
@@ -126,7 +132,7 @@ const Footer = () => {
                 </TextElement>
               </Link>
               <Link
-                href={'/'}
+                href={ixianGitHub}
                 target={'_blank'}
                 className={classes.externalLink}
               >

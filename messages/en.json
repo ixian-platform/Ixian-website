@@ -172,8 +172,8 @@
     },
     "article1": {
       "chip": "Powered by Ixian",
-      "title": "Learn how a chat app that is used by thousands, runs without costs.",
-      "subtitle": "A private chat app and wallet, built on the Ixian decentralized network, operates without server costs while ensuring security and privacy.",
+      "title": "Learn How a Chat App Significantly Reduced Operational Costs",
+      "subtitle": "A private chat app and wallet, built on the Ixian decentralized network, operates with near-zero costs while ensuring security and privacy.",
       "cta": "Read Case Study"
     }
   },
@@ -277,7 +277,7 @@
   "BuildPage": {
     "hero": {
       "title": "Build Smarter, Spend Less",
-      "subtitle": "Launch your product on Ixian and reduce your operational costs.",
+      "subtitle": "Significantly reduce your operational costs and boost security by utilizing Ixian in your products and services.",
       "cta": "Get Started Now",
       "readyToBuild": "Ready to Build?",
       "readyToBuildSubtitle": "Start reducing costs while improving the security and reliability of your project.",
@@ -392,7 +392,7 @@
           "title": "Wallets",
           "subtitle": "Did you know you can mine $IXI? Ixian uses Argon mining for fair distribution. Download the miner, setup and start.",
           "card1": {
-            "href": "https://github.com/ProjectIxian/Ixian-LiteWallet/releases",
+            "href": "https://github.com/ixian-platform/Ixian-LiteWallet/releases",
             "title": "LiteWallet",
             "subtitle": "CLI Based Light Wallet."
           },
@@ -406,7 +406,7 @@
           "title": "$IXI Miners",
           "subtitle": "Did you know you can mine $IXI? Ixian uses Argon mining for fair distribution. Download the miner, setup and start.",
           "card1": {
-            "href": "https://github.com/ProjectIxian/IxiWatt/releases",
+            "href": "https://github.com/ixian-platform/IxiWatt/releases",
             "title": "IXIWatt",
             "subtitle": "Official GUI Miner"
           },
