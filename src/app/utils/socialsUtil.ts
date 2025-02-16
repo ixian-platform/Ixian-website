@@ -6,7 +6,7 @@ import github from '@assets/socials/github.svg';
 import reddit from '@assets/socials/reddit.svg';
 import spixi from '@assets/socials/spixi.svg';
 import telegram from '@assets/socials/telegram.svg';
-import { ixianLinkedIn } from '@utils/constants';
+import { ixianGitHub, ixianLinkedIn } from '@utils/constants';
 
 export const socials = [
   {
@@ -36,7 +36,7 @@ export const socials = [
   {
     img: github,
     alt: 'github',
-    href: 'https://github.com/ProjectIxian',
+    href: ixianGitHub,
     label: 'Github',
   },
   {

@@ -25,14 +25,14 @@ export type Sections = (typeof Section)[keyof typeof Section];
 
 export const ixiLabsEmail = 'info@ixian.io';
 export const ixidocs = 'https://docs.ixian.io/';
-export const ixianGitHub = 'https://github.com/ProjectIxian';
+export const ixianGitHub = 'https://github.com/ixian-platform';
 export const xeggexIxi = 'https://xeggex.com/market/IXI_USDT';
 export const nonkycIxi = 'https://nonkyc.io/market/IXI_USDT';
 export const coingeckoIxi = 'https://www.coingecko.com/en/coins/ixicash';
 export const ixiscope = 'https://explorer.ixian.io/';
 export const spixiWebsite = 'https://spixi.io/';
-export const startDlt = 'https://github.com/ProjectIxian/Ixian-DLT/releases/';
-export const startS2 = 'https://github.com/ProjectIxian/Ixian-S2/releases/';
+export const startDlt = 'https://github.com/ixian-platform/Ixian-DLT/releases';
+export const startS2 = 'https://github.com/ixian-platform/Ixian-S2/releases';
 export const ixiEmissions = 'https://explorer.ixian.io/?p=emissions';
 export const spixiDownload = 'https://www.spixi.io/download';
 export const ixianLinkedIn = 'https://www.linkedin.com/company/ixian-platform';
@@ -43,3 +43,4 @@ export const benchmarkedLink = 'https://benchmarked.co/';
 export const evenLink = 'https://even.si/';
 export const ixianFirstArticle =
   'https://medium.com/ixian/how-spixi-minimized-infrastructure-costs-with-decentralized-technology-8a45ef7c6597';
+export const mineIxiLink = 'https://mineixi.com/';

@@ -19,7 +19,6 @@ const PoweringIxian = () => {
       asWrapperSection
       sectionClass={classes.poweringIxianSection}
       className={classes.poweringIxian}
-      sectionId={Section.RESOURCES}
     >
       <SectionHeader
         title={<TextElement type={'heading-lg'}>{t('title')}</TextElement>}
@@ -27,7 +26,7 @@ const PoweringIxian = () => {
         chipContainer={<Chip content={t('chip')} variant={'outlined'} />}
       />
       <IxiMetrics />
-      <div className={classes.resourcesContainer}>
+      <div className={classes.resourcesContainer} id={Section.RESOURCES}>
         <TextElement type={'heading-sm'}>{t('resources.label')}</TextElement>
         <TextElement type={'heading-lg'}>{t('resources.title')}</TextElement>
         <ExchangesImages forceTheme={'dark'} className={classes.customImages} />
