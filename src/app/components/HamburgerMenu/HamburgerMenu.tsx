@@ -12,6 +12,7 @@ const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [shouldHide, setShouldHide] = useState(false);
 
+  // eslint-disable-next-line  @typescript-eslint/no-explicit-any
   const ref: any = useClickAway(() => {
     setShouldHide(false);
     setIsOpen(false);
