@@ -3,6 +3,7 @@ import { ixidocs, ixiscope, Routes, Section } from '@utils/constants';
 export interface IMenu {
   title: string;
   href: string;
+  isExternal?: boolean;
 }
 
 export const learnMenu: IMenu[] = [
@@ -32,10 +33,12 @@ export const resourcesMenu: IMenu[] = [
   {
     title: 'Docs',
     href: ixidocs,
+    isExternal: true,
   },
   {
-    title: 'White Paper',
+    title: 'Whitepaper',
     href: ixidocs,
+    isExternal: true,
   },
   {
     title: 'Downloads',
@@ -44,6 +47,7 @@ export const resourcesMenu: IMenu[] = [
   {
     title: 'ixiscope',
     href: ixiscope,
+    isExternal: true,
   },
 ];
 

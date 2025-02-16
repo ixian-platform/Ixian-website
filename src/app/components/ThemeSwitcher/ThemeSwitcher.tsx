@@ -5,7 +5,11 @@ import { useTheme } from '@/app/providers/ThemeProvider/ThemeProvider';
 import { useEffect, useState } from 'react';
 import MyIcon from '@components/MyIcon/MyIcon';
 
-const ThemeSwitcher = () => {
+interface ThemeSwitcherProps {
+  toggleMenu?: () => void;
+}
+
+const ThemeSwitcher = ({ toggleMenu }: ThemeSwitcherProps) => {
   const { themeMode, setThemeMode } = useTheme();
   const [isMounted, setIsMounted] = useState(false);
 
@@ -14,8 +18,8 @@ const ThemeSwitcher = () => {
   }, []);
 
   const clickHandler = () => {
-    document.body.classList.add('body-slide');
     setThemeMode(themeMode === 'light' ? 'dark' : 'light');
+    toggleMenu?.();
   };
 
   if (!isMounted) {

@@ -8,7 +8,7 @@ type SEOConfig = {
   path?: string;
 };
 
-const defaultSEO: Metadata = {
+export const defaultSEO: Metadata = {
   title:
     'Open-Source Decentralized Data Streaming | Scalable & Secure Connectivity',
   description:

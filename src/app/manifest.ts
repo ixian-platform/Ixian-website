@@ -6,7 +6,8 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'Ixian',
     short_name: 'Ixian',
-    description: 'Distributed technology for the people',
+    description:
+      'Ixian is an open-source decentralized data streaming platform designed for seamless, secure, and scalable connectivity. Reduce costs, enhance security, and effortlessly integrate with IoT, smart cities, and real-time applications.',
     start_url: '/',
     display: 'standalone',
     background_color: '#fff',

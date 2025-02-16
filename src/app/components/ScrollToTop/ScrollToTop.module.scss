@@ -1,0 +1,28 @@
+@use '@styles/mixins' as *;
+
+.scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--colors-surface-inverse);
+  padding: 8px;
+  border-radius: var(--corner-radius-xxl);
+  border: 2px solid var(--colors-outline-inverse);
+  cursor: pointer;
+  display: none;
+  opacity: 0;
+  z-index: 98;
+
+  svg {
+    color: var(--colors-text-inverse);
+  }
+
+  &:hover {
+    background: var(--colors-outline-02);
+  }
+
+  &.visible {
+    display: block;
+    opacity: 1;
+  }
+}

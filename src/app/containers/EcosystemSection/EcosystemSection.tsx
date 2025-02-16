@@ -15,7 +15,7 @@ import CharacteristicsLayout, {
   SingleData,
 } from '@components/CharacteristicsLayout/CharacteristicsLayout';
 import classNames from 'classnames';
-import { Routes, spixiWebsite } from '@utils/constants';
+import { Routes, Section, spixiWebsite } from '@utils/constants';
 
 const st = await getServerTranslations();
 
@@ -81,6 +81,7 @@ const EcosystemSection = () => {
               {t('exploreEco')}
             </Button>
             <Button
+              href={`${Routes.TECHNOLOGY}#${Section.IXI_TOKEN}`}
               variant={'text'}
               leadingIcon={<MyIcon name={'EastRounded'} />}
             >

@@ -36,7 +36,7 @@ export const startS2 = 'https://github.com/ProjectIxian/Ixian-S2/releases/';
 export const ixiEmissions = 'https://explorer.ixian.io/?p=emissions';
 export const spixiDownload = 'https://www.spixi.io/download';
 export const ixianLinkedIn = 'https://www.linkedin.com/company/ixian-platform';
-export const ixiLabs = 'www.ixilabs.com';
+export const ixiLabs = 'https://www.ixilabs.com/';
 export const robotinaLink = 'https://www.robotina.si';
 export const vivatLink = 'https://www.vivatgroup.net/';
 export const benchmarkedLink = 'https://benchmarked.co/';
