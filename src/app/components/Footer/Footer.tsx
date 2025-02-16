@@ -16,6 +16,7 @@ import React from 'react';
 import { useTranslations } from 'next-intl';
 import { socials } from '@utils/socialsUtil';
 import Copyright from '@components/Copyright/Copyright';
+import MyIcon from '@components/MyIcon/MyIcon';
 
 const Footer = () => {
   const t = useTranslations('Footer');
@@ -103,6 +104,7 @@ const Footer = () => {
                 <TextElement type={'label-sm'}>
                   {t('external.ixiLabs')}
                 </TextElement>
+                <MyIcon name={'NorthEastRounded'} />
               </Link>
               <Link
                 href={spixiWebsite}

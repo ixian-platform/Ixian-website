@@ -55,7 +55,7 @@
     "robustBlockchain": "Robust Layer-1 Blockchain",
     "robustDesc": "Ixian DLT forms the backbone of the platform and the ecosystem, supporting device discovery and high volume of low-cost microtransactions.",
     "overlayNetwork": "Overlay DePIN",
-    "overlayDesc": "Ixian S2 ensures seamless data exchange across decentralized networks, driving real-time communication between connected devices.",
+    "overlayDesc": "Ixian S2 ensures secure data exchange across decentralized networks, driving real-time communication between connected devices.",
     "IxiCrypto": "$IXI Cryptocurrency",
     "IxiCryptoDesc": "Low-cost and high-throughput, $IXI is the native cryptocurrency that powers the entire ecosystem.",
     "devTools": "Developer Tools",
@@ -99,7 +99,7 @@
   "LandingHero": {
     "chip": "The Open-Source Decentralized Data Streaming Platform",
     "title": "The Building Blocks of a Connected World",
-    "subtitle": "Bringing together a world of devices with secure, seamless, and reliable connections. Allowing you to cut costs, enhance security, and confidently deploy products and services at scale.",
+    "subtitle": "Bringing together a world of devices with secure and reliable connections. Allowing you to cut costs, enhance security, and confidently deploy products and services at scale.",
     "start": "Start Building with Ixian",
     "discover": "Discover the Platform"
   },

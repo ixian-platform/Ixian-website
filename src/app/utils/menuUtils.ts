@@ -20,7 +20,7 @@ export const learnMenu: IMenu[] = [
     href: `${Routes.TECHNOLOGY}#${Section.IXIAN_S2_NETWORK}`,
   },
   {
-    title: 'IXI Token',
+    title: 'IXI Cryptocurrency',
     href: `${Routes.TECHNOLOGY}#${Section.IXI_TOKEN}`,
   },
   {

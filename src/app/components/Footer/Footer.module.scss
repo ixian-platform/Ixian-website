@@ -22,7 +22,6 @@
 
       @include mq('xs') {
         flex-direction: column;
-        gap: var(--spacing-md);
         gap: 40px;
       }
 
@@ -84,6 +83,8 @@
 
             svg {
               color: var(--colors-text-inverse);
+              max-width: 16px;
+              max-height: 16px;
             }
           }
 

@@ -17,17 +17,17 @@ const st = await getServerTranslations();
 
 const singleInfoData: SingleData[] = [
   {
-    icon: 'Home',
+    icon: 'SchoolRounded',
     title: st('EcoGetInvolvedPage.contribute.data1.title'),
     description: st('EcoGetInvolvedPage.contribute.data1.subtitle'),
   },
   {
-    icon: 'Home',
+    icon: 'CodeRounded',
     title: st('EcoGetInvolvedPage.contribute.data2.title'),
     description: st('EcoGetInvolvedPage.contribute.data2.subtitle'),
   },
   {
-    icon: 'Home',
+    icon: 'CampaignRounded',
     title: st('EcoGetInvolvedPage.contribute.data3.title'),
     description: st('EcoGetInvolvedPage.contribute.data3.subtitle'),
   },
@@ -63,7 +63,7 @@ const Contribute = () => {
             </Button>
             <Button
               isInverse
-              href={`${Routes.ABOUT_US}$${Section.PARTNERSHIPS}`}
+              href={`${Routes.ABOUT_US}#${Section.PARTNERSHIPS}`}
               variant={'text'}
               leadingIcon={<MyIcon name={'EastRounded'} />}
             >
