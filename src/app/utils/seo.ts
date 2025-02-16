@@ -37,17 +37,17 @@ export const defaultSEO: Metadata = {
     siteName: 'Ixian',
     images: [
       {
-        url: '/default-og-image.jpg',
+        url: '/ixian-og.jpg',
         width: 1200,
         height: 630,
-        alt: 'Default OG Image',
+        alt: 'ixian-og',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     creator: '@ixian_io',
-    images: ['/default-twitter-image.jpg'],
+    images: ['/ixian-og.jpg'],
   },
 };
 
@@ -67,7 +67,7 @@ export const generateSEO = (config: SEOConfig): Metadata => {
       url: `${siteUrl}${config.path || ''}`,
       images: config.image
         ? [{ url: config.image }]
-        : defaultSEO.openGraph?.images,
+        : [{ url: `${siteUrl}/ixian-og.jpg` }],
     },
     twitter: {
       ...defaultSEO.twitter,
@@ -75,7 +75,7 @@ export const generateSEO = (config: SEOConfig): Metadata => {
       description: config.description,
       images: config.image
         ? [{ url: config.image }]
-        : defaultSEO.twitter?.images,
+        : [{ url: `${siteUrl}/ixian-og.jpg` }],
     },
   };
 };
