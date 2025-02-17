@@ -15,7 +15,7 @@ export async function generateMetadata() {
   return generateSEO({
     title: 'Build on Ixian | Scalable, Secure & Cost-Effective Development',
     description:
-      'Launch your product on Ixian and cut operational costs. Enjoy trustless security, seamless integration, high scalability, and minimal infrastructure costs with Ixian’s Core DLT and Overlay Network. Build smarter, spend less.',
+      'Leverage Ixian’s scalable and secure DLT and overlay networks. Access documentation, API guides, and GitHub resources to start building today.',
     keywords: [
       'Build on Ixian',
       'decentralized development',
@@ -30,8 +30,6 @@ export async function generateMetadata() {
       'Ixian platform',
       '$IXI incentives',
     ],
-    image: '/',
-    path: '/',
   });
 }
 

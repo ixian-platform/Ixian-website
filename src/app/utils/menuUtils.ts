@@ -1,4 +1,4 @@
-import { ixidocs, ixiscope, Routes, Section } from '@utils/constants';
+import {ixidocs, ixiscope, Routes, Section, whitepaperLink} from '@utils/constants';
 
 export interface IMenu {
   title: string;
@@ -37,7 +37,7 @@ export const resourcesMenu: IMenu[] = [
   },
   {
     title: 'Whitepaper',
-    href: ixidocs,
+    href: whitepaperLink,
     isExternal: true,
   },
   {

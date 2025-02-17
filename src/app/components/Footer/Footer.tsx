@@ -114,6 +114,7 @@ const Footer = () => {
                 <TextElement type={'label-sm'}>
                   {t('external.spixi')}
                 </TextElement>
+                <MyIcon name={'NorthEastRounded'} />
               </Link>
               {/*<Link*/}
               {/*  href={'/'}*/}
@@ -132,6 +133,7 @@ const Footer = () => {
                 <TextElement type={'label-sm'}>
                   {t('external.mineIXI')}
                 </TextElement>
+                <MyIcon name={'NorthEastRounded'} />
               </Link>
               <Link
                 href={ixianGitHub}
@@ -141,6 +143,7 @@ const Footer = () => {
                 <TextElement type={'label-sm'}>
                   {t('external.github')}
                 </TextElement>
+                <MyIcon name={'NorthEastRounded'} />
               </Link>
             </div>
           </div>
