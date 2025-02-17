@@ -8,7 +8,7 @@ import Button from '@components/Button/Button';
 import SectionHeader from '@components/SectionHeader/SectionHeader';
 import { useTranslations } from 'next-intl';
 import MyIcon from '@components/MyIcon/MyIcon';
-import { ixidocs, Routes } from '@utils/constants';
+import { Routes, whitepaperLink} from '@utils/constants';
 
 const MetricsSection = () => {
   const t = useTranslations('Metrics');
@@ -41,7 +41,7 @@ const MetricsSection = () => {
               {t('howDoesItWork')}
             </Button>
             <Button
-              href={ixidocs}
+              href={whitepaperLink}
               isExternal
               variant={'text'}
               leadingIcon={<MyIcon name={'ArticleRounded'} />}

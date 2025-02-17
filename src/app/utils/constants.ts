@@ -25,6 +25,7 @@ export type Sections = (typeof Section)[keyof typeof Section];
 
 export const ixiLabsEmail = 'info@ixian.io';
 export const ixidocs = 'https://docs.ixian.io/';
+export const whitepaperLink = "https://docs.ixian.io/Ixian_DLT_Whitepaper_v0.9.4_PreRelease.pdf";
 export const ixianGitHub = 'https://github.com/ixian-platform';
 export const xeggexIxi = 'https://xeggex.com/market/IXI_USDT';
 export const nonkycIxi = 'https://nonkyc.io/market/IXI_USDT';

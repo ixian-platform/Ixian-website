@@ -8,7 +8,7 @@ type SEOConfig = {
   path?: string;
 };
 
-export const defaultSEO: Metadata = {
+export const defaultSEO = {
   title:
     'Open-Source Decentralized Data Streaming | Scalable & Secure Connectivity',
   description:
@@ -33,7 +33,7 @@ export const defaultSEO: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.ixian.io/',
+    url: 'https://www.ixian.io',
     siteName: 'Ixian',
     images: [
       {
@@ -47,12 +47,15 @@ export const defaultSEO: Metadata = {
   twitter: {
     card: 'summary_large_image',
     creator: '@ixian_io',
-    images: ['/ixian-og.jpg'],
+    images: [{
+      url: '/ixian-og.jpg',
+      alt: 'ixian-og',
+    }],
   },
 };
 
 export const generateSEO = (config: SEOConfig): Metadata => {
-  const siteUrl = process.env.SITE_URL || 'https://www.ixian.io/';
+  const siteUrl = process.env.SITE_URL || 'https://www.ixian.io';
 
   return {
     ...defaultSEO,
@@ -64,18 +67,19 @@ export const generateSEO = (config: SEOConfig): Metadata => {
       ...defaultSEO.openGraph,
       title: config.title,
       description: config.description,
-      url: `${siteUrl}${config.path || ''}`,
-      images: config.image
-        ? [{ url: config.image }]
-        : [{ url: `${siteUrl}/ixian-og.jpg` }],
+      images: defaultSEO.openGraph.images.map((image) => ({
+        ...image,
+        url: `${siteUrl}${image.url}`,
+      })),
     },
     twitter: {
       ...defaultSEO.twitter,
       title: config.title,
       description: config.description,
-      images: config.image
-        ? [{ url: config.image }]
-        : [{ url: `${siteUrl}/ixian-og.jpg` }],
+      images: defaultSEO.openGraph.images.map((image) => ({
+        ...image,
+        url: `${siteUrl}${image.url}`,
+      })),
     },
   };
 };

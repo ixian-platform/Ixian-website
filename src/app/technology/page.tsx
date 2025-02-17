@@ -11,15 +11,14 @@ import S2NetworkSection from '@/app/containers/S2NetworkSection/S2NetworkSection
 import IxiCurrency from '@/app/containers/IxiCurrency/IxiCurrency';
 import { generateSEO } from '@utils/seo';
 import Chip from '@components/Chip/Chip';
-import { ixianGitHub, ixidocs, Routes } from '@utils/constants';
+import {ixianGitHub, Routes, whitepaperLink} from '@utils/constants';
 import ChipsSpline from '@components/ChipsSpline/ChipsSpline';
 
 export async function generateMetadata() {
   return generateSEO({
-    title: 'Ixian Technology | Layer-1 Blockchain & Decentralized Network',
-    description:
-      'Discover Ixian’s powerful technology: a high-performance Layer-1 blockchain (DLT) and a Decentralized Physical Infrastructure Network (S2) enabling secure, scalable applications. Powering IoT, DePIN, and decentralized communication with $IXI.',
-    keywords: [
+    title: 'Ixian Technology | Next-Generation Blockchain and Overlay DePIN Network',
+    description: "Explore Ixian’s innovative dual-layer infrastructure, combining high-performance blockchain with a distributed overlay network for secure, scalable applications.",
+      keywords: [
       'Ixian technology',
       'decentralized network',
       'Layer-1 blockchain',
@@ -34,8 +33,6 @@ export async function generateMetadata() {
       'Ixian S2',
       '$IXI cryptocurrency',
     ],
-    image: '/',
-    path: '/',
   });
 }
 
@@ -52,7 +49,7 @@ export default function Technology() {
         ctaContent={
           <>
             <Button
-              href={ixidocs}
+              href={whitepaperLink}
               isExternal
               leadingIcon={<MyIcon name={'DescriptionRounded'} />}
             >

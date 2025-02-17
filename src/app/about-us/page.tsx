@@ -7,6 +7,15 @@ import Founders from '@/app/containers/Founders/Founders';
 import Partnership from '@/app/containers/Partnership/Partnership';
 import { ixianLinkedIn } from '@utils/constants';
 import SectionHeader from '@components/SectionHeader/SectionHeader';
+import {generateSEO} from "@utils/seo";
+
+export async function generateMetadata() {
+    return generateSEO({
+        title: 'About Ixian | Advancing Decentralized Infrastructure',
+        description:
+            'Ixian is building a decentralized future where devices communicate securely, without central intermediaries.',
+    });
+}
 
 export default function AboutUsPage() {
   const t = useTranslations('AboutUsPage.hero');
