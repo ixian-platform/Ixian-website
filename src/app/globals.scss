@@ -23,7 +23,8 @@ body {
   --spixi-uc: url('/assets/light/spixi-uc.png');
   --why: url('/assets/light/why.svg');
   --spixi-bg: url('/assets/light/spixi-bg.png');
-  --top-tech: url('/assets/light/top-tech.svg');
+  --retro-grid-top: url('/assets/light/retro-grid-top.svg');
+  --retro-grid-bottom: url('/assets/light/retro-grid-bottom.svg');
   --ixi-currency: url('/assets/light/ixi-currency.svg');
   --spixi-rotated: url('/assets/light/spixi-rotate.png');
   --partnerships: url('/assets/light/partnerships.svg');
@@ -82,6 +83,7 @@ body {
       var(--colors-surface-01, #fbfcfb),
       var(--colors-surface-01, #fbfcfb)
     );
+  --partners-gradient: var(--colors-surface-inverse);
   --resources-gradient: radial-gradient(
       173.13% 177.27% at 141.29% -38.75%,
       rgba(48, 162, 25, 0.3) 13.71%,
@@ -102,7 +104,8 @@ body {
     --spixi-uc: url('/assets/dark/spixi-uc.png');
     --why: url('/assets/dark/why.svg');
     --spixi-bg: url('/assets/dark/spixi-bg.png');
-    --top-tech: url('/assets/dark/top-tech.svg');
+    --retro-grid-top: url('/assets/dark/retro-grid-top.svg');
+    --retro-grid-bottom: url('/assets/dark/retro-grid-bottom.svg');
     --ixi-currency: url('/assets/dark/ixi-currency.svg');
     --spixi-rotated: url('/assets/dark/spixi-rotate.png');
     --partnerships: url('/assets/dark/partnerships.svg');
@@ -116,6 +119,17 @@ body {
       ),
       linear-gradient(0deg, #0a0f0c, #0a0f0c);
     --currency-gradient: radial-gradient(
+        57.77% 138.74% at 7.69% 16.52%,
+        rgba(229, 87, 232, 0.05) 0%,
+        rgba(102, 87, 232, 0.1125) 35%,
+        rgba(24, 107, 201, 0.1125) 84.5%
+      ),
+      linear-gradient(
+        0deg,
+        var(--colors-surface-01, #0a0f0c),
+        var(--colors-surface-01, #0a0f0c)
+      );
+    --partners-gradient: radial-gradient(
         57.77% 138.74% at 7.69% 16.52%,
         rgba(229, 87, 232, 0.05) 0%,
         rgba(102, 87, 232, 0.1125) 35%,
@@ -262,4 +276,31 @@ a {
   transform: translateX(-50%);
   width: 100%;
   max-width: 1249px;
+}
+
+.landingHeroContainer {
+  > section {
+    p:first-of-type {
+      max-width: 680px;
+    }
+  }
+
+  @include mq('sm', 'min') {
+    padding-top: 120px !important;
+    padding-bottom: 280px !important;
+  }
+
+  @include mq('sm') {
+    padding-top: 80px !important;
+    padding-bottom: 140px !important;
+
+    > section {
+      text-align: center !important;
+      align-items: center;
+
+      div[class*='ctaSection'] {
+        align-items: center;
+      }
+    }
+  }
 }

@@ -9,8 +9,6 @@ import InteractionCard from '@components/InteractionCard/InteractionCard';
 import BigCard from '@components/BigCard/BigCard';
 import MyIcon from '@components/MyIcon/MyIcon';
 import { getServerTranslations } from '@utils/getServerTranslations';
-import topRetro from '@assets/top-retro.svg';
-import Image from 'next/image';
 import CharacteristicsLayout, {
   SingleData,
 } from '@components/CharacteristicsLayout/CharacteristicsLayout';
@@ -58,7 +56,6 @@ const EcosystemSection = () => {
       asWrapperSection
       className={classes.ecosystemWrapper}
     >
-      <Image priority src={topRetro} alt={'top-retro'} className={'topRetro'} />
       <SectionHeader
         chipContainer={<Chip content={t('chip')} variant={'outlined'} />}
         title={

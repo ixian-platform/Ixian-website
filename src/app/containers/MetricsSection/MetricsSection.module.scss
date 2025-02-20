@@ -3,8 +3,8 @@
 
 .metricsSection {
   background: var(--sectionGradient);
-  border-top: 4px solid;
-  border-image: linear-gradient(45deg, #6ee17f, #a546e4, #4d7df6) 1;
+  border-top: 1px solid;
+  border-color: var(--colors-outline-action-hover);
 
   .metrics {
     width: 100%;
@@ -14,14 +14,9 @@
     flex-direction: column;
     gap: var(--spacing-super);
     align-items: flex-start;
-    background-image: var(--why);
-    background-repeat: no-repeat;
-    background-position: right top;
 
     @include mq('sm') {
       padding: 64px var(--spacing-sm);
-      background-size: contain;
-      background-position: center -80px;
     }
 
     .patternImg {

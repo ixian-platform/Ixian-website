@@ -52,13 +52,7 @@ export default function Build() {
           </Button>
         }
         leftContainer={
-          <Image
-            src={buildHeroImage}
-            alt={'code'}
-            priority
-            quality={100}
-            width={600}
-          />
+          <Image src={buildHeroImage} alt={'code'} priority width={600} />
         }
       />
       <WhyIxian />

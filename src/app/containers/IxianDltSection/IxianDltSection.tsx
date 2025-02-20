@@ -10,6 +10,7 @@ import Button from '@components/Button/Button';
 import { getServerTranslations } from '@utils/getServerTranslations';
 import { Section, startDlt } from '@utils/constants';
 import { SingleData } from '@components/CharacteristicsLayout/CharacteristicsLayout';
+import classNames from 'classnames';
 
 const st = await getServerTranslations();
 
@@ -38,12 +39,12 @@ const IxianDltSection = () => {
     <ContentWrapper
       asWrapperSection
       sectionClass={classes.ixianDltSection}
-      className={classes.ixianDltContainer}
+      className={classNames(classes.ixianDltContainer, classes.customDlt)}
       sectionId={Section.IXIAN_DLT}
     >
       <SectionHeader
         chipContainer={<Chip content={t('chip')} variant={'outlined'} />}
-        title={<TextElement type={'display-md'}>{t('title')}</TextElement>}
+        title={<TextElement type={'heading-lg'}>{t('title')}</TextElement>}
         subtitle={<TextElement type={'body-md'}>{t('subtitle')}</TextElement>}
         ctaContent={
           <Button
@@ -90,7 +91,7 @@ const IxianDltSection = () => {
           fullWidth
         />
       </div>
-      <div className={classes.rainbowDivider} />
+      <div className={classes.divider} />
     </ContentWrapper>
   );
 };

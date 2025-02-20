@@ -22,7 +22,7 @@
     display: flex;
     gap: var(--spacing-xs);
 
-    @include mq('md') {
+    @include mq('sm') {
       flex-direction: column;
     }
   }

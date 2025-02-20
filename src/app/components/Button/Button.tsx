@@ -42,7 +42,12 @@ const Button: React.FC<ButtonProps> = ({
 
   if (href) {
     return (
-      <Link href={href} passHref target={isExternal ? '_blank' : undefined}>
+      <Link
+        style={{ width: 'max-content' }}
+        href={href}
+        passHref
+        target={isExternal ? '_blank' : undefined}
+      >
         {button}
       </Link>
     );

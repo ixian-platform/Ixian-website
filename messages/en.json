@@ -91,13 +91,13 @@
     }
   },
   "Partners": {
-    "buildTogether": "Shift the Paradigm, Decentralize With Ixian",
+    "buildTogether": "Shift the Paradigm,<break></break>Decentralize With Ixian",
     "buildSubtitle": "Ixian is ready for your next step, are you?",
     "explorePartnerships": "Explore Partnerships",
     "chip": "Partners"
   },
   "LandingHero": {
-    "chip": "The Open-Source Decentralized Data Streaming Platform",
+    "chip": "Decentralized Data Streaming Platform",
     "title": "The Building Blocks of a Connected World",
     "subtitle": "Bringing together a world of devices with secure and reliable connections. Allowing you to cut costs, enhance security, and confidently deploy products and services at scale.",
     "start": "Start Building with Ixian",

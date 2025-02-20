@@ -11,14 +11,15 @@ import S2NetworkSection from '@/app/containers/S2NetworkSection/S2NetworkSection
 import IxiCurrency from '@/app/containers/IxiCurrency/IxiCurrency';
 import { generateSEO } from '@utils/seo';
 import Chip from '@components/Chip/Chip';
-import {ixianGitHub, Routes, whitepaperLink} from '@utils/constants';
-import ChipsSpline from '@components/ChipsSpline/ChipsSpline';
+import { ixianGitHub, Routes, whitepaperLink } from '@utils/constants';
 
 export async function generateMetadata() {
   return generateSEO({
-    title: 'Ixian Technology | Next-Generation Blockchain and Overlay DePIN Network',
-    description: "Explore Ixian’s innovative dual-layer infrastructure, combining high-performance blockchain with a distributed overlay network for secure, scalable applications.",
-      keywords: [
+    title:
+      'Ixian Technology | Next-Generation Blockchain and Overlay DePIN Network',
+    description:
+      'Explore Ixian’s innovative dual-layer infrastructure, combining high-performance blockchain with a distributed overlay network for secure, scalable applications.',
+    keywords: [
       'Ixian technology',
       'decentralized network',
       'Layer-1 blockchain',
@@ -44,7 +45,7 @@ export default function Technology() {
       <HeroSection
         sectionClassName={classes.techHero}
         chip={<Chip content={t('hero.chip')} variant={'outlined'} />}
-        title={<TextElement type={'display-lg'}>{t('hero.title')}</TextElement>}
+        title={<TextElement type={'display-md'}>{t('hero.title')}</TextElement>}
         subtitle={t('hero.subtitle')}
         ctaContent={
           <>
@@ -65,7 +66,6 @@ export default function Technology() {
             </Button>
           </>
         }
-        leftContainer={<ChipsSpline />}
       />
       <IxianDltSection />
       <S2NetworkSection />

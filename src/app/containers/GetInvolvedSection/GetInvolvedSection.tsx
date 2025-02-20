@@ -4,8 +4,6 @@ import SectionHeader from '@components/SectionHeader/SectionHeader';
 import Chip from '@components/Chip/Chip';
 import TextElement from '@components/TextElement/TextElement';
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
-import bottomRetro from '@assets/bottom-retro.svg';
 import Button from '@components/Button/Button';
 import { Routes, Section } from '@utils/constants';
 import MyIcon from '@components/MyIcon/MyIcon';
@@ -20,12 +18,6 @@ const GetInvolvedSection = () => {
       sectionClass={classes.getInvolvedSection}
       sectionId={Section.GET_INVOLVED}
     >
-      <Image
-        priority
-        src={bottomRetro}
-        alt={'bottom-retro'}
-        className={classes.bottomRetro}
-      />
       <SectionHeader
         chipContainer={<Chip content={t('chip')} variant={'outlined'} />}
         title={

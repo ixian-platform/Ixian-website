@@ -1,0 +1,27 @@
+@use '@styles/mixins' as *;
+
+.particlesSpline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  > canvas {
+    position: absolute;
+    width: 800px !important;
+    height: 800px !important;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -70%;
+
+    @include mq('md') {
+      bottom: -64% !important;
+    }
+
+    @include mq('sm') {
+      bottom: -66% !important;
+      width: 600px !important;
+      height: 600px !important;
+    }
+  }
+}

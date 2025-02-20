@@ -14,8 +14,10 @@ const HamburgerMenu = () => {
 
   // eslint-disable-next-line  @typescript-eslint/no-explicit-any
   const ref: any = useClickAway(() => {
-    setShouldHide(false);
-    setIsOpen(false);
+    if (isOpen) {
+      setShouldHide(false);
+      setIsOpen(false);
+    }
   });
 
   const toggleMenu = () => {
@@ -38,19 +40,21 @@ const HamburgerMenu = () => {
         <span className={classNames({ [classes.open]: isOpen })}></span>
         <span className={classNames({ [classes.open]: isOpen })}></span>
       </button>
-      <div
-        className={classNames(classes.menu, {
-          [classes.open]: isOpen,
-          [classes.hidden]: !isOpen && shouldHide,
-        })}
-      >
-        {linksData.map((link, index) => (
-          <Link key={index} href={link.href} onClick={toggleMenu}>
-            {link.label}
-          </Link>
-        ))}
-        <ThemeSwitcher toggleMenu={toggleMenu} />
-      </div>
+      {!isOpen && shouldHide ? null : (
+        <div
+          className={classNames(classes.menu, {
+            [classes.open]: isOpen,
+            [classes.hidden]: !isOpen && shouldHide,
+          })}
+        >
+          {linksData.map((link, index) => (
+            <Link key={index} href={link.href} onClick={toggleMenu}>
+              {link.label}
+            </Link>
+          ))}
+          <ThemeSwitcher toggleMenu={toggleMenu} />
+        </div>
+      )}
     </section>
   );
 };
