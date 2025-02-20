@@ -13,6 +13,7 @@
     left: 50%;
     transform: translateX(-50%);
     bottom: -70%;
+    pointer-events: none !important;
 
     @include mq('md') {
       bottom: -64% !important;
