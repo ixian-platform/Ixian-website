@@ -13,7 +13,7 @@ import LandingFeaturesGrid from '@/app/containers/LandingFeaturesGrid/LandingFea
 import Chip from '@components/Chip/Chip';
 import OpenSourceCard from '@components/OpenSourceCard/OpenSourceCard';
 import { Routes } from '@utils/constants';
-import CircleSpline from '@components/CircleSpline/CircleSpline';
+import ParticlesSpline from '@components/ParticlesSpline/ParticlesSpline';
 
 const LandingContent = () => {
   const t = useTranslations('LandingHero');
@@ -21,6 +21,8 @@ const LandingContent = () => {
   return (
     <Fragment>
       <HeroSection
+        className={'landingHeroContainer'}
+        isCentered
         chip={<Chip content={t('chip')} variant={'outlined'} />}
         title={<TextElement type={'display-lg'}>{t('title')}</TextElement>}
         subtitle={t('subtitle')}
@@ -41,7 +43,7 @@ const LandingContent = () => {
             </Button>
           </>
         }
-        leftContainer={<CircleSpline />}
+        leftContainer={<ParticlesSpline />}
       />
       <OpenSourceCard />
       <LandingFeaturesGrid />

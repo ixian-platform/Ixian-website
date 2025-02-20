@@ -1,6 +1,5 @@
 import React from 'react';
 import ContentWrapper from '@components/ContentWrapper/ContentWrapper';
-import topRetro from '@assets/top-retro.svg';
 import Image from 'next/image';
 import Chip from '@components/Chip/Chip';
 import TextElement from '@components/TextElement/TextElement';
@@ -26,7 +25,6 @@ const EcoGetInvolved = () => {
       asWrapperSection
       className={classes.ecoGetInvolved}
     >
-      <Image priority src={topRetro} alt={'top-retro'} className={'topRetro'} />
       <SectionHeader
         title={
           <TextElement type={'display-md'} as={'h1'}>

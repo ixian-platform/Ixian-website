@@ -61,7 +61,9 @@ const Partners = () => {
         inverseText
         title={
           <TextElement type={'heading-lg'} as={'h1'}>
-            {t('buildTogether')}
+            {t.rich('buildTogether', {
+              break: () => <br />,
+            })}
           </TextElement>
         }
         subtitle={
@@ -78,7 +80,6 @@ const Partners = () => {
             {t('explorePartnerships')}
           </Button>
         }
-        ctaClassName={classes.center}
       />
     </ContentWrapper>
   );

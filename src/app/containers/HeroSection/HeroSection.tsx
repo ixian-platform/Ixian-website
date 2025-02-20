@@ -13,6 +13,7 @@ interface HeroSectionProps {
   leftContainer?: ReactNode;
   className?: string;
   sectionClassName?: string;
+  isCentered?: boolean;
 }
 
 const HeroSection = ({
@@ -23,14 +24,18 @@ const HeroSection = ({
   leftContainer,
   className,
   sectionClassName,
+  isCentered,
 }: HeroSectionProps) => {
   return (
     <ContentWrapper
       asWrapperSection
       sectionClass={classNames(classes.wrapperSection, sectionClassName)}
-      className={classNames(classes.heroSection, className)}
+      className={classNames(classes.heroSection, className, {
+        [classes.centered]: isCentered,
+      })}
     >
       <SectionHeader
+        centerAll={isCentered}
         enableSlideUp
         className={classes.customSectionHeader}
         chipContainer={chip}

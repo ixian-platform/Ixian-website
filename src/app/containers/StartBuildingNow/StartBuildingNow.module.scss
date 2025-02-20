@@ -3,22 +3,15 @@
 .startBuildingSection {
   width: 100%;
   background: var(--colors-surface-inverse);
-  border-bottom: 4px solid;
-  border-image: linear-gradient(45deg, #6ee17f, #a546e4, #4d7df6) 1;
+  border-bottom: 1px solid;
+  border-color: var(--colors-outline-action-hover);
 
   .startBuildingContainer {
     padding: var(--spacing-super-xxl) var(--spacing-md);
     color: var(--colors-text-inverse);
-    //background-image: url('/assets/other/building.svg');
-    //background-position: top right;
-    //background-repeat: no-repeat;
 
     @include mq('sm') {
       padding: 64px var(--spacing-sm);
     }
-
-    //background-position: right;
-    //background-size: contain;
-    //background-repeat: no-repeat;
   }
 }

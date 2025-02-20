@@ -22,7 +22,7 @@ const S2NetworkSection = () => {
     >
       <SectionHeader
         chipContainer={<Chip content={t('chip')} variant={'outlined'} />}
-        title={<TextElement type={'display-md'}>{t('title')}</TextElement>}
+        title={<TextElement type={'heading-lg'}>{t('title')}</TextElement>}
         subtitle={<TextElement type={'body-md'}>{t('subtitle')}</TextElement>}
         ctaContent={
           <Button

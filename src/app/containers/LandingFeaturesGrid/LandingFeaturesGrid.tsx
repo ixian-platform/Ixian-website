@@ -10,8 +10,6 @@ import InteractionCard from '@components/InteractionCard/InteractionCard';
 import { useTranslations } from 'next-intl';
 
 import classNames from 'classnames';
-import topRetro from '@assets/top-retro.svg';
-import Image from 'next/image';
 import { ixianGitHub, Routes } from '@utils/constants';
 import PoweredByIxian from '@components/Articles/PoweredByIxian/PoweredByIxian';
 
@@ -24,7 +22,6 @@ const LandingFeaturesGrid = () => {
       sectionClass={classes.landingFeaturesSection}
       className={classes.landingFeatures}
     >
-      <Image priority src={topRetro} alt={'top-retro'} className={'topRetro'} />
       <div
         className={classNames(
           classes.landingFeaturesGridSingleCard,
@@ -36,7 +33,7 @@ const LandingFeaturesGrid = () => {
             <Chip content={t('build.chip')} variant={'outlined'} />
           }
           title={
-            <TextElement type={'display-md'}>{t('build.title')}</TextElement>
+            <TextElement type={'heading-lg'}>{t('build.title')}</TextElement>
           }
           subtitle={
             <TextElement type={'body-md'}>{t('build.subtitle')}</TextElement>
@@ -93,7 +90,7 @@ const LandingFeaturesGrid = () => {
             <Chip content={t('efficiency.chip')} variant={'outlined'} />
           }
           title={
-            <TextElement type={'display-md'}>
+            <TextElement type={'heading-lg'}>
               {t('efficiency.title')}
             </TextElement>
           }
@@ -143,7 +140,7 @@ const LandingFeaturesGrid = () => {
             <Chip content={t('security.chip')} variant={'outlined'} />
           }
           title={
-            <TextElement type={'display-md'}>{t('security.title')}</TextElement>
+            <TextElement type={'heading-lg'}>{t('security.title')}</TextElement>
           }
           subtitle={
             <TextElement type={'body-md'}>{t('security.subtitle')}</TextElement>

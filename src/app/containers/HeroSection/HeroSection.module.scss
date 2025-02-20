@@ -1,8 +1,7 @@
 @use '@styles/mixins' as *;
 
 .wrapperSection {
-  border-bottom: 1px solid var(--colors-outline-02);
-  background: var(--hero-gradient);
+  background: var(--colors-surface-01);
   position: relative;
 
   .heroSection {
@@ -25,5 +24,9 @@
     .customSectionHeader {
       z-index: 1;
     }
+  }
+
+  .centered {
+    justify-content: center;
   }
 }

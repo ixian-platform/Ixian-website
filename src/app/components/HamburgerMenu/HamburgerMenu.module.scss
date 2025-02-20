@@ -68,6 +68,7 @@
 
     &.hidden {
       display: none;
+      pointer-events: none;
     }
 
     a {

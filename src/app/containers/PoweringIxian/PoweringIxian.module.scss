@@ -4,9 +4,8 @@
 .poweringIxianSection {
   width: 100%;
   background: var(--colors-surface-01);
-  border-top: 4px solid;
-  border-bottom: 4px solid;
-  border-image: linear-gradient(45deg, #6ee17f, #a546e4, #4d7df6) 1;
+  border-top: 1px solid;
+  border-color: var(--colors-outline-action-hover);
   scroll-margin-top: var(--spacing-sm);
 
   .poweringIxian {
