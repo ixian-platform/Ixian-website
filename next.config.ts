@@ -8,6 +8,8 @@ const nextConfig: import('next').NextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
+    loader: 'imgix',
+    path: 'ixian-website.imgix.net',
   },
   basePath: '',
   assetPrefix: '',
