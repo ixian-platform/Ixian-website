@@ -8,25 +8,8 @@ import { useTranslations } from 'next-intl';
 import MyIcon from '@components/MyIcon/MyIcon';
 import { Routes, whitepaperLink } from '@utils/constants';
 import IxianPlatformMetrics from '@components/IxianPlatformMetrics/IxianPlatformMetrics';
-import { getNodeStatusData, NodeStatus } from '@utils/api';
 
-interface MetricsSectionProps {
-  props: {
-    initialNodeStatusData: NodeStatus;
-  };
-}
-
-export const revalidate = 60 * 60; // 1 hour
-
-export async function generateStaticParams() {
-  const initialNodeStatusData: NodeStatus = await getNodeStatusData();
-
-  return {
-    props: { initialNodeStatusData },
-  };
-}
-
-const MetricsSection = ({ props }: MetricsSectionProps) => {
+const MetricsSection = () => {
   const t = useTranslations('Metrics');
 
   return (
@@ -67,9 +50,7 @@ const MetricsSection = ({ props }: MetricsSectionProps) => {
           </>
         }
       />
-      <IxianPlatformMetrics
-        initialNodeStatusData={props?.initialNodeStatusData}
-      />
+      <IxianPlatformMetrics />
     </ContentWrapper>
   );
 };
