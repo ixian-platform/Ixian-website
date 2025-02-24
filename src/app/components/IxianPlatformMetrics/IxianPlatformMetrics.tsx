@@ -9,14 +9,8 @@ import { useTranslations } from 'next-intl';
 import classes from './IxianPlatformMetrics.module.scss';
 import { getNodeStatusData, NodeStatus } from '@utils/api';
 
-const IxianPlatformMetrics = ({
-  initialNodeStatusData,
-}: {
-  initialNodeStatusData: NodeStatus;
-}) => {
-  const [nodeStatusData, setNodeStatusData] = useState<NodeStatus>(
-    initialNodeStatusData
-  );
+const IxianPlatformMetrics = () => {
+  const [nodeStatusData, setNodeStatusData] = useState<NodeStatus | null>(null);
   const t = useTranslations('Metrics');
 
   useEffect(() => {
@@ -25,6 +19,7 @@ const IxianPlatformMetrics = ({
         const data = await getNodeStatusData();
         setNodeStatusData(data);
       } catch (e) {
+        // eslint-disable-next-line no-console
         console.error(e);
       }
     };
@@ -36,7 +31,10 @@ const IxianPlatformMetrics = ({
     <Fragment>
       <div className={classes.metricsContainer}>
         <div className={classes.insideSingle}>
-          <NumberTicker value={nodeStatusData?.M} className={classes.number} />
+          <NumberTicker
+            value={nodeStatusData?.M || 0}
+            className={classes.number}
+          />
           <TextElement type={'body-sm'}>{t('activeIxianDltNodes')}</TextElement>
         </div>
         <div className={classes.insideSingle}>
