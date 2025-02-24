@@ -2,15 +2,31 @@ import ContentWrapper from '@components/ContentWrapper/ContentWrapper';
 import classes from './MetricsSection.module.scss';
 import Chip from '@components/Chip/Chip';
 import TextElement from '@components/TextElement/TextElement';
-import NumberTicker from '@/components/ui/number-ticker';
-import TypingAnimation from '@/components/ui/typing-animation';
 import Button from '@components/Button/Button';
 import SectionHeader from '@components/SectionHeader/SectionHeader';
 import { useTranslations } from 'next-intl';
 import MyIcon from '@components/MyIcon/MyIcon';
-import { Routes, whitepaperLink} from '@utils/constants';
+import { Routes, whitepaperLink } from '@utils/constants';
+import IxianPlatformMetrics from '@components/IxianPlatformMetrics/IxianPlatformMetrics';
+import { getNodeStatusData, NodeStatus } from '@utils/api';
 
-const MetricsSection = () => {
+interface MetricsSectionProps {
+  props: {
+    initialNodeStatusData: NodeStatus;
+  };
+}
+
+export const revalidate = 60 * 60; // 1 hour
+
+export async function generateStaticParams() {
+  const initialNodeStatusData: NodeStatus = await getNodeStatusData();
+
+  return {
+    props: { initialNodeStatusData },
+  };
+}
+
+const MetricsSection = ({ props }: MetricsSectionProps) => {
   const t = useTranslations('Metrics');
 
   return (
@@ -51,43 +67,9 @@ const MetricsSection = () => {
           </>
         }
       />
-      <div className={classes.metricsContainer}>
-        <div className={classes.insideSingle}>
-          <NumberTicker value={189} className={classes.number} />
-          <TextElement type={'body-sm'}>{t('activeIxianDltNodes')}</TextElement>
-        </div>
-        <div className={classes.insideSingle}>
-          <TextElement type={'heading-lg'}>
-            <NumberTicker value={30} className={classes.number} />s
-          </TextElement>
-          <TextElement type={'body-sm'}>{t('targetBlockTime')}</TextElement>
-        </div>
-        <div className={classes.insideSingle}>
-          <TextElement type={'heading-lg'}>
-            <NumberTicker value={100} className={classes.number} /> M+*
-          </TextElement>
-          <TextElement type={'body-sm'}>{t('dataTransfers')}</TextElement>
-        </div>
-        <div className={classes.insideSingle}>
-          <TextElement type={'heading-lg'}>
-            <NumberTicker value={92} className={classes.number} />M +
-          </TextElement>
-          <TextElement type={'body-sm'}>{t('onChainTransactions')}</TextElement>
-        </div>
-        <div className={classes.insideSingle}>
-          <NumberTicker value={379} className={classes.number} />
-          <TextElement type={'body-sm'}>{t('peakTps')}</TextElement>
-        </div>
-        <div className={classes.insideSingle}>
-          <TextElement type={'heading-lg'} as={'div'}>
-            <TypingAnimation text={'<$0.000001'} className={classes.number} />
-          </TextElement>
-          <TextElement type={'body-sm'}> {t('transactionFees')}</TextElement>
-        </div>
-      </div>
-      <TextElement className={classes.note} type={'body-sm'}>
-        {t('note')}
-      </TextElement>
+      <IxianPlatformMetrics
+        initialNodeStatusData={props?.initialNodeStatusData}
+      />
     </ContentWrapper>
   );
 };

@@ -9,7 +9,6 @@ import { Section } from '@utils/constants';
 import InteractionCard from '@components/InteractionCard/InteractionCard';
 import MyIcon from '@components/MyIcon/MyIcon';
 import { useTranslations } from 'next-intl';
-import ExchangesImages from '@components/ExchangesImages/ExchangesImages';
 
 const PoweringIxian = () => {
   const t = useTranslations('EcoGetInvolvedPage.poweringIxian');
@@ -28,9 +27,7 @@ const PoweringIxian = () => {
       <IxiMetrics />
       <div className={classes.resourcesContainer} id={Section.RESOURCES}>
         <TextElement type={'heading-sm'}>{t('resources.label')}</TextElement>
-        <TextElement type={'heading-lg'}>{t('resources.title')}</TextElement>
-        <ExchangesImages forceTheme={'dark'} className={classes.customImages} />
-        {['wallets', 'miners', 'miningPools'].map((res) => (
+        {['wallets', 'miners', 'nodes', 'miningPools'].map((res) => (
           <div className={classes.innerCards} key={res} id={Section.IXI_MINING}>
             <div className={classes.text}>
               <TextElement type={'heading-md'}>
