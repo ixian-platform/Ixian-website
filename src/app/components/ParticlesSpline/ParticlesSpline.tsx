@@ -1,9 +1,11 @@
 'use client';
 
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import Spline from '@splinetool/react-spline';
 import classes from './ParticlesSpline.module.scss';
 import { useTheme } from '@/app/providers/ThemeProvider/ThemeProvider';
+import { isLowPerformance } from '@utils/performanceUtil';
+import classNames from 'classnames';
 
 const darkModeParticlesScene =
   'https://prod.spline.design/T3FkgGinMWJHtzsl/scene.splinecode';
@@ -12,6 +14,12 @@ const lightModeParticlesScene =
 
 const ParticlesSpline = () => {
   const { themeMode } = useTheme();
+  const [isLoading, setIsLoading] = useState(true);
+  const [isWebGLSupported, setIsWebGLSupported] = useState(false);
+
+  useEffect(() => {
+    setIsWebGLSupported(!isLowPerformance());
+  }, []);
 
   const splineScene = useMemo(() => {
     return themeMode === 'light'
@@ -19,7 +27,17 @@ const ParticlesSpline = () => {
       : darkModeParticlesScene;
   }, [themeMode]);
 
-  return <Spline scene={splineScene} className={classes.particlesSpline} />;
+  return isWebGLSupported ? (
+    <Spline
+      onLoad={() => {
+        setIsLoading(false);
+      }}
+      scene={splineScene}
+      className={classNames(classes.particlesSpline, {
+        [classes.isLoading]: isLoading,
+      })}
+    />
+  ) : null;
 };
 
 export default ParticlesSpline;

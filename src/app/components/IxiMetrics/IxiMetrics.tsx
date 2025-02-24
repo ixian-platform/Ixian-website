@@ -4,6 +4,7 @@ import NumberTicker from '@/components/ui/number-ticker';
 import TypingAnimation from '@/components/ui/typing-animation';
 import classes from './IxiMetrics.module.scss';
 import { useTranslations } from 'next-intl';
+import { metricsData } from '@utils/metricsUtil';
 
 const IxiMetrics = () => {
   const t = useTranslations('TechnologyPage.ixiCurrency');
@@ -13,19 +14,30 @@ const IxiMetrics = () => {
       <div className={classes.mainMetrics}>
         <div className={classes.insideSingle}>
           <TextElement type={'heading-md'}>
-            <NumberTicker value={21} className={classes.number} /> BN
+            <NumberTicker
+              value={metricsData.maxSupply}
+              className={classes.number}
+            />{' '}
+            BN
           </TextElement>
           <TextElement type={'body-md'}>{t('metrics.supply')}</TextElement>
         </div>
         <div className={classes.insideSingle}>
           <TextElement type={'heading-md'}>
-            <NumberTicker value={379} className={classes.number} />
+            <NumberTicker
+              value={metricsData.peakTps}
+              className={classes.number}
+            />
           </TextElement>
           <TextElement type={'body-md'}>{t('metrics.peakTps')}</TextElement>
         </div>
         <div className={classes.insideSingle}>
           <TextElement type={'heading-md'}>
-            <NumberTicker value={30} className={classes.number} />s
+            <NumberTicker
+              value={metricsData.targetBlockTime}
+              className={classes.number}
+            />
+            s
           </TextElement>
           <TextElement type={'body-md'}>
             {t('metrics.targetBlockTime')}
@@ -33,7 +45,10 @@ const IxiMetrics = () => {
         </div>
         <div className={classes.insideSingle}>
           <TextElement type={'heading-lg'} as={'div'}>
-            <TypingAnimation text={'<$0.00001'} className={classes.number} />
+            <TypingAnimation
+              text={metricsData.transactionFees}
+              className={classes.number}
+            />
           </TextElement>
           <TextElement type={'body-sm'}>
             {t('metrics.transactionFees')}

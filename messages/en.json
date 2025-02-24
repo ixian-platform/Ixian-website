@@ -264,7 +264,7 @@
         "subtitle": "$IXI is generated through block rewards for DLT node operators, ensuring a decentralized and equitable distribution. There were no pre-sales or private sales, making the process fully transparent and accessible to all participants. 9% of the total projected supply is allocated as a pre-mine for platform and ecosystem development."
       },
       "metrics": {
-        "supply": "Projected Max Supply",
+        "supply": "Projected Max Supply at year 2125",
         "peakTps": "Peak TPS YTD",
         "targetBlockTime": "Target Block Time",
         "transactionFees": "Transaction Fees",
@@ -387,7 +387,7 @@
       "subtitle": "By creating an incentive for node operators, $IXI powers the platform. With fast and efficient transactions, it creates the foundation for an ecosystem of value.",
       "resources": {
         "label": "Resources",
-        "title": "Exchanges and Aggregators",
+        "cta": "Explore $IXI",
         "wallets": {
           "title": "Wallets",
           "subtitle": "Did you know you can mine $IXI? Ixian uses Argon mining for fair distribution. Download the miner, setup and start.",
@@ -414,6 +414,20 @@
             "href": "https://github.com/bogdanadnan/iximiner/releases",
             "title": "Third-party Miner",
             "subtitle": "Built by members of the community."
+          }
+        },
+        "nodes": {
+          "title": "Nodes",
+          "subtitle": "Support the Ixian network while earning $IXI rewards. Contribute to a decentralized, scalable blockchain and gain from the growth of the platform.",
+          "card1": {
+            "href": "https://github.com/ixian-platform/Ixian-DLT/releases",
+            "title": "DLT Node",
+            "subtitle": "Ixian DLT Software"
+          },
+          "card2": {
+            "href": "https://github.com/ixian-platform/Ixian-S2/releases",
+            "title": "S2 Node",
+            "subtitle": "Ixian S2 end to end data streaming network software"
           }
         },
         "miningPools": {
