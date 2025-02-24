@@ -18,7 +18,13 @@ const ThemeSwitcher = ({ toggleMenu }: ThemeSwitcherProps) => {
   }, []);
 
   const clickHandler = () => {
-    setThemeMode(themeMode === 'light' ? 'dark' : 'light');
+    document.body.classList.add('body-slide');
+    setTimeout(() => {
+      setThemeMode(themeMode === 'light' ? 'dark' : 'light');
+    }, 500);
+    setTimeout(() => {
+      document.body.classList.remove('body-slide');
+    }, 1000);
     toggleMenu?.();
   };
 

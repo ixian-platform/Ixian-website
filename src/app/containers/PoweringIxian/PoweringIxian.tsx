@@ -5,11 +5,10 @@ import SectionHeader from '@components/SectionHeader/SectionHeader';
 import TextElement from '@components/TextElement/TextElement';
 import Chip from '@components/Chip/Chip';
 import IxiMetrics from '@components/IxiMetrics/IxiMetrics';
-import { Routes, Section } from '@utils/constants';
+import { Section } from '@utils/constants';
 import InteractionCard from '@components/InteractionCard/InteractionCard';
 import MyIcon from '@components/MyIcon/MyIcon';
 import { useTranslations } from 'next-intl';
-import Button from '@components/Button/Button';
 
 const PoweringIxian = () => {
   const t = useTranslations('EcoGetInvolvedPage.poweringIxian');
@@ -28,13 +27,6 @@ const PoweringIxian = () => {
       <IxiMetrics />
       <div className={classes.resourcesContainer} id={Section.RESOURCES}>
         <TextElement type={'heading-sm'}>{t('resources.label')}</TextElement>
-        <Button
-          leadingIcon={<MyIcon name={'EastRounded'} />}
-          variant={'outlined'}
-          href={`${Routes.TECHNOLOGY}#${Section.IXI_TOKEN}`}
-        >
-          {t('resources.cta')}
-        </Button>
         {['wallets', 'miners', 'nodes', 'miningPools'].map((res) => (
           <div className={classes.innerCards} key={res} id={Section.IXI_MINING}>
             <div className={classes.text}>

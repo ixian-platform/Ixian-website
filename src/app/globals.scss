@@ -304,3 +304,19 @@ a {
     }
   }
 }
+
+.body-slide {
+  animation: scale 0.5s forwards;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scaleX(0.98) scaleY(0.998);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
