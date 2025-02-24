@@ -5,4 +5,5 @@ export const metricsData = {
   peakTps: 379,
   transactionFees: '<$0.000001',
   maxSupply: 21,
+  activeDltNodesFallback: 186,
 };

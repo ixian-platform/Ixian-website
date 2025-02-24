@@ -32,7 +32,7 @@ const IxianPlatformMetrics = () => {
       <div className={classes.metricsContainer}>
         <div className={classes.insideSingle}>
           <NumberTicker
-            value={nodeStatusData?.M || 0}
+            value={nodeStatusData?.M || metricsData.activeDltNodesFallback}
             className={classes.number}
           />
           <TextElement type={'body-sm'}>{t('activeIxianDltNodes')}</TextElement>
