@@ -193,7 +193,7 @@
     "gitSection": {
       "chip": "Since 2018",
       "title": "Proudly Open-Source ",
-      "subtitle": "We are committed to building Ixian in public. It's open source and available for anyone to contribute to or audit on GitHub.",
+      "subtitle": "Our commitment to open-source means continuous innovation, community-driven development, and trustless technology. Ixian is open source and available for anyone to contribute to or audit on GitHub.",
       "visitIxian": "Visit Ixian Project on GitHub"
     },
     "milestones": {
@@ -264,7 +264,7 @@
         "subtitle": "$IXI is generated through block rewards for DLT node operators, ensuring a decentralized and equitable distribution. There were no pre-sales or private sales, making the process fully transparent and accessible to all participants. 9% of the total projected supply is allocated as a pre-mine for platform and ecosystem development."
       },
       "metrics": {
-        "supply": "Projected Max Supply at year 2125",
+        "supply": "Projected Supply in Year 2125",
         "peakTps": "Peak TPS YTD",
         "targetBlockTime": "Target Block Time",
         "transactionFees": "Transaction Fees",
