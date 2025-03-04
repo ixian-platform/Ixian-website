@@ -33,19 +33,19 @@ export default async function RootLayout({
       className={Cookies.get('themeMode') || 'dark'}
       suppressHydrationWarning={true}
     >
-      <ThemeProvider>
-        <NextIntlClientProvider messages={messages}>
-          <body
-            className={`${spaceGrotesk.className} ${inter.className} bodyLayout`}
-          >
+      <body
+        className={`${spaceGrotesk.className} ${inter.className} bodyLayout`}
+      >
+        <ThemeProvider>
+          <NextIntlClientProvider messages={messages}>
             <Navbar />
             {children}
             <Footer />
             <ScrollToTop />
             <CookiesBanner />
-          </body>
-        </NextIntlClientProvider>
-      </ThemeProvider>
+          </NextIntlClientProvider>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
