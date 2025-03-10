@@ -320,3 +320,37 @@ a {
     transform: scale(1);
   }
 }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--colors-surface-01);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--colors-surface-action-hover);
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--colors-icon-action-hover);
+  cursor: pointer;
+}
+
+@include mq('sm') {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  html {
+    scrollbar-width: none;
+  }
+
+  body {
+    -ms-overflow-style: none;
+  }
+}

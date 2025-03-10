@@ -9,7 +9,7 @@ import StartBuildingNow from '@/app/containers/StartBuildingNow/StartBuildingNow
 import { generateSEO } from '@utils/seo';
 import { ixidocs } from '@utils/constants';
 import Image from 'next/image';
-import buildHeroImage from '@assets/other/build-hero.png';
+import buildHeroImage from '@assets/other/build-hero-opt.png';
 
 export async function generateMetadata() {
   return generateSEO({
