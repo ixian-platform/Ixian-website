@@ -3,7 +3,7 @@
 import classes from './HamburgerMenu.module.scss';
 import React, { useEffect, useState } from 'react';
 import classNames from 'classnames';
-import Link from 'next/link';
+import { Link } from 'next-view-transitions';
 import { linksData } from '@components/Navbar/Navbar';
 import ThemeSwitcher from '@components/ThemeSwitcher/ThemeSwitcher';
 import { useClickAway } from '@uidotdev/usehooks';

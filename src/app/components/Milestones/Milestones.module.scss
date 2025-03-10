@@ -23,12 +23,12 @@
       min-height: 60px;
 
       &::-webkit-scrollbar {
-        height: 4px;
+        height: 2px;
+        display: block;
       }
 
-      &::-webkit-scrollbar-thumb {
-        background-color: gray;
-        border-radius: 4px;
+      &::-webkit-scrollbar-track {
+        border-radius: 12px !important;
       }
 
       p {

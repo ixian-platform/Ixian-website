@@ -1,7 +1,7 @@
 'use client';
 
 import classes from './Navbar.module.scss';
-import Link from 'next/link';
+import { Link } from 'next-view-transitions';
 
 import { ixidocs, Routes } from '@utils/constants';
 import ContentWrapper from '@components/ContentWrapper/ContentWrapper';
