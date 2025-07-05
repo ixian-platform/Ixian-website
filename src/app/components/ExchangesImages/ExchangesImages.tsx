@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { coingeckoIxi, nonkycIxi, xeggexIxi } from '@utils/constants';
+import { coingeckoIxi, nonkycIxi } from '@utils/constants';
 import Image from 'next/image';
 import classes from './ExchangesImages.module.scss';
 import useImages from '@utils/useImages';
@@ -15,15 +15,12 @@ interface ExchangesImagesProps {
 }
 
 const ExchangesImages = ({ forceTheme, className }: ExchangesImagesProps) => {
-  const { coingecko, xeggex, nonkyc } = useImages(forceTheme);
+  const { coingecko, nonkyc } = useImages(forceTheme);
 
   return (
     <div className={classNames(classes.images, className)}>
       <Link href={coingeckoIxi} target={'_blank'}>
         <Image src={coingecko} alt={'coingecko'} />
-      </Link>
-      <Link href={xeggexIxi} target={'_blank'}>
-        <Image src={xeggex} alt={'xeggex'} />
       </Link>
       <Link href={nonkycIxi} target={'_blank'}>
         <Image src={nonkyc} alt={'nonkyc'} />
