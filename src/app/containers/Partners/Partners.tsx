@@ -11,14 +11,12 @@ import Image from 'next/image';
 import benchmarked from '@assets/partners/benchmarked.svg';
 import even from '@assets/partners/even.svg';
 import ixilabs from '@assets/partners/ixilabs.svg';
-import robotina from '@assets/partners/robotina.svg';
 import vivat from '@assets/partners/vivat.svg';
 import Link from 'next/link';
 import {
   benchmarkedLink,
   evenLink,
   ixiLabs,
-  robotinaLink,
   Routes,
   vivatLink,
 } from '@utils/constants';
@@ -42,16 +40,12 @@ const Partners = () => {
         <Link href={ixiLabs} target={'_blank'}>
           <Image src={ixilabs} alt={'ixilabs'} />
         </Link>
-        <Link href={robotinaLink} target={'_blank'}>
-          <Image src={robotina} alt={'robotina'} />
-        </Link>
         <Link href={vivatLink} target={'_blank'}>
           <Image src={vivat} alt={'vivat'} />
         </Link>
         <Link href={benchmarkedLink} target={'_blank'}>
           <Image src={benchmarked} alt={'benchmarked'} />
         </Link>
-        {/*<Image src={nodezro} alt={'nodezro'} />*/}
         <Link href={evenLink} target={'_blank'}>
           <Image src={even} alt={'even'} />
         </Link>

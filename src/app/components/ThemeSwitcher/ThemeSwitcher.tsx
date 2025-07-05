@@ -36,9 +36,7 @@ const ThemeSwitcher = ({ toggleMenu }: ThemeSwitcherProps) => {
     <div className={classes.themeSwitcher} onClick={clickHandler}>
       <MyIcon
         color={'#F3F7F4'}
-        name={
-          themeMode === 'light' ? 'Brightness2Rounded' : 'Brightness5Rounded'
-        }
+        name={themeMode === 'light' ? 'Brightness2Rounded' : 'LightModeRounded'}
         width={24}
         height={24}
       />

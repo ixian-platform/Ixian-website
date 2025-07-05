@@ -14,7 +14,6 @@ import {
   evenLink,
   ixiLabs,
   ixiLabsEmail,
-  robotinaLink,
   Section,
   vivatLink,
 } from '@utils/constants';
@@ -24,7 +23,7 @@ import useImages from '@utils/useImages';
 
 const Partnership = () => {
   const t = useTranslations('AboutUsPage.partnerships');
-  const { ixilabs, benchmark, vivat, even, robotina } = useImages();
+  const { ixilabs, benchmark, vivat, even } = useImages();
 
   return (
     <ContentWrapper
@@ -51,9 +50,6 @@ const Partnership = () => {
         <div className={classes.partnerImages}>
           <Link href={ixiLabs} target={'_blank'}>
             <Image src={ixilabs} alt={'ixilabs'} />
-          </Link>
-          <Link href={robotinaLink} target={'_blank'}>
-            <Image src={robotina} alt={'robotina'} />
           </Link>
           <Link href={vivatLink} target={'_blank'}>
             <Image src={vivat} alt={'vivat'} />
