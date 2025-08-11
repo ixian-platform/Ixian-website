@@ -36,6 +36,10 @@ export const linksData = [
     label: 'Get Involved',
     href: Routes.GET_INVOLVED,
   },
+  {
+    label: 'About Us',
+    href: Routes.ABOUT_US,
+  },
 ];
 
 const Navbar = () => {

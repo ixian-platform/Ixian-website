@@ -5,7 +5,11 @@
   background: var(--color-neutral-1000);
   border-top: 1px solid;
   border-bottom: 1px solid;
-  border-color: var(--colors-outline-action-hover);
+  border-color: color-mix(
+    in srgb,
+    var(--colors-outline-action-hover) 15%,
+    transparent
+  );
 
   .openSourceCard {
     width: 100%;

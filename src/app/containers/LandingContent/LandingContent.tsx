@@ -11,9 +11,9 @@ import MyIcon from '@components/MyIcon/MyIcon';
 import Partners from '@/app/containers/Partners/Partners';
 import LandingFeaturesGrid from '@/app/containers/LandingFeaturesGrid/LandingFeaturesGrid';
 import Chip from '@components/Chip/Chip';
-import OpenSourceCard from '@components/OpenSourceCard/OpenSourceCard';
 import { Routes } from '@utils/constants';
 import ParticlesSpline from '@components/ParticlesSpline/ParticlesSpline';
+import OpenSourceCard from '@components/OpenSourceCard/OpenSourceCard';
 
 const LandingContent = () => {
   const t = useTranslations('LandingHero');
@@ -45,8 +45,8 @@ const LandingContent = () => {
         }
         leftContainer={<ParticlesSpline />}
       />
-      <OpenSourceCard />
       <LandingFeaturesGrid />
+      <OpenSourceCard />
       <MetricsSection />
       <UseCases />
       <Partners />
