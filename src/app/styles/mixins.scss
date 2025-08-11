@@ -1,9 +1,19 @@
-@use 'theme' as *;
 @use 'sass:map';
 
+$breakpoints: (
+  'xs': 480,
+  'sm': 768,
+  'md': 1024,
+  'lg': 1280,
+  'xl': 1600,
+  'xl_2': 1920,
+  'xl_3': 2560,
+  'wrapper': 1440,
+);
+
 @mixin mq($width, $type: max) {
-  @if map_has_key($breakpoints, $width) {
-    $width: map_get($breakpoints, $width);
+  @if map.has-key($breakpoints, $width) {
+    $width: map.get($breakpoints, $width);
     @if $type == max {
       $width: $width - 0.001;
     }

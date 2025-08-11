@@ -12,30 +12,29 @@ import IxiCurrency from '@/app/containers/IxiCurrency/IxiCurrency';
 import { generateSEO } from '@utils/seo';
 import Chip from '@components/Chip/Chip';
 import { ixianGitHub, Routes, whitepaperLink } from '@utils/constants';
+import { Metadata } from 'next';
 
-export async function generateMetadata() {
-  return generateSEO({
-    title:
-      'Ixian Technology | Next-Generation Blockchain and Overlay DePIN Network',
-    description:
-      'Explore Ixian’s innovative dual-layer infrastructure, combining high-performance blockchain with a distributed overlay network for secure, scalable applications.',
-    keywords: [
-      'Ixian technology',
-      'decentralized network',
-      'Layer-1 blockchain',
-      'DePIN',
-      'decentralized infrastructure',
-      'scalable blockchain',
-      'proof-of-collaborative-work',
-      'IoT blockchain',
-      'secure data streaming',
-      'decentralized communication',
-      'Ixian DLT',
-      'Ixian S2',
-      '$IXI cryptocurrency',
-    ],
-  });
-}
+export const metadata: Metadata = generateSEO({
+  title:
+    'Ixian Technology | Next-Generation Blockchain and Overlay DePIN Network',
+  description:
+    'Explore Ixian’s innovative dual-layer infrastructure, combining high-performance blockchain with a distributed overlay network for secure, scalable applications.',
+  keywords: [
+    'Ixian technology',
+    'decentralized network',
+    'Layer-1 blockchain',
+    'DePIN',
+    'decentralized infrastructure',
+    'scalable blockchain',
+    'proof-of-collaborative-work',
+    'IoT blockchain',
+    'secure data streaming',
+    'decentralized communication',
+    'Ixian DLT',
+    'Ixian S2',
+    '$IXI cryptocurrency',
+  ],
+});
 
 export default function Technology() {
   const t = useTranslations('TechnologyPage');

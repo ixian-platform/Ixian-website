@@ -1,7 +1,7 @@
 'use client';
 
 import classes from './Navbar.module.scss';
-import { Link } from 'next-view-transitions';
+import Link from 'next/link';
 
 import { ixidocs, Routes } from '@utils/constants';
 import ContentWrapper from '@components/ContentWrapper/ContentWrapper';
@@ -35,6 +35,10 @@ export const linksData = [
   {
     label: 'Get Involved',
     href: Routes.GET_INVOLVED,
+  },
+  {
+    label: 'About Us',
+    href: Routes.ABOUT_US,
   },
 ];
 

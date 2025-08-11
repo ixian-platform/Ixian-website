@@ -8,7 +8,6 @@ import { NextIntlClientProvider } from 'next-intl';
 import { Inter, Space_Grotesk } from 'next/font/google';
 import CookiesBanner from '@components/CookiesBanner/CookiesBanner';
 import ScrollToTop from '@components/ScrollToTop/ScrollToTop';
-import { ViewTransitions } from 'next-view-transitions';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -29,7 +28,6 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <ViewTransitions>
     <html
       lang={locale}
       className={Cookies.get('themeMode') || 'dark'}
@@ -49,6 +47,5 @@ export default async function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-    </ViewTransitions>
   );
 }

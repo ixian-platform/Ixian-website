@@ -10,28 +10,27 @@ import { generateSEO } from '@utils/seo';
 import { ixidocs } from '@utils/constants';
 import Image from 'next/image';
 import buildHeroImage from '@assets/other/build-hero-opt.png';
+import { Metadata } from 'next';
 
-export async function generateMetadata() {
-  return generateSEO({
-    title: 'Build on Ixian | Scalable, Secure & Cost-Effective Development',
-    description:
-      'Leverage Ixian’s scalable and secure DLT and overlay networks. Access documentation, API guides, and GitHub resources to start building today.',
-    keywords: [
-      'Build on Ixian',
-      'decentralized development',
-      'secure blockchain applications',
-      'scalable blockchain',
-      'trustless communication',
-      'end-to-end security',
-      'easy blockchain integration',
-      'minimal infrastructure costs',
-      'high-performance blockchain',
-      'DePIN development',
-      'Ixian platform',
-      '$IXI incentives',
-    ],
-  });
-}
+export const metadata: Metadata = generateSEO({
+  title: 'Build on Ixian | Scalable, Secure & Cost-Effective Development',
+  description:
+    'Leverage Ixian’s scalable and secure DLT and overlay networks. Access documentation, API guides, and GitHub resources to start building today.',
+  keywords: [
+    'Build on Ixian',
+    'decentralized development',
+    'secure blockchain applications',
+    'scalable blockchain',
+    'trustless communication',
+    'end-to-end security',
+    'easy blockchain integration',
+    'minimal infrastructure costs',
+    'high-performance blockchain',
+    'DePIN development',
+    'Ixian platform',
+    '$IXI incentives',
+  ],
+});
 
 export default function Build() {
   const t = useTranslations('BuildPage.hero');
