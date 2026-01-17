@@ -4,7 +4,6 @@ import Link from 'next/link';
 import {
   ixianGitHub,
   ixiLabs,
-  mineIxiLink,
   Routes,
   spixiWebsite,
 } from '@utils/constants';
@@ -125,16 +124,6 @@ const Footer = () => {
               {/*    {t('external.IXInames')}*/}
               {/*  </TextElement>*/}
               {/*</Link>*/}
-              <Link
-                href={mineIxiLink}
-                target={'_blank'}
-                className={classes.externalLink}
-              >
-                <TextElement type={'label-sm'}>
-                  {t('external.mineIXI')}
-                </TextElement>
-                <MyIcon name={'NorthEastRounded'} />
-              </Link>
               <Link
                 href={ixianGitHub}
                 target={'_blank'}

@@ -9,7 +9,6 @@
       "ixiLabs": "IXI Labs",
       "spixi": "Spixi",
       "IXInames": "IXI Names",
-      "mineIXI": "Mine IXI",
       "github": "GitHub"
     },
     "termsOfUse": "Terms of Use",
@@ -434,11 +433,6 @@
           "title": "Mining Pools",
           "subtitle": "You can mine $IXI on the following pools:",
           "card1": {
-            "href": "https://mineixi.com/",
-            "title": "mineixi.com",
-            "subtitle": "Official mining pool."
-          },
-          "card2": {
             "href": "https://ixi.hash.express/",
             "title": "HashExpress",
             "subtitle": "Community mining pool."

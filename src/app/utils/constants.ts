@@ -43,4 +43,3 @@ export const benchmarkedLink = 'https://benchmarked.co/';
 export const evenLink = 'https://even.si/';
 export const ixianFirstArticle =
   'https://medium.com/ixian/how-spixi-minimized-infrastructure-costs-with-decentralized-technology-8a45ef7c6597';
-export const mineIxiLink = 'https://mineixi.com/';
