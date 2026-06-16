@@ -11,7 +11,7 @@ import { MilestonesData, milestonesData } from '@utils/milestonesUtils';
 const Milestones = () => {
   const t = useTranslations('TechnologyPage.milestones');
   const [selectedMilestone, setSelectedMilestone] = useState<MilestonesData>(
-    milestonesData[0]
+    milestonesData[milestonesData.length - 1]
   );
 
   return (

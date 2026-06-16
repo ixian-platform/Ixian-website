@@ -33,7 +33,7 @@
   "Metrics": {
     "chip": "Why Ixian",
     "title": "Built for Scalability, Security and Real-world Use",
-    "subtitle": "Ixian is designed for real-world applications, providing the scalability and security needed to power a world of devices across industries—from end-user applications to IoT and smart cities. We’re reducing operational overhead and complexity in multi-user environments.",
+    "subtitle": "Ixian is designed for real-world applications, providing the scalability and security needed to power a world of devices across industries - from end-user applications to IoT and smart cities. We’re reducing operational overhead and complexity in multi-user environments.",
     "howDoesItWork": "How Does It Work",
     "readWhitepaper": "Read the White Paper",
     "connectedDevices": "Connected Devices",
@@ -389,30 +389,16 @@
         "cta": "Explore $IXI",
         "wallets": {
           "title": "Wallets",
-          "subtitle": "Did you know you can mine $IXI? Ixian uses Argon mining for fair distribution. Download the miner, setup and start.",
+          "subtitle": "Choose the wallet that best fits your needs, from a lightweight desktop client to a mobile messaging super app with built-in $IXI payments.",
           "card1": {
-            "href": "https://github.com/ixian-platform/Ixian-LiteWallet/releases",
-            "title": "LiteWallet",
-            "subtitle": "CLI Based Light Wallet."
+            "href": "https://github.com/ixian-platform/QuIXI/releases",
+            "title": "QuIXI",
+            "subtitle": "Fast and lightweight wallet for managing $IXI and integrating with the Ixian ecosystem."
           },
           "card2": {
-            "href": "https://www.spixi.io/download/",
+            "href": "https://www.spixi.io/",
             "title": "Spixi",
-            "subtitle": "Best wallet for holding and using your $IXI"
-          }
-        },
-        "miners": {
-          "title": "$IXI Miners",
-          "subtitle": "Did you know you can mine $IXI? Ixian uses Argon mining for fair distribution. Download the miner, setup and start.",
-          "card1": {
-            "href": "https://github.com/ixian-platform/IxiWatt/releases",
-            "title": "IXIWatt",
-            "subtitle": "Official GUI Miner"
-          },
-          "card2": {
-            "href": "https://github.com/bogdanadnan/iximiner/releases",
-            "title": "Third-party Miner",
-            "subtitle": "Built by members of the community."
+            "subtitle": "Chat, pay, and manage $IXI from a single decentralized messaging and wallet app."
           }
         },
         "nodes": {
@@ -427,15 +413,6 @@
             "href": "https://github.com/ixian-platform/Ixian-S2/releases",
             "title": "S2 Node",
             "subtitle": "Ixian S2 end to end data streaming network software"
-          }
-        },
-        "miningPools": {
-          "title": "Mining Pools",
-          "subtitle": "You can mine $IXI on the following pools:",
-          "card1": {
-            "href": "https://ixi.hash.express/",
-            "title": "HashExpress",
-            "subtitle": "Community mining pool."
           }
         }
       }

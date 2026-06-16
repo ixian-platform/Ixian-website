@@ -27,7 +27,7 @@ const PoweringIxian = () => {
       <IxiMetrics />
       <div className={classes.resourcesContainer} id={Section.RESOURCES}>
         <TextElement type={'heading-sm'}>{t('resources.label')}</TextElement>
-        {['wallets', 'miners', 'nodes', 'miningPools'].map((res) => (
+        {['wallets', 'nodes'].map((res) => (
           <div className={classes.innerCards} key={res} id={Section.IXI_MINING}>
             <div className={classes.text}>
               <TextElement type={'heading-md'}>

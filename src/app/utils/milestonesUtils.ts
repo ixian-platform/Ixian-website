@@ -201,6 +201,27 @@ export const milestonesData: MilestonesData[] = [
   },
   {
     index: 9,
+    year: '2025',
+    milestones: [
+        {
+          title: 'S2 Starling Release & Network Scaling',
+          description:
+            'Released the S2 Starling scaling model, introducing relay sectors, presence list optimizations, decentralized client discovery improvements, and S2 relay monetization support. Enhanced network routing, connectivity, and message relay infrastructure to enable unbounded scaling of the Ixian communication layer.',
+        },
+        {
+          title: 'Post-Quantum Cryptography Integration',
+          description:
+            'Launched the Kyber Crystal Release, introducing Phase 1 of Post-Quantum Cryptography across the Ixian ecosystem. Integrated hybrid RSA + ECDH + ML-KEM (Kyber) key exchange and upgraded streaming protocols, laying the foundation for quantum-resilient decentralized communications.',
+        },
+        {
+          title: 'QuIXI & Spixi Mini Apps',
+          description:
+            'Expanded the Ixian ecosystem with the introduction of QuIXI, a lightweight integration gateway connecting IoT devices, AI agents, REST services, and message queue systems to the decentralized network. Introduced the foundation for Spixi Mini Apps, enabling developers to build lightweight applications and services directly within the Spixi ecosystem.',
+        },
+    ],
+  },
+  {
+    index: 10,
     year: 'Upcoming Releases',
     milestones: [
       {
@@ -214,9 +235,9 @@ export const milestonesData: MilestonesData[] = [
           'Launching a dedicated portal for managing IXI Names, providing a user-friendly interface for registration, management, and integration of  human-readable names on the Ixian Platform.',
       },
       {
-        title: 'Spixi Mini Apps',
+        title: 'The Decentralized Application Platform',
         description:
-          'Introducing Spixi Mini Apps, enabling developers to build and deploy lightweight, decentralized applications within the Spixi ecosystem.',
+          'Advancing the next generation of decentralized applications through Spixi Mini Apps, QuIXI integrations, AI agent connectivity, IoT infrastructure, and enhanced developer tooling, enabling real-world adoption of the Ixian Platform.',
       },
     ],
   },

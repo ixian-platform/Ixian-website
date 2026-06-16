@@ -12,7 +12,7 @@ export const socials = [
   {
     img: discord,
     alt: 'discord',
-    href: 'https://discord.gg/P493UN9',
+    href: 'https://discord.gg/pdJNVhv',
     label: 'Discord',
   },
   {
