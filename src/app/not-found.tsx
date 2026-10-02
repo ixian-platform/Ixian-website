@@ -1,50 +1,22 @@
-import classes from '@/app/page.module.scss';
-import ContentWrapper from '@components/ContentWrapper/ContentWrapper';
-import SectionHeader from '@components/SectionHeader/SectionHeader';
-import TextElement from '@components/TextElement/TextElement';
-import Button from '@components/Button/Button';
-import MyIcon from '@components/MyIcon/MyIcon';
-import { getServerTranslations } from '@utils/getServerTranslations';
-import { Routes } from '@utils/constants';
+import type { Metadata } from 'next';
+import '@site/styles/tokens.css';
+import '@site/styles/base.css';
+import Nav from '@site/components/Nav';
+import Footer from '@site/components/Footer';
+import { PageHero } from '@site/components/page/kit';
+import NotFoundTrace from '@site/sections/NotFound/NotFoundTrace';
+import { notFound as c } from '@site/content/notFound';
 
-const t = await getServerTranslations();
+export const metadata: Metadata = { title: 'Page not found | Ixian', robots: { index: false } };
 
-export default async function NotFound() {
+export default function NotFound() {
   return (
-    <section className={classes.page}>
-      <ContentWrapper
-        asWrapperSection
-        sectionClass={classes.notFoundSection}
-        className={classes.notFound}
-      >
-        <div className={classes.notFoundInnerCard}>
-          <SectionHeader
-            chipContainer={
-              <TextElement type={'display-lg'}>
-                {t('NotFound.code')}
-              </TextElement>
-            }
-            title={
-              <TextElement type={'heading-lg'}>
-                {t('NotFound.title')}
-              </TextElement>
-            }
-            subtitle={
-              <TextElement type={'body-lg'}>
-                {t('NotFound.subtitle')}
-              </TextElement>
-            }
-            ctaContent={
-              <Button
-                href={Routes.INDEX}
-                leadingIcon={<MyIcon name={'EastRounded'} />}
-              >
-                {t('NotFound.cta')}
-              </Button>
-            }
-          />
-        </div>
-      </ContentWrapper>
-    </section>
+    <div className="ix">
+      <Nav />
+      <main id="main" style={{ minHeight: '70vh' }}>
+        <PageHero title={c.title} lead={c.lead} actions={c.actions} aside={<NotFoundTrace />} />
+      </main>
+      <Footer />
+    </div>
   );
 }

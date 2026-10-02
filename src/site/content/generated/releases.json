@@ -1,0 +1,12 @@
+{
+  "dlt": {
+    "tag": "v0.9.8g",
+    "url": "https://github.com/ixian-platform/Ixian-DLT/releases/tag/v0.9.8g",
+    "date": "2026-08-10"
+  },
+  "s2": {
+    "tag": "v0.9.5e",
+    "url": "https://github.com/ixian-platform/Ixian-S2/releases/tag/v0.9.5e",
+    "date": "2026-08-10"
+  }
+}

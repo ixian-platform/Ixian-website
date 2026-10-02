@@ -18,11 +18,20 @@
     "ecmaVersion": 13,
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint"],
+  "plugins": [
+    "@typescript-eslint"
+  ],
   "rules": {
-    "no-unused-vars": "warn",
     "no-console": "warn",
     "no-extra-semi": "error",
-    "react/no-unescaped-entities": 0
+    "react/no-unescaped-entities": 0,
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "ignoreRestSiblings": true
+      }
+    ]
   }
 }

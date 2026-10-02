@@ -1,0 +1,166 @@
+.vis {
+  position: absolute;
+  inset: 0;
+  background: var(--ix-bg);
+  overflow: hidden;
+}
+/* a quiet dot grid, fading out towards the edges */
+.vis::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgb(var(--ix-ink-rgb) / 0.07) 0.8px, transparent 1.1px);
+  background-size: 16px 16px;
+  background-position: 8px 8px;
+  -webkit-mask-image: radial-gradient(70% 65% at 50% 50%, #000 20%, transparent 100%);
+  mask-image: radial-gradient(70% 65% at 50% 50%, #000 20%, transparent 100%);
+  pointer-events: none;
+}
+.svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.svg * {
+  vector-effect: non-scaling-stroke;
+}
+.mono {
+  font-family: var(--ix-mono);
+}
+
+/* wiring at rest, and lit on hover */
+.wire {
+  stroke: rgb(var(--ix-ink-rgb) / 0.13);
+  stroke-width: 1;
+  fill: none;
+  transition: stroke var(--ix-dur-2) var(--ix-ease-out);
+}
+.live {
+  stroke: var(--ix-route);
+  stroke-width: 1.3;
+  fill: none;
+  opacity: 0.55;
+  transition: opacity var(--ix-dur-2) var(--ix-ease-out);
+}
+.quiet {
+  stroke: rgb(var(--ix-ink-rgb) / 0.1);
+  stroke-width: 1;
+  fill: none;
+}
+.faint {
+  stroke: rgb(var(--ix-ink-rgb) / 0.08);
+  stroke-width: 1;
+  stroke-dasharray: 2 5;
+  fill: none;
+}
+.card {
+  fill: #0a0d0c;
+  stroke: rgb(var(--ix-ink-rgb) / 0.14);
+  stroke-width: 1;
+  transition: stroke var(--ix-dur-2) var(--ix-ease-out);
+}
+.cardKey {
+  fill: #0b0e0f;
+  stroke: rgb(var(--ix-route-rgb) / 0.34);
+  stroke-width: 1;
+  transition: stroke var(--ix-dur-2) var(--ix-ease-out);
+}
+.outline {
+  fill: none;
+  stroke: rgb(var(--ix-ink-rgb) / 0.14);
+  stroke-width: 1;
+}
+.tray {
+  fill: rgb(var(--ix-ink-rgb) / 0.012);
+  stroke: rgb(var(--ix-ink-rgb) / 0.05);
+  stroke-width: 1;
+}
+.ghost {
+  fill: none;
+  stroke: rgb(var(--ix-ink-rgb) / 0.1);
+  stroke-width: 1;
+  stroke-dasharray: 3 4;
+}
+.glyph {
+  stroke: var(--ix-text-2);
+  stroke-width: 1.4;
+  fill: none;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.cell {
+  fill: var(--ix-route);
+}
+.addr {
+  fill: var(--ix-text-2);
+}
+.dim {
+  fill: var(--ix-text-3);
+}
+.chip {
+  fill: rgb(var(--ix-ink-rgb) / 0.025);
+  stroke: rgb(var(--ix-ink-rgb) / 0.1);
+  stroke-width: 1;
+}
+.chipGlyph {
+  stroke: var(--ix-text-2);
+  stroke-width: 1.2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.ok {
+  fill: var(--ix-bg);
+  stroke: var(--ix-route);
+  stroke-width: 1;
+}
+.okMark {
+  stroke: var(--ix-route);
+  stroke-width: 1.3;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.relay {
+  fill: var(--ix-bg);
+  stroke: var(--ix-route);
+  stroke-width: 1.2;
+}
+.relayCore {
+  fill: var(--ix-route);
+}
+.packet {
+  fill: var(--ix-route);
+}
+.coin {
+  fill: var(--ix-live); /* value: the one place green appears in these drawings */
+}
+.coinGlow {
+  fill: var(--ix-live);
+  opacity: 0.16;
+}
+.pay {
+  stroke: rgb(var(--ix-action-rgb) / 0.55);
+  stroke-width: 1.2;
+  fill: none;
+  stroke-dasharray: 3 4;
+}
+.packetGlow {
+  fill: var(--ix-route);
+  opacity: 0.18;
+}
+
+:global(.ix-build-tile):is(:hover, :focus-within) .live { opacity: 0.95; }
+:global(.ix-build-tile):is(:hover, :focus-within) .cardKey { stroke: rgb(var(--ix-route-rgb) / 0.6); }
+:global(.ix-build-tile):is(:hover, :focus-within) .wire { stroke: rgb(var(--ix-ink-rgb) / 0.2); }
+
+@media (prefers-reduced-motion: reduce) {
+  .wire, .live, .card, .cardKey { transition: none; }
+}
+
+/* interactive cells (Mini Apps): a pointer, a hover, a focus ring */
+.hit { cursor: pointer; outline: none; }
+.hit rect:first-child { transition: stroke var(--ix-dur-1) var(--ix-ease-out), fill var(--ix-dur-1) var(--ix-ease-out); }
+.hit:hover rect:first-child { stroke: rgb(var(--ix-route-rgb) / 0.5); fill: rgb(var(--ix-route-rgb) / 0.06); }
+.hit:focus-visible rect:first-child { stroke: var(--ix-focus); stroke-width: 1.5; }

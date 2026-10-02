@@ -3,6 +3,10 @@ name: Build Next.js app and deploy to GitHub Pages
 on:
   workflow_dispatch:
 
+  # rebuild every 10 days to refresh the on-chain transaction total from ixiscope
+  schedule:
+    - cron: '17 3 */10 * *'
+
   push:
     branches: [ "master" ]
 
@@ -19,7 +23,6 @@ jobs:
           node-version: "lts/*"
           cache: 'npm'
 
-      # Cache node_modules
       - name: Cache node_modules
         uses: actions/cache@v4
         with:
@@ -28,7 +31,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-modules-
 
-      # Cache Next.js build cache
       - name: Cache Next.js .next/cache
         uses: actions/cache@v4
         with:
@@ -40,8 +42,27 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # never deploy a broken build, on a push or on the scheduled rebuild
+      - name: Type check, lint and unit tests
+        run: |
+          npm run typecheck
+          npm run lint
+          npm test
+
       - name: Build Next.js app
         run: npm run build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # a scheduled rebuild exists to refresh the figures; stop if they are a month old
+      - name: Live figures are fresh
+        if: github.event_name == 'schedule'
+        run: node -e "const c=require('./src/site/content/generated/chain.json');const d=(Date.now()-Date.parse(c.at))/864e5;console.log('chain.json age',d.toFixed(1),'days');if(!(d<30))process.exit(1)"
+
+      - name: Smoke and accessibility tests (Chromium, phone)
+        run: |
+          npx playwright install --with-deps chromium
+          npx playwright test --project=chromium --project=phone
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

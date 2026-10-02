@@ -1,0 +1,151 @@
+/* Design tokens: primitives → semantic tokens; components use semantic tokens only.
+   Contrast on the page (#050907): text 18.5, text-2 8.26, text-3 5.09; text-disabled (2.78) is never for reading. */
+
+:root {
+  /* ---- Primitives: brand ramp --------------------------------------- */
+  --ix-brand-1000: #061108;
+  --ix-brand-950: #0e2511;
+  --ix-brand-900: #173b1c;
+  --ix-brand-800: #215028;
+  --ix-brand-700: #2c6635;
+  --ix-brand-600: #377e42;
+  --ix-brand-500: #449751;
+  --ix-brand-400: #50b05f;
+  --ix-brand-300: #5cc96d;
+  --ix-brand-200: #6ee17f;
+  --ix-brand-100: #a7f6ad;
+  --ix-brand-50: #f9fdf9;
+
+  /* ---- Primitives: grey ramp ---------------------------------------- */
+  --ix-grey-1000: #0a0f0c;
+  --ix-grey-950: #111712;
+  --ix-grey-900: #1d251d;
+  --ix-grey-800: #373937;
+  --ix-grey-700: #585a59;
+  --ix-grey-600: #7e817f;
+  --ix-grey-500: #a4a7a6;
+  --ix-grey-400: #c0c8c4;
+  --ix-grey-300: #d7e4de;
+  --ix-grey-200: #e7efea;
+  --ix-grey-100: #f3f7f4;
+  --ix-grey-50: #fbfcfb;
+
+  /* ---- Semantic: surfaces and lines --------------------------------- */
+  /* raised is lighter than the page so a panel reads as sitting on it, not cut into it */
+  --ix-page: #050907; /* the page itself, every section */
+  --ix-surface: #0b0c0c; /* a quiet band or a panel's inner well: neutral, no green cast */
+  --ix-raised: #0f1111; /* an instrument: a panel you operate: neutral, no green cast */
+  --ix-border: rgb(var(--ix-white-rgb) / 0.1); /* the edge of a surface or a raised panel */
+  --ix-bg: var(--ix-page);
+  /* aliases: base = page, card = raised */
+  --ix-bg-base: var(--ix-page);
+  --ix-bg-card: var(--ix-raised);
+  /* the diagram well inside illustrations: a step below the page */
+  --ix-bg-deep: #030504;
+  --ix-surface-2: var(--ix-grey-900);
+  --ix-line: rgb(var(--ix-ink-rgb) / 0.07); /* hairlines, frames */
+  --ix-line-2: rgb(var(--ix-ink-rgb) / 0.12); /* stronger hairlines */
+  --ix-line-strong: var(--ix-grey-600); /* UI edges that must pass 3:1 */
+
+  /* ---- Semantic: text ------------------------------------------------ */
+  --ix-text: var(--ix-grey-100);
+  --ix-text-2: var(--ix-grey-500);
+  --ix-text-3: var(--ix-grey-600);
+  --ix-text-disabled: var(--ix-grey-700);
+
+  /* ---- Semantic: action and live ------------------------------------ */
+  --ix-action: var(--ix-brand-300);
+  --ix-action-hover: var(--ix-brand-200);
+  --ix-action-press: var(--ix-brand-400);
+  --ix-on-action: var(--ix-brand-1000); /* near black on green: 9.19:1 */
+  --ix-focus: var(--ix-brand-200);
+  --ix-live: var(--ix-brand-300);
+  --ix-disabled-bg: var(--ix-grey-900);
+
+  /* ---- RGB channels for translucent use: rgb(var(--ix-ink-rgb) / 0.1) ---- */
+  --ix-ink-rgb: 243 247 244;
+  --ix-action-rgb: 92 201 109;
+  --ix-route-rgb: 157 185 255;
+  --ix-build-rgb: 227 166 79;
+  --ix-white-rgb: 255 255 255;
+  --ix-black-rgb: 0 0 0;
+
+  /* ---- Semantic: colour means something ---------------------------- */
+  /* green = live, value, confirmed; blue = network traffic; amber = developer action.
+     No red: errors are shown by form (struck value, dashed edge, cross), so amber never reads as an error. */
+  --ix-route: #9db9ff;
+  --ix-build: #e3a64f;
+  --ix-build-soft: rgb(var(--ix-build-rgb) / 0.12);
+  --ix-on-build: #1b1206; /* text on amber: 8.66:1 */
+
+  /* ---- Type (Geist) --------------------------------------------------- */
+  --ix-font: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --ix-mono: var(--font-geist-mono), ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  --ix-fs-display: clamp(2.75rem, 1.4rem + 4.6vw, 5.5rem); /* 44 → 88 */
+  --ix-fs-h2: clamp(2rem, 1.3rem + 2.4vw, 3.5rem); /* 32 → 56 */
+  --ix-fs-h3: clamp(1.5rem, 1.1rem + 1.2vw, 2.125rem); /* 24 → 34 */
+  --ix-fs-lead: 1.125rem; /* 18 */
+  --ix-fs-body: 1rem; /* 16 */
+  --ix-fs-small: 0.875rem; /* 14 */
+  --ix-fs-label: 0.78125rem; /* 12.5 */
+  --ix-fs-tiny: 0.75rem; /* 12 */
+  --ix-fs-micro: 0.6875rem; /* 11: the smallest text on the site */
+  --ix-fs-mono: 0.78125rem;
+
+  --ix-fw-head: 600;
+  --ix-fw-body: 400;
+  --ix-fw-ui: 500;
+
+  --ix-lh-tight: 1;
+  --ix-lh-h3: 1.12;
+  --ix-lh-body: 1.6;
+
+  --ix-track-display: -0.035em;
+  --ix-track-h2: -0.035em;
+  --ix-track-h3: -0.025em;
+
+  /* ---- Layout and spacing (4 px base, modular) ---------------------- */
+  --ix-container: 1320px;
+  --ix-gutter: clamp(16px, 4.2vw, 48px);
+  --ix-section-y: clamp(96px, 10vw, 150px);
+  --ix-cols: 12;
+  --ix-col-gap: clamp(32px, 5vw, 72px);
+  --ix-nav-h: 68px;
+
+  /* ---- Layers: everything above the page flow ---------------------- */
+  --ix-z-chapters: 30; /* the chapter bar at the bottom */
+  --ix-z-nav: 50;
+  --ix-z-overlay: 60; /* the privacy panel, the blog reader */
+  --ix-s-1: 4px;
+  --ix-s-2: 8px;
+  --ix-s-3: 12px;
+  --ix-s-4: 16px;
+  --ix-s-5: 24px;
+  --ix-s-6: 32px;
+  --ix-s-7: 48px;
+  --ix-s-8: 64px;
+  --ix-s-9: 96px;
+
+  /* ---- Radius: sharp system ------------------------------------------ */
+  --ix-r-none: 0;
+  --ix-r-xs: 2px;
+  --ix-r-sm: 4px;
+  --ix-r-md: 6px;
+  --ix-r-full: 999px; /* pills, toggles and dots only */
+
+  /* ---- Motion ------------------------------------------------------- */
+  --ix-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ix-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ix-dur-1: 160ms; /* hover, press */
+  --ix-dur-2: 320ms; /* reveals, toggles */
+  --ix-dur-3: 640ms; /* section transitions */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --ix-dur-1: 0ms;
+    --ix-dur-2: 0ms;
+    --ix-dur-3: 0ms;
+  }
+}

@@ -1,0 +1,240 @@
+/* Shared flat illustration styles; keep in sync with Build's flat.module.css. Green is reserved for value. */
+
+/* the well: sits in a sharp container, draws its own grid and glow */
+.well {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--ix-bg-deep);
+  box-shadow: inset 0 0 0 1px var(--ix-line);
+}
+.well::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: radial-gradient(circle, rgb(var(--ix-ink-rgb) / 0.07) 0.8px, transparent 1.1px);
+  background-size: 16px 16px;
+  background-position: 8px 8px;
+  -webkit-mask-image: radial-gradient(70% 65% at 50% 50%, #000 20%, transparent 100%);
+  mask-image: radial-gradient(70% 65% at 50% 50%, #000 20%, transparent 100%);
+  pointer-events: none;
+}
+.well > :where(*) {
+  position: relative;
+  z-index: 1;
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.svg * {
+  vector-effect: non-scaling-stroke;
+}
+.mono {
+  font-family: var(--ix-mono);
+}
+.sans {
+  font-family: var(--ix-font);
+}
+
+/* wiring */
+.wire {
+  stroke: rgb(var(--ix-ink-rgb) / 0.13);
+  stroke-width: 1;
+  fill: none;
+}
+.live {
+  stroke: var(--ix-route);
+  stroke-width: 1.3;
+  fill: none;
+  opacity: 0.55;
+  transition: opacity var(--ix-dur-2) var(--ix-ease-out);
+}
+.liveOn {
+  opacity: 0.95;
+}
+.trace {
+  stroke: var(--ix-route);
+  stroke-width: 1.6;
+  fill: none;
+  filter: drop-shadow(0 0 3px rgb(var(--ix-route-rgb) / 0.55));
+}
+.faint {
+  stroke: rgb(var(--ix-ink-rgb) / 0.1);
+  stroke-width: 1;
+  stroke-dasharray: 2 5;
+  fill: none;
+}
+.end {
+  fill: var(--ix-grey-700);
+}
+
+/* objects */
+.tray {
+  fill: rgb(var(--ix-ink-rgb) / 0.012);
+  stroke: rgb(var(--ix-ink-rgb) / 0.05);
+  stroke-width: 1;
+}
+.card {
+  fill: #0a0d0c;
+  stroke: rgb(var(--ix-ink-rgb) / 0.14);
+  stroke-width: 1;
+  transition: stroke var(--ix-dur-2) var(--ix-ease-out);
+}
+.cardOn {
+  stroke: rgb(var(--ix-route-rgb) / 0.55);
+}
+.cardKey {
+  fill: #0b0e0f;
+  stroke: rgb(var(--ix-route-rgb) / 0.34);
+  stroke-width: 1;
+  transition: stroke var(--ix-dur-2) var(--ix-ease-out);
+}
+.cardKeyOn {
+  stroke: rgb(var(--ix-route-rgb) / 0.7);
+}
+.ghost {
+  fill: rgba(5, 9, 7, 0.6);
+  stroke: rgb(var(--ix-ink-rgb) / 0.16);
+  stroke-width: 1;
+  stroke-dasharray: 3 4;
+}
+.chip {
+  fill: rgb(var(--ix-ink-rgb) / 0.025);
+  stroke: rgb(var(--ix-ink-rgb) / 0.1);
+  stroke-width: 1;
+}
+.bar {
+  fill: rgb(var(--ix-ink-rgb) / 0.1);
+}
+.glyph {
+  stroke: var(--ix-text-2);
+  stroke-width: 1.4;
+  fill: none;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.glyphDim {
+  stroke: var(--ix-text-3);
+}
+.cell {
+  fill: var(--ix-route);
+}
+.cellDim {
+  fill: var(--ix-text-3);
+}
+.addr {
+  fill: var(--ix-text-2);
+}
+.dim {
+  fill: var(--ix-text-3);
+}
+.bright {
+  fill: var(--ix-text);
+}
+.caps {
+  font-family: var(--ix-mono);
+  letter-spacing: 0.14em;
+  fill: var(--ix-text-3);
+}
+
+/* network */
+.relay {
+  fill: var(--ix-bg-deep);
+  stroke: var(--ix-route);
+  stroke-width: 1.2;
+}
+.relayCore {
+  fill: var(--ix-route);
+}
+.dlt {
+  fill: var(--ix-live);
+}
+
+/* marks */
+.ok {
+  fill: var(--ix-bg-deep);
+  stroke: var(--ix-route);
+  stroke-width: 1;
+}
+.okMark {
+  stroke: var(--ix-route);
+  stroke-width: 1.3;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.no {
+  fill: var(--ix-bg-deep);
+  stroke: rgb(var(--ix-ink-rgb) / 0.3);
+  stroke-width: 1;
+  stroke-dasharray: 2 2;
+}
+.noMark {
+  stroke: var(--ix-text-2);
+  stroke-width: 1.3;
+  fill: none;
+  stroke-linecap: round;
+}
+.lockBg {
+  fill: var(--ix-bg-deep);
+}
+.lock {
+  stroke: var(--ix-route);
+  stroke-width: 1.1;
+  fill: none;
+}
+.pill {
+  fill: var(--ix-bg-deep);
+  stroke: rgb(var(--ix-route-rgb) / 0.45);
+  stroke-width: 1;
+}
+.pillText {
+  fill: var(--ix-route);
+}
+.pillGhost {
+  fill: var(--ix-bg-deep);
+  stroke: rgb(var(--ix-ink-rgb) / 0.22);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+}
+.pillGhostText {
+  fill: var(--ix-text-2);
+}
+
+/* traffic */
+.packet {
+  fill: var(--ix-route);
+}
+.packetGlow {
+  fill: var(--ix-route);
+  opacity: 0.18;
+}
+.packetGhost {
+  fill: var(--ix-bg-deep);
+  stroke: var(--ix-text-2);
+  stroke-width: 1;
+  stroke-dasharray: 2 2;
+}
+
+/* fade-ins driven by a data attribute on any group */
+.show {
+  opacity: 0;
+  transition: opacity 420ms var(--ix-ease-out);
+}
+.show[data-on] {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .live,
+  .card,
+  .cardKey,
+  .show {
+    transition: none;
+  }
+}

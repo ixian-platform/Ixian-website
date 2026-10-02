@@ -1,0 +1,231 @@
+/* Quickstart drawings: once per view (and on Replay), then still. */
+.wrap {
+  position: relative;
+  background: var(--ix-bg-deep);
+  box-shadow: inset 0 0 0 1px var(--ix-line);
+  overflow: hidden;
+}
+/* dot grid fading to the edges */
+.wrap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgb(var(--ix-ink-rgb) / 0.07) 0.8px, transparent 1.1px);
+  background-size: 16px 16px;
+  -webkit-mask-image: radial-gradient(70% 65% at 50% 50%, #000 20%, transparent 100%);
+  mask-image: radial-gradient(70% 65% at 50% 50%, #000 20%, transparent 100%);
+  pointer-events: none;
+}
+.svg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.svg * {
+  vector-effect: non-scaling-stroke;
+}
+.addr {
+  font-size: var(--ix-fs-micro);
+  fill: var(--ix-text-2);
+}
+.to {
+  font-size: var(--ix-fs-micro);
+  fill: var(--ix-route);
+}
+.prompt {
+  fill: none;
+  stroke: var(--ix-text-2);
+  stroke-width: 1.3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.typed {
+  fill: rgb(var(--ix-ink-rgb) / 0.5);
+  transform-box: fill-box;
+  transform-origin: 0 50%;
+}
+.route {
+  fill: none;
+  stroke: var(--ix-route);
+  stroke-width: 1.3;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  opacity: 0.7;
+}
+.packet {
+  opacity: 0;
+  transform: translate(242px, 200px);
+}
+.pkt {
+  fill: var(--ix-route);
+}
+.pktKey {
+  fill: var(--ix-route);
+}
+
+/* the phone's thread */
+.bubbleOut {
+  fill: rgb(var(--ix-ink-rgb) / 0.07);
+}
+.bubbleIn {
+  fill: rgb(var(--ix-ink-rgb) / 0.035);
+  stroke: rgb(var(--ix-ink-rgb) / 0.1);
+  stroke-width: 1;
+}
+.bubbleNew {
+  fill: rgb(var(--ix-route-rgb) / 0.08);
+  stroke: rgb(var(--ix-route-rgb) / 0.45);
+  stroke-width: 1;
+}
+.bar {
+  fill: rgb(var(--ix-ink-rgb) / 0.55);
+}
+.landing {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.read {
+  opacity: 0;
+}
+
+/* the contact request */
+.reqCard {
+  fill: rgb(var(--ix-ink-rgb) / 0.03);
+  stroke: rgb(var(--ix-ink-rgb) / 0.16);
+  stroke-width: 1;
+}
+.btnGhost {
+  fill: none;
+  stroke: rgb(var(--ix-ink-rgb) / 0.22);
+  stroke-width: 1;
+}
+.btnSolid {
+  fill: var(--ix-text);
+}
+.btnMark {
+  fill: none;
+  stroke: var(--ix-text-2);
+  stroke-width: 1.3;
+  stroke-linecap: round;
+}
+.btnMarkDark {
+  fill: none;
+  stroke: var(--ix-bg-deep);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.request > :not(.added) {
+  transition: none;
+}
+.reqCard,
+.decline,
+.accept {
+  transform-box: fill-box;
+}
+.tap {
+  fill: none;
+  stroke: var(--ix-text);
+  stroke-width: 1.2;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+}
+.added {
+  opacity: 0;
+}
+
+/* ---- play ------------------------------------------------------------- */
+.svg[data-play] .typed { animation: qsType 600ms var(--ix-ease-out) both; }
+.svg[data-play] .route { animation: qsDraw 800ms var(--ix-ease-out) 500ms both; }
+.svg[data-play] .packet { animation: qsTravel 1000ms var(--ix-ease-in-out) 650ms both; }
+.svg[data-play] .landing { animation: qsLand 520ms var(--ix-ease-out) 1650ms both; }
+.svg[data-play] .read { animation: qsFade 300ms var(--ix-ease-out) 2400ms both; }
+
+.wrap[data-mode='pair'] .svg:not([data-play]):not([data-still]) .request > * { opacity: 0; }
+.wrap[data-mode='pair'] .svg[data-play] .reqCard,
+.wrap[data-mode='pair'] .svg[data-play] .request > g:not(.added),
+.wrap[data-mode='pair'] .svg[data-play] .request > rect,
+.wrap[data-mode='pair'] .svg[data-play] .request > circle.tap {
+  animation-fill-mode: both;
+}
+.wrap[data-mode='pair'] .svg[data-play] .request > :not(.tap):not(.added) {
+  animation: qsCard 2000ms var(--ix-ease-out) 1600ms both;
+}
+.wrap[data-mode='pair'] .svg[data-play] .tap { animation: qsTap 700ms var(--ix-ease-out) 2700ms both; }
+.wrap[data-mode='pair'] .svg[data-play] .accept { animation: qsPress 260ms var(--ix-ease-out) 2750ms both; transform-origin: 50% 50%; }
+.wrap[data-mode='pair'] .svg[data-play] .added { animation: qsFade 360ms var(--ix-ease-out) 3600ms both; }
+
+/* reduced motion or no JS play: the end state */
+.svg[data-still] .route { stroke-dashoffset: 0; }
+.svg[data-still] .landing { opacity: 1; transform: none; }
+.svg[data-still] .read { opacity: 1; }
+.wrap[data-mode='pair'] .svg[data-still] .request > :not(.added) { opacity: 0; }
+.wrap[data-mode='pair'] .svg[data-still] .added { opacity: 1; }
+
+@keyframes qsType { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes qsDraw { to { stroke-dashoffset: 0; } }
+@keyframes qsTravel {
+  0% { opacity: 0; transform: translate(242px, 200px); }
+  12% { opacity: 1; }
+  88% { opacity: 1; }
+  100% { opacity: 0; transform: translate(440px, 200px); }
+}
+@keyframes qsLand { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes qsFade { from { opacity: 0; } to { opacity: 1; } }
+/* the request: in, held while it is accepted, then gives way */
+@keyframes qsCard {
+  0% { opacity: 0; transform: translateY(8px); }
+  18% { opacity: 1; transform: none; }
+  80% { opacity: 1; transform: none; }
+  100% { opacity: 0; transform: none; }
+}
+@keyframes qsTap {
+  0% { opacity: 0; transform: scale(0.6); }
+  1% { opacity: 0.8; transform: scale(0.6); }
+  100% { opacity: 0; transform: scale(2.2); }
+}
+@keyframes qsPress {
+  50% { transform: scale(0.88); }
+  100% { transform: scale(1); }
+}
+
+.replay {
+  all: unset;
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: var(--ix-r-sm);
+  color: var(--ix-text-3);
+  cursor: pointer;
+  transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+}
+.replay:hover { color: var(--ix-text); background: rgb(var(--ix-ink-rgb) / 0.05); }
+.replay:focus-visible { outline: 2px solid var(--ix-focus); outline-offset: 2px; }
+
+/* inside a step's confirmation: no frame of its own, fills the strip's height */
+.wrap[data-bare] { background: none; box-shadow: none; height: 100%; }
+.wrap[data-bare]::before { display: none; }
+.wrap[data-bare] .svg { width: auto; height: 100%; margin: 0 auto; }
+.wrap[data-bare] .replay { right: 4px; bottom: 4px; }
+
+/* as a page backdrop: no frame, the dot grid stays */
+.wrap[data-backdrop] { background: none; box-shadow: none; overflow: visible; }
+.wrap[data-backdrop]::before {
+  inset: -10% -10%;
+  -webkit-mask-image: radial-gradient(55% 55% at 55% 50%, #000 10%, transparent 100%);
+  mask-image: radial-gradient(55% 55% at 55% 50%, #000 10%, transparent 100%);
+}
+
+/* the sender: brighter edge and text lines than the default card, so the
+   eye starts at the terminal and follows the wire to the phone */
+.senderCard { stroke: rgb(var(--ix-ink-rgb) / 0.28); }
+.senderLine { fill: rgb(var(--ix-ink-rgb) / 0.06); stroke: rgb(var(--ix-ink-rgb) / 0.2); }
+.sender .typed { fill: rgb(var(--ix-ink-rgb) / 0.78); }
+.sender .addr { fill: var(--ix-text); }
+.sender .prompt { stroke: var(--ix-text); }

@@ -1,0 +1,139 @@
+.band {
+  --ix-bg: var(--ix-page);
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  display: grid;
+  align-items: center;
+  min-height: clamp(480px, 42vw, 620px);
+  padding-block: clamp(96px, 9vw, 136px);
+  background: var(--ix-bg);
+}
+
+.art {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+.glow,
+.lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+/* the glow fades in from the band's edges, so it meets the base without a seam */
+.glow {
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 22%, #000 78%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 22%, #000 78%, transparent);
+}
+/* the lines fill the band but fade out before the copy: none under the text */
+.lines {
+  -webkit-mask-image: linear-gradient(to right, transparent 0, transparent 44%, rgb(var(--ix-black-rgb) / 0.5) 56%, #000 70%);
+  mask-image: linear-gradient(to right, transparent 0, transparent 44%, rgb(var(--ix-black-rgb) / 0.5) 56%, #000 70%);
+}
+.measure {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.wrap {
+  width: 100%;
+  max-width: calc(var(--ix-container) + var(--ix-gutter) * 2);
+  margin: 0 auto;
+  padding-inline: var(--ix-gutter);
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  column-gap: var(--ix-col-gap);
+  row-gap: var(--ix-s-6);
+  align-items: end;
+}
+/* the action sits under the copy, so the right half belongs to the mark */
+.wrap > .copy,
+.wrap > .cta {
+  grid-column: 1;
+}
+.copy {
+  display: grid;
+  gap: var(--ix-s-5);
+}
+.title {
+  margin: 0;
+  max-width: 17ch;
+  font-size: var(--ix-fs-h2);
+  line-height: 1.05;
+  font-weight: var(--ix-fw-head);
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+.sub {
+  margin: 0;
+  max-width: 44ch;
+  color: var(--ix-text-2);
+  font-size: var(--ix-fs-lead);
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+.cta {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 52px;
+  padding: 0 24px;
+  border-radius: var(--ix-r-sm);
+  background: var(--ix-action);
+  color: var(--ix-on-action);
+  font-size: var(--ix-fs-body);
+  font-weight: var(--ix-fw-ui);
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background-color var(--ix-dur-1) var(--ix-ease-out), transform var(--ix-dur-1) var(--ix-ease-out);
+}
+.cta:hover {
+  background: var(--ix-action-hover);
+}
+.cta:active {
+  background: var(--ix-action-press);
+  transform: scale(0.98);
+}
+.cta:focus-visible {
+  outline: 2px solid var(--ix-focus);
+  outline-offset: 3px;
+  border-radius: var(--ix-r-sm);
+}
+.arrow {
+  transition: transform var(--ix-dur-2) var(--ix-ease-out);
+}
+.cta:hover .arrow {
+  transform: translateX(3px);
+}
+
+/* phones: the mark forms above the copy */
+@media (max-width: 760px) {
+  .band {
+    min-height: 0;
+    padding-top: 340px;
+    padding-bottom: var(--ix-section-y);
+    align-items: start;
+  }
+  .lines {
+    -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 240px, transparent 330px);
+    mask-image: linear-gradient(to bottom, #000 0, #000 240px, transparent 330px);
+  }
+  .wrap {
+    grid-template-columns: 1fr;
+    gap: var(--ix-s-6);
+  }
+  .cta {
+    justify-self: start;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cta, .arrow { transition: none; }
+}

@@ -1,0 +1,57 @@
+.boundary {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  pointer-events: none;
+  z-index: 1;
+}
+.boundary[data-edge='bottom'] {
+  top: auto;
+  bottom: 0;
+}
+.boundary[data-edge='bottom'] .draw {
+  transform-origin: 100% 50%; /* the closing line draws back from the right */
+}
+.draw {
+  position: absolute;
+  inset: 0;
+  background: var(--ix-line-2);
+  transform-origin: 0 50%;
+}
+/* crosshairs on the content grid's outer edges */
+.marks {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: min(100% - var(--ix-gutter) * 2, var(--ix-container));
+  transform: translateX(-50%);
+}
+.marks i {
+  position: absolute;
+  top: 0;
+  width: 11px;
+  height: 11px;
+  translate: -50% -50%;
+  background:
+    linear-gradient(var(--ix-grey-600), var(--ix-grey-600)) center / 1px 100% no-repeat,
+    linear-gradient(var(--ix-grey-600), var(--ix-grey-600)) center / 100% 1px no-repeat;
+}
+.marks i:first-child { left: 0; }
+.marks i:last-child { left: 100%; }
+
+.boundary[data-armed] .draw {
+  transform: scaleX(0);
+  transition: transform var(--ix-dur-3) var(--ix-ease-in-out);
+}
+.boundary[data-armed] .marks i {
+  opacity: 0;
+  scale: 0.4;
+  transition: opacity var(--ix-dur-2) var(--ix-ease-out), scale var(--ix-dur-2) var(--ix-ease-out);
+}
+.boundary[data-armed] .marks i:last-child {
+  transition-delay: 480ms; /* lands as the line arrives */
+}
+.boundary[data-armed][data-in] .draw { transform: none; }
+.boundary[data-armed][data-in] .marks i { opacity: 1; scale: 1; }
