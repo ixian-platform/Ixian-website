@@ -1,0 +1,15 @@
+.bar {
+  position: fixed; z-index: var(--ix-z-chapters); left: var(--ix-gutter); right: var(--ix-gutter); bottom: 18px;
+  display: flex; gap: 24px; align-items: center;
+  font-size: var(--ix-fs-tiny); color: var(--ix-text-3); pointer-events: none;
+  transition: opacity var(--ix-dur-2) var(--ix-ease-out), translate var(--ix-dur-2) var(--ix-ease-out);
+}
+.bar[data-off], .bar[data-top] { opacity: 0; translate: 0 8px; }
+.bar > span { transition: color 320ms; }
+.on { color: var(--ix-text); }
+.track { flex: 1; height: 1px; position: relative; background: var(--ix-grey-800); }
+.fill { position: absolute; inset: 0; background: var(--ix-text-2); transform-origin: 0 50%; transform: scaleX(var(--p, 0)); }
+@media (max-width: 860px) { .bar { display: none; } }
+/* steps aside when the footer comes in */
+.bar { transition: opacity var(--ix-dur-2) var(--ix-ease-out), translate var(--ix-dur-2) var(--ix-ease-out); }
+.bar[data-off], .bar[data-top] { opacity: 0; translate: 0 8px; }

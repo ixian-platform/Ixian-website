@@ -1,0 +1,245 @@
+.build {
+  --ix-bg: var(--ix-page);  background: var(--ix-bg);
+  position: relative;
+  padding-top: var(--ix-section-y);
+  padding-bottom: var(--ix-section-y);
+}
+.wrap {
+  max-width: calc(var(--ix-container) + var(--ix-gutter) * 2);
+  margin: 0 auto;
+  padding-inline: var(--ix-gutter); /* inline only: .build owns the vertical padding */
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+  gap: var(--ix-col-gap);
+  align-items: end;
+  margin-bottom: var(--ix-s-8);
+}
+.title {
+  margin: 0;
+  font-size: var(--ix-fs-h2);
+  line-height: 1.05;
+  font-weight: var(--ix-fw-head);
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+.lead {
+  margin: 0;
+  padding-bottom: var(--ix-s-1);
+  max-width: 54ch;
+  color: var(--ix-text-2);
+  font-size: var(--ix-fs-lead);
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+/* Hairline grid: 1 px gaps over the line colour, framed on the outside */
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--ix-line-2);
+  box-shadow: 0 0 0 1px var(--ix-line-2);
+}
+.tile {
+  /* media / body share rows with the neighbouring tile, so the links line up */
+  display: grid;
+  grid-row: span 2;
+  grid-template-rows: subgrid;
+  background: var(--ix-bg);  min-width: 0;
+}
+
+.media {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  --ix-bg: var(--ix-bg-deep);  background: var(--ix-bg);
+  box-shadow: inset 0 -1px 0 var(--ix-line);
+  overflow: hidden;
+}
+/* grey at rest; colour on hover, or while in view on phones ([data-lit]) */
+.media > * {
+  filter: grayscale(1);
+  transition: filter 160ms var(--ix-ease-out);
+}
+.tile:is(:hover, :focus-within) .media > *,
+.tile[data-lit] .media > * {
+  filter: grayscale(0);
+  transition: filter 520ms var(--ix-ease-out);
+}
+@media (prefers-reduced-motion: reduce) {
+  .media > * { transition: none; }
+}
+.media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slot {
+  position: absolute;
+  inset: var(--ix-s-5);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 2px;
+  padding: var(--ix-s-4);
+  font-size: var(--ix-fs-label);
+  color: var(--ix-text-3);
+  --t: 12px;
+  --c: var(--ix-grey-800);
+  background:
+    linear-gradient(var(--c), var(--c)) top left / var(--t) 1px,
+    linear-gradient(var(--c), var(--c)) top left / 1px var(--t),
+    linear-gradient(var(--c), var(--c)) top right / var(--t) 1px,
+    linear-gradient(var(--c), var(--c)) top right / 1px var(--t),
+    linear-gradient(var(--c), var(--c)) bottom left / var(--t) 1px,
+    linear-gradient(var(--c), var(--c)) bottom left / 1px var(--t),
+    linear-gradient(var(--c), var(--c)) bottom right / var(--t) 1px,
+    linear-gradient(var(--c), var(--c)) bottom right / 1px var(--t);
+  background-repeat: no-repeat;
+}
+.slot span:last-child {
+  color: var(--ix-text-2);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  padding: var(--ix-s-6) var(--ix-s-6) var(--ix-s-6);
+}
+.tileTitle {
+  margin: 0 0 var(--ix-s-3);
+  font-size: 1.5rem;
+  line-height: var(--ix-lh-h3);
+  font-weight: var(--ix-fw-head);
+  letter-spacing: var(--ix-track-h3);
+}
+.text {
+  margin: 0;
+  max-width: 52ch;
+  color: var(--ix-text-2);
+  line-height: var(--ix-lh-body);
+  text-wrap: pretty;
+}
+.note {
+  margin: var(--ix-s-3) 0 0;
+  padding-left: var(--ix-s-3);
+  box-shadow: inset 1px 0 0 var(--ix-grey-700);
+  font-size: var(--ix-fs-small);
+  color: var(--ix-text-3);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--ix-s-3) var(--ix-s-6);
+  margin-top: auto;
+  padding-top: var(--ix-s-5);
+}
+.guide {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9375rem;
+  font-weight: var(--ix-fw-ui);
+  line-height: 1.4;
+  color: var(--ix-text);
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size var(--ix-dur-1) var(--ix-ease-out), color var(--ix-dur-1) var(--ix-ease-out);
+}
+.guide:hover {
+  background-size: 100% 1px;
+}
+.guide svg {
+  color: var(--ix-text-3);
+  transition: transform var(--ix-dur-1) var(--ix-ease-out), color var(--ix-dur-1);
+}
+.guide:hover svg {
+  color: var(--ix-text);
+  transform: translate(2px, -2px);
+}
+.guide:focus-visible {
+  outline: 2px solid var(--ix-focus);
+  outline-offset: 3px;
+  border-radius: var(--ix-r-xs);
+}
+@media (max-width: 860px) {
+  .intro {
+    grid-template-columns: 1fr;
+    gap: var(--ix-s-4);
+    margin-bottom: var(--ix-s-7);
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .body {
+    padding: var(--ix-s-5) var(--ix-s-4) var(--ix-s-6);
+  }
+  .slot {
+    inset: var(--ix-s-4);
+  }
+  .tileTitle {
+    font-size: 1.375rem;
+  }
+}
+
+/* faint dot grid, fading out from the top */
+.build::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: radial-gradient(circle, rgb(var(--ix-ink-rgb) / 0.1) 0.8px, transparent 1.1px);
+  background-size: 24px 24px;
+  background-position: center top;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0, rgb(var(--ix-black-rgb) / 0.5) 40%, transparent 85%);
+  mask-image: linear-gradient(to bottom, #000 0, rgb(var(--ix-black-rgb) / 0.5) 40%, transparent 85%);
+  pointer-events: none;
+}
+.build {
+  isolation: isolate;
+}
+
+/* closing call to action */
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--ix-s-4) var(--ix-s-6);
+  margin-top: var(--ix-s-7);
+}
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 48px;
+  padding: 0 22px;
+  border-radius: var(--ix-r-sm);
+  background: var(--ix-action);
+  color: var(--ix-on-action);
+  font-size: 15px;
+  font-weight: var(--ix-fw-ui);
+  text-decoration: none;
+  transition: background-color var(--ix-dur-1) var(--ix-ease-out), transform var(--ix-dur-1) var(--ix-ease-out);
+}
+.ctaBtn:hover { background: var(--ix-action-hover); }
+.ctaBtn:active { background: var(--ix-action-press); transform: scale(0.98); }
+.ctaBtn:focus-visible { outline: 2px solid var(--ix-focus); outline-offset: 3px; }
+.ctaBtn svg { transition: transform var(--ix-dur-1) var(--ix-ease-out); }
+.ctaBtn:hover svg { transform: translateX(3px); }
+
+/* outlined, so the filled green button stays unique to Start */
+.ctaBtn[data-outline] { background: transparent; color: var(--ix-text); }
+.ctaBtn[data-outline]:hover, .ctaBtn[data-outline]:active { background: transparent; }

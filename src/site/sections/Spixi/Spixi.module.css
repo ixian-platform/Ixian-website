@@ -1,0 +1,269 @@
+.spixi {
+  position: relative;
+  padding-top: var(--ix-section-y);
+  padding-bottom: var(--ix-section-y);
+}
+.wrap {
+  max-width: calc(var(--ix-container) + var(--ix-gutter) * 2);
+  margin: 0 auto;
+  padding-inline: var(--ix-gutter);
+}
+
+/* desktop: copy on the left (4 of 12), frame on the right (8 of 12) */
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+  grid-template-areas:
+    'head stage'
+    'copy stage';
+  grid-template-rows: auto 1fr;
+  column-gap: var(--ix-col-gap);
+  row-gap: var(--ix-s-6);
+}
+.head { grid-area: head; }
+.stage { grid-area: stage; }
+.copy { grid-area: copy; display: flex; flex-direction: column; }
+
+.title {
+  margin: 0;
+  font-size: var(--ix-fs-h2);
+  line-height: 1.05;
+  font-weight: var(--ix-fw-head);
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+.body {
+  margin: 0;
+  max-width: 40ch;
+  color: var(--ix-text-2);
+  font-size: var(--ix-fs-lead);
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--ix-s-4) var(--ix-s-5);
+  margin-top: var(--ix-s-6);
+}
+.primary {
+  display: inline-flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 22px;
+  border-radius: var(--ix-r-sm);
+  background: var(--ix-action);
+  color: var(--ix-on-action);
+  font-size: 15px;
+  font-weight: var(--ix-fw-ui);
+  text-decoration: none;
+  transition: background-color var(--ix-dur-1) var(--ix-ease-out), transform var(--ix-dur-1) var(--ix-ease-out);
+}
+.primary:hover { background: var(--ix-action-hover); }
+.primary:active { background: var(--ix-action-press); transform: scale(0.98); }
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ix-text-2);
+  font-size: 0.9375rem;
+  font-weight: var(--ix-fw-ui);
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size var(--ix-dur-1) var(--ix-ease-out), color var(--ix-dur-1) var(--ix-ease-out);
+}
+.link:hover { color: var(--ix-text); background-size: 100% 1px; }
+.primary:focus-visible,
+.link:focus-visible,
+.tab:focus-visible {
+  outline: 2px solid var(--ix-focus);
+  outline-offset: 3px;
+  border-radius: var(--ix-r-xs);
+}
+
+/* numbers: one hairline list, big figures, quiet labels */
+.numbers {
+  margin: var(--ix-s-6) 0 0; /* right under the button; the space falls below as margin */
+  display: grid;
+  box-shadow: inset 0 -1px 0 var(--ix-line-2);
+}
+.liveRow dd { font-size: 1.25rem !important; }
+.platformRow dd {
+  font-size: var(--ix-fs-small) !important;
+  font-weight: var(--ix-fw-ui) !important;
+  letter-spacing: 0 !important;
+  color: var(--ix-text-2) !important;
+}
+.numbers div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--ix-s-4);
+  padding: var(--ix-s-4) 0;
+  box-shadow: inset 0 1px 0 var(--ix-line-2);
+}
+.numbers dt {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ix-text-2);
+  font-size: var(--ix-fs-small);
+}
+.numbers dd {
+  margin: 0;
+  color: var(--ix-text);
+  font-size: 1.75rem;
+  font-weight: var(--ix-fw-head);
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+.pending {
+  font-size: var(--ix-fs-small);
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--ix-text-3);
+}
+/* green only when a real reading is in */
+.live {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--ix-text-3);
+}
+.live[data-on] { background: var(--ix-live); }
+.note {
+  margin: var(--ix-s-3) 0 0;
+  font-size: var(--ix-fs-label);
+  color: var(--ix-text-3);
+}
+
+/* the frame: sharp, corner marks, screens crossfade */
+.frame {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: var(--ix-surface);
+  box-shadow: inset 0 0 0 1px var(--ix-line-2);
+  overflow: hidden;
+}
+.frame::after {
+  /* corner marks just outside the frame */
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  --t: 14px;
+  --c: var(--ix-grey-600);
+  background:
+    linear-gradient(var(--c), var(--c)) top left / var(--t) 1px,
+    linear-gradient(var(--c), var(--c)) top left / 1px var(--t),
+    linear-gradient(var(--c), var(--c)) top right / var(--t) 1px,
+    linear-gradient(var(--c), var(--c)) top right / 1px var(--t),
+    linear-gradient(var(--c), var(--c)) bottom left / var(--t) 1px,
+    linear-gradient(var(--c), var(--c)) bottom left / 1px var(--t),
+    linear-gradient(var(--c), var(--c)) bottom right / var(--t) 1px,
+    linear-gradient(var(--c), var(--c)) bottom right / 1px var(--t);
+  background-repeat: no-repeat;
+}
+
+/* tabs under the frame, full width, the active one underlined from above */
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.tab {
+  all: unset;
+  position: relative;
+  padding: var(--ix-s-4) 0;
+  text-align: center;
+  cursor: pointer;
+  font-size: 0.9375rem;
+  font-weight: var(--ix-fw-ui);
+  color: var(--ix-text-3);
+  box-shadow: inset 0 1px 0 var(--ix-line-2);
+  transition: color var(--ix-dur-1) var(--ix-ease-out);
+}
+.tab::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--ix-text);
+  transform: scaleX(0);
+  transition: transform var(--ix-dur-1) var(--ix-ease-out);
+}
+.tab:hover { color: var(--ix-text-2); }
+.tab[aria-selected='true'] { color: var(--ix-text); }
+.tab[aria-selected='true']::before { transform: none; }
+
+/* phones and tablets: title, frame and tabs, then the copy */
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'head' 'stage' 'copy';
+    grid-template-rows: auto;
+    row-gap: var(--ix-s-6);
+  }
+  .numbers dd { font-size: 1.5rem; }
+}
+
+/* background: a subtle haze, plus the twelve content columns as faint guides */
+.spixi {
+  --ix-bg: var(--ix-page);
+  isolation: isolate;
+  /* a dither tile on top (±1.5 levels, invisible as grain) keeps the haze from banding */
+  background:
+    url('/site/grain.png') 0 0 / 160px 160px,
+    radial-gradient(46% 40% at 70% 40%, rgba(110, 124, 220, 0.05), transparent 70%),
+    radial-gradient(34% 32% at 18% 78%, rgba(214, 160, 96, 0.035), transparent 70%),
+    var(--ix-bg);
+}
+.spixi::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  left: 50%;
+  width: min(100% - var(--ix-gutter) * 2, var(--ix-container));
+  transform: translateX(-50%);
+  background-image: linear-gradient(to right, rgb(var(--ix-ink-rgb) / 0.035) 1px, transparent 1px);
+  background-size: calc(100% / 12) 100%;
+  box-shadow: inset -1px 0 0 rgb(var(--ix-ink-rgb) / 0.035);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 18%, #000 82%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 18%, #000 82%, transparent);
+  pointer-events: none;
+}
+.frame {
+  background: var(--ix-bg);
+}
+
+.previewNote {
+  margin: var(--ix-s-2) 0 0;
+  font-size: var(--ix-fs-label);
+  color: var(--ix-text-3);
+  text-align: center;
+  opacity: 0;
+  transition: opacity var(--ix-dur-2) var(--ix-ease-out);
+}
+.previewNote[data-on] {
+  opacity: 1;
+}
+
+/* phones: a taller frame so the stage reads */
+@media (max-width: 860px) {
+  .frame { aspect-ratio: 4 / 5; }
+}
+
+@media (max-width: 860px) {
+  .frame { aspect-ratio: 4 / 5; }
+}
+
+
+.eyebrow { margin: 0 0 var(--ix-s-3); font-size: var(--ix-fs-small); font-weight: var(--ix-fw-ui); color: var(--ix-text-2); }

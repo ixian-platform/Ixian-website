@@ -1,72 +1,44 @@
-# Ixian Website
+# ixian.io
 
-## Overview
-Ixian Website is a Next.js-based application built using Next.js v15+.
+The Ixian website. Next.js 15 (App Router), exported as a static site and deployed to GitHub Pages.
 
-## Getting Started
+## Run
 
-### Installation
-Ensure you have Node.js installed, then run:
 ```sh
-  npm install
+npm ci
+npm run dev        # http://localhost:3000
 ```
 
-### Development
-To start the development server:
+`npm run preview` builds the site and serves `out/` on port 3000, with the live network figures proxied, so it behaves like production.
+
+## Build and deploy
+
 ```sh
-  npm run dev
+npm run build      # static site in out/
 ```
 
-### Build
-To build the project for production:
+`prebuild` fetches the on-chain transaction total and the latest app releases first. Pushing to `master` runs `.github/workflows/deploy.yml`, which builds and publishes to GitHub Pages; the workflow also rebuilds every 10 days to refresh the figures.
+
+## Checks
+
 ```sh
-  npm run build
+npm run check      # typecheck, lint, unit tests, build, end-to-end tests
 ```
 
-## Project Structure
+End-to-end tests use Playwright (`npm run test:e2e`).
 
-### Pages
-All pages can be found in the `src/app` folder.
-- `src/app/page.tsx` is the index page.
+## Layout
 
-### Components
-Custom components are located under:
-- `src/app/components`
-- `src/components` (components from `shadcn/ui`, which may be replaced in the future to remove `framer-motion` and `tailwind`)
-
-### Containers
-Wrappers and main containers for pages are under:
-- `src/app/containers`
-
-### Providers
-Context providers are located under:
-- `src/app/providers`
-    - Theme management can be found here.
-
-### Styles
-Design tokens, mixins, and typography are located under:
-- `src/app/styles`
-
-### Utilities
-Different utility functions can be found under:
-- `src/app/utils`
-
-### Assets
-Static assets used in the application are stored in:
-- `public/assets`
-
-### Translations
-The app is translated using the `next-intl` package.
-- Translation files can be found in the `messages` directory at the root.
-- Edit `messages/en.json` for translations.
-
-### Configuration
-- **Next.js Configuration**: Edit `next.config.ts` for important app configurations. Currently, the output is set to `"export"` for GitHub Pages static build.
-- **TypeScript Configuration**: Modify `tsconfig.json` for TypeScript settings.
-- **Linting & Formatting**: The project uses ESLint and Prettier configurations.
+- `src/app/` routes and the root layout
+- `src/site/sections/` page sections
+- `src/site/components/` shared components (nav, footer, page parts)
+- `src/site/content/` all copy and figures, kept out of the components
+- `src/site/styles/` design tokens (`tokens.css`) and base styles; `palette.ts` mirrors the token colours for canvas and WebGL
+- `src/site/three/` the WebGL hero
+- `public/` static files
+- `scripts/` build-time fetches, the preview server and the social image generator
+- `tests/` unit and end-to-end tests
 
 ## License
- - This project is licensed under the MIT License.
- - See the [LICENSE](https://github.com/vercel/next.js/blob/canary/license.md) file for more information.
 
-
+MIT

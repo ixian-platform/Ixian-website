@@ -19,14 +19,9 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"],
-      "@components/*": ["./src/app/components/*"],
-      "@utils/*": ["./src/app/utils/*"],
-      "@styles/*": ["./src/app/styles/*"],
-      "@assets/*": ["./public/assets/*"],
-
+      "@site/*": ["./src/site/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "out", "_to_delete"]
 }

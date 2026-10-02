@@ -1,0 +1,87 @@
+/* Pinned steps on phones only; on desktop the wrappers are display: contents. */
+.outer, .inner { display: contents; }
+.rail { display: none; }
+
+@media (max-width: 860px) {
+  /* one snap point per step (placed by PinSteps.tsx; the page's snap type is in base.css) */
+  .snap {
+    position: absolute;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    pointer-events: none;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+  .outer {
+    display: block;
+    position: relative;
+    /* one screen, plus most of a screen of scroll per further step, so one swipe reaches one step */
+    height: calc(100svh + (var(--n, 3) - 1) * 85svh);
+  }
+  .inner {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+    height: 100svh;
+    padding: calc(var(--ix-nav-h) + 4px) 0 16px;
+    box-sizing: border-box;
+    /* clip only vertically: the drawings bleed into the page gutters, edge to edge */
+    overflow-x: visible;
+    overflow-y: clip;
+  }
+  .rail {
+    display: flex;
+    gap: 10px;
+    flex: none;
+    margin-inline: calc(var(--ix-gutter) * -1);
+    padding-inline: var(--ix-gutter);
+    scroll-padding-inline: var(--ix-gutter);
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .rail::-webkit-scrollbar { display: none; }
+  /* a left hairline that lights on the active step, as on desktop */
+  .card {
+    all: unset;
+    box-sizing: border-box;
+    position: relative;
+    flex: 0 0 80%;
+    scroll-snap-align: start;
+    display: grid;
+    align-content: start;
+    gap: 4px;
+    min-height: 92px;
+    padding: 2px 8px 4px 16px;
+    opacity: 0.42;
+    cursor: pointer;
+    transition: opacity 300ms var(--ix-ease-out);
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    bottom: 4px;
+    width: 1px;
+    background: rgb(var(--ix-ink-rgb) / 0.1);
+    transition: background-color 300ms var(--ix-ease-out);
+  }
+  .card[data-on] { opacity: 1; }
+  .card[data-on]::before { background: var(--ix-text); }
+  .card:focus-visible { outline: 2px solid var(--ix-focus); outline-offset: 2px; border-radius: var(--ix-r-sm); }
+  .cardHead { all: unset; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 10px; cursor: pointer; }
+  .cardHead:focus-visible { outline: 2px solid var(--ix-focus); outline-offset: 2px; }
+  .cardNo { font-family: var(--ix-mono); font-size: var(--ix-fs-micro); color: var(--ix-text-3); }
+  .cardName { font-size: 17px; font-weight: var(--ix-fw-head); letter-spacing: -0.015em; color: var(--ix-text); }
+  .cardTerm { font-size: var(--ix-fs-tiny); color: var(--ix-text-3); white-space: nowrap; }
+  .cardText { margin: 2px 0 0; font-size: var(--ix-fs-small); line-height: 1.45; color: var(--ix-text-2); text-wrap: pretty; }
+}
+@media (max-width: 860px) and (prefers-reduced-motion: reduce) {
+  .card { transition: none; }
+}
